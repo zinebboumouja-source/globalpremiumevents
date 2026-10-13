@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATIGS 2018 Case Study — Global Premium Events</title>
+<meta name="description" content="Inside the Africa Trade & Investment Global Summit 2018 in Washington, D.C. — how Global Premium Events organized and delivered the delegation experience.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Global Premium Events">
+<meta property="og:title" content="ATIGS 2018 Case Study — Global Premium Events">
+<meta property="og:description" content="Inside the Africa Trade & Investment Global Summit 2018 in Washington, D.C. — how Global Premium Events organized and delivered the delegation experience.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ATIGS 2018 Case Study — Global Premium Events">
+<meta name="twitter:description" content="Inside the Africa Trade & Investment Global Summit 2018 in Washington, D.C. — how Global Premium Events organized and delivered the delegation experience.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Africa Trade & Investment Global Summit 2018",
+  "startDate": "2018",
+  "location": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Washington, D.C.",
+      "addressCountry": "US"
+    }
+  },
+  "description": "Sarah Zineb Boumouja served as Head of the Organizing Committee, with Global Premium Events as organizing partner, welcoming delegates from multiple international markets.",
+  "organizer": {
+    "@type": "Organization",
+    "name": "Global Premium Events",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rabat",
+      "addressCountry": "MA"
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #16294F;
+    --blue: #2C4E86;
+    --blue-mid: #45659B;
+    --ink: #1B1E24;
+    --ink-dim: #5B6270;
+    --line: #DDE3EC;
+    --panel: #F4F6FA;
+    --bg: #FFFFFF;
+    --gold: #A9832E;
+    --gold-light: #C3A86D;
+    --gold-dark: #8E6E27;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', Arial, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{ font-family:'Source Serif 4', Georgia, serif; }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  header.top{ border-bottom:1px solid var(--line); }
+  .top-inner{
+    max-width:1080px;
+    margin:0 auto;
+    padding:22px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:17px;
+    color:var(--navy);
+    text-decoration:none;
+  }
+  .brand span{ color:var(--gold); }
+  .back-link{
+    font-size:13px;
+    color:var(--ink-dim);
+    text-decoration:none;
+    border:1px solid var(--line);
+    padding:8px 14px;
+    border-radius:2px;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .back-link:hover{ border-color:var(--blue-mid); color:var(--navy); }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:60px 0 44px;
+    overflow:hidden;
+  }
+  .hero-watermark{
+    position:absolute;
+    top:-64px;
+    right:-18px;
+    font-family:'Source Serif 4', serif;
+    font-size:280px;
+    font-weight:600;
+    color:var(--gold);
+    opacity:0.05;
+    line-height:1;
+    pointer-events:none;
+    user-select:none;
+    z-index:0;
+  }
+  .hero-kicker{
+    position:relative;
+    z-index:1;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--blue);
+    font-size:13px;
+    margin-bottom:22px;
+    font-weight:500;
+  }
+  .hero-kicker .rule{ width:36px; height:1px; background:var(--blue-mid); }
+  h1.hero-title{
+    position:relative;
+    z-index:1;
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(32px, 4.2vw, 46px);
+    line-height:1.15;
+    font-weight:600;
+    margin:0 0 16px;
+    max-width:20ch;
+    color:var(--navy);
+  }
+  .hero-tagline{
+    position:relative;
+    z-index:1;
+    font-family:'Source Serif 4', serif;
+    font-size:17px;
+    font-style:italic;
+    font-weight:500;
+    color:var(--blue);
+    margin:0 0 24px;
+    max-width:52ch;
+  }
+  .hero-meta{
+    position:relative;
+    z-index:1;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    margin:0 0 26px;
+  }
+  .hero-sub{
+    position:relative;
+    z-index:1;
+    font-size:15.5px;
+    color:var(--ink-dim);
+    line-height:1.75;
+    margin:0;
+    max-width:70ch;
+  }
+
+  /* HERO BANNER PHOTO */
+  .hero-banner{
+    position:relative;
+    height:440px;
+    overflow:hidden;
+  }
+  .hero-banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .hero-banner-caption{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:40px 32px 20px;
+    background:linear-gradient(0deg, rgba(10,18,38,0.78), rgba(10,18,38,0));
+    color:#fff;
+    font-size:13px;
+    letter-spacing:0.02em;
+  }
+  @media (max-width:700px){ .hero-banner{ height:260px; } }
+
+  /* RECOGNITION STRIP */
+  .recognition{ padding:56px 0 10px; border-bottom:1px solid var(--line); }
+  .recognition-split{
+    display:grid;
+    grid-template-columns:1fr 260px;
+    gap:40px;
+    align-items:start;
+  }
+  .recognition-note{
+    margin:0;
+    font-size:14.5px;
+    color:var(--ink-dim);
+    line-height:1.7;
+    max-width:74ch;
+  }
+  .letter-frame{
+    border:1px solid var(--line);
+    padding:10px;
+    background:#fff;
+    box-shadow:0 12px 28px rgba(22,41,79,0.10);
+  }
+  .letter-frame img{ width:100%; display:block; }
+  .letter-caption{
+    margin:10px 0 0;
+    font-size:11px;
+    color:var(--ink-dim);
+    text-align:center;
+    line-height:1.5;
+  }
+  @media (max-width:760px){
+    .recognition-split{ grid-template-columns:1fr; }
+    .letter-frame{ max-width:260px; }
+  }
+
+  /* GLOBAL VISIBILITY — NASDAQ */
+  .visibility{ padding:0; }
+  .vis-split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    border:1px solid var(--line);
+  }
+  .vis-photo{ position:relative; min-height:400px; overflow:hidden; }
+  .vis-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .vis-panel{
+    background:var(--navy);
+    color:#fff;
+    padding:52px 48px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .vis-panel .hero-kicker{ color:#9FB2D9; }
+  .vis-panel .hero-kicker .rule{ background:var(--gold); }
+  .vis-panel h2{
+    font-family:'Source Serif 4', serif;
+    font-size:25px;
+    font-weight:600;
+    color:#fff;
+    margin:0 0 16px;
+  }
+  .vis-panel p{ font-size:14.5px; color:#C7D1E3; margin:0 0 18px; line-height:1.7; }
+  .vis-stat{
+    display:flex;
+    gap:28px;
+    margin:6px 0 20px;
+  }
+  .vis-stat div{ display:flex; flex-direction:column; }
+  .vis-stat b{
+    font-family:'Source Serif 4', serif;
+    font-size:26px;
+    font-weight:600;
+    color:var(--gold);
+  }
+  .vis-stat span{
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:#9FB2D9;
+    margin-top:4px;
+  }
+  .vis-credit{ font-size:11.5px; color:#7F93B8; margin:0; }
+  @media (max-width:800px){
+    .vis-split{ grid-template-columns:1fr; }
+    .vis-photo{ min-height:280px; }
+  }
+  .people-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:32px;
+    padding-bottom:52px;
+  }
+  .people-card{ border-top:2px solid var(--gold); padding-top:16px; }
+  .people-name{
+    font-family:'Source Serif 4', serif;
+    font-size:17px;
+    font-weight:600;
+    color:var(--navy);
+    margin:0 0 8px;
+  }
+  .people-role{
+    font-size:12px;
+    color:var(--ink-dim);
+    line-height:1.6;
+  }
+  .people-org{
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--blue-mid);
+    margin-top:6px;
+  }
+  @media (max-width:760px){ .people-grid{ grid-template-columns:1fr; gap:28px; } }
+
+  /* STAT BAND */
+  .stat-band{ background:var(--navy); color:#fff; }
+  .stat-inner{
+    max-width:1080px;
+    margin:0 auto;
+    padding:54px 32px;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:44px;
+    align-items:center;
+  }
+  .stat-number-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding-right:44px;
+    border-right:1px solid rgba(255,255,255,0.16);
+  }
+  .stat-number{
+    font-family:'Source Serif 4', serif;
+    font-size:56px;
+    font-weight:600;
+    color:#fff;
+    line-height:1;
+    white-space:nowrap;
+    transition:transform .35s ease;
+  }
+  .stat-band:hover .stat-number{ transform:scale(1.05); }
+  .stat-unit{
+    display:block;
+    margin-top:10px;
+    font-size:11.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--gold);
+    font-family:'Inter', sans-serif;
+  }
+  .stat-text{ font-size:15.5px; color:#C7D1E3; max-width:56ch; line-height:1.7; }
+  .stat-text b{ color:#fff; font-weight:600; }
+  @media (max-width:600px){
+    .stat-inner{ grid-template-columns:1fr; gap:24px; padding:40px 32px; }
+    .stat-number-wrap{ padding-right:0; padding-bottom:22px; border-right:none; border-bottom:1px solid rgba(255,255,255,0.16); }
+  }
+
+  /* SECTION HEAD */
+  .sec-head{ max-width:640px; margin-bottom:32px; }
+  .sec-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:25px;
+    margin:0 0 10px;
+    font-weight:600;
+    color:var(--navy);
+  }
+  .sec-head p{ margin:0; color:var(--ink-dim); font-size:14.5px; line-height:1.65; }
+
+  /* BY THE NUMBERS */
+  .numbers{ padding:64px 0 10px; border-bottom:1px solid var(--line); }
+  .bn-highlights{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:16px;
+    margin-bottom:44px;
+  }
+  .bn-hl{
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px 20px;
+    background:var(--panel);
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .bn-hl:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 32px rgba(22,41,79,0.10);
+    border-color:var(--navy);
+    background:#fff;
+  }
+  .bn-hl-num{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(26px, 3vw, 32px);
+    font-weight:600;
+    background:linear-gradient(100deg, var(--navy) 0%, var(--blue) 55%, var(--gold-dark) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    line-height:1.1;
+  }
+  .bn-hl-label{
+    font-size:12.5px;
+    color:var(--ink-dim);
+    line-height:1.45;
+  }
+  .bn-highlights > .reveal:nth-child(1){ transition-delay:0s; }
+  .bn-highlights > .reveal:nth-child(2){ transition-delay:.06s; }
+  .bn-highlights > .reveal:nth-child(3){ transition-delay:.12s; }
+  .bn-highlights > .reveal:nth-child(4){ transition-delay:.18s; }
+  .bn-highlights > .reveal:nth-child(5){ transition-delay:.24s; }
+  .bn-highlights > .reveal:nth-child(6){ transition-delay:.3s; }
+  .bn-highlights > .reveal:nth-child(7){ transition-delay:.36s; }
+  .bn-highlights > .reveal:nth-child(8){ transition-delay:.42s; }
+  .bn-detail-label{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--blue);
+    margin:0 0 8px;
+  }
+  @media (max-width:900px){
+    .bn-highlights{ grid-template-columns:repeat(2, 1fr); }
+  }
+  @media (max-width:520px){
+    .bn-highlights{ grid-template-columns:1fr; }
+  }
+  .bn-columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0 56px;
+    padding-bottom:56px;
+  }
+  .bn-group-title{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 18px;
+  }
+  .bn-list{ list-style:none; margin:0 0 8px; padding:0; }
+  .bn-list li{
+    display:flex;
+    gap:14px;
+    padding:13px 0;
+    border-top:1px solid var(--line);
+    font-size:14px;
+    color:var(--ink-dim);
+    line-height:1.55;
+  }
+  .bn-list li:last-child{ border-bottom:1px solid var(--line); }
+  .bn-num{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    color:var(--navy);
+    flex-shrink:0;
+    min-width:1ch;
+  }
+  @media (max-width:760px){ .bn-columns{ grid-template-columns:1fr; gap:0; } }
+
+  /* MORE MOMENTS STRIP */
+  .moments{ padding:64px 0 20px; border-top:1px solid var(--line); }
+  /* MOMENTS — modern rounded autoplay carousel */
+  .mission-carousel{ position:relative; }
+  .mc-track{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    padding-bottom:2px;
+  }
+  .mc-track::-webkit-scrollbar{ display:none; }
+  .mc-card{
+    position:relative;
+    flex:0 0 calc(25% - 15px);
+    scroll-snap-align:start;
+    aspect-ratio:4/3;
+    border-radius:16px;
+    overflow:hidden;
+    background:#0d1b33;
+    display:block;
+    text-decoration:none;
+    box-shadow:0 10px 26px rgba(22,41,79,0.10);
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .mc-card:hover{ transform:translateY(-5px); box-shadow:0 20px 40px rgba(22,41,79,0.18); }
+  .mc-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .5s ease;
+  }
+  .mc-card:hover img{ transform:scale(1.07); }
+  .mc-cap{
+    position:absolute;
+    left:14px; right:14px; bottom:14px;
+    background:rgba(22,41,79,0.42);
+    -webkit-backdrop-filter:blur(12px) saturate(140%);
+    backdrop-filter:blur(12px) saturate(140%);
+    border:1px solid rgba(255,255,255,0.26);
+    border-radius:10px;
+    padding:11px 14px;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    z-index:1;
+  }
+  .mc-cap span{ font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold-light); font-weight:600; }
+  .mc-cap b{ font-family:'Source Serif 4', serif; font-size:13.5px; font-weight:600; }
+  .mc-nav{ display:flex; align-items:center; justify-content:center; gap:14px; margin-top:20px; }
+  .mc-btn{
+    width:36px; height:36px; border-radius:50%; border:1px solid var(--line); background:#fff;
+    display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--navy);
+    transition:all .3s ease; flex-shrink:0; font-size:16px;
+  }
+  .mc-btn:hover{ background:var(--panel); border-color:var(--navy); transform:scale(1.06); }
+  .mc-dots{ display:flex; gap:7px; align-items:center; }
+  .mc-dots .mc-dot{ width:7px; height:7px; border-radius:50%; background:var(--line); cursor:pointer; transition:all .3s ease; border:none; padding:0; }
+  .mc-dots .mc-dot.active{ background:var(--blue); width:20px; border-radius:4px; }
+  @media (max-width:900px){
+    .mc-card{ flex-basis:calc(50% - 10px); }
+  }
+  @media (max-width:560px){
+    .mc-card{ flex-basis:82%; }
+  }
+
+  /* DISTINGUISHED ATTENDEES (under moments strip) */
+  .attendees-head{
+    margin:0 0 24px;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  /* OBJECTIVES SPLIT */
+  .objectives{ padding:64px 0; }
+  .obj-split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    border:1px solid var(--line);
+  }
+  .obj-photo{ position:relative; min-height:420px; overflow:hidden; }
+  .obj-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .obj-panel{
+    background:var(--navy);
+    color:#fff;
+    padding:52px 48px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .obj-panel h2{
+    font-family:'Source Serif 4', serif;
+    font-size:26px;
+    font-weight:600;
+    color:#fff;
+    margin:0 0 16px;
+  }
+  .obj-panel .obj-lead{ font-size:14.5px; color:#C7D1E3; margin:0 0 22px; line-height:1.65; }
+  .obj-list{ list-style:none; margin:0 0 30px; padding:0; display:grid; gap:16px; }
+  .obj-list li{
+    display:flex;
+    gap:14px;
+    font-size:14.5px;
+    color:#E4E9F2;
+    line-height:1.6;
+  }
+  .obj-list .ob-num{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    color:var(--gold);
+    flex-shrink:0;
+  }
+  .cta-btn{
+    align-self:flex-start;
+    background:var(--gold);
+    color:var(--navy);
+    border:none;
+    padding:14px 24px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    border-radius:2px;
+    cursor:pointer;
+    transition:background-color .3s ease, transform .3s ease;
+    text-decoration:none;
+    display:inline-block;
+  }
+  .cta-btn:hover{ background:#c49b3f; transform:translateY(-3px); }
+  @media (max-width:800px){
+    .obj-split{ grid-template-columns:1fr; }
+    .obj-photo{ min-height:280px; }
+  }
+
+  /* CTA FOOTER */
+  footer.cta{ padding:20px 0 60px; }
+  .cta-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:24px;
+    border-top:1px solid var(--line);
+    padding-top:44px;
+  }
+  .cta-inner h3{
+    font-family:'Source Serif 4', serif;
+    font-size:23px;
+    margin:0;
+    font-weight:600;
+    color:var(--navy);
+    max-width:26ch;
+  }
+  .cta-inner .cta-btn2{
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    padding:15px 26px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    transition:background-color .3s ease, transform .3s ease, box-shadow .3s ease;
+    text-decoration:none;
+    display:inline-block;
+  }
+  .cta-inner .cta-btn2:hover{
+    background:var(--blue);
+    transform:translateY(-3px);
+    box-shadow:0 16px 32px rgba(22,41,79,0.25);
+  }
+
+  /* SITE FOOTER */
+  .site-footer{ background:var(--navy); color:#C7D1E3; padding:64px 0 0; }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.95fr 1fr 1.35fr;
+    gap:32px;
+    padding-bottom:44px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-brand{ display:flex; flex-direction:column; gap:18px; }
+  .footer-logo{ width:84px; height:84px; display:block; }
+  .footer-brand p{ font-size:13px; color:#9FACC6; line-height:1.65; max-width:30ch; margin:0; }
+  .footer-col-title{
+    font-size:11px; font-weight:600; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--gold); margin:0 0 20px;
+  }
+  .footer-contact{ list-style:none; margin:0; padding:0; display:grid; gap:13px; }
+  .footer-contact li{ font-size:14px; color:#E4E9F2; line-height:1.6; display:flex; gap:12px; }
+  .footer-contact li b{ color:#7F93B8; font-weight:600; flex-shrink:0; width:14px; }
+
+  .footer-cta-text{
+    font-size:13.5px;
+    color:#9FACC6;
+    line-height:1.65;
+    margin:0 0 14px;
+    max-width:26ch;
+  }
+  .footer-cta-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    color:#fff;
+    text-decoration:none;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:3px;
+    transition:color .3s ease, gap .3s ease;
+  }
+  .footer-cta-link:hover{ color:var(--gold-light); gap:12px; }
+
+  .footer-relocating{ margin:10px 0 0; font-size:12px; font-style:italic; color:#8394B3; line-height:1.5; }
+  .footer-partners-list{ font-size:13px; font-weight:600; letter-spacing:0.06em; color:#E4E9F2; line-height:2; }
+  .footer-partners-list .sep{ color:var(--gold); margin:0 10px; }
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:12px; padding:22px 0; font-size:12px; color:#7F93B8;
+  }
+  @media (max-width:760px){
+    .footer-bottom{ justify-content:flex-start; }
+  }
+  @media (max-width:900px){
+    .footer-grid{ grid-template-columns:1fr 1fr; gap:36px 40px; }
+  }
+  @media (max-width:560px){
+    .footer-grid{ grid-template-columns:1fr; gap:32px; }
+  }
+
+  /* ============ ACCESSIBILITY: skip link + focus-visible ============ */
+  .skip-link{
+    position:absolute; top:-48px; left:12px; z-index:9999;
+    background:var(--navy); color:#fff; padding:12px 20px; border-radius:4px;
+    font-family:'Inter', Arial, sans-serif; font-size:14px; font-weight:600; text-decoration:none;
+    transition:top .25s ease;
+  }
+  .skip-link:focus{ top:12px; }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  /* ============ SCROLL PROGRESS + REVEAL/GLOW (shared with Home/About) ============ */
+  .scroll-progress{ position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; background:transparent; pointer-events:none; }
+  .scroll-progress-bar{ height:100%; width:0%; background:linear-gradient(90deg, var(--gold), var(--navy)); transition:width .1s linear; }
+  @media (prefers-reduced-motion: reduce){ .scroll-progress-bar{ transition:none; } }
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .5s ease, box-shadow .35s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  .glow-card{ position:relative; overflow:hidden; }
+  .glow-card::before{
+    content:""; position:absolute; inset:0; opacity:0; transition:opacity .4s ease; pointer-events:none; z-index:0;
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(169,131,46,0.14), transparent 70%);
+  }
+  .glow-card:hover::before{ opacity:1; }
+  .glow-card > *{ position:relative; z-index:1; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .glow-card::before{ display:none; }
+  }
+</style>
+<link rel="canonical" href="https://globalpremiumevents.com/case-study-trade-mission/">
+<meta property="og:url" content="https://globalpremiumevents.com/case-study-trade-mission/">
+<meta property="og:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#16294F">
+<link rel="stylesheet" href="/assets/gpe.css">
+<style id="cs-partners-css">
+.partners{padding:90px 0 30px;background:#fff;}
+.cs-partners-head{max-width:760px;margin:0 auto 40px;padding:0 24px;text-align:center;}
+.cs-partners-head h2{font-family:'Source Serif 4',Georgia,serif;color:#16294F;font-size:clamp(28px,3.4vw,38px);margin:14px 0 12px;}
+.cs-partners-head p{color:#5B6270;font-size:15.5px;line-height:1.65;margin:0;}
+.marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 64px,#000 calc(100% - 64px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 64px,#000 calc(100% - 64px),transparent 100%);}
+.marquee-track{display:flex;align-items:center;gap:52px;width:max-content;animation:marquee-scroll 110s linear infinite;padding:8px 0 56px;}
+.marquee:hover .marquee-track{animation-play-state:paused;}
+.marquee-track img{width:auto;object-fit:contain;flex-shrink:0;}
+@keyframes marquee-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<header class="gpe-nav" id="gpeNav">
+  <div class="gpe-nav-in">
+    <a class="gpe-nav-logo" href="/" aria-label="Global Premium Events — Home"><img src="/assets/logo.webp" alt="Global Premium Events" width="44" height="44"></a>
+    <button class="gpe-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="gpeNavLinks"><span></span><span></span><span></span></button>
+    <nav class="gpe-nav-links" id="gpeNavLinks" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/about-us/">About</a>
+      <div class="gpe-dd">
+        <button class="gpe-dd-toggle" aria-expanded="false" aria-haspopup="true">Services <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="gpe-dd-menu"><a href="/services/missions-partnerships/"><b>Missions, Delegations &amp; Matchmaking</b><span>Official delegations, trade missions, B2B / G2G meetings</span></a><a href="/services/exhibitions-trade-shows/"><b>Trade Shows &amp; Exhibitions</b><span>Stand design, build and full participation management</span></a><a href="/services/event-production/"><b>Corporate Event Production</b><span>Launches, conferences, ceremonies and galas</span></a><a class="gpe-dd-all" href="/services/">View all services &rarr;</a></div>
+      </div>
+      <a href="/our-work/" class="active">Our Work</a>
+      <a href="/inclusive-events/" class="gpe-nav-incl">Inclusive Events</a>
+      <a class="gpe-nav-cta" href="/contact-us/">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="wrap">
+    <section class="hero">
+    <div class="hero-watermark" aria-hidden="true">2018</div>
+    <div class="hero-kicker">
+      <span class="rule"></span>
+      <span>Case Study — Missions &amp; Delegations</span>
+    </div>
+    <h1 class="hero-title">Africa Trade &amp; Investment Global Summit</h1>
+    <p class="hero-tagline">Three days. 92 countries. One summit that opened doors across Africa.</p>
+    <p class="hero-meta">World Trade Center · Ronald Reagan Building, Washington, D.C. — June 24–26, 2018</p>
+    <p class="hero-sub">
+      Global Premium Events' CEO, Sarah Zineb Boumouja, served as Head of the Organizing
+      Committee for the Africa Trade and Investment Global Summit (ATIGS), with GPE as
+      organizing partner — gathering 2,345 delegates over three days: key economic
+      decision-makers from more than 70 countries, government delegations, African
+      heads of delegation and business leaders, project developers and international
+      investors.
+    </p>
+    </section>
+  </div>
+
+<div class="hero-banner">
+  <img src="/assets/img/8a49b2efc0f9.webp" alt="Ribbon-cutting ceremony on the steps of the World Trade Center, Washington, D.C., flanked by the flags of participating nations">
+  <div class="hero-banner-caption">Ribbon-cutting ceremony — World Trade Center, Washington, D.C.</div>
+</div>
+
+<div class="wrap">
+
+  <section class="recognition">
+    <div class="hero-kicker">
+      <span class="rule"></span>
+      <span>High-Level Recognition</span>
+    </div>
+    <div class="recognition-split">
+      <p class="recognition-note">
+        The summit was officially welcomed by the Mayor of Washington, D.C., who issued the
+        welcome letter shown here, and brought together senior voices from government,
+        finance and international institutions over the three-day program.
+      </p>
+      <div>
+        <div class="letter-frame">
+          <img loading="lazy" src="/assets/img/0b1f50dc0d73.webp" alt="Official welcome letter for the Africa Trade and Investment Global Summit 2018, signed by Muriel Bowser, Mayor of Washington, D.C.">
+        </div>
+        <p class="letter-caption">Official welcome letter — Mayor Muriel Bowser, Washington, D.C., June 24, 2018</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="stat-band">
+  <div class="stat-inner">
+    <div class="stat-number-wrap">
+      <div class="stat-number">2,345</div>
+      <span class="stat-unit">Delegates Attended</span>
+    </div>
+    <div class="stat-text">
+      Key economic decision-makers from more than 70 countries — government
+      delegations, African heads of delegation and business leaders, project
+      developers and international investors — <b>gathered over three days under
+      one roof</b> at the World Trade Center.
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="numbers">
+    <div class="sec-head">
+      <h2>By the Numbers</h2>
+      <p>The scale of the program Global Premium Events planned, coordinated and delivered end-to-end.</p>
+    </div>
+
+    <div class="bn-highlights">
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">48,600</span><span class="bn-hl-label">Sq. ft. of occupied exhibition space</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">92</span><span class="bn-hl-label">Countries represented among delegates</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">262</span><span class="bn-hl-label">High-level government delegates</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">162</span><span class="bn-hl-label">Featured speakers</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">320</span><span class="bn-hl-label">Panelists and moderators</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">87</span><span class="bn-hl-label">Exhibitors across 10 pavilions</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">24</span><span class="bn-hl-label">Country presentations</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">150+</span><span class="bn-hl-label">Trade &amp; investment agencies and organizations</span></div>
+    </div>
+
+    <p class="bn-detail-label">Complete program breakdown</p>
+    <div class="bn-columns">
+      <div>
+        <p class="bn-group-title">Venue &amp; Program</p>
+        <ul class="bn-list">
+          <li><span class="bn-num">48,600</span> sq. ft. of occupied exhibition space</li>
+          <li><span class="bn-num">2</span> exhibition halls</li>
+          <li><span class="bn-num">14</span> conference session rooms</li>
+          <li><span class="bn-num">87</span> exhibitors across 10 pavilions</li>
+          <li><span class="bn-num">8</span> networking programs</li>
+          <li><span class="bn-num">6</span> sectors of focus</li>
+          <li><span class="bn-num">13</span> sector briefings</li>
+          <li><span class="bn-num">24</span> country presentations</li>
+          <li><span class="bn-num">—</span> Red Carpet Awards ceremony</li>
+          <li><span class="bn-num">—</span> Arts, culture &amp; entertainment program</li>
+          <li><span class="bn-num">—</span> Book signings &amp; press conference</li>
+          <li><span class="bn-num">—</span> MOU signing ceremony</li>
+          <li><span class="bn-num">—</span> VIP lounge side events</li>
+          <li><span class="bn-num">—</span> One-on-one meetings with Vice Presidents, Ministers, Governors and Ambassadors</li>
+        </ul>
+      </div>
+      <div>
+        <p class="bn-group-title">Scale &amp; Reach</p>
+        <ul class="bn-list">
+          <li><span class="bn-num">92</span> countries represented among delegates</li>
+          <li><span class="bn-num">162</span> featured speakers</li>
+          <li><span class="bn-num">320</span> panelists and moderators</li>
+          <li><span class="bn-num">186</span> accredited investor groups</li>
+          <li><span class="bn-num">262</span> high-level government delegates</li>
+          <li><span class="bn-num">11</span> mega sponsors</li>
+          <li><span class="bn-num">75</span> supporting partners</li>
+          <li><span class="bn-num">62</span> featured media partners</li>
+          <li><span class="bn-num">150+</span> national trade &amp; investment agencies and organizations (TPOs, IPAs, EDOs and IDOs)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+  <section class="partners">
+    <div class="sec-head cs-partners-head">
+      <div class="hero-kicker" style="justify-content:center;"><span class="rule"></span><span>ATIGS 2018</span><span class="rule"></span></div>
+      <h2>Summit Sponsors &amp; Partners</h2>
+      <p>The institutions, financial partners, chambers of commerce and media that stood behind the Africa Trade &amp; Investment Global Summit &mdash; 11 mega sponsors, 75 supporting partners and 62 featured media partners.</p>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track">
+      <img src="/assets/img/c953ba0ddc73.webp" alt="IFC — International Finance Corporation (World Bank Group)">
+      <img src="/assets/img/372d0bd91348.webp" alt="Banco Sol">
+      <img src="/assets/img/d296ed185e96.webp" alt="Qatar Fund for Development">
+      <img src="/assets/img/3ab7fa3e9804.webp" alt="Qatar Mining">
+      <img src="/assets/img/cac2b3f64d49.webp" alt="Ronald Reagan Building & International Trade Center">
+      <img src="/assets/img/b9e9fe843ce7.webp" alt="QDB — Qatar Development Bank">
+      <img src="/assets/img/bf7d1f841f5f.webp" alt="National Bank of Egypt">
+      <img src="/assets/img/0304ee791dff.webp" alt="Austrian Airlines / Lufthansa / SWISS">
+      <img src="/assets/img/05250746aaba.webp" alt="Brussels Airlines / Eurowings">
+      <img src="/assets/img/1f0715c7864c.webp" alt="QIA — Qatar Investment Authority">
+      <img src="/assets/img/e9491f8d7845.webp" alt="Barwa Bank">
+      <img src="/assets/img/3ac5e5123873.webp" alt="Arab Business Leaders">
+      <img src="/assets/img/42a5b33c993a.webp" alt="GTPA — Global Trade Professionals Alliance">
+      <img src="/assets/img/8a99eab86050.webp" alt="SFD — Saudi Fund for Development">
+      <img src="/assets/img/02f0f7b5a367.webp" alt="AVCA — African Private Equity and Venture Capital Association">
+      <img src="/assets/img/a7f340845b8f.webp" alt="Foster — Fostering Global Immigration Solutions">
+      <img src="/assets/img/0e4446812994.webp" alt="Qatar Airways">
+      <img src="/assets/img/698c926a85f0.webp" alt="African Agri Council">
+      <img src="/assets/img/2a756357b1ad.webp" alt="Pulsar Development">
+      <img src="/assets/img/08bc168b45eb.webp" alt="USBACC — U.S. Bilateral African Chamber of Commerce">
+      <img src="/assets/img/a7594e72f931.webp" alt="World Trade Center Washington, D.C.">
+      <img src="/assets/img/82d0efe00072.webp" alt="Asian-African Chamber of Commerce & Industry">
+      <img src="/assets/img/151f855255b0.webp" alt="Al Rayan Bank">
+      <img src="/assets/img/1d4a746ab110.webp" alt="African Trade Centre">
+      <img src="/assets/img/ec46e16b5a34.webp" alt="EEP — Energy and Environment Partnership">
+      <img src="/assets/img/6d61143c579e.webp" alt="Afrinection">
+      <img src="/assets/img/041886f23297.webp" alt="Global Innovation Exchange">
+      <img src="/assets/img/ccbd7a7cc0e1.webp" alt="Oxford Business Group">
+      <img src="/assets/img/45054864af2d.webp" alt="The Varanda Network">
+      <img src="/assets/img/0c4693201553.webp" alt="Air France / KLM">
+      <img src="/assets/img/00b3d95063d4.webp" alt="fDi Intelligence">
+      <img src="/assets/img/790a786a209f.webp" alt="NAPA — Nigerian American Professionals Association">
+      <img src="/assets/img/b3e3b484296a.webp" alt="Private Jet Services">
+      <img src="/assets/img/86f36aea5c3a.webp" alt="Leading Women of Africa">
+      <img src="/assets/img/f662ef06da78.webp" alt="Africa Business Radio">
+      <img src="/assets/img/dfa3e627f8aa.webp" alt="AP Group — Official Newswire">
+      <img src="/assets/img/6864183b2570.webp" alt="International Association of African NGOs">
+      <img src="/assets/img/2739a458449b.webp" alt="Africa Global Funds">
+      <img src="/assets/img/7303b1776b86.webp" alt="Asoko Insight">
+      <img src="/assets/img/bc2cb5bec7fd.webp" alt="African Business">
+      <img src="/assets/img/ebc07454a7b6.webp" alt="Zublia">
+      <img src="/assets/img/ec850b880297.webp" alt="International Trade Center">
+      <img src="/assets/img/be7032621066.webp" alt="AGEL — Alliance for Global Education and Leadership">
+      <img src="/assets/img/9239ed60f525.webp" alt="The Washington Diplomat">
+      <img src="/assets/img/c02dd60d51ec.webp" alt="BBOA News">
+      <img src="/assets/img/355100cc1ef6.webp" alt="AFO — Association of Family Offices in Asia">
+      <img src="/assets/img/bdbfa21f7f88.webp" alt="Think Africa">
+      <img src="/assets/img/abf9ddf7a0a8.webp" alt="Africans Building Africa">
+      <img src="/assets/img/f5593ec1b344.webp" alt="APB — Association of Private Bankers in Greater China">
+      <img src="/assets/img/89fc510e87b9.webp" alt="Export Québec">
+      <img src="/assets/img/d59327d781a8.webp" alt="PACCI — Pan African Chamber of Commerce and Industry">
+      <img src="/assets/img/eaba26352b12.webp" alt="Nigerian-American Chamber of Commerce">
+      <img src="/assets/img/8ce78a15dbc9.webp" alt="friexporter">
+      <img src="/assets/img/829424c5518c.webp" alt="Afreximbank">
+      <img src="/assets/img/b3f55099f4ee.webp" alt="ZITIC — Zambian International Trade & Investment Centre">
+      <img src="/assets/img/4eb9a9bf2740.webp" alt="The Investor — Beyond Investments Group">
+      <img src="/assets/img/36968077c2cf.webp" alt="The Africa Society — National Summit on Africa">
+      <img src="/assets/img/c66b348241ab.webp" alt="Ethiopian Airlines">
+      <img src="/assets/img/44698a855542.webp" alt="AGCe — Africa Global Chamber of Commerce">
+      <img src="/assets/img/809ae2781f46.webp" alt="TCMA">
+      <img src="/assets/img/392669b8d6c1.webp" alt="tekbos">
+      <img src="/assets/img/2152ff08030c.webp" alt="Dress Me Outlet">
+      <img src="/assets/img/17b2c5aaef7f.webp" alt="Capital Consulting">
+      <img src="/assets/img/72cde6444611.webp" alt="Financial Nigeria">
+      <img src="/assets/img/c54cfd2dc2df.webp" alt="Invest Africa">
+      <img src="/assets/img/35f5d7691dff.webp" alt="Lovoco">
+      <img src="/assets/img/c953ba0ddc73.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/372d0bd91348.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/d296ed185e96.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/3ab7fa3e9804.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/cac2b3f64d49.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/b9e9fe843ce7.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/bf7d1f841f5f.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/0304ee791dff.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/05250746aaba.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/1f0715c7864c.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/e9491f8d7845.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/3ac5e5123873.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/42a5b33c993a.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/8a99eab86050.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/02f0f7b5a367.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/a7f340845b8f.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/0e4446812994.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/698c926a85f0.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/2a756357b1ad.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/08bc168b45eb.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/a7594e72f931.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/82d0efe00072.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/151f855255b0.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/1d4a746ab110.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/ec46e16b5a34.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/6d61143c579e.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/041886f23297.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/ccbd7a7cc0e1.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/45054864af2d.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/0c4693201553.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/00b3d95063d4.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/790a786a209f.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/b3e3b484296a.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/86f36aea5c3a.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/f662ef06da78.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/dfa3e627f8aa.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/6864183b2570.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/2739a458449b.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/7303b1776b86.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/bc2cb5bec7fd.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/ebc07454a7b6.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/ec850b880297.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/be7032621066.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/9239ed60f525.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/c02dd60d51ec.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/355100cc1ef6.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/bdbfa21f7f88.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/abf9ddf7a0a8.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/f5593ec1b344.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/89fc510e87b9.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/d59327d781a8.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/eaba26352b12.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/8ce78a15dbc9.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/829424c5518c.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/b3f55099f4ee.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/4eb9a9bf2740.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/36968077c2cf.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/c66b348241ab.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/44698a855542.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/809ae2781f46.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/392669b8d6c1.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/2152ff08030c.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/17b2c5aaef7f.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/72cde6444611.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/c54cfd2dc2df.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/35f5d7691dff.webp" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </section>
+
+<section class="visibility">
+  <div class="vis-split">
+    <div class="vis-photo">
+      <img loading="lazy" src="/assets/img/457b23c79a2f.webp" alt="Africa Trade &amp; Investment Global Summit 2018 displayed on the NASDAQ Tower LED billboard in Times Square, New York City">
+    </div>
+    <div class="vis-panel">
+      <div class="hero-kicker">
+        <span class="rule"></span>
+        <span>Global Visibility</span>
+      </div>
+      <h2>Live on the NASDAQ Tower, Times Square</h2>
+      <p>
+        In the lead-up to the summit, ATIGS 2018 was featured on the NASDAQ
+        Tower's LED billboard overlooking Times Square, New York City — one
+        of the most visible advertising spaces in the city, reaching the
+        global investors and business leaders who pass through Times Square every day.
+      </p>
+      <div class="vis-stat">
+        <div><b>9,000</b><span>Sq. Ft. of Display Space</span></div>
+        <div><b>NYC</b><span>Times Square</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <section class="objectives">
+    <div class="obj-split">
+      <div class="obj-photo">
+        <img loading="lazy" src="/assets/img/534589554de3.webp" alt="ATIGS Awards Ceremony, June 2018">
+      </div>
+      <div class="obj-panel">
+        <h2>Objectives</h2>
+        <p class="obj-lead">The summit had three primary objectives:</p>
+        <ul class="obj-list">
+          <li><span class="ob-num">01</span> Promoting international trade in Africa</li>
+          <li><span class="ob-num">02</span> Facilitating FDI in Africa</li>
+          <li><span class="ob-num">03</span> Providing a platform for business to expand into African markets</li>
+        </ul>
+        <a class="cta-btn" href="mailto:info@globalpremiumevents.com">Talk to our team</a>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="moments">
+    <div class="sec-head">
+      <h2>More Moments from the Summit</h2>
+      <p>Additional highlights from the three-day program, captured across the summit’s opening, sessions and delegations.</p>
+    </div>
+    <div class="mission-carousel">
+      <div class="mc-track" id="momentsTrack">
+
+      <div class="mc-card">
+        <img loading="lazy" src="/assets/img/2c28851c4bef.webp" alt="Close-up of the ribbon-cutting ceremony with Global Premium Events leadership and government officials">
+        <div class="mc-cap"><span>Ribbon-cutting</span><b>GPE leadership &amp; government officials</b></div>
+      </div>
+
+      <div class="mc-card">
+        <img loading="lazy" src="/assets/img/9b69eeed802b.webp" alt="Delegates walking through the World Trade Center concourse during the summit">
+        <div class="mc-cap"><span>World Trade Center</span><b>Delegates crossing the concourse</b></div>
+      </div>
+
+      <div class="mc-card">
+        <img loading="lazy" src="/assets/img/2b701abe440c.webp" alt="Delegates and organizing committee, ATIGS 2018">
+        <div class="mc-cap"><span>Organizing committee</span><b>ATIGS 2018</b></div>
+      </div>
+
+      <div class="mc-card">
+        <img loading="lazy" src="/assets/img/435d397e226b.webp" alt="VIP delegation, ATIGS 2018">
+        <div class="mc-cap"><span>VIP delegation</span><b>ATIGS 2018</b></div>
+      </div>
+
+      </div>
+    </div>
+    <div class="mc-nav">
+      <button class="mc-btn mc-prev" id="momentsPrev" aria-label="Previous photo">&#8249;</button>
+      <div class="mc-dots" id="momentsDots"></div>
+      <button class="mc-btn mc-next" id="momentsNext" aria-label="Next photo">&#8250;</button>
+    </div>
+
+    <p class="attendees-head">Pictured — Distinguished Attendees</p>
+    <div class="people-grid">
+      <div class="people-card">
+        <p class="people-name">Alexander Gazis</p>
+        <p class="people-role">Acting Deputy Director for Economic Affairs</p>
+        <p class="people-org">U.S. Department of State</p>
+      </div>
+      <div class="people-card">
+        <p class="people-name">Sarah Zineb Boumouja</p>
+        <p class="people-role">Chief Executive Officer, Global Premium Events</p>
+        <p class="people-org">Head of Organizing Committee — ATIGS</p>
+      </div>
+      <div class="people-card">
+        <p class="people-name">Dr. Coutinho Nobre Miguel</p>
+        <p class="people-role">Chief Executive Officer &amp; Chairman of the Board of Directors</p>
+        <p class="people-org">Banco Sol, Angola — ATIGS 2018 Mega Sponsor</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="cta">
+    <div class="cta-inner">
+      <h3>Want a summit of this scale for your organization?</h3>
+      <a class="cta-btn2" href="mailto:info@globalpremiumevents.com">Talk to our team</a>
+    </div>
+  </footer>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img loading="lazy" class="footer-logo" src="/assets/logo.webp" alt="Global Premium Events">
+        <p>Structuring international missions, delegations and business matchmaking between Africa and global markets.</p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Headquarters</div>
+        <ul class="footer-contact">
+          <li><b>T</b> +212 653512995</li>
+          <li><b>E</b> info@globalpremiumevents.com</li>
+          <li><b>A</b> Rabat, Morocco</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="gpe-foot-links">
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/our-work/">Our Work</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/inclusive-events/">Inclusive Events</a></li>
+          <li><a href="/partner-with-us/">Partner With Us</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Global Presence</div>
+        <div class="footer-partners-list">AFRICA <span class="sep">&bull;</span> G.C.C <span class="sep">&bull;</span> EUROPE <span class="sep">&bull;</span> U.S.A</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Global Premium Events. All rights reserved.</span><span class="gpe-legal-links"><a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/privacy-policy/#legal-notice">Legal Notice</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion) {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  if (!reduceMotion) {
+    var glowEls = document.querySelectorAll('.glow-card');
+    glowEls.forEach(function(el){
+      el.addEventListener('mousemove', function(e){
+        var rect = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+      });
+    });
+  }
+
+  // Count-up animation for "By the Numbers" stat cards
+  var countEls = document.querySelectorAll('.bn-hl-num');
+  countEls.forEach(function(el){
+    var raw = el.textContent.trim();
+    var suffix = raw.replace(/[0-9,]/g, ''); // e.g. "+" in "150+"
+    var target = parseInt(raw.replace(/[^0-9]/g, ''), 10);
+    if (isNaN(target)) { return; }
+    el.setAttribute('data-target', String(target));
+    el.setAttribute('data-suffix', suffix);
+    el.textContent = reduceMotion ? raw : '0';
+  });
+
+  function formatCount(n){
+    return n.toLocaleString('en-US');
+  }
+
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (isNaN(target)) { return; }
+    var duration = 1400;
+    var startTime = null;
+    function step(ts){
+      if (startTime === null) { startTime = ts; }
+      var progress = Math.min((ts - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      var current = Math.round(eased * target);
+      el.textContent = formatCount(current) + suffix;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        el.textContent = formatCount(target) + suffix;
+      }
+    }
+    window.requestAnimationFrame(step);
+  }
+
+  if (!reduceMotion && countEls.length) {
+    if ('IntersectionObserver' in window) {
+      var countIo = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            countIo.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      countEls.forEach(function(el){ countIo.observe(el); });
+    } else {
+      countEls.forEach(function(el){
+        el.textContent = formatCount(parseInt(el.getAttribute('data-target'), 10)) + (el.getAttribute('data-suffix') || '');
+      });
+    }
+  }
+
+  var progressBar = document.getElementById('scrollProgressBar');
+  if (progressBar) {
+    var updateProgress = function(){
+      var doc = document.documentElement;
+      var scrollTop = window.scrollY || doc.scrollTop;
+      var height = doc.scrollHeight - doc.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    };
+    var progressTicking = false;
+    window.addEventListener('scroll', function(){
+      if (!progressTicking) {
+        requestAnimationFrame(function(){ updateProgress(); progressTicking = false; });
+        progressTicking = true;
+      }
+    });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  }
+
+  /* Moments strip — rounded-card autoplay carousel */
+  var momentsTrack = document.getElementById('momentsTrack');
+  if (momentsTrack) {
+    var mtCards = momentsTrack.querySelectorAll('.mc-card');
+    var mtDotsWrap = document.getElementById('momentsDots');
+    var mtDots = [];
+    function mtCardStep(){
+      var first = mtCards[0];
+      var style = getComputedStyle(momentsTrack);
+      var gap = parseFloat(style.columnGap || style.gap) || 20;
+      return first.getBoundingClientRect().width + gap;
+    }
+    function mtCurrentIndex(){
+      var step = mtCardStep() || 1;
+      return Math.max(0, Math.min(mtCards.length - 1, Math.round(momentsTrack.scrollLeft / step)));
+    }
+    function mtScrollToSlide(i){
+      i = Math.max(0, Math.min(mtCards.length - 1, i));
+      momentsTrack.scrollTo({ left: i * mtCardStep(), behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+    mtCards.forEach(function(_, i){
+      var d = document.createElement('button');
+      d.className = 'mc-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+      d.addEventListener('click', function(){ mtScrollToSlide(i); });
+      mtDotsWrap.appendChild(d);
+      mtDots.push(d);
+    });
+    function mtUpdateDots(){
+      var idx = mtCurrentIndex();
+      mtDots.forEach(function(d, i){ d.classList.toggle('active', i === idx); });
+    }
+    var mtScrollTicking = false;
+    momentsTrack.addEventListener('scroll', function(){
+      if (!mtScrollTicking) {
+        requestAnimationFrame(function(){ mtUpdateDots(); mtScrollTicking = false; });
+        mtScrollTicking = true;
+      }
+    });
+    var momentsPrev = document.getElementById('momentsPrev');
+    var momentsNext = document.getElementById('momentsNext');
+    if (momentsPrev) momentsPrev.addEventListener('click', function(){ mtScrollToSlide(mtCurrentIndex() - 1); });
+    if (momentsNext) momentsNext.addEventListener('click', function(){ mtScrollToSlide(mtCurrentIndex() + 1); });
+    window.addEventListener('resize', function(){ mtScrollToSlide(mtCurrentIndex()); });
+
+    if (!reduceMotion && mtCards.length > 1) {
+      var momentsTimer = null;
+      function startMomentsAutoplay(){
+        stopMomentsAutoplay();
+        momentsTimer = setInterval(function(){
+          var next = (mtCurrentIndex() + 1) % mtCards.length;
+          mtScrollToSlide(next);
+        }, 4200);
+      }
+      function stopMomentsAutoplay(){ if (momentsTimer) { clearInterval(momentsTimer); momentsTimer = null; } }
+      startMomentsAutoplay();
+      momentsTrack.addEventListener('mouseenter', stopMomentsAutoplay);
+      momentsTrack.addEventListener('mouseleave', startMomentsAutoplay);
+      momentsTrack.addEventListener('focusin', stopMomentsAutoplay);
+      momentsTrack.addEventListener('focusout', startMomentsAutoplay);
+    }
+  }
+})();
+</script>
+
+<script src="/assets/gpe.js" defer></script>
+</body>
+</html>

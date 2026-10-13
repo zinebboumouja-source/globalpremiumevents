@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services — Global Premium Events</title>
+<meta name="description" content="Trade show participation, missions & delegations, and corporate event production — three services delivered by one accountable team across Africa, Europe and the Gulf.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Premium Events">
+<meta property="og:title" content="Our Services — Global Premium Events">
+<meta property="og:description" content="Trade show participation, missions & delegations, and corporate event production — three services delivered by one accountable team across Africa, Europe and the Gulf.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Services — Global Premium Events">
+<meta name="twitter:description" content="Trade show participation, missions & delegations, and corporate event production — three services delivered by one accountable team across Africa, Europe and the Gulf.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Event management and international business services",
+  "name": "Global Premium Events Services",
+  "description": "Trade show participation, missions & delegations, and corporate event production delivered end-to-end by one in-house team.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Global Premium Events",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rabat",
+      "addressCountry": "MA"
+    }
+  },
+  "areaServed": [
+    "Africa",
+    "Europe",
+    "Gulf Cooperation Council",
+    "United States"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #16294F;
+    --blue: #2C4E86;
+    --blue-mid: #45659B;
+    --ink: #1B1E24;
+    --ink-dim: #5B6270;
+    --line: #DDE3EC;
+    --panel: #F4F6FA;
+    --bg: #FFFFFF;
+    --gold: #A9832E;
+    --gold-light: #C3A86D;
+    --gold-dark: #8E6E27;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', Arial, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{ font-family:'Source Serif 4', Georgia, serif; }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  header.top{ border-bottom:1px solid var(--line); }
+  .top-inner{
+    max-width:1080px;
+    margin:0 auto;
+    padding:22px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:17px;
+    color:var(--navy);
+  }
+  .brand span{ color:var(--gold); }
+  .back-link{
+    font-size:13px;
+    color:var(--ink-dim);
+    text-decoration:none;
+    border:1px solid var(--line);
+    padding:8px 14px;
+    border-radius:2px;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .back-link:hover{ border-color:var(--blue-mid); color:var(--navy); }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:80px 0 70px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-watermark{
+    position:absolute;
+    top:-64px;
+    right:-18px;
+    font-family:'Source Serif 4', serif;
+    font-size:300px;
+    font-weight:600;
+    color:var(--gold);
+    opacity:0.06;
+    line-height:1;
+    pointer-events:none;
+    user-select:none;
+    z-index:0;
+  }
+  .hero-grid{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:24px;
+    align-items:center;
+  }
+  .hero-kicker{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--blue);
+    font-size:13px;
+    margin-bottom:22px;
+    font-weight:500;
+  }
+  .hero-kicker .rule{ width:36px; height:1px; background:var(--blue-mid); }
+  h1.hero-title{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(34px, 4.4vw, 48px);
+    line-height:1.15;
+    font-weight:600;
+    margin:0 0 22px;
+    max-width:18ch;
+    color:var(--navy);
+  }
+  .hero-sub{
+    font-size:15.5px;
+    color:var(--ink-dim);
+    line-height:1.75;
+    margin:0;
+    max-width:64ch;
+  }
+
+  /* HERO GRAPHIC — three services converging into one */
+  .hero-graphic{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .hero-graphic svg{ width:100%; height:auto; max-width:420px; overflow:visible; }
+
+  /* ambient orbit rings — slow continuous drift */
+  .hg-orbit{
+    fill:none;
+    stroke:var(--line);
+    stroke-width:1;
+    stroke-dasharray:2 6;
+    transform-box:fill-box;
+    transform-origin:center;
+    animation:hg-spin 140s linear infinite;
+  }
+  .hg-orbit.rev{ animation-direction:reverse; animation-duration:110s; }
+
+  /* connecting paths — draw in on load, then sit at rest */
+  .hg-path{
+    fill:none;
+    stroke-linecap:round;
+    stroke-dasharray:100;
+    stroke-dashoffset:100;
+    opacity:0.72;
+    animation:hg-draw 1.4s cubic-bezier(.4,0,.2,1) forwards;
+    transition:stroke-width .3s ease, opacity .3s ease, filter .3s ease;
+  }
+
+  /* small pulses of light traveling along each path toward the hub */
+  .hg-flow{
+    fill:var(--gold);
+    opacity:0;
+    animation:hg-flow-dot 3.6s ease-in-out infinite;
+  }
+  @supports not (offset-path: path('M0,0')){
+    .hg-flow{ display:none; }
+  }
+
+  .hg-node-group{
+    transform-box:fill-box;
+    transform-origin:center;
+    transition:transform .35s ease;
+    opacity:0;
+    animation:hg-pop-in .6s cubic-bezier(.34,1.56,.64,1) forwards;
+  }
+  .hg-node-circle{
+    fill:#fff;
+    stroke-width:1.4;
+    transition:fill .3s ease, stroke .3s ease, filter .3s ease;
+  }
+  .hg-node-num{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    fill:var(--gold);
+    transition:fill .3s ease;
+  }
+  .hg-node-label{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    letter-spacing:0.08em;
+    fill:var(--ink-dim);
+    text-transform:uppercase;
+    transition:fill .3s ease;
+  }
+
+  .hg-link{ cursor:pointer; }
+  .hg-link:hover .hg-node-group{ transform:scale(1.14); }
+  .hg-link:hover .hg-node-circle{ fill:var(--navy); stroke:var(--navy); filter:drop-shadow(0 6px 14px rgba(22,41,79,0.35)); }
+  .hg-link:hover .hg-node-num{ fill:#fff; }
+  .hg-link:hover .hg-node-label{ fill:var(--navy); }
+  .hg-link:hover .hg-path{ stroke-width:2.6; opacity:1; filter:drop-shadow(0 0 6px rgba(169,131,46,0.45)); }
+  .hg-link:focus-visible{ outline:2px solid var(--gold); outline-offset:4px; border-radius:50%; }
+  .hg-link:focus-visible .hg-node-circle{ fill:var(--navy); stroke:var(--navy); }
+  .hg-link:focus-visible .hg-node-num{ fill:#fff; }
+  .hg-link:focus-visible .hg-node-label{ fill:var(--navy); }
+
+  .hg-hub-wrap{
+    transform-box:fill-box;
+    transform-origin:center;
+    animation:hg-breathe 3.2s ease-in-out infinite;
+  }
+  .hg-hub{ fill:var(--navy); transition:filter .3s ease; }
+  .hg-hub-ring{ fill:none; stroke:var(--gold); stroke-width:1.2; opacity:0.55; }
+  .hg-hub-dot{ fill:#fff; animation:hg-dot-pulse 2.4s ease-in-out infinite; }
+  .hg-hub-label{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    letter-spacing:0.08em;
+    fill:var(--navy);
+    text-transform:uppercase;
+  }
+
+  @keyframes hg-draw{ to{ stroke-dashoffset:0; } }
+  @keyframes hg-pop-in{
+    from{ opacity:0; transform:scale(0.6); }
+    to{ opacity:1; transform:scale(1); }
+  }
+  @keyframes hg-spin{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+  @keyframes hg-breathe{
+    0%, 100%{ transform:scale(1); }
+    50%{ transform:scale(1.05); }
+  }
+  @keyframes hg-dot-pulse{
+    0%, 100%{ opacity:1; transform:scale(1); }
+    50%{ opacity:0.5; transform:scale(1.4); }
+  }
+  @keyframes hg-flow-dot{
+    0%{ opacity:0; offset-distance:0%; }
+    12%{ opacity:1; }
+    85%{ opacity:1; }
+    100%{ opacity:0; offset-distance:100%; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hg-orbit, .hg-hub-wrap, .hg-hub-dot, .hg-flow{ animation:none; }
+    .hg-path{ animation:none; stroke-dashoffset:0; }
+    .hg-node-group{ animation:none; opacity:1; }
+  }
+  @media (max-width:860px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-graphic{ display:none; }
+    .hero-watermark{ font-size:200px; top:-30px; }
+  }
+
+  /* PILLARS */
+  .pillars{ padding:10px 0 20px; }
+  .pillar-row{
+    display:grid;
+    grid-template-columns:80px 1fr auto;
+    gap:36px;
+    align-items:center;
+    padding:44px 0;
+    border-top:1px solid var(--line);
+    position:relative;
+    text-decoration:none;
+    color:inherit;
+    transition:padding-left .3s ease;
+  }
+  .pillar-row:last-child{ border-bottom:1px solid var(--line); }
+  .pillar-row::before{
+    content:"";
+    position:absolute;
+    top:0; bottom:0;
+    left:-24px; right:-24px;
+    background:var(--panel);
+    opacity:0;
+    transition:opacity .3s ease;
+    z-index:-1;
+    border-radius:4px;
+  }
+  .pillar-row::after{
+    content:"";
+    position:absolute;
+    left:-24px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:var(--gold);
+    opacity:0;
+    transition:opacity .3s ease;
+  }
+  .pillar-row:hover{ padding-left:14px; }
+  .pillar-row:hover::before, .pillar-row:hover::after{ opacity:1; }
+  .pillar-row:hover .pillar-title{ color:var(--blue); }
+  .pillar-num{
+    font-family:'Source Serif 4', serif;
+    font-size:34px;
+    font-weight:600;
+    color:var(--gold);
+    line-height:1;
+  }
+  .pillar-body{ display:flex; flex-direction:column; gap:10px; }
+  .pillar-title{
+    font-family:'Source Serif 4', serif;
+    font-size:23px;
+    font-weight:600;
+    color:var(--navy);
+    margin:0;
+    transition:color .3s ease;
+  }
+  .pillar-desc{
+    font-size:15px;
+    color:var(--ink-dim);
+    line-height:1.65;
+    margin:0;
+    max-width:60ch;
+  }
+  .pillar-arrow{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:1.4px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--navy);
+    font-size:17px;
+    flex-shrink:0;
+    transition:background-color .3s ease, border-color .3s ease, color .3s ease, transform .3s ease;
+  }
+  .pillar-row:hover .pillar-arrow{
+    background:var(--navy);
+    border-color:var(--navy);
+    color:#fff;
+    transform:translateX(4px);
+  }
+  @media (max-width:700px){
+    .pillar-row{ grid-template-columns:56px 1fr; }
+    .pillar-arrow{ display:none; }
+  }
+
+  /* SECTION HEAD (shared) */
+  .sec-head{ max-width:720px; margin:0 auto 48px; padding:0 48px; text-align:center; }
+  .sec-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(26px,3vw,32px);
+    margin:0 0 12px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+  }
+  .sec-head p{
+    margin:0 auto;
+    color:var(--ink-dim);
+    font-size:14.5px;
+    line-height:1.65;
+  }
+  @media (max-width:640px){ .sec-head{ padding:0 24px; } }
+
+  /* PATRONAGE STRIP */
+  .patronage{ padding:56px 0 46px; border-top:1px solid var(--line); }
+  .patronage-row{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+  }
+  .patronage-badge{ display:flex; align-items:center; }
+  .patronage-badge img{ height:58px; width:auto; display:block; }
+  .patronage-sep{ width:1px; height:42px; background:var(--line); flex-shrink:0; }
+  .patronage-note{
+    margin:0;
+    font-size:13px;
+    color:var(--ink-dim);
+    line-height:1.6;
+    max-width:70ch;
+  }
+  @media (max-width:640px){
+    .patronage-row{ gap:24px; }
+    .patronage-sep{ display:none; }
+    .patronage-badge img{ height:44px; }
+  }
+
+  /* PARTNERS MARQUEE */
+  .partners{ padding:10px 0 20px; }
+  .marquee{
+    position:relative;
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 64px, #000 calc(100% - 64px), transparent 100%);
+    mask-image:linear-gradient(90deg, transparent 0, #000 64px, #000 calc(100% - 64px), transparent 100%);
+  }
+  .marquee-track{
+    display:flex;
+    align-items:center;
+    gap:52px;
+    width:max-content;
+    animation:marquee-scroll 110s linear infinite;
+    padding:8px 0 56px;
+  }
+  .marquee:hover .marquee-track{ animation-play-state:paused; }
+  .marquee-track img{
+    height:40px;
+    width:auto;
+    max-width:140px;
+    object-fit:contain;
+    opacity:0.72;
+    filter:grayscale(1);
+    transition:opacity .3s ease;
+    flex-shrink:0;
+  }
+  .marquee-track img:hover{ opacity:1; }
+  @keyframes marquee-scroll{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
+  @media (max-width:640px){
+    .marquee-track img{ height:30px; max-width:104px; }
+  }
+
+  /* FIELD GALLERY */
+  .field-gallery{ padding:70px 0 10px; border-top:1px solid var(--line); }
+  .field-strip{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:14px;
+    padding-bottom:60px;
+  }
+  .field-card{
+    aspect-ratio:4/3;
+    border:1px solid var(--line);
+    overflow:hidden;
+    position:relative;
+    display:block;
+    text-decoration:none;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  a.field-card::after{
+    content:"View Case Study";
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:9px 12px;
+    background:var(--navy);
+    color:#fff;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-align:center;
+    transform:translateY(100%);
+    transition:transform .3s ease;
+  }
+  a.field-card:hover::after{ transform:translateY(0); }
+  .field-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 16px 32px rgba(22,41,79,0.12);
+    border-color:var(--navy);
+  }
+  .field-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+  }
+  .field-card:hover img{ transform:scale(1.07); }
+  @media (max-width:900px){ .field-strip{ grid-template-columns:repeat(2, 1fr); } }
+  @media (max-width:520px){ .field-strip{ grid-template-columns:1fr; } }
+
+  /* AUDIENCE — interactive "who we work with" panel */
+  .audience{ padding:10px 0 60px; }
+  .audience-panel{
+    border:1px solid var(--line);
+    background:#fff;
+    display:grid;
+    grid-template-columns:300px 1fr;
+    min-height:280px;
+  }
+  .audience-tabs{
+    display:flex;
+    flex-direction:column;
+    border-right:1px solid var(--line);
+    background:var(--panel);
+  }
+  .audience-tab{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-align:left;
+    padding:22px 24px;
+    border:none;
+    border-bottom:1px solid var(--line);
+    background:transparent;
+    cursor:pointer;
+    font-family:inherit;
+    color:var(--ink-dim);
+    transition:background .25s ease, color .25s ease;
+  }
+  .audience-tab:last-child{ border-bottom:none; }
+  .audience-tab-num{
+    font-family:'Source Serif 4', serif;
+    font-size:18px;
+    font-weight:600;
+    color:var(--line);
+    transition:color .25s ease;
+    flex-shrink:0;
+  }
+  .audience-tab-label{ font-size:14px; font-weight:600; line-height:1.3; }
+  .audience-tab:hover{ background:#EDF0F6; color:var(--navy); }
+  .audience-tab.is-active{ background:#fff; color:var(--navy); box-shadow:inset 3px 0 0 var(--gold); }
+  .audience-tab.is-active .audience-tab-num{ color:var(--gold); }
+  .audience-panels{ padding:40px 44px; display:flex; align-items:center; }
+  .audience-content{ max-width:56ch; }
+  .audience-content h3{
+    font-family:'Source Serif 4', serif;
+    font-size:22px;
+    font-weight:600;
+    color:var(--navy);
+    margin:0 0 14px;
+    letter-spacing:-0.01em;
+  }
+  .audience-content p{ font-size:14.5px; color:var(--ink); line-height:1.65; margin:0 0 22px; }
+  .audience-stat{ display:flex; align-items:baseline; gap:12px; padding:16px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-bottom:22px; }
+  .audience-stat b{ font-family:'Source Serif 4', serif; font-size:28px; font-weight:700; color:var(--gold); flex-shrink:0; }
+  .audience-stat span{ font-size:12.5px; color:var(--ink-dim); line-height:1.4; }
+  .audience-cta{ font-size:13px; font-weight:600; color:var(--navy); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:2px; }
+  .audience-cta:hover{ color:var(--gold); }
+  @media (max-width:760px){
+    .audience-panel{ grid-template-columns:1fr; }
+    .audience-tabs{ flex-direction:row; overflow-x:auto; border-right:none; border-bottom:1px solid var(--line); }
+    .audience-tab{ border-bottom:none; border-right:1px solid var(--line); white-space:nowrap; }
+    .audience-tab.is-active{ box-shadow:inset 0 -3px 0 var(--gold); }
+    .audience-panels{ padding:28px 24px; }
+  }
+
+  /* CTA FOOTER */
+  footer.cta{ padding:70px 0 60px; }
+  .cta-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:24px;
+    border-top:1px solid var(--line);
+    padding-top:44px;
+  }
+  .cta-inner h3{
+    font-family:'Source Serif 4', serif;
+    font-size:25px;
+    margin:0;
+    font-weight:600;
+    color:var(--navy);
+    max-width:22ch;
+  }
+  .cta-btn{
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    padding:15px 26px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    transition:background-color .3s ease, transform .3s ease, box-shadow .3s ease;
+    text-decoration:none;
+    display:inline-block;
+  }
+  .cta-btn:hover{
+    background:var(--blue);
+    transform:translateY(-3px);
+    box-shadow:0 16px 32px rgba(22,41,79,0.25);
+  }
+
+  /* SITE FOOTER */
+  .site-footer{
+    background:var(--navy);
+    color:#C7D1E3;
+    padding:64px 0 0;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.95fr 1fr 1.35fr;
+    gap:32px;
+    padding-bottom:44px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-brand{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .footer-logo{
+    width:84px;
+    height:84px;
+    display:block;
+  }
+  .footer-brand p{
+    font-size:13px;
+    color:#9FACC6;
+    line-height:1.65;
+    max-width:30ch;
+    margin:0;
+  }
+  .footer-col-title{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 20px;
+  }
+  .footer-contact{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:13px;
+  }
+  .footer-contact li{
+    font-size:14px;
+    color:#E4E9F2;
+    line-height:1.6;
+    display:flex;
+    gap:12px;
+  }
+  .footer-contact li b{
+    color:#7F93B8;
+    font-weight:600;
+    flex-shrink:0;
+    width:14px;
+  }
+
+  .footer-cta-text{
+    font-size:13.5px;
+    color:#9FACC6;
+    line-height:1.65;
+    margin:0 0 14px;
+    max-width:26ch;
+  }
+  .footer-cta-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    color:#fff;
+    text-decoration:none;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:3px;
+    transition:color .3s ease, gap .3s ease;
+  }
+  .footer-cta-link:hover{ color:var(--gold-light); gap:12px; }
+
+  .footer-relocating{
+    margin:10px 0 0;
+    font-size:12px;
+    font-style:italic;
+    color:#8394B3;
+    line-height:1.5;
+  }
+  .footer-partners-list{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    color:#E4E9F2;
+    line-height:2;
+  }
+  .footer-partners-list .sep{
+    color:var(--gold);
+    margin:0 10px;
+  }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    padding:22px 0;
+    font-size:12px;
+    color:#7F93B8;
+  }
+  @media (max-width:760px){
+    .footer-bottom{ justify-content:flex-start; }
+  }
+  @media (max-width:900px){
+    .footer-grid{ grid-template-columns:1fr 1fr; gap:36px 40px; }
+  }
+  @media (max-width:560px){
+    .footer-grid{ grid-template-columns:1fr; gap:32px; }
+  }
+
+  /* ============ ACCESSIBILITY: skip link + focus-visible ============ */
+  .skip-link{
+    position:absolute; top:-48px; left:12px; z-index:9999;
+    background:var(--navy); color:#fff; padding:12px 20px; border-radius:4px;
+    font-family:'Inter', Arial, sans-serif; font-size:14px; font-weight:600; text-decoration:none;
+    transition:top .25s ease;
+  }
+  .skip-link:focus{ top:12px; }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  /* ============ SCROLL PROGRESS + REVEAL/GLOW (shared with Home/About) ============ */
+  .scroll-progress{ position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; background:transparent; pointer-events:none; }
+  .scroll-progress-bar{ height:100%; width:0%; background:linear-gradient(90deg, var(--gold), var(--navy)); transition:width .1s linear; }
+  @media (prefers-reduced-motion: reduce){ .scroll-progress-bar{ transition:none; } }
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .5s ease, box-shadow .35s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  .glow-card{ position:relative; overflow:hidden; }
+  .glow-card::before{
+    content:""; position:absolute; inset:0; opacity:0; transition:opacity .4s ease; pointer-events:none; z-index:0;
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(169,131,46,0.14), transparent 70%);
+  }
+  .glow-card:hover::before{ opacity:1; }
+  .glow-card > *{ position:relative; z-index:1; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .glow-card::before{ display:none; }
+  }
+
+  /* ============ GPE DIFFERENCE — modern 2026 redesign ============ */
+  .gpe-diff{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(160deg, var(--navy) 0%, #101d38 100%);
+    padding:96px 0;
+    margin-top:20px;
+  }
+  .gpe-diff::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(700px circle at 85% 0%, rgba(169,131,46,0.16), transparent 60%),
+      radial-gradient(600px circle at 5% 100%, rgba(44,78,134,0.35), transparent 60%);
+    pointer-events:none;
+  }
+  .gpe-diff-head{
+    position:relative; z-index:1;
+    max-width:640px; margin:0 auto 56px; padding:0 48px; text-align:center;
+  }
+  .gpe-diff-head .hero-kicker{ justify-content:center; color:var(--gold-light); }
+  .gpe-diff-head .hero-kicker .rule{ background:var(--gold-light); }
+  .gpe-diff-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(26px,3vw,34px);
+    font-weight:600;
+    margin:0 0 12px;
+    letter-spacing:-0.01em;
+    background:linear-gradient(100deg, #fff 0%, #E4C989 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .gpe-diff-head p{ font-size:14.5px; color:#B9C4DD; line-height:1.7; margin:0; }
+  .gpe-diff-grid{
+    position:relative; z-index:1;
+    max-width:1080px; margin:0 auto; padding:0 48px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+  .gpe-diff-card{
+    position:relative;
+    overflow:hidden;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:8px;
+    padding:28px 24px 24px;
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+    transition:transform .35s ease, border-color .35s ease, background-color .35s ease;
+  }
+  .gpe-diff-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(201,164,90,0.5);
+    background:rgba(255,255,255,0.08);
+  }
+  .gpe-diff-num{
+    position:absolute;
+    top:-6px; right:8px;
+    font-family:'Source Serif 4', serif;
+    font-size:64px;
+    font-weight:700;
+    color:rgba(255,255,255,0.06);
+    line-height:1;
+    pointer-events:none;
+  }
+  .gpe-diff-rule{
+    width:28px; height:2px;
+    background:var(--gold-light);
+    margin-bottom:16px;
+    transition:width .3s ease;
+  }
+  .gpe-diff-card:hover .gpe-diff-rule{ width:46px; }
+  .gpe-diff-label{
+    display:block;
+    font-family:'Source Serif 4', serif;
+    font-size:16.5px;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:8px;
+    position:relative; z-index:1;
+  }
+  .gpe-diff-card p{
+    font-size:13.5px;
+    color:#B9C4DD;
+    line-height:1.65;
+    margin:0;
+    position:relative; z-index:1;
+  }
+  @media (max-width:900px){
+    .gpe-diff-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:560px){
+    .gpe-diff-grid{ grid-template-columns:1fr; }
+  }
+</style>
+<link rel="canonical" href="https://globalpremiumevents.com/services/">
+<meta property="og:url" content="https://globalpremiumevents.com/services/">
+<meta property="og:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#16294F">
+<link rel="stylesheet" href="/assets/gpe.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<header class="gpe-nav" id="gpeNav">
+  <div class="gpe-nav-in">
+    <a class="gpe-nav-logo" href="/" aria-label="Global Premium Events — Home"><img src="/assets/logo.webp" alt="Global Premium Events" width="44" height="44"></a>
+    <button class="gpe-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="gpeNavLinks"><span></span><span></span><span></span></button>
+    <nav class="gpe-nav-links" id="gpeNavLinks" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/about-us/">About</a>
+      <div class="gpe-dd">
+        <button class="gpe-dd-toggle active" aria-expanded="false" aria-haspopup="true">Services <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="gpe-dd-menu"><a href="/services/missions-partnerships/"><b>Missions, Delegations &amp; Matchmaking</b><span>Official delegations, trade missions, B2B / G2G meetings</span></a><a href="/services/exhibitions-trade-shows/"><b>Trade Shows &amp; Exhibitions</b><span>Stand design, build and full participation management</span></a><a href="/services/event-production/"><b>Corporate Event Production</b><span>Launches, conferences, ceremonies and galas</span></a><a class="gpe-dd-all" href="/services/">View all services &rarr;</a></div>
+      </div>
+      <a href="/our-work/">Our Work</a>
+      <a href="/inclusive-events/" class="gpe-nav-incl">Inclusive Events</a>
+      <a class="gpe-nav-cta" href="/contact-us/">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <section class="hero">
+    <div class="hero-watermark" aria-hidden="true">3</div>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-kicker">
+          <span class="rule"></span>
+          <span>What We Do</span>
+        </div>
+        <h1 class="hero-title">Three services. One coordinated team.</h1>
+        <p class="hero-sub">
+          For 12 years, Global Premium Events has structured international
+          presence for companies and institutions — on the trade show floor, at
+          the negotiating table and on the stage. Every service is delivered
+          end-to-end, from first brief to final report, by the same in-house team.
+        </p>
+      </div>
+      <div class="hero-graphic" aria-hidden="true">
+        <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
+          <circle class="hg-orbit" cx="80" cy="190" r="150"/>
+          <circle class="hg-orbit rev" cx="80" cy="190" r="118"/>
+
+          <g class="hg-hub-wrap">
+            <circle class="hg-hub-ring" cx="80" cy="190" r="40"/>
+            <circle class="hg-hub" cx="80" cy="190" r="30"/>
+            <circle class="hg-hub-dot" cx="80" cy="190" r="4"/>
+          </g>
+          <text class="hg-hub-label" x="80" y="248" font-size="10.5" text-anchor="middle">One Team</text>
+
+          <a class="hg-link" href="/services/exhibitions-trade-shows/" tabindex="-1">
+            <path class="hg-path" pathLength="100" d="M370,70 C270,70 150,120 80,190" stroke="var(--blue-mid)" stroke-width="1.6" style="animation-delay:.05s"/>
+            <circle class="hg-flow" r="3.2" style="offset-path:path('M370,70 C270,70 150,120 80,190'); animation-delay:1.6s"/>
+            <g class="hg-node-group" style="animation-delay:1.1s">
+              <circle class="hg-node-circle" cx="370" cy="70" r="21" stroke="var(--gold)"/>
+              <text class="hg-node-num" x="370" y="75" font-size="15" text-anchor="middle">01</text>
+            </g>
+            <text class="hg-node-label" x="370" y="106" font-size="9.5" text-anchor="middle">Trade Shows</text>
+          </a>
+
+          <a class="hg-link" href="/services/missions-partnerships/" tabindex="-1">
+            <path class="hg-path" pathLength="100" d="M370,190 C280,178 150,178 80,190" stroke="var(--gold)" stroke-width="1.6" style="animation-delay:.2s"/>
+            <circle class="hg-flow" r="3.2" style="offset-path:path('M370,190 C280,178 150,178 80,190'); animation-delay:2.3s; animation-duration:3.1s"/>
+            <g class="hg-node-group" style="animation-delay:1.25s">
+              <circle class="hg-node-circle" cx="370" cy="190" r="21" stroke="var(--gold)"/>
+              <text class="hg-node-num" x="370" y="195" font-size="15" text-anchor="middle">02</text>
+            </g>
+            <text class="hg-node-label" x="370" y="226" font-size="9.5" text-anchor="middle">Missions</text>
+          </a>
+
+          <a class="hg-link" href="/services/event-production/" tabindex="-1">
+            <path class="hg-path" pathLength="100" d="M370,310 C270,310 150,260 80,190" stroke="var(--navy)" stroke-width="1.6" style="animation-delay:.35s; opacity:0.6"/>
+            <circle class="hg-flow" r="3.2" style="offset-path:path('M370,310 C270,310 150,260 80,190'); animation-delay:3s; animation-duration:4s"/>
+            <g class="hg-node-group" style="animation-delay:1.4s">
+              <circle class="hg-node-circle" cx="370" cy="310" r="21" stroke="var(--gold)"/>
+              <text class="hg-node-num" x="370" y="315" font-size="15" text-anchor="middle">03</text>
+            </g>
+            <text class="hg-node-label" x="370" y="346" font-size="9.5" text-anchor="middle">Corporate</text>
+          </a>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="pillars">
+
+    <a class="pillar-row reveal" href="/services/missions-partnerships/" id="missions">
+      <span class="pillar-num">01</span>
+      <div class="pillar-body">
+        <h2 class="pillar-title">Missions, Delegations &amp; Business Matchmaking</h2>
+        <p class="pillar-desc">Official delegations, trade missions and B2B / G2G / G2B matchmaking — structuring the two-way flow of business between Africa and international markets.</p>
+      </div>
+      <span class="pillar-arrow">→</span>
+    </a>
+
+    <a class="pillar-row reveal" href="/services/exhibitions-trade-shows/" id="trade-shows">
+      <span class="pillar-num">02</span>
+      <div class="pillar-body">
+        <h2 class="pillar-title">Trade Shows &amp; Exhibitions</h2>
+        <p class="pillar-desc">From booking your space to the final teardown — design, fabrication, installation and communication for your trade show participation, across France, Morocco, the GCC and the United States.</p>
+      </div>
+      <span class="pillar-arrow">→</span>
+    </a>
+
+    <a class="pillar-row reveal" href="/services/event-production/" id="corporate-events">
+      <span class="pillar-num">03</span>
+      <div class="pillar-body">
+        <h2 class="pillar-title">Corporate Event Production</h2>
+        <p class="pillar-desc">Product launches, press conferences, seminars and ceremonies — scenography, technical production, staffing and catering, produced from brief to debrief.</p>
+      </div>
+      <span class="pillar-arrow">→</span>
+    </a>
+
+  </section>
+
+
+
+
+  <section class="gpe-band gpe-band-light">
+    <div class="gpe-band-inner">
+      <div>
+        <div class="gpe-band-kicker"><span class="rule"></span><span>Our Work</span></div>
+        <h2>See these services in action &mdash; from Washington, D.C. to Sharjah and Ankara.</h2>
+      </div>
+      <a class="btn-gold" href="/our-work/">Explore Our Work &rarr;</a>
+    </div>
+  </section>
+
+  <section class="audience">
+    <div class="sec-head reveal">
+      <h2>Built for the People Who Set the Agenda</h2>
+      <p>Governments, investors and global brands each need something different from a trade show presence. Select who you are.</p>
+    </div>
+    <div class="audience-panel reveal glow-card">
+      <div class="audience-tabs" role="tablist" aria-label="Who we work with">
+        <button class="audience-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="audience-gov" id="tab-gov" data-target="audience-gov">
+          <span class="audience-tab-num">01</span>
+          <span class="audience-tab-label">Governments &amp; Public Institutions</span>
+        </button>
+        <button class="audience-tab" type="button" role="tab" aria-selected="false" aria-controls="audience-inv" id="tab-inv" data-target="audience-inv">
+          <span class="audience-tab-num">02</span>
+          <span class="audience-tab-label">Investors &amp; Trade Delegations</span>
+        </button>
+        <button class="audience-tab" type="button" role="tab" aria-selected="false" aria-controls="audience-corp" id="tab-corp" data-target="audience-corp">
+          <span class="audience-tab-num">03</span>
+          <span class="audience-tab-label">Corporates &amp; Exhibiting Brands</span>
+        </button>
+      </div>
+      <div class="audience-panels">
+        <div class="audience-content is-active" id="audience-gov" role="tabpanel" aria-labelledby="tab-gov">
+          <h3>A single point of protocol and accountability.</h3>
+          <p>Ministries, trade promotion bodies and public institutions trust GPE to manage delegations, pavilions and bilateral meetings with full attention to protocol, sequencing and diplomatic sensitivity &mdash; one accountable team, from first brief to final report.</p>
+          <div class="audience-stat"><b>12+</b><span>years coordinating official delegations across Africa, Europe, the Gulf and the United States</span></div>
+          <a class="audience-cta" href="/contact-us/">Discuss a Delegation or Pavilion &rarr;</a>
+        </div>
+        <div class="audience-content" id="audience-inv" role="tabpanel" aria-labelledby="tab-inv" hidden>
+          <h3>Direct access to the rooms where deals get made.</h3>
+          <p>From G2G matchmaking to curated investor meetings, GPE structures the two-way flow of capital and opportunity between Africa and global markets &mdash; reverse matchmaking included, bringing qualified investors in, not only African business out.</p>
+          <div class="audience-stat"><b>8,000+</b><span>participants and delegates across our projects, with 2,345 convened at our flagship summit alone</span></div>
+          <a class="audience-cta" href="/contact-us/">Explore Investment &amp; Matchmaking &rarr;</a>
+        </div>
+        <div class="audience-content" id="audience-corp" role="tabpanel" aria-labelledby="tab-corp" hidden>
+          <h3>Your brand, engineered for the show floor.</h3>
+          <p>In-house design, fabrication and technical production mean your stand is built, staffed and running exactly as briefed, with full technical capability under one roof &mdash; no subcontracting gaps between stages.</p>
+          <div class="audience-stat"><b>4</b><span>markets delivered end-to-end: France, Morocco, the GCC and the United States</span></div>
+          <a class="audience-cta" href="/contact-us/">Request a Stand Quote &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gpe-diff">
+    <div class="gpe-diff-head reveal">
+      <div class="hero-kicker"><span class="rule"></span><span>What Sets Us Apart</span></div>
+      <h2>The GPE Difference</h2>
+      <p>Six things that define the way we work, across every service line.</p>
+    </div>
+    <div class="gpe-diff-grid">
+      <div class="gpe-diff-card reveal"><span class="gpe-diff-num" aria-hidden="true">01</span><span class="gpe-diff-rule"></span><span class="gpe-diff-label">Africa-Centred</span><p>Built from Morocco, shaped by experience across African markets.</p></div>
+      <div class="gpe-diff-card reveal"><span class="gpe-diff-num" aria-hidden="true">02</span><span class="gpe-diff-rule"></span><span class="gpe-diff-label">Globally Connected</span><p>A network extending across 45+ countries internationally.</p></div>
+      <div class="gpe-diff-card reveal"><span class="gpe-diff-num" aria-hidden="true">03</span><span class="gpe-diff-rule"></span><span class="gpe-diff-label">Two-Way</span><p>Outbound and inbound connectivity within one coordinated model.</p></div>
+      <div class="gpe-diff-card reveal"><span class="gpe-diff-num" aria-hidden="true">04</span><span class="gpe-diff-rule"></span><span class="gpe-diff-label">Accountable</span><p>One team, from first brief through final delivery.</p></div>
+      <div class="gpe-diff-card reveal"><span class="gpe-diff-num" aria-hidden="true">05</span><span class="gpe-diff-rule"></span><span class="gpe-diff-label">Institutionally Experienced</span><p>Across business, government and international organizations.</p></div>
+      <div class="gpe-diff-card reveal"><span class="gpe-diff-num" aria-hidden="true">06</span><span class="gpe-diff-rule"></span><span class="gpe-diff-label">Purpose-Driven</span><p>Events that create value beyond the immediate programme.</p></div>
+    </div>
+  </section>
+
+  <footer class="cta">
+    <div class="cta-inner reveal">
+      <h3>Not sure which service fits your project?</h3>
+      <a class="cta-btn" href="mailto:info@globalpremiumevents.com">Talk to our team</a>
+    </div>
+  </footer>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img loading="lazy" class="footer-logo" src="/assets/logo.webp" alt="Global Premium Events">
+        <p>Structuring international missions, delegations and business matchmaking between Africa and global markets.</p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Headquarters</div>
+        <ul class="footer-contact">
+          <li><b>T</b> +212 653512995</li>
+          <li><b>E</b> info@globalpremiumevents.com</li>
+          <li><b>A</b> Rabat, Morocco</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="gpe-foot-links">
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/our-work/">Our Work</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/inclusive-events/">Inclusive Events</a></li>
+          <li><a href="/partner-with-us/">Partner With Us</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Global Presence</div>
+        <div class="footer-partners-list">AFRICA <span class="sep">&bull;</span> G.C.C <span class="sep">&bull;</span> EUROPE <span class="sep">&bull;</span> U.S.A</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Global Premium Events. All rights reserved.</span><span class="gpe-legal-links"><a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/privacy-policy/#legal-notice">Legal Notice</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion) {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  if (!reduceMotion) {
+    var glowEls = document.querySelectorAll('.glow-card');
+    glowEls.forEach(function(el){
+      el.addEventListener('mousemove', function(e){
+        var rect = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+      });
+    });
+  }
+
+  var progressBar = document.getElementById('scrollProgressBar');
+  if (progressBar) {
+    var updateProgress = function(){
+      var doc = document.documentElement;
+      var scrollTop = window.scrollY || doc.scrollTop;
+      var height = doc.scrollHeight - doc.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    };
+    var progressTicking = false;
+    window.addEventListener('scroll', function(){
+      if (!progressTicking) {
+        requestAnimationFrame(function(){ updateProgress(); progressTicking = false; });
+        progressTicking = true;
+      }
+    });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  }
+})();
+</script>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.audience-tab');
+  var panels = document.querySelectorAll('.audience-content');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('is-active'); t.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('is-active'); p.setAttribute('hidden',''); });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected','true');
+      var target = document.getElementById(tab.getAttribute('data-target'));
+      if (target) { target.classList.add('is-active'); target.removeAttribute('hidden'); }
+    });
+  });
+})();
+</script>
+<script src="/assets/gpe.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner With Us &mdash; Global Premium Events</title>
+<meta name="description" content="Sponsorship and partnership opportunities with Global Premium Events: high-visibility placement and direct access to government delegates, ministries and investment agencies.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Premium Events">
+<meta property="og:title" content="Partner With Us &mdash; Global Premium Events">
+<meta property="og:description" content="Sponsorship and partnership opportunities with Global Premium Events: high-visibility placement and direct access to government delegates, ministries and investment agencies.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Partner With Us &mdash; Global Premium Events">
+<meta name="twitter:description" content="Sponsorship and partnership opportunities with Global Premium Events: high-visibility placement and direct access to government delegates, ministries and investment agencies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #16294F;
+    --blue: #2C4E86;
+    --blue-mid: #45659B;
+    --ink: #1B1E24;
+    --ink-dim: #5B6270;
+    --line: #DDE3EC;
+    --panel: #F4F6FA;
+    --bg: #FFFFFF;
+    --gold: #A9832E;
+    --gold-light: #C3A86D;
+    --gold-dark: #8E6E27;
+    --crimson: #990000;
+    --crimson-light: #D98A8A;
+    --crimson-dark: #7A0000;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', Arial, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{ font-family:'Source Serif 4', Georgia, serif; }
+
+  .wrap{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 48px;
+  }
+  .wrap-inner{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 48px;
+    box-sizing:border-box;
+  }
+
+  /* HERO */
+  .hero-kicker{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--blue);
+    font-size:13px;
+    margin-bottom:22px;
+    font-weight:500;
+  }
+  .hero-kicker .rule{ width:36px; height:1px; background:var(--blue-mid); }
+  h1.hero-title{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(34px, 4.4vw, 48px);
+    line-height:1.15;
+    font-weight:600;
+    margin:0 0 22px;
+    max-width:18ch;
+    color:var(--navy);
+  }
+  .hero-sub{
+    font-size:15.5px;
+    color:var(--ink-dim);
+    line-height:1.75;
+    margin:0;
+    max-width:64ch;
+  }
+  /* PILLARS — bold card grid */
+  .pillars{ padding:0 0 96px; background:var(--panel); }
+  .pillars-grid{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 48px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  .pillar-row{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:16px;
+    padding:44px 34px 38px;
+    background:#fff;
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .pillar-row::before{
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0;
+    height:4px;
+    background:var(--gold);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .4s ease;
+  }
+  .pillar-row:hover{
+    transform:translateY(-8px);
+    box-shadow:0 26px 50px rgba(22,41,79,0.16);
+  }
+  .pillar-row:hover::before{ transform:scaleX(1); }
+  .pillar-row:hover .pillar-title{ color:var(--blue); }
+  .pillar-top{ display:flex; align-items:center; gap:16px; }
+  .pillar-icon{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    box-shadow:0 10px 20px rgba(0,0,0,0.18);
+    transition:transform .4s cubic-bezier(.34,1.56,.64,1), box-shadow .4s ease;
+  }
+  .pillar-icon svg{
+    width:24px;
+    height:24px;
+    stroke:#fff;
+    fill:none;
+    stroke-width:1.7;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    display:block;
+  }
+  .pillar-icon-gold{ background:linear-gradient(135deg, var(--gold-light), var(--gold-dark)); }
+  .pillar-icon-navy{ background:linear-gradient(135deg, var(--blue-mid), var(--navy)); }
+  .pillar-row:hover .pillar-icon{ transform:scale(1.1) rotate(-6deg); box-shadow:0 14px 26px rgba(0,0,0,0.26); }
+  .pillar-num{
+    font-family:'Source Serif 4', serif;
+    font-size:34px;
+    font-weight:600;
+    color:var(--gold);
+    line-height:1;
+  }
+  .pillar-body{ display:flex; flex-direction:column; gap:10px; }
+  .pillar-title{
+    font-family:'Source Serif 4', serif;
+    font-size:21px;
+    font-weight:600;
+    color:var(--navy);
+    margin:0;
+    transition:color .3s ease;
+  }
+  .pillar-desc{
+    font-size:14px;
+    color:var(--ink-dim);
+    line-height:1.65;
+    margin:0;
+  }
+  .pillar-arrow{
+    margin-top:auto;
+    align-self:flex-end;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:1.4px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--navy);
+    font-size:17px;
+    flex-shrink:0;
+    transition:background-color .3s ease, border-color .3s ease, color .3s ease, transform .3s ease;
+  }
+  .pillar-row:hover .pillar-arrow{
+    background:var(--navy);
+    border-color:var(--navy);
+    color:#fff;
+    transform:translateX(4px);
+  }
+  @media (max-width:860px){
+    .pillars-grid{ grid-template-columns:1fr; }
+  }
+
+  /* SECTION HEAD (shared) */
+  .sec-head{ max-width:720px; margin:0 auto 48px; padding:0 48px; text-align:center; }
+  .sec-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(26px,3vw,32px);
+    margin:0 0 12px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+  }
+  .sec-head p{
+    margin:0 auto;
+    color:var(--ink-dim);
+    font-size:15px;
+    line-height:1.65;
+  }
+
+  /* PATRONAGE STRIP */
+  .patronage{ padding:44px 0 60px; border-top:none; background:var(--panel); }
+  .patronage-row{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+  }
+  .patronage-badge{ display:flex; align-items:center; }
+  .patronage-badge img{ height:58px; width:auto; display:block; }
+  .patronage-sep{ width:1px; height:42px; background:var(--line); flex-shrink:0; }
+  .patronage-note{
+    margin:0;
+    font-size:13px;
+    color:var(--ink-dim);
+    line-height:1.6;
+    max-width:70ch;
+  }
+  @media (max-width:640px){
+    .patronage-row{ gap:24px; }
+    .patronage-sep{ display:none; }
+    .patronage-badge img{ height:44px; }
+  }
+
+  /* PARTNERS MARQUEE */
+  .partners{ padding:90px 0 30px; background:#fff; }
+  .marquee{
+    position:relative;
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 64px, #000 calc(100% - 64px), transparent 100%);
+    mask-image:linear-gradient(90deg, transparent 0, #000 64px, #000 calc(100% - 64px), transparent 100%);
+  }
+  .marquee-track{
+    display:flex;
+    align-items:center;
+    gap:52px;
+    width:max-content;
+    animation:marquee-scroll 110s linear infinite;
+    padding:8px 0 56px;
+  }
+  .marquee:hover .marquee-track{ animation-play-state:paused; }
+  .marquee-track img{
+    height:40px;
+    width:auto;
+    max-width:140px;
+    object-fit:contain;
+    opacity:0.72;
+    filter:grayscale(1);
+    transition:opacity .3s ease;
+    flex-shrink:0;
+  }
+  .marquee-track img:hover{ opacity:1; }
+  @keyframes marquee-scroll{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
+  @media (max-width:640px){
+    .marquee-track img{ height:30px; max-width:104px; }
+  }
+
+  /* WORK GLIMPSE — photo grid + case study, merged */
+  .work-glimpse{ padding:100px 0; background:#fff; border-top:1px solid var(--line); }
+  .sec-head.work-head{ margin-bottom:44px; }
+  .case-bento{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 48px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:200px 200px minmax(140px,auto) minmax(120px,auto);
+    gap:18px;
+  }
+  .bento-tile{ border-radius:4px; transition:transform .35s ease, box-shadow .35s ease; }
+  .bento-tile:hover{ transform:translateY(-4px); box-shadow:0 22px 44px rgba(22,41,79,0.14); }
+  .case-hero, .case-photo{
+    position:relative;
+    overflow:hidden;
+    background:var(--line);
+    display:block;
+    text-decoration:none;
+  }
+  .case-hero{ grid-column:1/3; grid-row:1/3; }
+  .case-photo-1{ grid-column:3/4; grid-row:1/2; }
+  .case-photo-2{ grid-column:4/5; grid-row:1/2; }
+  .case-photo-3{ grid-column:3/4; grid-row:2/3; }
+  .case-photo-4{ grid-column:4/5; grid-row:2/3; }
+  .case-hero img, .case-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+  }
+  .bento-tile:hover img{ transform:scale(1.06); }
+  a.case-photo::after{
+    content:"View Case Study";
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:9px 12px;
+    background:var(--navy);
+    color:#fff;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-align:center;
+    transform:translateY(100%);
+    transition:transform .3s ease;
+  }
+  a.case-photo:hover::after{ transform:translateY(0); }
+  .case-info{
+    grid-column:1/3;
+    grid-row:3/5;
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--gold);
+    box-shadow:0 12px 32px rgba(22,41,79,0.06);
+    padding:44px clamp(28px,4vw,48px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .case-stat{
+    position:relative;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid var(--line);
+    box-shadow:0 12px 28px rgba(22,41,79,0.06);
+    padding:24px 24px 22px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:4px;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .case-stat::before{
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0;
+    height:3px;
+    background:linear-gradient(90deg, var(--gold-light), var(--gold-dark));
+  }
+  .case-stat:hover{ transform:translateY(-4px); box-shadow:0 20px 38px rgba(22,41,79,0.14); }
+  .case-stat-lead{
+    grid-column:3/5;
+    grid-row:3/4;
+    background:var(--navy);
+    border-color:var(--navy);
+  }
+  .case-stat.case-stat-lead b{ color:#fff; font-size:34px; }
+  .case-stat.case-stat-lead span{ color:#C7D1E3; }
+  .case-stat-b{ grid-column:3/4; grid-row:4/5; }
+  .case-stat-c{ grid-column:4/5; grid-row:4/5; }
+  .case-stat-b b, .case-stat-c b{ font-size:26px; }
+  @media (max-width:900px){
+    .case-bento{ grid-template-columns:repeat(2,1fr); grid-template-rows:auto; }
+    .case-hero{ grid-column:1/3; grid-row:auto; height:320px; }
+    .case-photo-1, .case-photo-2, .case-photo-3, .case-photo-4{ grid-row:auto; height:200px; }
+    .case-photo-1, .case-photo-3{ grid-column:1/2; }
+    .case-photo-2, .case-photo-4{ grid-column:2/3; }
+    .case-info{ grid-column:1/3; grid-row:auto; }
+    .case-stat-lead{ grid-column:1/3; grid-row:auto; }
+    .case-stat-b, .case-stat-c{ grid-column:auto; grid-row:auto; }
+  }
+  @media (max-width:640px){
+    .work-glimpse{ padding:64px 0; }
+    .case-bento{ grid-template-columns:1fr; padding:0 24px; gap:14px; }
+    .case-hero, .case-photo-1, .case-photo-2, .case-photo-3, .case-photo-4,
+    .case-info, .case-stat-lead, .case-stat-b, .case-stat-c{
+      grid-column:1/2;
+      grid-row:auto;
+    }
+    .case-hero{ height:260px; }
+    .case-photo-1, .case-photo-2, .case-photo-3, .case-photo-4{ height:200px; }
+    .case-info{ padding:36px 24px; }
+  }
+  /* SITE FOOTER */
+  .site-footer{
+    background:var(--navy);
+    color:#C7D1E3;
+    padding:64px 0 0;
+    border-top:1px solid rgba(255,255,255,0.14);
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.95fr 1fr 1.35fr;
+    gap:32px;
+    padding-bottom:44px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-brand{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .footer-logo{
+    width:84px;
+    height:84px;
+    display:block;
+  }
+  .footer-brand p{
+    font-size:13px;
+    color:#9FACC6;
+    line-height:1.65;
+    max-width:30ch;
+    margin:0;
+  }
+  .footer-col-title{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    margin:0 0 20px;
+  }
+  .footer-address{
+    font-size:14px;
+    color:#E4E9F2;
+    line-height:1.65;
+    margin:0;
+    max-width:24ch;
+  }
+
+  .footer-contact{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:13px;
+  }
+  .footer-contact li{
+    font-size:14px;
+    color:#E4E9F2;
+    line-height:1.6;
+    display:flex;
+    gap:12px;
+  }
+  .footer-contact li b{
+    color:#7F93B8;
+    font-weight:600;
+    flex-shrink:0;
+    width:14px;
+  }
+
+  .footer-relocating{
+    margin:10px 0 0;
+    font-size:12px;
+    font-style:italic;
+    color:#8394B3;
+    line-height:1.5;
+  }
+  .footer-cta-text{
+    font-size:13.5px;
+    color:#9FACC6;
+    line-height:1.65;
+    margin:0 0 14px;
+    max-width:26ch;
+  }
+  .footer-cta-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    color:#fff;
+    text-decoration:none;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:3px;
+    transition:color .3s ease, gap .3s ease;
+  }
+  .footer-cta-link:hover{ color:var(--gold-light); gap:12px; }
+  .footer-partners-list{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    color:#E4E9F2;
+    line-height:2;
+  }
+  .footer-partners-list .sep{
+    color:var(--gold-light);
+    margin:0 10px;
+  }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    padding:22px 0;
+    font-size:12px;
+    color:#7F93B8;
+  }
+  @media (max-width:900px){
+    .footer-grid{ grid-template-columns:1fr 1fr; gap:36px 40px; }
+    .footer-brand{ grid-column:1/3; }
+  }
+  @media (max-width:560px){
+    .footer-grid{ grid-template-columns:1fr; gap:32px; }
+    .footer-brand{ grid-column:1/2; }
+    .footer-bottom{ justify-content:flex-start; }
+  }
+  /* HOME HERO — full-bleed cover photo */
+  .hero-cover{
+    position:relative;
+    min-height:clamp(480px, 82vh, 760px);
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+    border-bottom:none;
+  }
+  .hero-cover-bg{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center 32%;
+  }
+  .hero-cover-bg::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(12,22,45,0.58) 0%, rgba(16,29,55,0.55) 38%, rgba(9,16,33,0.97) 100%);
+  }
+  .hero-cover-inner{
+    position:relative;
+    z-index:1;
+    max-width:1240px;
+    margin:0 auto;
+    padding:80px 48px 84px;
+    width:100%;
+    box-sizing:border-box;
+  }
+  .hero-cover .hero-kicker{ color:#C7D1E3; }
+  .hero-cover .hero-kicker .rule{ background:var(--gold); }
+  .hero-cover h1.hero-title{
+    color:#fff;
+    max-width:20ch;
+    font-size:clamp(38px, 5.4vw, 66px);
+    letter-spacing:-0.01em;
+    line-height:1.08;
+  }
+  .hero-cover .hero-sub{ color:#C7D1E3; max-width:52ch; font-size:16px; }
+  .hero-cover .hero-stats{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.16);
+    border-radius:3px;
+    padding:26px 32px;
+    backdrop-filter:blur(6px);
+    row-gap:18px;
+    column-gap:32px;
+  }
+  .hero-cover .hero-stat b{ color:#fff; font-size:28px; }
+  .hero-cover .hero-stat span{ color:#9FACC6; }
+  .hero-cover .btn-secondary{ border-color:rgba(255,255,255,0.45); color:#fff; }
+  .hero-cover .btn-secondary:hover{ border-color:#fff; background:rgba(255,255,255,0.12); }
+  @media (max-width:760px){
+    .hero-cover{ min-height:clamp(420px, 78vh, 640px); }
+    .hero-cover-inner{ padding:56px 24px 50px; }
+    .hero-cover h1.hero-title{ max-width:16ch; }
+  }
+
+  .hero-stats{
+    display:flex;
+    gap:36px;
+    flex-wrap:wrap;
+    margin:34px 0 0;
+  }
+  .hero-stat b{
+    display:block;
+    font-family:'Source Serif 4', serif;
+    font-size:24px;
+    font-weight:600;
+    color:var(--navy);
+    line-height:1.2;
+  }
+  .hero-stat span{
+    display:block;
+    font-size:11px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    margin-top:4px;
+  }
+  .hero-ctas{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:36px;
+  }
+  .btn-primary{
+    background:var(--gold-dark);
+    color:#fff;
+    border:none;
+    padding:15px 26px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    border-radius:2px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:background-color .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .btn-primary::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-60%;
+    width:40%;
+    height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform:skewX(-20deg);
+    transition:left .6s ease;
+    pointer-events:none;
+  }
+  .btn-primary:hover{
+    background:#795E21;
+    transform:translateY(-3px);
+    box-shadow:0 16px 32px rgba(0,0,0,0.3);
+  }
+  .btn-primary:hover::after{ left:130%; }
+  @media (prefers-reduced-motion: reduce){
+    .btn-primary::after{ display:none; }
+  }
+  .btn-secondary{
+    border:1.4px solid var(--line);
+    color:var(--navy);
+    padding:14px 24px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    border-radius:2px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    transition:border-color .3s ease, background-color .3s ease, transform .3s ease;
+  }
+  .btn-secondary:hover{
+    border-color:var(--navy);
+    background:var(--panel);
+    transform:translateY(-3px);
+  }
+
+  /* ABOUT — asymmetrical bento grid */
+  .about{ padding:100px 0; background:var(--panel); border-top:none; }
+  .about-bento{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 48px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:minmax(240px,auto) minmax(240px,auto) auto;
+    gap:20px;
+  }
+  .bento-tile{
+    border-radius:4px;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .bento-story{
+    grid-column:1/3;
+    grid-row:1/3;
+    background:var(--navy);
+    color:#fff;
+    padding:48px 44px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    box-shadow:0 20px 44px rgba(22,41,79,0.2);
+  }
+  .bento-story .hero-kicker{ color:#C7D1E3; }
+  .bento-story .hero-kicker .rule{ background:var(--gold); }
+  .bento-story p{
+    font-size:15px;
+    color:#C7D1E3;
+    line-height:1.8;
+    margin:0 0 18px;
+  }
+  .bento-story p:last-child{ margin-bottom:0; }
+  .bento-story-stats{
+    display:flex;
+    gap:28px;
+    margin-top:28px;
+    padding-top:24px;
+    border-top:1px solid rgba(255,255,255,0.14);
+  }
+  .bento-story-stats div{ display:flex; flex-direction:column; gap:3px; }
+  .bento-story-stats b{ font-family:'Source Serif 4', serif; font-size:22px; font-weight:600; color:var(--gold-light); line-height:1; }
+  .bento-story-stats span{ font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#9FACC6; }
+  @media (max-width:560px){
+    .bento-story-stats{ gap:20px; flex-wrap:wrap; }
+  }
+  .bento-photo1, .bento-photo2{
+    position:relative;
+    background:var(--line);
+    overflow:hidden;
+  }
+  .bento-photo1{ grid-column:3/5; grid-row:1/2; }
+  .bento-photo2{ grid-column:4/5; grid-row:2/3; }
+  .bento-photo1 img, .bento-photo2 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+  }
+  .bento-tile:hover img{ transform:scale(1.06); }
+  .bento-photo1::after, .bento-photo2::after, .bento-stat::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(150deg, rgba(22,41,79,0.5) 0%, rgba(44,78,134,0.32) 45%, rgba(22,41,79,0.08) 100%);
+    pointer-events:none;
+    transition:opacity .4s ease;
+    z-index:1;
+  }
+  .bento-photo1:hover::after, .bento-photo2:hover::after, .bento-stat:hover::after{ opacity:0.45; }
+  .bento-stat{
+    grid-column:3/4;
+    grid-row:2/3;
+    position:relative;
+    overflow:hidden;
+    background:var(--line);
+  }
+  .bento-stat img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+  }
+  .bento-ceo{
+    grid-column:1/5;
+    grid-row:3/4;
+    background:#fff;
+    border:1px solid var(--line);
+    box-shadow:0 12px 32px rgba(22,41,79,0.08);
+    padding:36px 44px;
+    display:flex;
+    align-items:center;
+    gap:28px;
+    flex-wrap:wrap;
+  }
+  .bento-tile:hover{ transform:translateY(-4px); box-shadow:0 22px 48px rgba(22,41,79,0.16); }
+  @media (max-width:900px){
+    .about-bento{ grid-template-columns:repeat(2,1fr); grid-template-rows:auto; }
+    .bento-story{ grid-column:1/3; grid-row:auto; }
+    .bento-photo1{ grid-column:1/2; grid-row:auto; height:260px; }
+    .bento-stat{ grid-column:2/3; grid-row:auto; }
+    .bento-photo2{ grid-column:1/3; grid-row:auto; height:220px; }
+    .bento-ceo{ grid-column:1/3; grid-row:auto; }
+  }
+  @media (max-width:640px){
+    .about{ padding:64px 0; }
+    .about-bento{ grid-template-columns:1fr; padding:0 24px; gap:14px; }
+    .bento-story, .bento-photo1, .bento-stat, .bento-photo2, .bento-ceo{
+      grid-column:1/2;
+      grid-row:auto;
+    }
+    .bento-photo1, .bento-photo2{ height:220px; }
+    .bento-story{ padding:40px 28px; }
+    .bento-ceo{ padding:28px 24px; flex-direction:column; align-items:flex-start; }
+    .about-bento .about-leadership-text{ flex:none; min-width:0; width:100%; }
+    .about-cta{ margin-left:0 !important; margin-top:8px; }
+  }
+
+  .about-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-left:auto;
+    font-family:'Inter', sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.04em;
+    color:var(--navy);
+    text-decoration:none;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:3px;
+    transition:color .3s ease, gap .3s ease;
+  }
+  .about-cta:hover{ color:var(--gold-dark); gap:12px; }
+
+  /* AWARD STRIP */
+  .award-strip{
+    padding:74px 0;
+    border-top:none;
+    background:#fff;
+  }
+  .award-inner{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 48px;
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  .award-logo-wrap{
+    background:#fff;
+    border:1px solid var(--line);
+    box-shadow:0 20px 40px rgba(22,41,79,0.12);
+    padding:20px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:transform .4s ease, box-shadow .4s ease;
+  }
+  .award-logo-wrap:hover{
+    transform:translateY(-4px);
+    box-shadow:0 26px 50px rgba(22,41,79,0.18);
+  }
+  .award-logo{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  .award-quote{
+    font-family:'Source Serif 4', serif;
+    font-size:19px;
+    font-weight:500;
+    color:var(--navy);
+    line-height:1.55;
+    margin:0 0 10px;
+  }
+  .award-source{
+    font-size:12px;
+    color:var(--ink-dim);
+    letter-spacing:0.02em;
+  }
+  @media (max-width:760px){
+    .award-inner{ grid-template-columns:1fr; gap:18px; text-align:left; }
+  }
+
+  /* ABOUT — CEO leadership bento tile */
+  .cm-photo-round{
+    width:74px;
+    height:74px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid var(--gold);
+    box-shadow:0 10px 22px rgba(0,0,0,0.18);
+    flex-shrink:0;
+  }
+  .about-leadership-text{ display:flex; flex-direction:column; flex:1 1 320px; min-width:220px; }
+  .cm-name{
+    font-family:'Source Serif 4', serif;
+    font-size:15px;
+    font-weight:600;
+    color:var(--navy);
+  }
+  .cm-title{
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--gold-dark);
+    display:block;
+    margin:2px 0 8px;
+  }
+  .about-leadership-text p{
+    font-size:13px;
+    color:var(--ink-dim);
+    line-height:1.6;
+    margin:0;
+    max-width:52ch;
+  }
+
+  /* SERVICES SUMMARY intro */
+  .services-summary{ padding:86px 0 8px; border-top:none; background:var(--panel); }
+  .services-summary-foot{
+    padding:6px 0 48px;
+    background:var(--panel);
+    text-align:center;
+  }
+  .link-arrow{
+    color:var(--navy);
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:gap .3s ease;
+  }
+  .link-arrow span{ transition:transform .3s ease; }
+  .link-arrow:hover span{ transform:translateX(4px); }
+
+  /* INCLUSIVE EVENTS — feature teaser */
+  .inclusive-feature{
+    padding:100px 0;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(800px circle at 90% 10%, rgba(153,0,0,0.055), transparent 55%),
+      radial-gradient(600px circle at 5% 90%, rgba(153,0,0,0.04), transparent 55%),
+      var(--panel);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .if-iu-watermark{
+    position:absolute;
+    top:50%; right:4%;
+    width:340px; height:340px;
+    transform:translateY(-50%);
+    opacity:0.06;
+    pointer-events:none;
+    z-index:0;
+    filter:grayscale(1);
+  }
+  .if-iu-watermark img{ width:100%; height:100%; object-fit:contain; }
+  @media (max-width:900px){
+    .if-iu-watermark{ width:220px; height:220px; opacity:0.05; }
+  }
+  .inclusive-feature-inner{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 48px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    align-items:center;
+    position:relative;
+    z-index:1;
+  }
+  .inclusive-feature-photo{
+    position:relative;
+    overflow:hidden;
+    background:var(--line);
+    box-shadow:0 20px 44px rgba(22,41,79,0.14);
+    height:420px;
+  }
+  .inclusive-feature-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+  }
+  .inclusive-feature-photo:hover img{ transform:scale(1.05); }
+  .inclusive-feature-text .text-accent-red{
+    color:var(--crimson);
+    font-style:italic;
+  }
+  .inclusive-feature-text h2{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(26px,3vw,34px);
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+    margin:0 0 16px;
+  }
+  .inclusive-feature-text p{
+    font-size:15px;
+    color:var(--ink-dim);
+    line-height:1.75;
+    margin:0 0 24px;
+    max-width:52ch;
+  }
+  .inclusive-feature-caption{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:22px;
+    font-size:12.5px;
+    color:var(--ink-dim);
+  }
+  .inclusive-feature-caption .rule{ width:28px; height:1px; background:var(--line); flex-shrink:0; }
+  @media (max-width:900px){
+    .inclusive-feature-inner{ grid-template-columns:1fr; gap:32px; }
+    .inclusive-feature-photo{ height:280px; }
+  }
+  @media (max-width:640px){
+    .inclusive-feature{ padding:64px 0; }
+    .inclusive-feature-inner{ padding:0 24px; }
+  }
+
+  /* CASE STUDY — info & stat tiles */
+  .case-kicker{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--blue);
+    font-size:13px;
+    margin-bottom:18px;
+    font-weight:500;
+  }
+  .case-kicker .rule{ width:36px; height:1px; background:var(--blue-mid); }
+  .case-info h3{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(22px,2.6vw,28px);
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+    margin:0 0 14px;
+  }
+  .case-info p{
+    font-size:14.5px;
+    color:var(--ink-dim);
+    line-height:1.7;
+    margin:0 0 20px;
+    max-width:56ch;
+  }
+  .case-stat b{
+    display:block;
+    font-family:'Source Serif 4', serif;
+    font-size:22px;
+    color:var(--navy);
+    font-weight:600;
+  }
+  .case-stat span{
+    display:block;
+    font-size:10.5px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    margin-top:3px;
+  }
+
+  /* SPONSORS & PARTNERS */
+  .sponsors-section{
+    padding:96px 0;
+    background:var(--navy);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .sponsors-section::before{
+    content:"";
+    position:absolute;
+    top:-120px; right:-100px;
+    width:420px; height:420px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(169,131,46,0.18), transparent 70%);
+    pointer-events:none;
+  }
+  .sponsors-inner{ position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:0 48px; }
+  @media (max-width:560px){ .sponsors-inner{ padding:0 24px; } }
+  .sponsors-head{ max-width:660px; margin:0 0 52px; }
+  .sponsors-head .hero-kicker span:last-child{ color:var(--gold-light); }
+  .sponsors-head .hero-kicker .rule{ background:var(--gold-light); }
+  .sponsors-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(28px, 3.2vw, 38px);
+    font-weight:600;
+    line-height:1.2;
+    margin:18px 0 16px;
+    color:#fff;
+  }
+  .sponsors-head p{
+    font-size:15px;
+    line-height:1.75;
+    color:#C7D1E3;
+    margin:0;
+    max-width:62ch;
+  }
+  .sponsors-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+    margin-bottom:48px;
+  }
+  .sponsor-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:4px;
+    padding:30px 26px;
+    position:relative;
+  }
+  .sponsor-card-icon{
+    width:42px; height:42px;
+    border-radius:50%;
+    background:rgba(169,131,46,0.18);
+    border:1px solid rgba(169,131,46,0.4);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+  }
+  .sponsor-card-icon svg{ width:19px; height:19px; stroke:var(--gold-light); fill:none; stroke-width:1.7; }
+  .sponsor-card h3{
+    font-family:'Source Serif 4', serif;
+    font-size:17px;
+    font-weight:600;
+    color:#fff;
+    margin:0 0 10px;
+  }
+  .sponsor-card p{
+    font-size:13.5px;
+    line-height:1.65;
+    color:#C7D1E3;
+    margin:0;
+  }
+  .sponsors-proof{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px 36px;
+    padding:28px 0;
+    border-top:1px solid rgba(255,255,255,0.14);
+    border-bottom:1px solid rgba(255,255,255,0.14);
+    margin-bottom:40px;
+  }
+  .sponsors-proof-item{ display:flex; align-items:baseline; gap:10px; }
+  .sponsors-proof-item b{ font-family:'Source Serif 4', serif; font-size:26px; font-weight:600; color:var(--gold-light); }
+  .sponsors-proof-item span{ font-size:12.5px; color:#C7D1E3; max-width:22ch; line-height:1.4; }
+  .sponsors-cta{ display:flex; flex-wrap:wrap; align-items:center; gap:22px; }
+  .sponsors-cta .btn-gold{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--gold); color:var(--navy); font-weight:600; font-size:14.5px;
+    padding:15px 28px; text-decoration:none; border-radius:2px;
+    transition:background-color .3s ease, transform .3s ease;
+  }
+  .sponsors-cta .btn-gold:hover{ background:var(--gold-light); transform:translateY(-2px); }
+  .sponsors-cta-note{ font-size:13px; color:#9FACC6; }
+  @media (max-width:900px){
+    .sponsors-grid{ grid-template-columns:1fr; }
+    .sponsors-proof{ gap:20px 32px; }
+  }
+
+  /* CONTACT — asymmetrical split */
+  .contact{ padding:0; border-top:none; }
+  .contact-split{
+    display:grid;
+    grid-template-columns:2fr 3fr;
+    align-items:stretch;
+    min-height:600px;
+  }
+  .contact-text{
+    background:var(--navy);
+    color:#fff;
+    padding:96px clamp(32px,5vw,80px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .contact-text h2{ color:#fff !important; }
+  .contact-text .hero-kicker{ color:#C7D1E3; }
+  .contact-text .hero-kicker .rule{ background:var(--gold); }
+  .contact-text p{
+    font-size:15px;
+    color:#C7D1E3;
+    line-height:1.78;
+    margin:0 0 16px;
+  }
+  .contact-quicklinks{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:14px;
+    padding-top:26px;
+    border-top:1px solid rgba(255,255,255,0.18);
+  }
+  .contact-quicklinks div{ display:flex; align-items:baseline; gap:12px; }
+  .contact-quicklinks b{
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--gold-light);
+    flex-shrink:0;
+    width:16px;
+  }
+  .contact-quicklinks span{
+    font-size:13.5px;
+    color:#E4E9F2;
+    line-height:1.5;
+  }
+  .contact-card{
+    background:#fff;
+    color:var(--ink);
+    padding:80px clamp(32px,5vw,80px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .contact-card-title{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold-dark);
+    margin:0 0 22px;
+  }
+  .btn-gold{
+    background:var(--gold-dark);
+    color:#fff;
+    border:none;
+    padding:14px 24px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    border-radius:2px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    transition:background-color .3s ease, transform .3s ease;
+  }
+  .btn-gold::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-60%;
+    width:40%;
+    height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform:skewX(-20deg);
+    transition:left .6s ease;
+    pointer-events:none;
+  }
+  .btn-gold:hover{
+    background:#795E21;
+    transform:translateY(-3px);
+  }
+  .btn-gold:hover::after{ left:130%; }
+  @media (prefers-reduced-motion: reduce){
+    .btn-gold::after{ display:none; }
+  }
+  .contact-form{ display:grid; gap:16px; }
+  .form-row{ display:flex; flex-direction:column; gap:6px; }
+  .form-row label{
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--gold-dark);
+    font-weight:600;
+  }
+  .form-row input,
+  .form-row select,
+  .form-row textarea{
+    background:var(--panel);
+    border:1px solid var(--line);
+    color:var(--ink);
+    padding:12px 14px;
+    font-family:'Inter', sans-serif;
+    font-size:13.5px;
+    border-radius:2px;
+    outline:none;
+    transition:border-color .3s ease, background-color .3s ease;
+  }
+  .form-row textarea{ resize:vertical; min-height:96px; }
+  .form-row input::placeholder,
+  .form-row textarea::placeholder{ color:#9AA3B4; }
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus{
+    border-color:var(--gold);
+    background:#fff;
+  }
+  .form-row select{ color:var(--ink); }
+  .contact-form .btn-gold{
+    border:none;
+    cursor:pointer;
+    font-family:'Inter', sans-serif;
+    justify-content:center;
+    margin-top:4px;
+  }
+  .contact-form-note{
+    font-size:11.5px;
+    font-style:italic;
+    color:var(--ink-dim);
+    line-height:1.5;
+    margin:2px 0 0;
+  }
+  @media (max-width:860px){
+    .contact-split{ grid-template-columns:1fr; }
+  }
+
+  /* SCROLL PROGRESS BAR */
+  .scroll-progress{
+    position:fixed;
+    top:0; left:0;
+    width:100%;
+    height:3px;
+    z-index:200;
+    background:transparent;
+    pointer-events:none;
+  }
+  .scroll-progress-bar{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg, var(--gold), var(--navy));
+    transition:width .1s linear;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .scroll-progress-bar{ transition:none; }
+  }
+
+  /* MICRO-INTERACTIONS — scroll reveal + ambient cursor glow */
+  .reveal{
+    opacity:0;
+    transform:translateY(26px);
+    transition:opacity .7s ease, transform .5s ease, box-shadow .35s ease;
+  }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  .glow-card, .glow-card-dark{ position:relative; overflow:hidden; }
+  .glow-card::before, .glow-card-dark::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity .4s ease;
+    pointer-events:none;
+    z-index:0;
+  }
+  .glow-card::before{
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(169,131,46,0.14), transparent 70%);
+  }
+  .glow-card-dark::before{
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.10), transparent 70%);
+  }
+  .glow-card:hover::before, .glow-card-dark:hover::before{ opacity:1; }
+  .glow-card > *, .glow-card-dark > *{ position:relative; z-index:1; }
+  .about-bento > .reveal:nth-child(1){ transition-delay:0s; }
+  .about-bento > .reveal:nth-child(2){ transition-delay:.08s; }
+  .about-bento > .reveal:nth-child(3){ transition-delay:.16s; }
+  .about-bento > .reveal:nth-child(4){ transition-delay:.24s; }
+  .about-bento > .reveal:nth-child(5){ transition-delay:.32s; }
+  .inclusive-feature-inner > .reveal:nth-child(2){ transition-delay:.1s; }
+  .case-bento > .reveal:nth-child(1){ transition-delay:0s; }
+  .case-bento > .reveal:nth-child(2){ transition-delay:.06s; }
+  .case-bento > .reveal:nth-child(3){ transition-delay:.12s; }
+  .case-bento > .reveal:nth-child(4){ transition-delay:.18s; }
+  .case-bento > .reveal:nth-child(5){ transition-delay:.24s; }
+  .case-bento > .reveal:nth-child(6){ transition-delay:.3s; }
+  .case-bento > .reveal:nth-child(7){ transition-delay:.36s; }
+  .case-bento > .reveal:nth-child(8){ transition-delay:.42s; }
+  .pillars-grid > .reveal:nth-child(1){ transition-delay:0s; }
+  .pillars-grid > .reveal:nth-child(2){ transition-delay:.1s; }
+  .pillars-grid > .reveal:nth-child(3){ transition-delay:.2s; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .glow-card::before, .glow-card-dark::before{ display:none; }
+    .bento-tile, .award-logo-wrap, .pillar-row, .case-photo{ transition:none !important; }
+    .inclusive-feature-photo{ transition:none !important; }
+    .pillar-icon{ transition:none !important; }
+  }
+
+  /* ============ ACCESSIBILITY: skip link + focus-visible ============ */
+  .skip-link{
+    position:absolute; top:-48px; left:12px; z-index:9999;
+    background:var(--navy); color:#fff; padding:12px 20px; border-radius:4px;
+    font-family:'Inter', Arial, sans-serif; font-size:14px; font-weight:600; text-decoration:none;
+    transition:top .25s ease;
+  }
+  .skip-link:focus{ top:12px; }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+</style>
+<style id="gpe-form-css">
+.gpe-form-ok{text-align:center;padding:40px 16px;}
+.gpe-form-ok-icon{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:#A9832E;color:#fff;font-size:28px;line-height:56px;}
+.gpe-form-ok h3{font-family:'Source Serif 4',Georgia,serif;color:#16294F;font-size:22px;margin:0 0 8px;}
+.gpe-form-ok p{color:#5B6270;margin:0;font-size:15px;}
+.contact-form-note,.cf-note{display:none;}
+</style>
+<link rel="canonical" href="https://globalpremiumevents.com/partner-with-us/">
+<meta property="og:url" content="https://globalpremiumevents.com/partner-with-us/">
+<meta property="og:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#16294F">
+<style id="pw-css">
+.sponsors-section{padding-top:120px!important;}
+.sponsors-h1{font-family:'Source Serif 4',Georgia,serif;font-weight:700;color:#fff;font-size:clamp(30px,4.2vw,46px);line-height:1.18;margin:0 0 18px;max-width:22ch;}
+</style>
+<link rel="stylesheet" href="/assets/gpe.css">
+</head>
+<body class="gpe-dark-top">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<header class="gpe-nav" id="gpeNav">
+  <div class="gpe-nav-in">
+    <a class="gpe-nav-logo" href="/" aria-label="Global Premium Events — Home"><img src="/assets/logo.webp" alt="Global Premium Events" width="44" height="44"></a>
+    <button class="gpe-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="gpeNavLinks"><span></span><span></span><span></span></button>
+    <nav class="gpe-nav-links" id="gpeNavLinks" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/about-us/">About</a>
+      <div class="gpe-dd">
+        <button class="gpe-dd-toggle" aria-expanded="false" aria-haspopup="true">Services <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="gpe-dd-menu"><a href="/services/missions-partnerships/"><b>Missions, Delegations &amp; Matchmaking</b><span>Official delegations, trade missions, B2B / G2G meetings</span></a><a href="/services/exhibitions-trade-shows/"><b>Trade Shows &amp; Exhibitions</b><span>Stand design, build and full participation management</span></a><a href="/services/event-production/"><b>Corporate Event Production</b><span>Launches, conferences, ceremonies and galas</span></a><a class="gpe-dd-all" href="/services/">View all services &rarr;</a></div>
+      </div>
+      <a href="/our-work/">Our Work</a>
+      <a href="/inclusive-events/" class="gpe-nav-incl">Inclusive Events</a>
+      <a class="gpe-nav-cta" href="/contact-us/">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="sponsors-section" id="sponsors">
+    <div class="sponsors-inner">
+      <div class="sponsors-head reveal">
+        <div class="hero-kicker">
+          <span class="rule"></span>
+          <span>For Sponsors &amp; Partners</span>
+        </div>
+        <h1 class="sponsors-h1">Put your brand in front of the people shaping Africa's trade agenda.</h1>
+        <p>From a 2,345-delegate global summit at Washington, D.C.'s World Trade Center to the delegations and matchmaking sessions we run year-round, GPE events put sponsors directly in the room with ministers, investment agencies and the private-sector decision-makers who act on what they see.</p>
+      </div>
+
+      <div class="sponsors-grid">
+        <div class="sponsor-card reveal glow-card-dark">
+          <div class="sponsor-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.4 7.1L12 17.6l-5.4 3.4L8 13.9 3 9.3l6.4-.7L12 2z"/></svg></div>
+          <h3>High-visibility placement</h3>
+          <p>Our 2018 summit put sponsor branding on the NASDAQ Tower in Times Square and across the official programme — the kind of visibility a trade show booth alone can't buy.</p>
+        </div>
+        <div class="sponsor-card reveal glow-card-dark">
+          <div class="sponsor-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20c0-4 3.4-6.5 7.5-6.5S19.5 16 19.5 20"/></svg></div>
+          <h3>Access to real decision-makers</h3>
+          <p>Government delegates, ministries and investment agencies — not just attendees — through the same institutional network we use to build our missions and delegations.</p>
+        </div>
+        <div class="sponsor-card reveal glow-card-dark">
+          <div class="sponsor-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+          <h3>Sponsorship, tailored to the goal</h3>
+          <p>From exhibition space to headline summit sponsorship, packages are scoped around what you're trying to achieve — not a fixed, one-size tier sheet.</p>
+        </div>
+      </div>
+
+      <div class="sponsors-proof reveal">
+        <div class="sponsors-proof-item"><b>92</b><span>countries represented among delegates at our flagship summit</span></div>
+        <div class="sponsors-proof-item"><b>262</b><span>high-level government delegates in the room</span></div>
+        <div class="sponsors-proof-item"><b>150+</b><span>trade &amp; investment agencies and organizations engaged</span></div>
+      </div>
+
+      <div class="sponsors-cta reveal">
+        <a class="btn-gold" href="/contact-us/">Discuss Sponsorship &rarr;</a>
+        <span class="sponsors-cta-note">Or read how our 2018 summit came together — <a href="/case-study-trade-mission/" style="color:#fff; border-bottom:1px solid var(--gold-light);">the full case study &rarr;</a></span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="partners">
+    <div class="sec-head">
+      <h2>Trusted by Institutions Across Africa, the Gulf &amp; Beyond</h2>
+      <p>A selection of the institutions, chambers of commerce, financial partners and media we've worked alongside over 12 years of missions, trade shows and productions.</p>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track">
+      <img src="/assets/img/c953ba0ddc73.webp" alt="IFC — International Finance Corporation (World Bank Group)">
+      <img src="/assets/img/372d0bd91348.webp" alt="Banco Sol">
+      <img src="/assets/img/d296ed185e96.webp" alt="Qatar Fund for Development">
+      <img src="/assets/img/3ab7fa3e9804.webp" alt="Qatar Mining">
+      <img src="/assets/img/cac2b3f64d49.webp" alt="Ronald Reagan Building & International Trade Center">
+      <img src="/assets/img/b9e9fe843ce7.webp" alt="QDB — Qatar Development Bank">
+      <img src="/assets/img/bf7d1f841f5f.webp" alt="National Bank of Egypt">
+      <img src="/assets/img/0304ee791dff.webp" alt="Austrian Airlines / Lufthansa / SWISS">
+      <img src="/assets/img/05250746aaba.webp" alt="Brussels Airlines / Eurowings">
+      <img src="/assets/img/1f0715c7864c.webp" alt="QIA — Qatar Investment Authority">
+      <img src="/assets/img/e9491f8d7845.webp" alt="Barwa Bank">
+      <img src="/assets/img/3ac5e5123873.webp" alt="Arab Business Leaders">
+      <img src="/assets/img/42a5b33c993a.webp" alt="GTPA — Global Trade Professionals Alliance">
+      <img src="/assets/img/8a99eab86050.webp" alt="SFD — Saudi Fund for Development">
+      <img src="/assets/img/02f0f7b5a367.webp" alt="AVCA — African Private Equity and Venture Capital Association">
+      <img src="/assets/img/a7f340845b8f.webp" alt="Foster — Fostering Global Immigration Solutions">
+      <img src="/assets/img/0e4446812994.webp" alt="Qatar Airways">
+      <img src="/assets/img/698c926a85f0.webp" alt="African Agri Council">
+      <img src="/assets/img/2a756357b1ad.webp" alt="Pulsar Development">
+      <img src="/assets/img/08bc168b45eb.webp" alt="USBACC — U.S. Bilateral African Chamber of Commerce">
+      <img src="/assets/img/a7594e72f931.webp" alt="World Trade Center Washington, D.C.">
+      <img src="/assets/img/82d0efe00072.webp" alt="Asian-African Chamber of Commerce & Industry">
+      <img src="/assets/img/151f855255b0.webp" alt="Al Rayan Bank">
+      <img src="/assets/img/1d4a746ab110.webp" alt="African Trade Centre">
+      <img src="/assets/img/ec46e16b5a34.webp" alt="EEP — Energy and Environment Partnership">
+      <img src="/assets/img/6d61143c579e.webp" alt="Afrinection">
+      <img src="/assets/img/041886f23297.webp" alt="Global Innovation Exchange">
+      <img src="/assets/img/ccbd7a7cc0e1.webp" alt="Oxford Business Group">
+      <img src="/assets/img/45054864af2d.webp" alt="The Varanda Network">
+      <img src="/assets/img/0c4693201553.webp" alt="Air France / KLM">
+      <img src="/assets/img/00b3d95063d4.webp" alt="fDi Intelligence">
+      <img src="/assets/img/790a786a209f.webp" alt="NAPA — Nigerian American Professionals Association">
+      <img src="/assets/img/b3e3b484296a.webp" alt="Private Jet Services">
+      <img src="/assets/img/86f36aea5c3a.webp" alt="Leading Women of Africa">
+      <img src="/assets/img/f662ef06da78.webp" alt="Africa Business Radio">
+      <img src="/assets/img/dfa3e627f8aa.webp" alt="AP Group — Official Newswire">
+      <img src="/assets/img/6864183b2570.webp" alt="International Association of African NGOs">
+      <img src="/assets/img/2739a458449b.webp" alt="Africa Global Funds">
+      <img src="/assets/img/7303b1776b86.webp" alt="Asoko Insight">
+      <img src="/assets/img/bc2cb5bec7fd.webp" alt="African Business">
+      <img src="/assets/img/ebc07454a7b6.webp" alt="Zublia">
+      <img src="/assets/img/ec850b880297.webp" alt="International Trade Center">
+      <img src="/assets/img/be7032621066.webp" alt="AGEL — Alliance for Global Education and Leadership">
+      <img src="/assets/img/9239ed60f525.webp" alt="The Washington Diplomat">
+      <img src="/assets/img/c02dd60d51ec.webp" alt="BBOA News">
+      <img src="/assets/img/355100cc1ef6.webp" alt="AFO — Association of Family Offices in Asia">
+      <img src="/assets/img/bdbfa21f7f88.webp" alt="Think Africa">
+      <img src="/assets/img/abf9ddf7a0a8.webp" alt="Africans Building Africa">
+      <img src="/assets/img/f5593ec1b344.webp" alt="APB — Association of Private Bankers in Greater China">
+      <img src="/assets/img/89fc510e87b9.webp" alt="Export Québec">
+      <img src="/assets/img/d59327d781a8.webp" alt="PACCI — Pan African Chamber of Commerce and Industry">
+      <img src="/assets/img/eaba26352b12.webp" alt="Nigerian-American Chamber of Commerce">
+      <img src="/assets/img/8ce78a15dbc9.webp" alt="friexporter">
+      <img src="/assets/img/829424c5518c.webp" alt="Afreximbank">
+      <img src="/assets/img/b3f55099f4ee.webp" alt="ZITIC — Zambian International Trade & Investment Centre">
+      <img src="/assets/img/4eb9a9bf2740.webp" alt="The Investor — Beyond Investments Group">
+      <img src="/assets/img/36968077c2cf.webp" alt="The Africa Society — National Summit on Africa">
+      <img src="/assets/img/c66b348241ab.webp" alt="Ethiopian Airlines">
+      <img src="/assets/img/44698a855542.webp" alt="AGCe — Africa Global Chamber of Commerce">
+      <img src="/assets/img/809ae2781f46.webp" alt="TCMA">
+      <img src="/assets/img/392669b8d6c1.webp" alt="tekbos">
+      <img src="/assets/img/2152ff08030c.webp" alt="Dress Me Outlet">
+      <img src="/assets/img/17b2c5aaef7f.webp" alt="Capital Consulting">
+      <img src="/assets/img/72cde6444611.webp" alt="Financial Nigeria">
+      <img src="/assets/img/c54cfd2dc2df.webp" alt="Invest Africa">
+      <img src="/assets/img/35f5d7691dff.webp" alt="Lovoco">
+      <img src="/assets/img/c953ba0ddc73.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/372d0bd91348.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/d296ed185e96.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/3ab7fa3e9804.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/cac2b3f64d49.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/b9e9fe843ce7.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/bf7d1f841f5f.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/0304ee791dff.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/05250746aaba.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/1f0715c7864c.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/e9491f8d7845.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/3ac5e5123873.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/42a5b33c993a.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/8a99eab86050.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/02f0f7b5a367.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/a7f340845b8f.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/0e4446812994.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/698c926a85f0.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/2a756357b1ad.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/08bc168b45eb.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/a7594e72f931.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/82d0efe00072.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/151f855255b0.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/1d4a746ab110.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/ec46e16b5a34.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/6d61143c579e.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/041886f23297.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/ccbd7a7cc0e1.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/45054864af2d.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/0c4693201553.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/00b3d95063d4.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/790a786a209f.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/b3e3b484296a.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/86f36aea5c3a.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/f662ef06da78.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/dfa3e627f8aa.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/6864183b2570.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/2739a458449b.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/7303b1776b86.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/bc2cb5bec7fd.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/ebc07454a7b6.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/ec850b880297.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/be7032621066.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/9239ed60f525.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/c02dd60d51ec.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/355100cc1ef6.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/bdbfa21f7f88.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/abf9ddf7a0a8.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/f5593ec1b344.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/89fc510e87b9.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/d59327d781a8.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/eaba26352b12.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/8ce78a15dbc9.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/829424c5518c.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/b3f55099f4ee.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/4eb9a9bf2740.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/36968077c2cf.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/c66b348241ab.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/44698a855542.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/809ae2781f46.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/392669b8d6c1.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/2152ff08030c.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/17b2c5aaef7f.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/72cde6444611.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/c54cfd2dc2df.webp" alt="" aria-hidden="true">
+      <img src="/assets/img/35f5d7691dff.webp" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </section>
+
+  <section class="gpe-band gpe-band-light">
+    <div class="gpe-band-inner">
+      <div>
+        <div class="gpe-band-kicker"><span class="rule"></span><span>Proof of Delivery</span></div>
+        <h2>See how our 2018 summit put sponsors in front of 2,345 delegates.</h2>
+      </div>
+      <a class="btn-gold" href="/case-study-trade-mission/">Read the Case Study &rarr;</a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img loading="lazy" class="footer-logo" src="/assets/logo.webp" alt="Global Premium Events">
+        <p>Structuring international missions, delegations and business matchmaking between Africa and global markets.</p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Headquarters</div>
+        <ul class="footer-contact">
+          <li><b>T</b> +212 653512995</li>
+          <li><b>E</b> info@globalpremiumevents.com</li>
+          <li><b>A</b> Rabat, Morocco</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="gpe-foot-links">
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/our-work/">Our Work</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/inclusive-events/">Inclusive Events</a></li>
+          <li><a href="/partner-with-us/">Partner With Us</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Global Presence</div>
+        <div class="footer-partners-list">AFRICA <span class="sep">&bull;</span> G.C.C <span class="sep">&bull;</span> EUROPE <span class="sep">&bull;</span> U.S.A</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Global Premium Events. All rights reserved.</span><span class="gpe-legal-links"><a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/privacy-policy/#legal-notice">Legal Notice</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll-reveal: fade + slide elements into view as the page scrolls
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion) {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // Ambient radial glow that follows the cursor on hover-capable cards
+  if (!reduceMotion) {
+    var glowEls = document.querySelectorAll('.glow-card, .glow-card-dark');
+    glowEls.forEach(function(el){
+      el.addEventListener('mousemove', function(e){
+        var rect = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+      });
+    });
+  }
+
+  // Thin progress bar across the top that tracks how far down the page the reader is
+  var progressBar = document.getElementById('scrollProgressBar');
+  if (progressBar) {
+    var updateProgress = function(){
+      var doc = document.documentElement;
+      var scrollTop = window.scrollY || doc.scrollTop;
+      var height = doc.scrollHeight - doc.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    };
+    var progressTicking = false;
+    window.addEventListener('scroll', function(){
+      if (!progressTicking) {
+        requestAnimationFrame(function(){ updateProgress(); progressTicking = false; });
+        progressTicking = true;
+      }
+    });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  }
+})();
+</script>
+<script src="/assets/gpe.js" defer></script>
+</body>
+</html>

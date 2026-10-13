@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Global Premium Events</title>
+<meta name="description" content="Global Premium Events connects African companies, institutions, investors and strategic partners across international markets. Our mission, vision, leadership and impact.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Premium Events">
+<meta property="og:title" content="About Us — Global Premium Events">
+<meta property="og:description" content="Global Premium Events connects African companies, institutions, investors and strategic partners across international markets. Our mission, vision, leadership and impact.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Us — Global Premium Events">
+<meta name="twitter:description" content="Global Premium Events connects African companies, institutions, investors and strategic partners across international markets. Our mission, vision, leadership and impact.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Global Premium Events",
+  "description": "Global Premium Events connects African companies, institutions, investors and strategic partners across international markets.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Global Premium Events"
+  },
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Global Premium Events",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rabat",
+      "addressCountry": "MA"
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500;1,8..60,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #16294F;
+    --blue: #2C4E86;
+    --blue-mid: #45659B;
+    --ink: #1B1E24;
+    --ink-dim: #5B6270;
+    --line: #DDE3EC;
+    --panel: #F4F6FA;
+    --bg: #FFFFFF;
+    --gold: #A9832E;
+    --gold-light: #C3A86D;
+    --gold-dark: #8E6E27;
+    --crimson: #990000;
+    --crimson-light: #D98A8A;
+    --crimson-dark: #7A0000;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', Arial, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{ font-family:'Source Serif 4', Georgia, serif; }
+  .wrap{ max-width:1240px; margin:0 auto; padding:0 48px; }
+  @media (max-width:640px){ .wrap{ padding:0 24px; } }
+
+  /* HERO KICKER (shared) */
+  .hero-kicker{ display:flex; align-items:center; gap:10px; color:var(--blue); font-size:13px; margin-bottom:22px; font-weight:500; }
+  .hero-kicker .rule{ width:36px; height:1px; background:var(--blue-mid); }
+  h1.hero-title{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(34px, 4.4vw, 48px);
+    line-height:1.15;
+    font-weight:600;
+    margin:0 0 22px;
+    max-width:18ch;
+    color:var(--navy);
+  }
+  .hero-sub{ font-size:15.5px; color:var(--ink-dim); line-height:1.75; margin:0; max-width:64ch; }
+  .text-accent-gold{ color:var(--gold-dark); font-style:italic; }
+
+  /* SECTION HEAD (shared) */
+  .sec-head{ max-width:720px; margin:0 auto 48px; padding:0 48px; text-align:center; }
+  .sec-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(26px,3vw,32px);
+    margin:0 0 12px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+  }
+  .sec-head p{ margin:0 auto; color:var(--ink-dim); font-size:15px; line-height:1.65; }
+
+  /* BUTTONS (shared) */
+  .btn-primary{
+    background:var(--gold-dark); color:#fff; border:none; padding:15px 26px;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:14px; border-radius:2px;
+    text-decoration:none; display:inline-flex; align-items:center; cursor:pointer;
+    position:relative; overflow:hidden; transition:background-color .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .btn-primary::after{
+    content:""; position:absolute; top:0; left:-60%; width:40%; height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform:skewX(-20deg); transition:left .6s ease; pointer-events:none;
+  }
+  .btn-primary:hover{ background:#795E21; transform:translateY(-3px); box-shadow:0 16px 32px rgba(0,0,0,0.3); }
+  .btn-primary:hover::after{ left:130%; }
+  .btn-secondary{
+    border:1.4px solid var(--line); color:var(--navy); padding:14px 24px;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:14px; border-radius:2px;
+    text-decoration:none; display:inline-flex; align-items:center;
+    transition:border-color .3s ease, background-color .3s ease, transform .3s ease;
+  }
+  .btn-secondary:hover{ border-color:var(--navy); background:var(--panel); transform:translateY(-3px); }
+  .btn-secondary.on-dark{ border-color:rgba(255,255,255,0.45); color:#fff; }
+  .btn-secondary.on-dark:hover{ border-color:#fff; background:rgba(255,255,255,0.12); }
+  .btn-gold{
+    background:var(--gold-dark); color:#fff; border:none; padding:14px 24px;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:13.5px; border-radius:2px;
+    text-decoration:none; display:inline-flex; align-items:center; position:relative; overflow:hidden;
+    transition:background-color .3s ease, transform .3s ease;
+  }
+  .btn-gold::after{
+    content:""; position:absolute; top:0; left:-60%; width:40%; height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform:skewX(-20deg); transition:left .6s ease; pointer-events:none;
+  }
+  .btn-gold:hover{ background:#795E21; transform:translateY(-3px); }
+  .btn-gold:hover::after{ left:130%; }
+  .btn-crimson{
+    background:var(--crimson); color:#fff; border:none; padding:14px 24px;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:13.5px; border-radius:2px;
+    text-decoration:none; display:inline-flex; align-items:center; position:relative; overflow:hidden;
+    transition:background-color .3s ease, transform .3s ease;
+  }
+  .btn-crimson::after{
+    content:""; position:absolute; top:0; left:-60%; width:40%; height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform:skewX(-20deg); transition:left .6s ease; pointer-events:none;
+  }
+  .btn-crimson:hover{ background:var(--crimson-dark); transform:translateY(-3px); }
+  .btn-crimson:hover::after{ left:130%; }
+  @media (prefers-reduced-motion: reduce){ .btn-primary::after, .btn-gold::after, .btn-crimson::after{ display:none; } }
+
+  /* ============ HERO — full-bleed cover photo ============ */
+  .hero-cover{ position:relative; min-height:clamp(460px, 76vh, 680px); display:flex; align-items:flex-end; overflow:hidden; }
+  .hero-cover-bg{ position:absolute; inset:0; background-size:cover; background-position:center 30%; }
+  .hero-cover-bg::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(12,22,45,0.6) 0%, rgba(16,29,55,0.58) 40%, rgba(9,16,33,0.97) 100%);
+  }
+  .hero-cover-inner{ position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:76px 48px 76px; width:100%; box-sizing:border-box; }
+  .hero-cover .hero-kicker{ color:#C7D1E3; }
+  .hero-cover .hero-kicker .rule{ background:var(--gold); }
+  .hero-cover h1.hero-title{ color:#fff; max-width:20ch; font-size:clamp(38px, 5.4vw, 66px); letter-spacing:-0.01em; line-height:1.12; }
+  .hero-cover .hero-sub{ color:#C7D1E3; max-width:58ch; font-size:16px; }
+  .hero-cover .hero-stat b{ color:#fff; font-size:28px; }
+  .hero-cover .hero-stat span{ color:#9FACC6; }
+  .hero-stats{
+    display:flex; gap:0; flex-wrap:wrap; margin:30px 0 0;
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.16); border-radius:3px;
+    backdrop-filter:blur(6px);
+  }
+  .hero-stat{ flex:1 1 150px; padding:22px 26px; border-right:1px solid rgba(255,255,255,0.14); }
+  .hero-stat:last-child{ border-right:none; }
+  .hero-stat b{ display:block; font-family:'Source Serif 4', serif; font-size:24px; font-weight:600; color:var(--navy); line-height:1.2; }
+  .hero-stat span{ display:block; font-size:11px; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-dim); margin-top:4px; line-height:1.4; }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-top:32px; }
+  @media (max-width:760px){
+    .hero-cover{ min-height:clamp(520px, 86vh, 680px); }
+    .hero-cover-inner{ padding:52px 24px 46px; }
+    .hero-cover h1.hero-title{ max-width:16ch; }
+    .hero-stat{ flex:1 1 45%; border-bottom:1px solid rgba(255,255,255,0.14); }
+  }
+
+  /* ============ ABOUT / WHO WE ARE — text + photo split ============ */
+  .about-split{ padding:96px 0; background:var(--panel); }
+  .about-split-grid{ max-width:1240px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:stretch; }
+  .about-split-text{
+    background:var(--navy); color:#fff; padding:48px 44px; display:flex; flex-direction:column;
+    justify-content:center; box-shadow:0 20px 44px rgba(22,41,79,0.2); border-radius:4px;
+  }
+  .about-split-text .hero-kicker{ color:#C7D1E3; }
+  .about-split-text .hero-kicker .rule{ background:var(--gold); }
+  .about-split-text h2{
+    font-family:'Source Serif 4', serif; font-size:clamp(23px,2.4vw,28px); font-weight:600;
+    letter-spacing:-0.01em; margin:0 0 16px; max-width:17ch;
+  }
+  .about-split-text p{ font-size:14.5px; color:#C7D1E3; line-height:1.8; margin:0; }
+  .about-split-photo{ position:relative; overflow:hidden; background:var(--line); border-radius:4px; box-shadow:0 20px 44px rgba(22,41,79,0.14); }
+  .about-split-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
+
+  /* WHO WE ARE — autoplay photo carousel, glass caption */
+  .wwa-carousel{ position:relative; width:100%; height:100%; min-height:420px; }
+  .wwa-slide{
+    position:absolute; inset:0;
+    opacity:0;
+    transition:opacity 1s ease;
+    pointer-events:none;
+  }
+  .wwa-slide.is-active{ opacity:1; pointer-events:auto; }
+  .wwa-slide img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .wwa-caption{
+    position:absolute; left:16px; right:16px; bottom:16px;
+    background:rgba(22,41,79,0.38);
+    -webkit-backdrop-filter:blur(14px) saturate(140%);
+    backdrop-filter:blur(14px) saturate(140%);
+    border:1px solid rgba(255,255,255,0.28);
+    border-radius:6px;
+    padding:14px 18px;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+  }
+  .wwa-caption span{ font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-light); font-weight:600; }
+  .wwa-caption b{ font-family:'Source Serif 4', serif; font-size:15.5px; font-weight:600; }
+  .wwa-dots{
+    position:absolute; top:16px; right:16px;
+    display:flex; gap:6px; z-index:2;
+  }
+  .wwa-dots .wwa-dot{
+    width:7px; height:7px; border-radius:50%;
+    background:rgba(255,255,255,0.5);
+    border:1px solid rgba(255,255,255,0.7);
+    transition:background-color .3s ease, transform .3s ease;
+  }
+  .wwa-dots .wwa-dot.is-active{ background:var(--gold); transform:scale(1.25); }
+  @media (max-width:760px){
+    .wwa-carousel{ min-height:300px; }
+  }
+  .about-split-photo:hover img{ transform:scale(1.05); }
+  @media (max-width:900px){
+    .about-split-grid{ grid-template-columns:1fr; }
+    .about-split-photo{ height:260px; }
+  }
+  @media (max-width:640px){
+    .about-split{ padding:60px 0; }
+    .about-split-grid{ padding:0 24px; gap:16px; }
+    .about-split-text{ padding:36px 26px; }
+  }
+
+  /* SCROLL PROGRESS + REVEAL/GLOW (shared) */
+  .scroll-progress{ position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; background:transparent; pointer-events:none; }
+  .scroll-progress-bar{ height:100%; width:0%; background:linear-gradient(90deg, var(--gold), var(--navy)); transition:width .1s linear; }
+  @media (prefers-reduced-motion: reduce){ .scroll-progress-bar{ transition:none; } }
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .5s ease, box-shadow .35s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  .glow-card{ position:relative; overflow:hidden; }
+  .glow-card::before{
+    content:""; position:absolute; inset:0; opacity:0; transition:opacity .4s ease; pointer-events:none; z-index:0;
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(169,131,46,0.14), transparent 70%);
+  }
+  .glow-card:hover::before{ opacity:1; }
+  .glow-card > *{ position:relative; z-index:1; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .glow-card::before{ display:none; }
+  }
+
+  /* ============ MISSION & VISION — minimalist split ============ */
+  .mv{ padding:96px 0; background:#fff; }
+  .mv-grid{ max-width:1080px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1fr 1fr; }
+  .mv-col{ padding:0 44px; }
+  .mv-col:first-child{ padding-left:0; }
+  .mv-col:last-child{ padding-right:0; border-left:1px solid var(--line); }
+  .mv-col h2{
+    font-family:'Source Serif 4', serif; font-size:clamp(21px,2.4vw,26px); font-weight:600;
+    background:linear-gradient(100deg, var(--navy) 0%, var(--blue) 45%, var(--gold-dark) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    margin:0 0 14px; letter-spacing:-0.01em; line-height:1.32;
+  }
+  .mv-col .hero-kicker span{ color:var(--gold); font-weight:600; }
+  .mv-col p{ font-size:14.5px; color:var(--ink-dim); line-height:1.75; margin:0; }
+  @media (max-width:760px){
+    .mv-grid{ grid-template-columns:1fr; gap:40px; }
+    .mv-col{ padding:0 !important; }
+    .mv-col:last-child{ border-left:none; border-top:1px solid var(--line); padding-top:36px !important; }
+  }
+  @media (max-width:640px){ .mv{ padding:60px 0; } .mv-grid{ padding:0 24px; } }
+
+  /* ============ LEADERSHIP — CEO ============ */
+  .leadership{ padding:96px 0; background:var(--panel); }
+  .leader-card{
+    position:relative; overflow:hidden; max-width:1180px; margin:0 auto; padding:52px 48px;
+    background:#fff; border:1px solid var(--line); border-radius:20px;
+    display:grid; grid-template-columns:300px 1fr; gap:52px; align-items:start;
+  }
+  .leader-portrait{ position:relative; z-index:1; }
+  .leader-photo-frame{ transition:transform .4s ease, box-shadow .4s ease; border-radius:16px; box-shadow:0 22px 44px rgba(22,41,79,0.18); overflow:hidden; }
+  .leader-portrait:hover .leader-photo-frame{ transform:translateY(-5px); box-shadow:0 30px 58px rgba(22,41,79,0.24); }
+  .leader-photo{ width:100%; height:auto; display:block; }
+  .leader-caption{ margin-top:16px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:2px; }
+  .leader-caption b{ font-family:'Source Serif 4', serif; font-size:14.5px; font-weight:600; color:var(--navy); }
+  .leader-caption span{ font-size:11.5px; color:var(--gold-dark); font-weight:600; letter-spacing:0.03em; text-transform:uppercase; }
+  .leader-inner{ position:relative; z-index:1; max-width:640px; }
+  .leader-inner .hero-kicker{ justify-content:flex-start; }
+  .leader-inner h2{
+    font-family:'Source Serif 4', serif; font-size:clamp(22px,2.6vw,28px); margin:0 0 18px;
+    font-weight:600; letter-spacing:-0.01em; color:var(--navy);
+  }
+  .leader-inner p{ font-size:14.5px; color:var(--ink-dim); line-height:1.8; margin:0 0 14px; }
+  .leader-quote{
+    margin:14px 0 20px; padding:16px 20px; background:var(--panel); border-left:3px solid var(--gold);
+    font-family:'Source Serif 4', serif; font-style:italic; font-size:14.5px; color:var(--ink); line-height:1.6;
+  }
+  .leader-expertise{ display:flex; flex-wrap:wrap; gap:9px; margin-top:6px; }
+  .leader-expertise span{
+    font-size:12px; font-weight:600; color:var(--navy); background:var(--panel); border:1px solid var(--line);
+    border-radius:999px; padding:7px 14px;
+  }
+  @media (max-width:860px){
+    .leader-card{ grid-template-columns:1fr; gap:28px; padding:40px 32px; }
+    .leader-portrait{ max-width:240px; margin:0 auto; }
+    .leader-inner{ max-width:100%; }
+  }
+  @media (max-width:640px){
+    .leadership{ padding:60px 0; }
+    .leader-card{ padding:32px 22px; border-radius:16px; }
+  }
+
+  /* ============ HOW WE WORK — 4 circular steps ============ */
+  .hww{ padding:96px 0; background:#fff; }
+  .hww-row{ max-width:1080px; margin:0 auto; padding:0 48px; display:flex; justify-content:space-between; gap:20px; position:relative; }
+  .hww-row::before{ content:""; position:absolute; top:44px; left:11%; right:11%; height:1px; background:var(--line); z-index:0; }
+  .hww-step{ position:relative; z-index:1; flex:1 1 0; display:flex; flex-direction:column; align-items:center; text-align:center; }
+  .hww-circle{
+    width:84px; height:84px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    color:#fff; font-family:'Source Serif 4', serif; font-weight:600; font-size:23px;
+    box-shadow:0 8px 18px rgba(22,41,79,0.14); margin-bottom:18px; border:2px solid #fff;
+    transform:scale(0.4); opacity:0;
+    transition:transform .55s cubic-bezier(.34,1.56,.64,1), opacity .45s ease, box-shadow .3s ease;
+  }
+  .hww-step.is-visible .hww-circle{ transform:scale(1); opacity:1; }
+  .hww-step:hover .hww-circle{ transform:scale(1.08); }
+  .hww-row > .reveal:nth-child(1){ transition-delay:0s; }
+  .hww-row > .reveal:nth-child(1) .hww-circle{ transition-delay:.05s; }
+  .hww-row > .reveal:nth-child(2){ transition-delay:.15s; }
+  .hww-row > .reveal:nth-child(2) .hww-circle{ transition-delay:.2s; }
+  .hww-row > .reveal:nth-child(3){ transition-delay:.3s; }
+  .hww-row > .reveal:nth-child(3) .hww-circle{ transition-delay:.35s; }
+  .hww-row > .reveal:nth-child(4){ transition-delay:.45s; }
+  .hww-row > .reveal:nth-child(4) .hww-circle{ transition-delay:.5s; }
+  @media (prefers-reduced-motion: reduce){
+    .hww-circle{ transform:none; opacity:1; transition:none; }
+  }
+  .hww-step:hover .hww-circle{ transform:scale(1.06); }
+  .hww-circle-1{ background:#7089B7; }
+  .hww-circle-2{ background:#4C6DA0; }
+  .hww-circle-3{ background:#2C4E86; }
+  .hww-circle-4{ background:#16294F; }
+  .hww-step h3{ font-family:'Source Serif 4', serif; font-size:15.5px; font-weight:600; color:var(--navy); margin:0 0 8px; }
+  .hww-step p{ font-size:12.5px; color:var(--ink-dim); line-height:1.6; margin:0; max-width:20ch; }
+  @media (prefers-reduced-motion: reduce){ .hww-step:hover .hww-circle{ transform:none; } }
+  @media (max-width:760px){
+    .hww{ padding:60px 0; }
+    .hww-row{ flex-direction:column; align-items:center; gap:36px; }
+    .hww-row::before{ display:none; }
+    .hww-step p{ max-width:60vw; }
+  }
+
+  /* ============ PHILANTHROPY — purpose + carousel + believe ============ */
+  .philanthropy{ padding:96px 0; background:var(--panel); }
+  .phil-top{ max-width:1240px; margin:0 auto 52px; padding:0 48px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; align-items:start; }
+  .phil-text, .phil-carousel{ min-width:0; }
+  .impact-carousel, .impact-carousel-track{ min-width:0; }
+  .phil-text h2{
+    font-family:'Source Serif 4', serif; font-size:clamp(23px,2.6vw,28px); font-weight:600;
+    color:var(--navy); margin:0 0 18px; letter-spacing:-0.01em; line-height:1.32;
+  }
+  .phil-text p{ font-size:14px; color:var(--ink-dim); line-height:1.78; margin:0 0 14px; }
+  .phil-close{ font-family:'Source Serif 4', serif; font-style:italic; font-size:16px; color:var(--navy); margin:18px 0 0; }
+  .phil-carousel-head{ margin-bottom:16px; }
+  .phil-carousel-head h3{ font-family:'Source Serif 4', serif; font-size:17px; font-weight:600; color:var(--navy); margin:0 0 4px; }
+  .phil-carousel-head span{ font-size:12.5px; color:var(--ink-dim); }
+  .impact-carousel-track{
+    display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:0;
+    scrollbar-width:none; -ms-overflow-style:none; border-radius:4px;
+  }
+  .impact-carousel-track::-webkit-scrollbar{ display:none; }
+  .impact-slide{
+    flex:0 0 100%; scroll-snap-align:start; background:#fff; border:1px solid var(--line);
+    border-radius:4px; padding:26px 26px 24px; display:flex; flex-direction:column; min-height:280px;
+  }
+  .impact-slide-media{ height:130px; border-radius:4px; overflow:hidden; margin-bottom:16px; background:var(--line); }
+  .impact-slide-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .impact-tag{
+    display:inline-block; align-self:flex-start; font-size:10.5px; font-weight:700; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--blue); background:var(--panel); border-radius:999px; padding:5px 12px; margin-bottom:12px;
+  }
+  .impact-slide h4{ font-family:'Source Serif 4', serif; font-size:15.5px; font-weight:600; color:var(--navy); margin:0 0 3px; line-height:1.3; }
+  .impact-meta{ font-size:11px; color:var(--ink-dim); margin:0 0 10px; }
+  .impact-slide p{ font-size:12.5px; color:var(--ink-dim); line-height:1.6; margin:0; }
+  .impact-people{ margin-top:8px; padding-top:10px; border-top:1px solid var(--line); display:flex; flex-direction:column; gap:6px; overflow-y:auto; }
+  .impact-person b{ display:block; color:var(--navy); font-weight:600; font-size:11.5px; }
+  .impact-person span{ color:var(--ink-dim); font-size:10px; }
+  .impact-carousel-nav{ display:flex; align-items:center; justify-content:center; gap:14px; margin-top:18px; }
+  .ic-btn{
+    width:36px; height:36px; border-radius:50%; border:1px solid var(--line); background:#fff;
+    display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--navy);
+    transition:all .3s ease; flex-shrink:0; font-size:14px;
+  }
+  .ic-btn:hover{ background:var(--panel); border-color:var(--navy); transform:scale(1.06); }
+  .ic-dots{ display:flex; gap:7px; align-items:center; }
+  .ic-dot{ width:7px; height:7px; border-radius:50%; background:var(--line); cursor:pointer; transition:all .3s ease; border:none; padding:0; }
+  .ic-dot.active{ background:var(--blue); width:20px; border-radius:4px; }
+  .believe-mini-grid{
+    max-width:1240px; margin:0 auto; padding:40px 48px 0; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:repeat(4,1fr); gap:26px;
+  }
+  .believe-mini{ display:flex; flex-direction:column; align-items:flex-start; gap:10px; }
+  .believe-mini-icon{ width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--panel); border:1.5px solid var(--blue-mid); flex-shrink:0; transition:border-color .3s ease, background .3s ease; }
+  .believe-mini:hover .believe-mini-icon{ background:#fff; border-color:var(--navy); }
+  .believe-mini-icon svg{ width:19px; height:19px; stroke:var(--blue); fill:none; stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round; }
+  .believe-mini h4{ font-family:'Source Serif 4', serif; font-size:14.5px; font-weight:600; color:var(--navy); margin:0; }
+  .believe-mini p{ font-size:12.5px; color:var(--ink-dim); line-height:1.55; margin:0; }
+  @media (max-width:900px){
+    .phil-top{ grid-template-columns:1fr; gap:36px; }
+    .believe-mini-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:640px){
+    .philanthropy{ padding:60px 0; }
+    .phil-top, .believe-mini-grid{ padding-left:24px; padding-right:24px; }
+    .believe-mini-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ============ GLOBAL INCLUSIVE EVENTS — crimson themed ============ */
+  .gie{
+    padding:96px 0; margin-top:48px; position:relative; overflow:hidden;
+    background:
+      radial-gradient(900px circle at 12% 15%, rgba(153,0,0,0.07), transparent 55%),
+      radial-gradient(700px circle at 88% 85%, rgba(153,0,0,0.05), transparent 55%),
+      #fff;
+  }
+  .gie-glow-a, .gie-glow-b{
+    position:absolute; border-radius:50%; pointer-events:none; z-index:0;
+    filter:blur(60px); opacity:0.5;
+  }
+  .gie-glow-a{
+    width:340px; height:340px; top:-100px; left:-80px;
+    background:radial-gradient(circle, rgba(153,0,0,0.16), transparent 70%);
+    animation:gieDriftA 14s ease-in-out infinite;
+  }
+  .gie-glow-b{
+    width:260px; height:260px; bottom:-90px; right:-60px;
+    background:radial-gradient(circle, rgba(153,0,0,0.13), transparent 70%);
+    animation:gieDriftB 17s ease-in-out infinite;
+  }
+  @keyframes gieDriftA{
+    0%, 100%{ transform:translate(0,0) scale(1); }
+    50%{ transform:translate(30px,20px) scale(1.12); }
+  }
+  @keyframes gieDriftB{
+    0%, 100%{ transform:translate(0,0) scale(1); }
+    50%{ transform:translate(-24px,-18px) scale(1.1); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .gie-glow-a, .gie-glow-b{ animation:none; }
+  }
+  
+  .gie-inner{ max-width:1240px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; position:relative; z-index:1; }
+  .gie-photo{ position:relative; overflow:hidden; background:var(--line); box-shadow:0 20px 44px rgba(153,0,0,0.14); height:380px; border-radius:4px; }
+  .gie-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
+  .gie-photo:hover img{ transform:scale(1.05); }
+  .gie-text .hero-kicker{ color:var(--crimson); }
+  .gie-text .hero-kicker .rule{ background:var(--crimson-light); }
+  .gie-text h2{ font-family:'Source Serif 4', serif; font-size:clamp(24px,2.8vw,30px); font-weight:600; color:var(--navy); margin:0 0 16px; }
+  .gie-text h2 em{ color:var(--crimson); font-style:italic; }
+  .gie-text p{ font-size:14.5px; color:var(--ink-dim); line-height:1.75; margin:0 0 20px; max-width:52ch; }
+  .gie-flow{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:6px 0 22px; }
+  .gie-flow-step{
+    font-size:11px; font-weight:700; letter-spacing:0.03em; text-transform:uppercase; color:var(--crimson-dark);
+    background:rgba(153,0,0,0.06); border:1px solid rgba(153,0,0,0.18); border-radius:999px; padding:8px 14px;
+  }
+  .gie-flow-arrow{ color:var(--crimson); font-size:13px; }
+  .gie-caption{ display:flex; align-items:center; gap:10px; margin-top:20px; font-size:12.5px; color:var(--ink-dim); }
+  .gie-caption .rule{ width:28px; height:1px; background:var(--line); flex-shrink:0; }
+  @media (max-width:900px){
+    .gie-inner{ grid-template-columns:1fr; gap:32px; }
+    .gie-photo{ height:260px; }
+  }
+  @media (max-width:640px){
+    .gie{ padding:60px 0; margin-top:28px; }
+    .gie-inner{ padding:0 24px; }
+  }
+
+  /* ============ RECOGNITION & INSTITUTIONAL TRUST ============ */
+  .recognition{ padding:96px 0 0; background:var(--panel); }
+  .recognition-grid{ max-width:1240px; margin:0 auto 52px; padding:0 48px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .recognition-card{ background:#fff; border:1px solid var(--line); border-radius:4px; padding:26px 24px 28px; }
+  .recognition-card-media{
+    height:140px; border-radius:4px; overflow:hidden; margin-bottom:18px; background:var(--panel);
+    border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+  }
+  .recognition-card-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .recognition-card-media.logo-media img{ width:auto; height:auto; max-width:76%; max-height:58%; object-fit:contain; }
+  .r-year{ font-family:'Source Serif 4', serif; font-size:12px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#7C611F; margin-bottom:10px; }
+  .recognition-card h3{ font-family:'Source Serif 4', serif; font-size:15.5px; font-weight:600; color:var(--navy); margin:0 0 4px; line-height:1.3; }
+  .recognition-card p{ font-size:12.5px; color:var(--ink-dim); line-height:1.6; margin:0; }
+  .patronage{ max-width:1240px; margin:0 auto; padding:32px 48px 88px; border-top:1px solid var(--line); }
+  .patronage-row{ display:flex; align-items:center; gap:36px; flex-wrap:wrap; margin:18px 0 16px; }
+  .patronage-badge img{ height:46px; width:auto; display:block; }
+  .patronage-sep{ width:1px; height:34px; background:var(--line); flex-shrink:0; }
+  .patronage-note{ margin:0; font-size:12.5px; color:var(--ink-dim); line-height:1.6; max-width:70ch; }
+  @media (max-width:900px){ .recognition-grid{ grid-template-columns:1fr; } }
+  @media (max-width:640px){
+    .recognition{ padding:60px 0 0; }
+    .recognition-grid, .patronage{ padding-left:24px; padding-right:24px; }
+    .patronage-sep{ display:none; }
+  }
+
+  /* ============ THE GPE DIFFERENCE ============ */
+  .difference{ padding:96px 0; background:#fff; }
+  .difference-grid{
+    max-width:1240px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:repeat(3,1fr);
+    gap:1px; background:var(--line); border:1px solid var(--line); border-radius:4px; overflow:hidden;
+  }
+  .diff-card{
+    position:relative; background:#fff; padding:34px 26px 28px; overflow:hidden;
+    transition:background .3s ease;
+  }
+  .diff-card:hover{ background:var(--panel); }
+  .diff-card .d-num{
+    position:absolute; top:10px; right:16px; font-family:'Source Serif 4', serif; font-size:56px;
+    font-weight:700; color:var(--panel); line-height:1; z-index:0; pointer-events:none;
+  }
+  .diff-card:hover .d-num{ color:#fff; }
+  .diff-card .d-rule{ position:relative; z-index:1; display:block; width:26px; height:2px; background:var(--gold); margin-bottom:14px; }
+  .diff-card .d-label{
+    position:relative; z-index:1; display:block; font-family:'Source Serif 4', serif; font-size:14px;
+    font-weight:700; letter-spacing:0.01em; color:var(--navy); margin:0 0 9px;
+  }
+  .diff-card p{ position:relative; z-index:1; font-size:13px; color:var(--ink-dim); line-height:1.65; margin:0; max-width:27ch; }
+  @media (max-width:900px){ .difference-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:640px){ .difference{ padding:60px 0; } .difference-grid{ grid-template-columns:1fr; } .diff-card .d-num{ font-size:46px; } }
+
+  /* ============ CLOSING CTA ============ */
+  .closing-cta{ background:var(--navy); padding:84px 0; text-align:center; }
+  .closing-cta h2{ font-family:'Source Serif 4', serif; font-size:clamp(24px,3vw,34px); font-weight:600; color:#fff; margin:0 0 14px; }
+  .closing-cta p{ font-size:14.5px; color:#C7D1E3; line-height:1.7; max-width:58ch; margin:0 auto 30px; }
+  .closing-cta .hero-ctas{ justify-content:center; margin-top:0; }
+  @media (max-width:640px){ .closing-cta{ padding:60px 0; } }
+
+  /* ============ SITE FOOTER ============ */
+  .site-footer{ background:var(--navy); color:#C7D1E3; padding:64px 0 0; border-top:1px solid rgba(255,255,255,0.14); }
+  .footer-grid{ display:grid; grid-template-columns:1.15fr 0.95fr 1fr 1.35fr; gap:32px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,0.12); }
+  .footer-brand{ display:flex; flex-direction:column; gap:18px; }
+  .footer-logo{ width:84px; height:84px; display:block; }
+  .footer-brand p{ font-size:13px; color:#9FACC6; line-height:1.65; max-width:30ch; margin:0; }
+  .footer-col-title{ font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-light); margin:0 0 20px; }
+  .footer-address{ font-size:14px; color:#E4E9F2; line-height:1.65; margin:0; max-width:24ch; }
+
+  .footer-contact{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:13px;
+  }
+  .footer-contact li{
+    font-size:14px;
+    color:#E4E9F2;
+    line-height:1.6;
+    display:flex;
+    gap:12px;
+  }
+  .footer-contact li b{
+    color:#7F93B8;
+    font-weight:600;
+    flex-shrink:0;
+    width:14px;
+  }
+
+  .footer-relocating{ margin:10px 0 0; font-size:12px; font-style:italic; color:#8394B3; line-height:1.5; }
+  .footer-cta-text{ font-size:13.5px; color:#9FACC6; line-height:1.65; margin:0 0 14px; max-width:26ch; }
+  .footer-cta-link{
+    display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; letter-spacing:0.02em;
+    color:#fff; text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:3px;
+    transition:color .3s ease, gap .3s ease;
+  }
+  .footer-cta-link:hover{ color:var(--gold-light); gap:12px; }
+  .footer-partners-list{ font-size:13px; font-weight:600; letter-spacing:0.06em; color:#E4E9F2; line-height:2; }
+  .footer-partners-list .sep{ color:var(--gold-light); margin:0 10px; }
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding:22px 0; font-size:12px; color:#7F93B8; }
+  @media (max-width:900px){
+    .footer-grid{ grid-template-columns:1fr 1fr; gap:36px 40px; }
+    .footer-brand{ grid-column:1/3; }
+  }
+  @media (max-width:560px){
+    .footer-grid{ grid-template-columns:1fr; gap:32px; }
+    .footer-brand{ grid-column:1/2; }
+    .footer-bottom{ justify-content:flex-start; }
+  }
+
+  .hww-row .reveal:nth-child(1){ transition-delay:0s; }
+  .hww-row .reveal:nth-child(2){ transition-delay:.08s; }
+  .hww-row .reveal:nth-child(3){ transition-delay:.16s; }
+  .hww-row .reveal:nth-child(4){ transition-delay:.24s; }
+  .believe-mini-grid .reveal:nth-child(1){ transition-delay:0s; }
+  .believe-mini-grid .reveal:nth-child(2){ transition-delay:.08s; }
+  .believe-mini-grid .reveal:nth-child(3){ transition-delay:.16s; }
+  .believe-mini-grid .reveal:nth-child(4){ transition-delay:.24s; }
+  @media (prefers-reduced-motion: reduce){
+    .leader-photo-frame, .about-split-photo, .gie-photo{ transition:none !important; }
+    .hww-step:hover .hww-circle{ transform:none !important; }
+  }
+
+  /* ============ ACCESSIBILITY: skip link + focus-visible ============ */
+  .skip-link{
+    position:absolute; top:-48px; left:12px; z-index:9999;
+    background:var(--navy); color:#fff; padding:12px 20px; border-radius:4px;
+    font-family:'Inter', Arial, sans-serif; font-size:14px; font-weight:600; text-decoration:none;
+    transition:top .25s ease;
+  }
+  .skip-link:focus{ top:12px; }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+</style>
+<link rel="canonical" href="https://globalpremiumevents.com/about-us/">
+<meta property="og:url" content="https://globalpremiumevents.com/about-us/">
+<meta property="og:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#16294F">
+<link rel="stylesheet" href="/assets/gpe.css">
+</head>
+<body class="gpe-dark-top">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<header class="gpe-nav" id="gpeNav">
+  <div class="gpe-nav-in">
+    <a class="gpe-nav-logo" href="/" aria-label="Global Premium Events — Home"><img src="/assets/logo.webp" alt="Global Premium Events" width="44" height="44"></a>
+    <button class="gpe-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="gpeNavLinks"><span></span><span></span><span></span></button>
+    <nav class="gpe-nav-links" id="gpeNavLinks" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/about-us/" class="active">About</a>
+      <div class="gpe-dd">
+        <button class="gpe-dd-toggle" aria-expanded="false" aria-haspopup="true">Services <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="gpe-dd-menu"><a href="/services/missions-partnerships/"><b>Missions, Delegations &amp; Matchmaking</b><span>Official delegations, trade missions, B2B / G2G meetings</span></a><a href="/services/exhibitions-trade-shows/"><b>Trade Shows &amp; Exhibitions</b><span>Stand design, build and full participation management</span></a><a href="/services/event-production/"><b>Corporate Event Production</b><span>Launches, conferences, ceremonies and galas</span></a><a class="gpe-dd-all" href="/services/">View all services &rarr;</a></div>
+      </div>
+      <a href="/our-work/">Our Work</a>
+      <a href="/inclusive-events/" class="gpe-nav-incl">Inclusive Events</a>
+      <a class="gpe-nav-cta" href="/contact-us/">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero-cover">
+    <div class="hero-cover-bg" style="background-image:url('/assets/img/48e560549c24.webp');"></div>
+    <div class="hero-cover-inner">
+      <div class="hero-kicker"><span class="rule"></span><span>About Global Premium Events</span></div>
+      <h1 class="hero-title">Africa isn't a stop on the itinerary. It's the centre of our network.</h1>
+      <p class="hero-sub">Global Premium Events connects African companies, institutions, investors and strategic partners across international markets — one coordinated network, built in Africa and operating globally.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>12+ Years</b><span>International experience</span></div>
+        <div class="hero-stat"><b>45+ Countries</b><span>Represented across our projects</span></div>
+        <div class="hero-stat"><b>2-Way Network</b><span>Africa &rarr; World / World &rarr; Africa</span></div>
+        <div class="hero-stat"><b>4 Regions</b><span>Africa &middot; Europe &middot; GCC &middot; United States</span></div>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="/contact-us/">Talk to Our Team &rarr;</a>
+        <a class="btn-secondary on-dark" href="/services/">Explore Our Services &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-split" id="who-we-are">
+    <div class="about-split-grid">
+      <div class="about-split-text reveal glow-card">
+        <div class="hero-kicker"><span class="rule"></span><span>Who We Are</span></div>
+        <h2>Built in Africa. Connected to the world.</h2>
+        <p>A Morocco-based international events and business-mission company, working at the intersection of events, market development and strategic connectivity — creating pathways into international markets for African organizations, and meaningful pathways into Africa for the world.</p>
+        <p>For twelve years, our in-house team has planned and delivered trade show participations, official missions and delegations, and corporate productions across Africa, Europe, the Gulf and the United States — carrying every project from first brief through on-the-ground execution to final report, under one accountable roof.</p>
+      </div>
+      <div class="about-split-photo reveal glow-card">
+        <div class="wwa-carousel" id="wwaCarousel">
+          <div class="wwa-slide is-active">
+            <img loading="lazy" src="/assets/img/24588e908e76.webp" alt="Global Premium Events team at work">
+            <div class="wwa-caption"><span>Global Premium Events</span><b>Connecting People Across Markets</b></div>
+          </div>
+          <div class="wwa-slide">
+            <img loading="lazy" src="/assets/img/5620222e3981.webp" alt="Official delegation, United Arab Emirates">
+            <div class="wwa-caption"><span>Official Delegation</span><b>United Arab Emirates</b></div>
+          </div>
+          <div class="wwa-slide">
+            <img loading="lazy" src="/assets/img/88b16c169df4.webp" alt="Targeted networking, Marrakech COP22, La Mamounia">
+            <div class="wwa-caption"><span>Targeted Networking</span><b>Marrakech &mdash; COP22 / La Mamounia</b></div>
+          </div>
+          <div class="wwa-dots" id="wwaDots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mv" id="mission-vision">
+    <div class="mv-grid">
+      <div class="mv-col reveal">
+        <div class="hero-kicker"><span class="rule"></span><span>Our Mission</span></div>
+        <h2>Creating connections that move markets and create impact.</h2>
+        <p>We connect African businesses, institutions and entrepreneurs with international markets — and bring investors, buyers and strategic partners into Africa. One mission, two directions.</p>
+      </div>
+      <div class="mv-col reveal">
+        <div class="hero-kicker"><span class="rule"></span><span>Our Vision</span></div>
+        <h2>Africa at the centre. The world connected through it.</h2>
+        <p>A globally connected ecosystem where Africa is not simply a destination for international engagement, but a central participant in global exchange.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="leadership" id="leadership">
+    <div class="leader-card glow-card reveal">
+      <div class="leader-portrait">
+        <div class="leader-photo-frame">
+          <img class="leader-photo" src="/assets/img/df1d07824aa0.webp" alt="Sarah Zineb Boumouja, Co-Founder and CEO of Global Premium Events" loading="lazy">
+        </div>
+        <div class="leader-caption">
+          <b>Sarah Zineb Boumouja</b>
+          <span>Co-Founder &amp; CEO, Global Premium Events</span>
+        </div>
+      </div>
+      <div class="leader-inner">
+        <div class="hero-kicker"><span class="rule"></span><span>Leadership</span></div>
+        <h2>Led from the front.</h2>
+        <p>Sarah Zineb Boumouja is the Co-Founder and CEO of Global Premium Events — leading the organization for more than twelve years across trade shows, missions and corporate productions in Africa, Europe, the GCC and the United States.</p>
+        <p>She led the Organizing Committee behind the Africa Trade &amp; Investment Global Summit in Washington, D.C., and in 2025 brought GPE's own accessibility challenges back to her alma mater, Indiana University's Kelley School of Business — a partnership that became Global Inclusive Events.</p>
+        <p class="leader-quote">&ldquo;Certain voices remained unheard — women, young individuals from rural areas, and students with disabilities were consistently missing from the transformative circle.&rdquo;</p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="hww" id="how-we-work">
+    <div class="sec-head">
+      <div class="hero-kicker" style="justify-content:center;"><span class="rule"></span><span>How We Work</span></div>
+      <h2>One Team. From Brief to Impact.</h2>
+      <p>One coordinated team, accountable from first brief to final delivery.</p>
+    </div>
+    <div class="hww-row">
+      <div class="hww-step reveal">
+        <div class="hww-circle hww-circle-1">01</div>
+        <h3>Discover &amp; Strategize</h3>
+        <p>Defining objectives and the right markets, people and opportunities.</p>
+      </div>
+      <div class="hww-step reveal">
+        <div class="hww-circle hww-circle-2">02</div>
+        <h3>Design</h3>
+        <p>Shaping the concept, experience and programme.</p>
+      </div>
+      <div class="hww-step reveal">
+        <div class="hww-circle hww-circle-3">03</div>
+        <h3>Produce &amp; Deliver</h3>
+        <p>Coordinating production, logistics and protocol — on the ground.</p>
+      </div>
+      <div class="hww-step reveal">
+        <div class="hww-circle hww-circle-4">04</div>
+        <h3>Follow Through</h3>
+        <p>Turning connections into lasting opportunity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="philanthropy" id="philanthropy">
+    <div class="phil-top">
+      <div class="phil-text reveal">
+        <div class="hero-kicker"><span class="rule"></span><span>Events With a Purpose</span></div>
+        <h2>Because an event can do more than fill a room.</h2>
+        <p>We believe events can mobilize attention, create connections, raise awareness, open markets and contribute to positive change.</p>
+        <p>Our experience in event strategy, international convening and production has also allowed us to support initiatives whose purpose extends beyond commercial outcomes.</p>
+        <p>From climate and women's leadership to health, humanitarian causes and accessibility, we use the power of events to create platforms around issues that matter.</p>
+        <p class="phil-close">The purpose behind an event matters as much as the event itself.</p>
+      </div>
+
+      <div class="phil-carousel reveal">
+        <div class="phil-carousel-head">
+          <h3>Our Impact</h3>
+          <span>Selected initiatives where events became platforms for something bigger.</span>
+        </div>
+        <div class="impact-carousel">
+          <div class="impact-carousel-track" id="impactTrack">
+            <div class="impact-slide">
+              <div class="impact-slide-media"><img src="/assets/img/09ce3159b76d.webp" alt="COP22 panel on climate threats and cultural responses, La Mamounia, Marrakech, under UNESCO patronage" loading="lazy"></div>
+              <span class="impact-tag">Climate &amp; Environment</span>
+              <h4>African Purple Economy Forum</h4>
+              <p class="impact-meta">Marrakech, Morocco &middot; 2016</p>
+              <p>Scheduled ahead of COP22, creating a platform for African economic opportunity alongside the wider climate agenda.</p>
+            </div>
+            <div class="impact-slide">
+              <span class="impact-tag">Women &amp; Leadership</span>
+              <h4>Advancing Women Leadership in Key Sectors in Africa</h4>
+              <p class="impact-meta">La Mamounia, Marrakech &middot; 2016</p>
+              <p>Women leaders and experts convened around the advancement of women across technology, entrepreneurship, business and leadership.</p>
+              <div class="impact-people">
+                <div class="impact-person"><b>Sarah Zineb Boumouja</b><span>Co-Founder &amp; CEO, GPE &middot; Morocco</span></div>
+                <div class="impact-person"><b>Madelein Mkunu</b><span>Founder &amp; President, Leading Women of Africa &middot; South Africa</span></div>
+                <div class="impact-person"><b>Kathryn Ross</b><span>Founding CEO, wiseHer &middot; United States</span></div>
+              </div>
+            </div>
+            <div class="impact-slide">
+              <span class="impact-tag">Humanitarian &amp; Social Impact</span>
+              <h4>Humanity: The Soul Rally</h4>
+              <p class="impact-meta">UK &rarr; France &rarr; Spain &rarr; Morocco &middot; 2015</p>
+              <p>A charity journey through the heartlands of European history, bringing travel, community and events together in support of a wider social purpose.</p>
+            </div>
+            <div class="impact-slide">
+              <span class="impact-tag">Health</span>
+              <h4>Africa Health Business Symposium</h4>
+              <p class="impact-meta">Addis Ababa, Ethiopia &middot; 2019</p>
+              <p>Senior public and sectoral stakeholders gathered to discuss African integration and approaches to improving health outcomes.</p>
+            </div>
+          </div>
+          <div class="impact-carousel-nav">
+            <button class="ic-btn" id="icPrev" aria-label="Previous story">&larr;</button>
+            <div class="ic-dots" id="icDots"></div>
+            <button class="ic-btn" id="icNext" aria-label="Next story">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gie" id="inclusion">
+    <span class="gie-glow-a" aria-hidden="true"></span>
+    <span class="gie-glow-b" aria-hidden="true"></span>
+    <div class="gie-inner">
+      <div class="gie-photo reveal glow-card">
+        <img src="/assets/img/32dc625530a3.webp" alt="Five Kelley School of Business students beside their inclusive-design poster, Indiana University" loading="lazy">
+      </div>
+      <div class="gie-text reveal">
+        <div class="hero-kicker"><span class="rule"></span><span>Inclusion by Design</span></div>
+        <h2>Global <em>Inclusive</em> Events</h2>
+        <p>Five student teams. Eight weeks. Real solutions for real barriers. In 2025, GPE brought its own accessibility challenges back to Indiana University's Kelley School of Business through a CLIP-grant partnership.</p>
+        <div class="gie-flow">
+          <span class="gie-flow-step">Research</span><span class="gie-flow-arrow">&rarr;</span>
+          <span class="gie-flow-step">Design</span><span class="gie-flow-arrow">&rarr;</span>
+          <span class="gie-flow-step">Solutions</span><span class="gie-flow-arrow">&rarr;</span>
+          <span class="gie-flow-step">Future Events</span>
+        </div>
+        <a class="btn-crimson" href="/inclusive-events/">Explore the Initiative &rarr;</a>
+        <div class="gie-caption"><span class="rule"></span><span>Indiana University's Kelley School of Business &middot; BUS-X190 &middot; CLIP Grant</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recognition" id="recognition">
+    <div class="sec-head">
+      <div class="hero-kicker" style="justify-content:center;"><span class="rule"></span><span>Recognition &amp; Institutional Trust</span></div>
+      <h2>Experience built across institutions, markets and industries.</h2>
+      <p>Our work has brought GPE into international environments involving government, international organizations, investors, businesses and institutional partners.</p>
+    </div>
+    <div class="recognition-grid">
+      <div class="recognition-card reveal glow-card">
+        <div class="recognition-card-media logo-media"><img loading="lazy" src="/assets/img/aa6395ee520a.webp" alt="COP22 / CMP12 / CMA1 — Marrakech 2016"></div>
+        <div class="r-year">Marrakech &middot; 2016</div>
+        <h3>COP22 / CMP12 / CMA1</h3>
+        <p>Contributed under the High Patronage of His Majesty King Mohammed VI, in partnership with UNESCO.</p>
+      </div>
+      <div class="recognition-card reveal glow-card">
+        <div class="recognition-card-media"><img src="/assets/img/24588e908e76.webp" alt="GPE leadership greets delegates at the Africa Trade &amp; Investment Global Summit, Washington, D.C." loading="lazy"></div>
+        <div class="r-year">Washington, D.C. &middot; 2018</div>
+        <h3>Africa Trade &amp; Investment Global Summit</h3>
+        <p>Sarah Zineb Boumouja served as Head of the Organizing Committee, with GPE as organizing partner, welcoming delegates from multiple international markets.</p>
+      </div>
+      <div class="recognition-card reveal glow-card">
+        <div class="recognition-card-media logo-media"><img loading="lazy" src="/assets/img/f9248d6cca7e.webp" alt="MEA Markets — African Excellence Awards 2022"></div>
+        <div class="r-year">MEA Markets &middot; 2022</div>
+        <h3>African Excellence Awards</h3>
+        <p>&ldquo;Best Global Event Management Company &ndash; North Africa,&rdquo; awarded by UK magazine MEA Markets.</p>
+      </div>
+    </div>
+    <div class="patronage">
+      <div class="hero-kicker"><span class="rule"></span><span>Under Distinguished Patronage</span></div>
+      <div class="patronage-row">
+        <div class="patronage-badge reveal"><img loading="lazy" src="/assets/img/ef6bd3fa70cd.webp" alt="Kingdom of Morocco"></div>
+        <span class="patronage-sep"></span>
+        <div class="patronage-badge reveal"><img loading="lazy" src="/assets/img/20e65a06396f.webp" alt="UNESCO"></div>
+      </div>
+      <p class="patronage-note">Past events delivered under the High Patronage of His Majesty King Mohammed VI, in partnership with UNESCO — including COP22 / CMP12 / CMA1, the UN Climate Change Conference, Marrakech 2016.</p>
+    </div>
+  </section>
+
+  <section class="closing-cta">
+    <div class="wrap">
+      <h2>Let's build what's next.</h2>
+      <p>Whether it's a trade show presence, an official mission, a global summit or a purpose-driven initiative — one team, accountable from first brief to final delivery.</p>
+      <div class="hero-ctas">
+        <a class="btn-gold" href="/contact-us/">Talk to Our Team &rarr;</a>
+        <a class="btn-secondary on-dark" href="/services/">Explore Our Services &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img loading="lazy" class="footer-logo" src="/assets/logo.webp" alt="Global Premium Events">
+        <p>Structuring international missions, delegations and business matchmaking between Africa and global markets.</p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Headquarters</div>
+        <ul class="footer-contact">
+          <li><b>T</b> +212 653512995</li>
+          <li><b>E</b> info@globalpremiumevents.com</li>
+          <li><b>A</b> Rabat, Morocco</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="gpe-foot-links">
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/our-work/">Our Work</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/inclusive-events/">Inclusive Events</a></li>
+          <li><a href="/partner-with-us/">Partner With Us</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Global Presence</div>
+        <div class="footer-partners-list">AFRICA <span class="sep">&bull;</span> G.C.C <span class="sep">&bull;</span> EUROPE <span class="sep">&bull;</span> U.S.A</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Global Premium Events. All rights reserved.</span><span class="gpe-legal-links"><a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/privacy-policy/#legal-notice">Legal Notice</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion) {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  if (!reduceMotion) {
+    var glowEls = document.querySelectorAll('.glow-card');
+    glowEls.forEach(function(el){
+      el.addEventListener('mousemove', function(e){
+        var rect = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+      });
+    });
+  }
+
+  var progressBar = document.getElementById('scrollProgressBar');
+  if (progressBar) {
+    var updateProgress = function(){
+      var doc = document.documentElement;
+      var scrollTop = window.scrollY || doc.scrollTop;
+      var height = doc.scrollHeight - doc.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    };
+    var progressTicking = false;
+    window.addEventListener('scroll', function(){
+      if (!progressTicking) {
+        requestAnimationFrame(function(){ updateProgress(); progressTicking = false; });
+        progressTicking = true;
+      }
+    });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  }
+
+  /* Impact carousel */
+  var track = document.getElementById('impactTrack');
+  if (track) {
+    var slides = track.querySelectorAll('.impact-slide');
+    var dotsWrap = document.getElementById('icDots');
+    var dots = [];
+    slides.forEach(function(_, i){
+      var d = document.createElement('button');
+      d.className = 'ic-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Go to story ' + (i + 1));
+      d.addEventListener('click', function(){ scrollToSlide(i); });
+      dotsWrap.appendChild(d);
+      dots.push(d);
+    });
+    function scrollToSlide(i){
+      var width = track.clientWidth;
+      track.scrollTo({ left: width * i, behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+    function currentIndex(){
+      var width = track.clientWidth || 1;
+      return Math.round(track.scrollLeft / width);
+    }
+    function updateDots(){
+      var idx = Math.max(0, Math.min(slides.length - 1, currentIndex()));
+      dots.forEach(function(d, i){ d.classList.toggle('active', i === idx); });
+    }
+    var scrollTicking = false;
+    track.addEventListener('scroll', function(){
+      if (!scrollTicking) {
+        requestAnimationFrame(function(){ updateDots(); scrollTicking = false; });
+        scrollTicking = true;
+      }
+    });
+    var prevBtn = document.getElementById('icPrev');
+    var nextBtn = document.getElementById('icNext');
+    if (prevBtn) prevBtn.addEventListener('click', function(){ scrollToSlide(Math.max(0, currentIndex() - 1)); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ scrollToSlide(Math.min(slides.length - 1, currentIndex() + 1)); });
+    window.addEventListener('resize', function(){ scrollToSlide(currentIndex()); });
+
+    if (!reduceMotion) {
+      var icTimer = null;
+      function startImpactAutoplay(){
+        stopImpactAutoplay();
+        icTimer = setInterval(function(){
+          var next = (currentIndex() + 1) % slides.length;
+          scrollToSlide(next);
+        }, 5500);
+      }
+      function stopImpactAutoplay(){ if (icTimer) { clearInterval(icTimer); icTimer = null; } }
+      startImpactAutoplay();
+      track.addEventListener('mouseenter', stopImpactAutoplay);
+      track.addEventListener('mouseleave', startImpactAutoplay);
+      track.addEventListener('focusin', stopImpactAutoplay);
+      track.addEventListener('focusout', startImpactAutoplay);
+    }
+  }
+
+  /* Who We Are — autoplay fade carousel */
+  var wwaCarousel = document.getElementById('wwaCarousel');
+  if (wwaCarousel) {
+    var wwaSlides = wwaCarousel.querySelectorAll('.wwa-slide');
+    var wwaDotsWrap = document.getElementById('wwaDots');
+    var wwaDots = [];
+    var wwaIndex = 0;
+    wwaSlides.forEach(function(_, i){
+      var d = document.createElement('span');
+      d.className = 'wwa-dot' + (i === 0 ? ' is-active' : '');
+      wwaDotsWrap.appendChild(d);
+      wwaDots.push(d);
+    });
+    function showWwaSlide(i){
+      wwaSlides.forEach(function(s, idx){ s.classList.toggle('is-active', idx === i); });
+      wwaDots.forEach(function(d, idx){ d.classList.toggle('is-active', idx === i); });
+      wwaIndex = i;
+    }
+    var wwaTimer = null;
+    function startWwaAutoplay(){
+      stopWwaAutoplay();
+      wwaTimer = setInterval(function(){ showWwaSlide((wwaIndex + 1) % wwaSlides.length); }, 4500);
+    }
+    function stopWwaAutoplay(){ if (wwaTimer) { clearInterval(wwaTimer); wwaTimer = null; } }
+    if (!reduceMotion && wwaSlides.length > 1) {
+      startWwaAutoplay();
+      wwaCarousel.addEventListener('mouseenter', stopWwaAutoplay);
+      wwaCarousel.addEventListener('mouseleave', startWwaAutoplay);
+    }
+  }
+})();
+</script>
+<script src="/assets/gpe.js" defer></script>
+</body>
+</html>
