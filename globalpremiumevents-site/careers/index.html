@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers &mdash; Global Premium Events</title>
+<meta name="description" content="Join Global Premium Events. Apply for roles and internships in event project management, protocol and delegations, exhibition production, communications and event staffing.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Premium Events">
+<meta property="og:title" content="Careers — Global Premium Events">
+<meta property="og:description" content="Join Global Premium Events. Apply for roles and internships in event project management, protocol and delegations, exhibition production, communications and event staffing.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Careers — Global Premium Events">
+<meta name="twitter:description" content="Join Global Premium Events. Apply for roles and internships in event project management, protocol and delegations, exhibition production, communications and event staffing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #16294F;
+    --blue: #2C4E86;
+    --blue-mid: #45659B;
+    --ink: #1B1E24;
+    --ink-dim: #5B6270;
+    --line: #DDE3EC;
+    --panel: #F4F6FA;
+    --bg: #FFFFFF;
+    --gold: #A9832E;
+    --gold-light: #C3A86D;
+    --gold-dark: #8E6E27;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', Arial, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{ font-family:'Source Serif 4', Georgia, serif; }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:72px 0 64px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-watermark{
+    position:absolute;
+    top:-70px;
+    right:-30px;
+    font-family:'Source Serif 4', serif;
+    font-size:280px;
+    font-weight:600;
+    color:var(--navy);
+    opacity:0.045;
+    line-height:1;
+    pointer-events:none;
+    user-select:none;
+    z-index:0;
+  }
+  .hero-inner{ position:relative; z-index:1; max-width:62ch; }
+  .hero-kicker{
+    display:flex; align-items:center; gap:10px; color:var(--blue); font-size:13px; margin-bottom:22px; font-weight:500;
+  }
+  .hero-kicker .rule{ width:36px; height:1px; background:var(--blue-mid); }
+  h1.hero-title{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(36px, 4.4vw, 52px);
+    line-height:1.1;
+    font-weight:600;
+    margin:0 0 20px;
+    color:var(--navy);
+  }
+  .hero-sub{
+    font-size:15.5px;
+    color:var(--ink-dim);
+    line-height:1.75;
+    margin:0;
+    max-width:58ch;
+  }
+
+  /* CONTACT SPLIT */
+  .contact-main{ padding:72px 0 88px; }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:start;
+  }
+  .contact-info-card{
+    background:var(--navy);
+    color:#fff;
+    padding:44px 38px;
+    position:relative;
+    overflow:hidden;
+  }
+  .contact-info-card::before{
+    content:"";
+    position:absolute;
+    top:-40px; right:-40px;
+    width:220px; height:220px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(169,131,46,0.22), transparent 70%);
+    pointer-events:none;
+  }
+  .contact-info-card h2{
+    font-family:'Source Serif 4', serif;
+    font-size:23px;
+    font-weight:600;
+    margin:0 0 12px;
+    position:relative;
+    z-index:1;
+  }
+  .contact-info-card > p{
+    font-size:14.5px;
+    color:#C7D1E3;
+    line-height:1.7;
+    margin:0 0 32px;
+    max-width:36ch;
+    position:relative;
+    z-index:1;
+  }
+  .contact-detail-list{
+    list-style:none;
+    margin:0 0 32px;
+    padding:0;
+    display:grid;
+    gap:22px;
+    position:relative;
+    z-index:1;
+  }
+  .contact-detail-list li{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .cd-icon{
+    flex-shrink:0;
+    width:38px; height:38px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.18);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .cd-icon svg{ width:17px; height:17px; stroke:var(--gold-light); fill:none; stroke-width:1.8; }
+  .cd-text{ font-size:14px; color:#E4E9F2; line-height:1.6; }
+  .cd-text b{ display:block; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8FA1C4; font-weight:600; margin-bottom:4px; }
+  .cd-text a{ color:#E4E9F2; text-decoration:none; border-bottom:1px solid rgba(228,233,242,0.35); transition:border-color .25s ease, color .25s ease; }
+  .cd-text a:hover{ color:#fff; border-color:var(--gold-light); }
+  .contact-email-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--gold);
+    color:var(--navy);
+    font-weight:600;
+    font-size:14px;
+    padding:14px 22px;
+    text-decoration:none;
+    border-radius:2px;
+    transition:background-color .3s ease, transform .3s ease;
+    position:relative;
+    z-index:1;
+  }
+  .contact-email-btn:hover{ background:var(--gold-light); transform:translateY(-2px); }
+
+  /* FORM */
+  .contact-form-card{
+    border:1px solid var(--line);
+    padding:44px 40px;
+  }
+  .contact-form-card h2{
+    font-family:'Source Serif 4', serif;
+    font-size:22px;
+    font-weight:600;
+    color:var(--navy);
+    margin:0 0 8px;
+  }
+  .contact-form-card > p{
+    font-size:14.5px;
+    color:var(--ink-dim);
+    line-height:1.7;
+    margin:0 0 32px;
+  }
+  .cf-row{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:22px; min-width:0; }
+  .cf-field{ display:flex; flex-direction:column; gap:8px; margin-bottom:22px; min-width:0; }
+  .cf-field label{ font-size:12.5px; font-weight:600; color:var(--navy); letter-spacing:0.02em; }
+  .cf-field input, .cf-field select, .cf-field textarea{
+    width:100%;
+    max-width:100%;
+    font-family:'Inter', Arial, sans-serif;
+    font-size:14.5px;
+    color:var(--ink);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:13px 14px;
+    background:var(--panel);
+    transition:border-color .25s ease, background-color .25s ease;
+    box-sizing:border-box;
+  }
+  .cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus{
+    outline:none;
+    border-color:var(--blue-mid);
+    background:#fff;
+  }
+  .cf-field textarea{ resize:vertical; min-height:130px; font-family:'Inter', Arial, sans-serif; }
+  .cf-submit{
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    padding:15px 30px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    border-radius:2px;
+    cursor:pointer;
+    transition:background-color .3s ease, transform .3s ease, box-shadow .3s ease;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .cf-submit:hover{ background:var(--blue); transform:translateY(-3px); box-shadow:0 16px 32px rgba(22,41,79,0.2); }
+  .cf-dynamic-note{
+    font-size:13px;
+    color:var(--blue);
+    background:var(--panel);
+    border-left:3px solid var(--gold);
+    padding:11px 14px;
+    border-radius:2px;
+    margin:-4px 0 22px;
+    line-height:1.55;
+    display:none;
+  }
+  .cf-dynamic-note.is-visible{ display:block; }
+  .cf-branch{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    transition:max-height .4s ease, opacity .35s ease, margin .4s ease;
+  }
+  .cf-branch.is-visible{
+    max-height:260px;
+    opacity:1;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .cf-branch{ transition:none; }
+  }
+  .cf-note{ font-size:12.5px; color:var(--ink-dim); margin-top:16px; line-height:1.6; }
+  .cf-note a{ color:var(--blue); }
+  @media (max-width:900px){
+    .contact-grid{ grid-template-columns:1fr; gap:40px; }
+  }
+  @media (max-width:560px){
+    .cf-row{ grid-template-columns:1fr; gap:0; }
+    .contact-info-card, .contact-form-card{ padding:32px 24px; }
+  }
+
+  /* WHAT HAPPENS NEXT */
+  .next-steps{ padding:20px 0 80px; border-top:1px solid var(--line); }
+  .next-steps-head{ max-width:640px; margin:56px auto 40px; padding:0 48px; text-align:center; }
+  .next-steps-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(24px,2.8vw,30px);
+    font-weight:600;
+    color:var(--navy);
+    margin:0 0 12px;
+    letter-spacing:-0.01em;
+  }
+  .next-steps-head p{ font-size:14.5px; color:var(--ink-dim); line-height:1.7; margin:0; }
+  .next-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+  }
+  .next-card{
+    text-align:center;
+    padding:8px 20px;
+  }
+  .next-num{
+    width:52px; height:52px;
+    border-radius:50%;
+    background:var(--panel);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 18px;
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    color:var(--gold);
+    font-size:17px;
+  }
+  .next-card h3{ font-family:'Source Serif 4', serif; font-size:16px; font-weight:600; color:var(--navy); margin:0 0 8px; }
+  .next-card p{ font-size:13.5px; color:var(--ink-dim); line-height:1.6; margin:0; }
+  @media (max-width:760px){
+    .next-grid{ grid-template-columns:1fr; gap:32px; }
+  }
+
+  /* SITE FOOTER (shared) */
+  .site-footer{
+    background:var(--navy);
+    color:#C7D1E3;
+    padding:64px 0 0;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.95fr 1fr 1.35fr;
+    gap:32px;
+    padding-bottom:44px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-brand{ display:flex; flex-direction:column; gap:18px; }
+  .footer-logo{ width:84px; height:84px; display:block; }
+  .footer-brand p{ font-size:13px; color:#9FACC6; line-height:1.65; max-width:30ch; margin:0; }
+  .footer-col-title{ font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin:0 0 20px; }
+  .footer-contact{ list-style:none; margin:0; padding:0; display:grid; gap:13px; }
+  .footer-contact li{ font-size:14px; color:#E4E9F2; line-height:1.6; display:flex; gap:12px; }
+  .footer-contact li b{ color:#7F93B8; font-weight:600; flex-shrink:0; width:14px; }
+  .footer-cta-text{ font-size:13.5px; color:#9FACC6; line-height:1.65; margin:0 0 14px; max-width:26ch; }
+  .footer-cta-link{ display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; letter-spacing:0.02em; color:#fff; text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:3px; transition:color .3s ease, gap .3s ease; }
+  .footer-cta-link:hover{ color:var(--gold-light); gap:12px; }
+  .footer-relocating{ margin:10px 0 0; font-size:12px; font-style:italic; color:#8394B3; line-height:1.5; }
+  .footer-partners-list{ font-size:13px; font-weight:600; letter-spacing:0.06em; color:#E4E9F2; line-height:2; }
+  .footer-partners-list .sep{ color:var(--gold); margin:0 10px; }
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding:22px 0; font-size:12px; color:#7F93B8; }
+  @media (max-width:760px){ .footer-bottom{ justify-content:flex-start; } }
+  @media (max-width:900px){ .footer-grid{ grid-template-columns:1fr 1fr; gap:36px 40px; } }
+  @media (max-width:560px){ .footer-grid{ grid-template-columns:1fr; gap:32px; } }
+
+  /* ============ ACCESSIBILITY: skip link + focus-visible ============ */
+  .skip-link{
+    position:absolute; top:-48px; left:12px; z-index:9999;
+    background:var(--navy); color:#fff; padding:12px 20px; border-radius:4px;
+    font-family:'Inter', Arial, sans-serif; font-size:14px; font-weight:600; text-decoration:none;
+    transition:top .25s ease;
+  }
+  .skip-link:focus{ top:12px; }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  /* ============ SCROLL PROGRESS + REVEAL/GLOW (shared with Home/About) ============ */
+  .scroll-progress{ position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; background:transparent; pointer-events:none; }
+  .scroll-progress-bar{ height:100%; width:0%; background:linear-gradient(90deg, var(--gold), var(--navy)); transition:width .1s linear; }
+  @media (prefers-reduced-motion: reduce){ .scroll-progress-bar{ transition:none; } }
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .5s ease, box-shadow .35s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  .glow-card, .glow-card-dark{ position:relative; overflow:hidden; }
+  .glow-card::before, .glow-card-dark::before{
+    content:""; position:absolute; inset:0; opacity:0; transition:opacity .4s ease; pointer-events:none; z-index:0;
+  }
+  .glow-card::before{ background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(169,131,46,0.14), transparent 70%); }
+  .glow-card-dark::before{ background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.10), transparent 70%); }
+  .glow-card:hover::before, .glow-card-dark:hover::before{ opacity:1; }
+  .glow-card > *, .glow-card-dark > *{ position:relative; z-index:1; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .glow-card::before, .glow-card-dark::before{ display:none; }
+  }
+
+</style>
+<style id="gpe-form-css">
+.gpe-form-ok{text-align:center;padding:40px 16px;}
+.gpe-form-ok-icon{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:#A9832E;color:#fff;font-size:28px;line-height:56px;}
+.gpe-form-ok h3{font-family:'Source Serif 4',Georgia,serif;color:#16294F;font-size:22px;margin:0 0 8px;}
+.gpe-form-ok p{color:#5B6270;margin:0;font-size:15px;}
+.contact-form-note,.cf-note{display:none;}
+</style>
+<link rel="canonical" href="https://globalpremiumevents.com/careers/">
+<meta property="og:url" content="https://globalpremiumevents.com/careers/">
+<meta property="og:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#16294F">
+<link rel="stylesheet" href="/assets/gpe.css">
+<style id="careers-css">
+.cr-areas{padding:40px 0 90px;}
+.cr-head{text-align:center;max-width:680px;margin:0 auto 44px;}
+.cr-head h2{font-family:'Source Serif 4',Georgia,serif;color:var(--navy);font-size:clamp(28px,3.4vw,38px);margin:0 0 12px;}
+.cr-head p{color:var(--ink-dim);margin:0;font-size:15.5px;}
+.cr-area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.cr-area{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px 28px;transition:transform .45s cubic-bezier(.2,.7,.3,1),box-shadow .45s cubic-bezier(.2,.7,.3,1),border-color .3s;}
+.cr-area:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(22,41,79,.10);border-color:var(--gold-light);}
+.cr-area-num{font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:22px;color:var(--gold);}
+.cr-area h3{font-family:'Source Serif 4',Georgia,serif;color:var(--navy);font-size:19px;margin:12px 0 8px;}
+.cr-area p{color:var(--ink-dim);font-size:14.5px;line-height:1.65;margin:0;}
+.cr-steps{list-style:none;counter-reset:s;padding:0;margin:26px 0;}
+.cr-steps li{counter-increment:s;position:relative;padding:0 0 22px 48px;}
+.cr-steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;border:1px solid rgba(195,168,109,.6);color:#C3A86D;font:600 14px/32px 'Inter',Arial,sans-serif;text-align:center;}
+.cr-steps b{display:block;color:#fff;font-size:15px;margin-bottom:3px;}
+.cr-steps span{color:#C9D3E4;font-size:14px;line-height:1.55;}
+.cr-small{font-size:13.5px;color:#C9D3E4;}
+.cr-small a{color:#fff;border-bottom:1px solid #C3A86D;text-decoration:none;}
+#careersForm input[type=file]{padding:12px;background:var(--panel);border:1px dashed var(--blue-mid);border-radius:4px;width:100%;font:inherit;cursor:pointer;}
+.cr-file-error{display:block;color:#990000;font-size:13px;margin-top:6px;min-height:1em;}
+.cr-consent{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.55;color:var(--ink-dim);margin:6px 0 22px;}
+.cr-consent input{margin-top:3px;accent-color:var(--navy);}
+.cr-consent a{color:var(--navy);}
+@media (max-width:900px){.cr-area-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:600px){.cr-area-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<header class="gpe-nav" id="gpeNav">
+  <div class="gpe-nav-in">
+    <a class="gpe-nav-logo" href="/" aria-label="Global Premium Events — Home"><img src="/assets/logo.webp" alt="Global Premium Events" width="44" height="44"></a>
+    <button class="gpe-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="gpeNavLinks"><span></span><span></span><span></span></button>
+    <nav class="gpe-nav-links" id="gpeNavLinks" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/about-us/">About</a>
+      <div class="gpe-dd">
+        <button class="gpe-dd-toggle" aria-expanded="false" aria-haspopup="true">Services <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="gpe-dd-menu"><a href="/services/missions-partnerships/"><b>Missions, Delegations &amp; Matchmaking</b><span>Official delegations, trade missions, B2B / G2G meetings</span></a><a href="/services/exhibitions-trade-shows/"><b>Trade Shows &amp; Exhibitions</b><span>Stand design, build and full participation management</span></a><a href="/services/event-production/"><b>Corporate Event Production</b><span>Launches, conferences, ceremonies and galas</span></a><a class="gpe-dd-all" href="/services/">View all services &rarr;</a></div>
+      </div>
+      <a href="/our-work/">Our Work</a>
+      <a href="/inclusive-events/" class="gpe-nav-incl">Inclusive Events</a>
+      <a class="gpe-nav-cta" href="/contact-us/">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-watermark" aria-hidden="true">&#9733;</div>
+      <div class="hero-inner">
+        <div class="hero-kicker"><span class="rule"></span><span>Careers</span></div>
+        <h1 class="hero-title">Build what&rsquo;s next with us.</h1>
+        <p class="hero-sub">Global Premium Events is a Rabat-based team delivering missions, trade shows and summits across Africa, the Gulf, Europe and the United States. We are always glad to meet people who care about detail, protocol and doing things properly.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="cr-areas">
+    <div class="wrap">
+      <div class="cr-head reveal">
+        <h2>Where You Could Fit</h2>
+        <p>We recruit for permanent roles, project-based missions and internships in these areas.</p>
+      </div>
+      <div class="cr-area-grid">
+        <div class="cr-area reveal">
+          <span class="cr-area-num">01</span>
+          <h3>Event Project Management</h3>
+          <p>Planning and running trade show participations, summits and corporate productions from first brief to final report.</p>
+        </div>
+        <div class="cr-area reveal">
+          <span class="cr-area-num">02</span>
+          <h3>Protocol &amp; Delegations</h3>
+          <p>Coordinating official delegations, VIP guests, B2B / G2G meetings and the logistics behind them.</p>
+        </div>
+        <div class="cr-area reveal">
+          <span class="cr-area-num">03</span>
+          <h3>Exhibition Design &amp; Production</h3>
+          <p>Stand design, technical production, fabrication follow-up and on-site build supervision.</p>
+        </div>
+        <div class="cr-area reveal">
+          <span class="cr-area-num">04</span>
+          <h3>Communications &amp; Partnerships</h3>
+          <p>Sponsor and partner relations, media, content and digital communication for our events.</p>
+        </div>
+        <div class="cr-area reveal">
+          <span class="cr-area-num">05</span>
+          <h3>Event Staff &amp; Hospitality</h3>
+          <p>Hosts, hostesses, interpreters and on-site teams for events in Morocco and abroad.</p>
+        </div>
+        <div class="cr-area reveal">
+          <span class="cr-area-num">06</span>
+          <h3>Internships</h3>
+          <p>Students and recent graduates who want hands-on experience on international events.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap contact-main" id="apply">
+    <div class="contact-grid">
+      <div class="contact-info-card reveal">
+        <h2>How We Recruit</h2>
+        <p>Every application is read by our team &mdash; not filtered by software.</p>
+        <ol class="cr-steps">
+          <li><b>Apply</b><span>Send your details and CV through the form.</span></li>
+          <li><b>Review</b><span>We read your profile and match it with current and upcoming projects.</span></li>
+          <li><b>Conversation</b><span>If there is a fit, we contact you for an interview.</span></li>
+        </ol>
+        <p class="cr-small">Prefer email? Send your CV to <a href="mailto:info@globalpremiumevents.com?subject=Application">info@globalpremiumevents.com</a> with &ldquo;Application&rdquo; in the subject.</p>
+      </div>
+
+      <div class="contact-form-card reveal">
+        <h2>Apply Now</h2>
+        <p>Fields marked * are required. Accepted CV formats: PDF or Word, up to 5 MB.</p>
+        <form id="careersForm" action="https://formsubmit.co/info@globalpremiumevents.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="New job application — Global Premium Events">
+          <input type="hidden" name="_next" value="https://globalpremiumevents.com/careers/?sent=1#apply">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="cr-name">Full Name *</label>
+              <input type="text" id="cr-name" name="Full name" required autocomplete="name">
+            </div>
+            <div class="cf-field">
+              <label for="cr-email">Email Address *</label>
+              <input type="email" id="cr-email" name="email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="cr-phone">Phone *</label>
+              <input type="tel" id="cr-phone" name="Phone" required autocomplete="tel" placeholder="+212 …">
+            </div>
+            <div class="cf-field">
+              <label for="cr-city">City &amp; Country</label>
+              <input type="text" id="cr-city" name="City and country" autocomplete="address-level2" placeholder="e.g. Rabat, Morocco">
+            </div>
+          </div>
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="cr-area">Area of Interest *</label>
+              <select id="cr-area" name="Area of interest" required>
+                <option value="">Select an area</option><option value="Event Project Management">Event Project Management</option><option value="Protocol &amp; Delegations">Protocol &amp; Delegations</option><option value="Exhibition Design &amp; Production">Exhibition Design &amp; Production</option><option value="Communications &amp; Partnerships">Communications &amp; Partnerships</option><option value="Event Staff &amp; Hospitality">Event Staff &amp; Hospitality</option><option value="Internships">Internships</option><option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="cf-field">
+              <label for="cr-type">Type of Position</label>
+              <select id="cr-type" name="Type of position">
+                <option value="Full-time">Full-time</option>
+                <option value="Project-based / Freelance">Project-based / Freelance</option>
+                <option value="Internship">Internship</option>
+              </select>
+            </div>
+          </div>
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="cr-linkedin">LinkedIn Profile</label>
+              <input type="url" id="cr-linkedin" name="LinkedIn" placeholder="https://linkedin.com/in/…">
+            </div>
+            <div class="cf-field">
+              <label for="cr-lang">Languages</label>
+              <input type="text" id="cr-lang" name="Languages" placeholder="e.g. English, French, Arabic">
+            </div>
+          </div>
+          <div class="cf-field">
+            <label for="cr-cv">CV / Resume * (PDF or Word, max 5 MB)</label>
+            <input type="file" id="cr-cv" name="attachment" required accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            <span class="cr-file-error" id="crFileError" role="alert"></span>
+          </div>
+          <div class="cf-field">
+            <label for="cr-message">Why Global Premium Events? *</label>
+            <textarea id="cr-message" name="Message" required placeholder="Tell us briefly about your experience and what you would like to work on."></textarea>
+          </div>
+          <label class="cr-consent"><input type="checkbox" required name="Consent" value="Yes"> <span>I agree that GPE may keep my application to contact me about current and future opportunities, as described in the <a href="/privacy-policy/">Privacy Policy</a>.</span></label>
+          <button type="submit" class="cf-submit">Send Application <span aria-hidden="true">&rarr;</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img loading="lazy" class="footer-logo" src="/assets/logo.webp" alt="Global Premium Events">
+        <p>Structuring international missions, delegations and business matchmaking between Africa and global markets.</p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Headquarters</div>
+        <ul class="footer-contact">
+          <li><b>T</b> +212 653512995</li>
+          <li><b>E</b> info@globalpremiumevents.com</li>
+          <li><b>A</b> Rabat, Morocco</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="gpe-foot-links">
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/our-work/">Our Work</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/inclusive-events/">Inclusive Events</a></li>
+          <li><a href="/partner-with-us/">Partner With Us</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Global Presence</div>
+        <div class="footer-partners-list">AFRICA <span class="sep">&bull;</span> G.C.C <span class="sep">&bull;</span> EUROPE <span class="sep">&bull;</span> U.S.A</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Global Premium Events. All rights reserved.</span><span class="gpe-legal-links"><a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/privacy-policy/#legal-notice">Legal Notice</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion) {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  if (!reduceMotion) {
+    var glowEls = document.querySelectorAll('.glow-card, .glow-card-dark');
+    glowEls.forEach(function(el){
+      el.addEventListener('mousemove', function(e){
+        var rect = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+      });
+    });
+  }
+
+  var progressBar = document.getElementById('scrollProgressBar');
+  if (progressBar) {
+    var updateProgress = function(){
+      var doc = document.documentElement;
+      var scrollTop = window.scrollY || doc.scrollTop;
+      var height = doc.scrollHeight - doc.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    };
+    var progressTicking = false;
+    window.addEventListener('scroll', function(){
+      if (!progressTicking) {
+        requestAnimationFrame(function(){ updateProgress(); progressTicking = false; });
+        progressTicking = true;
+      }
+    });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  }
+})();
+</script>
+<script src="/assets/gpe.js" defer></script>
+<script>
+(function(){
+  var form=document.getElementById('careersForm'); if(!form) return;
+  if (/[?&]sent=1/.test(location.search)) {
+    form.innerHTML='<div class="gpe-form-ok" role="status"><div class="gpe-form-ok-icon">&#10003;</div><h3>Thank you &mdash; your application has been sent.</h3><p>Our team reads every application personally. If your profile matches a current or upcoming project, we will contact you.</p></div>';
+    return;
+  }
+  var cv=document.getElementById('cr-cv'), err=document.getElementById('crFileError');
+  function check(){
+    err.textContent='';
+    var f=cv.files&&cv.files[0]; if(!f) return true;
+    if(!/\.(pdf|docx?)$/i.test(f.name)){ err.textContent='Please upload a PDF or Word file.'; return false; }
+    if(f.size>5*1024*1024){ err.textContent='This file is larger than 5 MB. Please upload a smaller file.'; return false; }
+    return true;
+  }
+  cv.addEventListener('change',check);
+  form.addEventListener('submit',function(e){
+    if(!check()){ e.preventDefault(); cv.focus(); return; }
+    var name=document.getElementById('cr-name').value, area=document.getElementById('cr-area').value;
+    form.querySelector('[name=_subject]').value='New application — '+area+' — '+name;
+    var btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Sending…';
+  });
+})();
+</script>
+</body>
+</html>
