@@ -26,7 +26,7 @@
     fr: {
       open: 'Inscriptions ouvertes', soon: 'Bientôt', full: 'Complet', closed: 'Inscriptions closes', done: 'Terminée',
       kicker: 'Mission B2B', dates: 'Dates', place: 'Lieu', deleg: 'Délégation', companiesMax: 'entreprises maximum', deadline: 'Clôture des inscriptions',
-      register: 'S’inscrire à la mission', notify: 'Être informé en priorité', notifyNext: 'Être informé des prochaines missions', infoNote: 'Note d’information',
+      notify: 'Être informé en priorité', notifyNext: 'Être informé des prochaines missions', infoNote: 'Note d’information',
       why: 'Pourquoi le {p} maintenant', anchor: 'Événement d’ancrage', moreEvent: 'Site officiel de l’événement',
       organiser: 'Organisateur', programme: 'Programme', dlProg: 'Télécharger le programme (PDF)',
       progNote: 'Programme indicatif, susceptible d’évoluer selon les confirmations des institutions et partenaires.',
@@ -77,12 +77,19 @@
       dPkg: 'Forfait choisi', dPay: 'Règlement', dBank: 'Banque', dSend: 'Merci de nous envoyer :', dConfirm: 'Je confirme ma participation.',
       dDone: 'Fait à ...................... le ...... / ...... /', dSign: 'Signature et cachet', dAlong: 'En marge de',
       dPkgTitle: 'Forfaits de participation', dService: 'Prestations', dPrice: 'Prix HT', dYes: '✓', dNo: '—',
-      langSwitch: 'English', langHref: 'en'
+      langSwitch: 'English', langHref: 'en',
+      register: 'Rejoindre la délégation', requestOffer: 'Recevoir l\u2019offre de participation',
+      priceOnRequest: 'Conditions de participation communiquées avec l\u2019offre',
+      leadKicker: 'Offre de participation', leadTitle: 'Recevez l\u2019offre de participation',
+      leadText: 'Indiquez vos coordonnées : les conditions de participation de chaque formule s\u2019affichent immédiatement, et notre équipe vous contacte pour vous conseiller.',
+      leadBtn: 'Afficher l\u2019offre', leadOk: 'Merci. Voici les conditions de participation de chaque formule. Notre équipe vous contactera sous 24 heures.',
+      lead1: 'Présentation détaillée de la mission', lead2: 'Conditions de participation par formule', lead3: 'Conseil personnalisé par notre équipe',
+      packagesTitle: 'Formules de participation', proceed: 'Finaliser mon inscription'
     },
     en: {
       open: 'Registration open', soon: 'Coming soon', full: 'Fully booked', closed: 'Registration closed', done: 'Completed',
       kicker: 'B2B Mission', dates: 'Dates', place: 'Location', deleg: 'Delegation', companiesMax: 'companies maximum', deadline: 'Registration deadline',
-      register: 'Register for the mission', notify: 'Get priority information', notifyNext: 'Hear about upcoming missions', infoNote: 'Information note',
+      notify: 'Get priority information', notifyNext: 'Hear about upcoming missions', infoNote: 'Information note',
       why: 'Why {p}, why now', anchor: 'Anchor event', moreEvent: 'Official event website',
       organiser: 'Organiser', programme: 'Programme', dlProg: 'Download the programme (PDF)',
       progNote: 'Indicative programme, subject to change based on confirmations from institutions and partners.',
@@ -133,7 +140,14 @@
       dPkg: 'Package selected', dPay: 'Payment', dBank: 'Bank', dSend: 'Please send us:', dConfirm: 'I confirm my participation.',
       dDone: 'Place ...................... date ...... / ...... /', dSign: 'Signature and company stamp', dAlong: 'On the sidelines of',
       dPkgTitle: 'Participation packages', dService: 'Services', dPrice: 'Price excl. VAT', dYes: '✓', dNo: '—',
-      langSwitch: 'Français', langHref: 'fr'
+      langSwitch: 'Français', langHref: 'fr',
+      register: 'Join the delegation', requestOffer: 'Request the participation offer',
+      priceOnRequest: 'Participation terms provided with the offer',
+      leadKicker: 'Participation offer', leadTitle: 'Receive the participation offer',
+      leadText: 'Leave your details: the participation terms for each package are displayed immediately, and our team will contact you to advise you.',
+      leadBtn: 'Show the offer', leadOk: 'Thank you. Here are the participation terms for each package. Our team will contact you within 24 hours.',
+      lead1: 'Detailed presentation of the mission', lead2: 'Participation terms for each package', lead3: 'Personalised advice from our team',
+      packagesTitle: 'Participation packages', proceed: 'Complete my registration'
     }
   };
   var U = UI[LANG];
@@ -216,6 +230,15 @@
     return null;
   }
 
+  function unlockKey(m) { return 'gpe-offre-' + m.id; }
+  function unlocked(m) {
+    if (m.id === 'apercu' || param('acces') === 'offre') return true;
+    try { return localStorage.getItem(unlockKey(m)) === '1'; } catch (e) { return false; }
+  }
+  function unlock(m) { try { localStorage.setItem(unlockKey(m), '1'); } catch (e) {} UNLOCKED_NOW = true; }
+  var UNLOCKED_NOW = false;
+  function isOpen(m) { return UNLOCKED_NOW || unlocked(m); }
+
   function formules(m) {
     if (m.formules && m.formules.length) return m.formules;
     var p = m.prix || {};
@@ -269,7 +292,7 @@
         (s === 'ouverte' && m.dateLimite ? '<li class="' + (urgent ? 'is-urgent' : '') + '">' + ICON.clock + '<span>' + U.closes + ' ' + esc(fmtDate(m.dateLimite)) + (urgent ? ' — ' + (EN ? 'D-' : 'J-') + j : '') + '</span></li>' : '') +
         '</ul>' +
         (m.secteurs && m.secteurs.length ? '<p class="ms-card-sectors">' + m.secteurs.slice(0, 3).map(esc).join(' · ') + (m.secteurs.length > 3 ? ' …' : '') + '</p>' : '') +
-        '<div class="ms-card-foot"><span class="ms-card-price">' + (isFinite(pm) ? U.from + ' <b>' + money(pm, cur) + '</b>' : '') + '</span>' +
+        '<div class="ms-card-foot"><span class="ms-card-price">' + (isFinite(pm) && unlocked(m) ? U.from + ' <b>' + money(pm, cur) + '</b>' : '') + '</span>' +
         '<span class="ms-card-link">' + (s === 'ouverte' ? U.register.split(' ')[0] + (EN ? '' : '') : U.seeMission) + ' &rarr;</span></div></a>';
     }
     var html = avenir.length ? '<div class="ms-grid">' + avenir.map(card).join('') + '</div>' : '<p class="ms-empty">' + U.emptyList + '</p>';
@@ -281,6 +304,7 @@
      2. PAGE D'UNE MISSION  (/missions/mission/?id=…)
      ===================================================================== */
   function packagesHtml(m, s) {
+    var open = isOpen(m);
     var F = formules(m), cur = (m.prix && m.prix.devise) || 'MAD', rows = m.comparatif || [];
     var cards = F.map(function (f, i) {
       var feats = rows.map(function (g) {
@@ -294,10 +318,13 @@
       return '<div class="ms-pk' + (f.recommande ? ' is-reco' : '') + '">' +
         (f.recommande ? '<span class="ms-pk-badge">' + U.recommended + '</span>' : '') +
         '<h3 class="ms-pk-name serif">' + esc(f.nom) + '</h3>' +
-        '<p class="ms-pk-price serif">' + money(f.prix, cur) + '</p><p class="ms-pk-sub">' + U.perCompany + '</p>' +
-        '<ul class="ms-pk-meta">' + (f.prixSup ? '<li>' + U.extraP + (EN ? ': ' : ' : ') + '<b>' + money(f.prixSup, cur) + '</b></li>' : '') +
-        '<li>' + (f.places ? f.places + ' ' + U.places : U.availability) + '</li></ul>' +
-        (s === 'ouverte' ? '<a class="ms-btn' + (f.recommande ? ' ms-btn-gold' : ' ms-btn-ghost') + ' ms-pk-cta" href="#inscription" data-pick="' + esc(f.id) + '">' + U.choose + ' &rarr;</a>' : '') +
+        (open ? '<p class="ms-pk-price serif">' + money(f.prix, cur) + '</p><p class="ms-pk-sub">' + U.perCompany + '</p>' +
+          '<ul class="ms-pk-meta">' + (f.prixSup ? '<li>' + U.extraP + (EN ? ': ' : ' : ') + '<b>' + money(f.prixSup, cur) + '</b></li>' : '') +
+          '<li>' + (f.places ? f.places + ' ' + U.places : U.availability) + '</li></ul>'
+          : '<ul class="ms-pk-meta ms-pk-meta-locked"><li>' + (f.places ? f.places + ' ' + U.places : U.availability) + '</li></ul>') +
+        (s === 'ouverte' ? (open
+          ? '<a class="ms-btn' + (f.recommande ? ' ms-btn-gold' : ' ms-btn-ghost') + ' ms-pk-cta" href="#inscription" data-pick="' + esc(f.id) + '">' + U.choose + ' &rarr;</a>'
+          : '<a class="ms-btn' + (f.recommande ? ' ms-btn-gold' : ' ms-btn-ghost') + ' ms-pk-cta" href="#inscription">' + U.requestOffer + ' &rarr;</a>') : '') +
         '<div class="ms-pk-feats">' + feats + '</div></div>';
     }).join('');
     var after = '';
@@ -307,8 +334,9 @@
         (m.conditions && m.conditions.length ? '<div><h3 class="ms-h3 serif">' + U.terms + '</h3><ul>' + m.conditions.map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('') + '</ul></div>' : '') +
         '</div>';
     }
-    return '<section class="ms-sec ms-sec-panel" id="forfaits"><div class="wrap"><h2 class="ms-h2 serif">' + U.packages + '</h2>' +
-      '<p class="ms-small ms-pk-note">' + esc(m.prix && m.prix.mention) + '</p>' +
+    return '<section class="ms-sec ms-sec-panel" id="forfaits"><div class="wrap"><h2 class="ms-h2 serif">' + U.packagesTitle + '</h2>' +
+      (UNLOCKED_NOW ? '<p class="ms-unlocked" role="status">' + U.leadOk + '</p>' : '') +
+      '<p class="ms-small ms-pk-note">' + (open ? esc(m.prix && m.prix.mention) : U.priceOnRequest + '.') + '</p>' +
       '<div class="ms-pks ms-pks-' + F.length + '">' + cards + '</div>' + after + '</div></section>';
   }
 
@@ -326,7 +354,15 @@
     var h = '';
     if (id === 'apercu') h += '<div class="ms-preview-bar">' + U.preview + ' <a href="/missions/editeur/">' + U.backEditor + '</a></div>';
 
-    h += '<section class="ms-hero"><div class="wrap"><div class="ms-hero-in">' +
+    var C = m.couleurs;
+    if (C) {
+      root.classList.add('ms-themed');
+      root.style.setProperty('--ev-dark', C.fonce || '#075C32');
+      root.style.setProperty('--ev-main', C.principal || '#12884A');
+      root.style.setProperty('--ev-accent', C.accent || '#F8CB0E');
+      root.style.setProperty('--ev-red', C.rouge || '#E8484F');
+    } else { root.classList.remove('ms-themed'); }
+    h += '<section class="ms-hero' + (m.image ? ' has-img' : '') + '"><div class="wrap ms-hero-grid"><div class="ms-hero-in">' +
       '<div class="hero-kicker"><span class="rule"></span><span>' + U.kicker + ' · ' + esc(m.pays) + '</span><span class="ms-badge ms-badge-' + s + '">' + statutLabel(s) + '</span>' + langToggle() + '</div>' +
       '<h1 class="ms-title serif">' + esc(m.titre) + '</h1><p class="ms-lede">' + esc(m.accroche) + '</p>' +
       '<ul class="ms-facts"><li>' + ICON.cal + '<span><b>' + U.dates + '</b>' + esc(fmtRange(m.dateDebut, m.dateFin)) + '</span></li>' +
@@ -334,9 +370,9 @@
       (m.places ? '<li>' + ICON.seat + '<span><b>' + U.deleg + '</b>' + esc(m.places) + ' ' + U.companiesMax + '</span></li>' : '') +
       (m.dateLimite ? '<li>' + ICON.clock + '<span><b>' + U.deadline + '</b>' + esc(fmtDate(m.dateLimite)) + (s === 'ouverte' && j !== null && j >= 0 ? ' (' + (EN ? 'D-' : 'J-') + j + ')' : '') + '</span></li>' : '') +
       '</ul><div class="ms-ctas">' +
-      '<a class="ms-btn ms-btn-gold" href="#' + (s === 'ouverte' ? 'forfaits' : 'inscription') + '">' + (s === 'ouverte' ? U.register : (s === 'bientot' ? U.notify : U.notifyNext)) + ' &rarr;</a>' +
-      '<a class="ms-btn ms-btn-ghost" href="' + docUrl(m, 'note') + '" target="_blank" rel="noopener">' + ICON.doc + U.infoNote + '</a></div>' +
-      '</div></div></section>';
+      '<a class="ms-btn ms-btn-gold" href="#' + (s === 'ouverte' ? (isOpen(m) ? 'forfaits' : 'inscription') : 'inscription') + '">' + (s === 'ouverte' ? (isOpen(m) ? U.register : U.requestOffer) : (s === 'bientot' ? U.notify : U.notifyNext)) + ' &rarr;</a>' +
+      '<a class="ms-btn ms-btn-ghost" href="' + docUrl(m, 'programme') + '" target="_blank" rel="noopener">' + ICON.doc + U.docProg + '</a></div>' +
+      '</div>' + (m.image ? '<figure class="ms-hero-img"><img src="' + esc(m.image) + '" alt="' + esc(m.evenement ? m.evenement.nom : m.titre) + '" width="900" height="1125"></figure>' : '') + '</div></section>';
 
     if (m.pourquoi && m.pourquoi.length) {
       h += '<section class="ms-sec"><div class="wrap"><h2 class="ms-h2 serif">' + fill(U.why, { p: esc(m.pays) }) + '</h2><div class="ms-stats">' +
@@ -346,7 +382,10 @@
     if (m.evenement) {
       var e = m.evenement;
       h += '<section class="ms-sec ms-sec-tight"><div class="wrap"><div class="ms-event reveal">' +
-        '<div><p class="ms-event-k">' + U.anchor + '</p><h2 class="serif">' + esc(e.nom) + '</h2><p>' + esc(e.description) + '</p>' +
+        '<div><p class="ms-event-k">' + U.anchor + '</p><h2 class="serif">' + esc(e.nom) + '</h2>' +
+        (e.slogan ? '<p class="ms-event-slogan">' + esc(e.slogan) + '</p>' : '') +
+        (e.theme ? '<p class="ms-event-theme"><b>' + (EN ? 'Theme' : 'Thème') + '</b>' + esc(e.theme) + '</p>' : '') +
+        '<p>' + esc(e.description) + '</p>' +
         (e.lien ? '<a class="ms-event-link" href="' + esc(e.lien) + '" target="_blank" rel="noopener">' + U.moreEvent + ' &rarr;</a>' : '') + '</div>' +
         '<ul class="ms-event-facts"><li><b>' + U.dates + '</b>' + esc(e.dates) + '</li><li><b>' + U.place + '</b>' + esc(e.lieu) + '</li><li><b>' + U.organiser + '</b>' + esc(e.organisateur) + '</li></ul>' +
         '</div></div></section>';
@@ -376,14 +415,14 @@
     }
 
     h += '<section class="ms-sec ms-sec-tight"><div class="wrap"><h2 class="ms-h2 serif">' + U.docs + '</h2><div class="ms-docs">' +
-      [['note', U.docNote, U.docNoteD], ['fiche', U.docForm, U.docFormD], ['programme', U.docProg, U.docProgD]].map(function (d) {
+      (isOpen(m) ? [['note', U.docNote, U.docNoteD], ['fiche', U.docForm, U.docFormD], ['programme', U.docProg, U.docProgD]] : [['programme', U.docProg, U.docProgD]]).map(function (d) {
         return '<a class="ms-doc" href="' + docUrl(m, d[0]) + '" target="_blank" rel="noopener"><span class="ms-ic">' + ICON.doc + '</span><div><h3>' + d[1] + '</h3><p>' + d[2] + '</p><span class="ms-textlink">' + U.openPdf + ' &rarr;</span></div></a>';
       }).join('') + '</div></div></section>';
 
-    h += '<section class="ms-sec ms-sec-form" id="inscription"><div class="wrap">' + (s === 'ouverte' ? formHtml(m) : interestHtml(m, s)) + '</div></section>';
+    h += '<section class="ms-sec ms-sec-form" id="inscription"><div class="wrap">' + (s === 'ouverte' ? (isOpen(m) ? formHtml(m) : leadHtml(m)) : interestHtml(m, s)) + '</div></section>';
 
     root.innerHTML = h;
-    if (s === 'ouverte') bindForm(m); else bindInterest(m);
+    if (s === 'ouverte') { if (isOpen(m)) bindForm(m); else bindLead(m, root); } else bindInterest(m);
     revealInit();
   }
 
@@ -444,7 +483,7 @@
 
   function collect(form) { var data = {}, fd = new FormData(form); fd.forEach(function (v, k) { data[k] = data[k] ? data[k] + ', ' + v : v; }); return data; }
 
-  function send(form, payload, subject, okHtml) {
+  function send(form, payload, subject, okHtml, softFail) {
     if (param('id') === 'apercu') { var pe = form.querySelector('.ms-error'); if (pe) pe.textContent = U.previewNoSend; return; }
     var btn = form.querySelector('button[type=submit]'), label = btn ? btn.innerHTML : '';
     if (btn) { btn.disabled = true; btn.textContent = U.sending; }
@@ -455,8 +494,8 @@
     var mailto = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
     fetch('https://formsubmit.co/ajax/' + to, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) })
       .then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) === 'false') throw j; return j; }); })
-      .then(function () { form.outerHTML = okHtml; var t = document.getElementById('inscription'); if (t) window.scrollTo({ top: t.offsetTop - 80 }); })
-      .catch(function () { if (btn) { btn.disabled = false; btn.innerHTML = label; } window.location.href = mailto; });
+      .then(function () { if (typeof okHtml === 'function') { okHtml(); return; } form.outerHTML = okHtml; var t = document.getElementById('inscription'); if (t) window.scrollTo({ top: t.offsetTop - 80 }); })
+      .catch(function () { if (softFail && typeof okHtml === 'function') { okHtml(); return; } if (btn) { btn.disabled = false; btn.innerHTML = label; } window.location.href = mailto; });
   }
 
   function bindForm(m) {
@@ -500,6 +539,43 @@
         '<div class="gpe-form-ok ms-ok" role="status"><div class="gpe-form-ok-icon">&#10003;</div><h3>' + U.okTitle + '</h3><p>' + U.okText + '</p>' +
         '<p class="ms-ok-next"><b>' + U.okPrep + '</b> ' + pieces().map(esc).join(' · ') + '.</p>' +
         '<p><a class="ms-btn ms-btn-ghost" href="' + docUrl(m, 'note') + '" target="_blank" rel="noopener">' + U.reread + '</a></p></div>');
+    });
+  }
+
+  function leadHtml(m) {
+    return '<div class="ms-form-grid"><div class="ms-form-aside">' +
+      '<p class="hero-kicker"><span class="rule"></span><span>' + U.leadKicker + '</span></p>' +
+      '<h2 class="ms-h2 serif">' + U.leadTitle + '</h2><p>' + U.leadText + '</p>' +
+      '<ul class="ms-incl">' + [U.lead1, U.lead2, U.lead3].map(function (x) { return '<li>' + ICON.check + '<span>' + x + '</span></li>'; }).join('') + '</ul>' +
+      '<p class="ms-small">' + U.question + ' <a href="mailto:' + esc(CFG.email) + '">' + esc(CFG.email) + '</a> \u00b7 <a href="tel:' + esc((CFG.telephone || '').replace(/\s/g, '')) + '">' + esc(CFG.telephone) + '</a></p>' +
+      '</div><form class="ms-form" id="msLead" novalidate>' +
+      '<div class="cf-row"><div class="cf-field"><label for="l-nom">' + U.name + ' *</label><input id="l-nom" name="nom" required autocomplete="name"></div>' +
+      '<div class="cf-field"><label for="l-fonction">' + U.role + ' *</label><input id="l-fonction" name="fonction" required autocomplete="organization-title"></div></div>' +
+      '<div class="cf-row"><div class="cf-field"><label for="l-ent">' + U.company + ' *</label><input id="l-ent" name="entreprise" required autocomplete="organization"></div>' +
+      '<div class="cf-field"><label for="l-secteur">' + U.sector + '</label><select id="l-secteur" name="secteur"><option value="">' + U.choosePh + '</option>' + opt(SECTEURS_GENERAUX) + '</select></div></div>' +
+      '<div class="cf-row"><div class="cf-field"><label for="l-email">' + U.email + ' *</label><input id="l-email" name="email" type="email" required autocomplete="email"></div>' +
+      '<div class="cf-field"><label for="l-tel">' + U.phone + ' *</label><input id="l-tel" name="telephone" type="tel" required autocomplete="tel"></div></div>' +
+      '<p class="ms-error" id="msError" role="alert"></p>' +
+      '<button type="submit" class="cf-submit">' + U.leadBtn + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
+  }
+  function bindLead(m, root) {
+    var form = document.getElementById('msLead'); if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var err = document.getElementById('msError'); err.textContent = '';
+      form.querySelectorAll('.is-invalid').forEach(function (el) { el.classList.remove('is-invalid'); });
+      var bad = Array.prototype.filter.call(form.querySelectorAll('[required]'), function (el) { return !el.value.trim(); });
+      bad.forEach(function (el) { el.classList.add('is-invalid'); });
+      if (bad.length) { err.textContent = U.errReq; bad[0].focus(); return; }
+      var email = document.getElementById('l-email');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { email.classList.add('is-invalid'); err.textContent = U.errMail; email.focus(); return; }
+      var d = collect(form); d.mission = m.titre; d.langue = LANG.toUpperCase();
+      var subject = (EN ? 'Offer request' : 'Demande d\u2019offre') + ' \u2014 Mission ' + m.pays + ' ' + (m.dateDebut || '').slice(0, 4) + ' \u2014 ' + d.entreprise;
+      send(form, d, subject, function () {
+        unlock(m);
+        renderMission(root);
+        var t = document.getElementById('forfaits'); if (t) window.scrollTo({ top: t.offsetTop - 70 });
+      }, true);
     });
   }
 

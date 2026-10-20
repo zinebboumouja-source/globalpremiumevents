@@ -67,6 +67,8 @@ window.GPE_MISSIONS = [
       organisateur: 'Ghana Investment Promotion Authority (GIPA)',
       dates: '16 – 17 novembre 2026',
       lieu: 'Kempinski Hotel Gold Coast City, Accra',
+      slogan: 'Le premier rassemblement d’affaires du Ghana placé sous l’égide du Président de la République',
+      theme: 'Investing in Ghana’s New Economy — Building a productive economy that creates value and competes globally.',
       description: 'Première édition. Sessions sectorielles, matchmaking, rendez-vous B2B et B2G, rencontres directes avec les décideurs publics, les entreprises et les porteurs de projets ghanéens.',
       lien: 'https://igs.gipa.gov.gh/'
     },
@@ -153,7 +155,10 @@ window.GPE_MISSIONS = [
       { jour: 'Jeudi 19 novembre', items: ['Rencontres institutionnelles', 'Transfert et vol retour Accra – Casablanca'] }
     ],
 
-    image: null,
+    // Affiche de l'événement (affichée en haut de la page)
+    image: '/missions/img/ghana-2026-affiche.webp',
+    // Couleurs de l'événement (vert, jaune, rouge du Ghana). Supprimer pour garder les couleurs GPE.
+    couleurs: { fonce: '#075C32', principal: '#12884A', accent: '#F8CB0E', rouge: '#E8484F' },
 
     /* ---------------- TRADUCTION ANGLAISE ---------------- */
     en: {
@@ -162,6 +167,7 @@ window.GPE_MISSIONS = [
       titre: 'Business Mission to Ghana — Invest Ghana Summit 2026',
       accroche: 'Global Premium Events is organising the Moroccan business delegation to the Invest Ghana Summit 2026, the first investment summit hosted by the Ghana Investment Promotion Authority (GIPA). More than 2,000 investors, policymakers and business leaders are expected in Accra.',
       evenement: {
+        slogan: 'Ghana’s premier President-led business gathering',
         dates: '16 – 17 November 2026',
         description: 'First edition. Sector sessions, business matchmaking, B2B and B2G meetings, and direct engagement with government officials, Ghanaian businesses and investment project promoters.'
       },
