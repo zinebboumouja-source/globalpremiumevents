@@ -105,32 +105,26 @@ window.GPE_MISSIONS = [
        Une ligne = [prestation, Délégation, Business, Executive]
        'Y' = inclus, '-' = non inclus, sinon le texte affiché. */
     comparatif: [
-      { groupe: 'Accès et programme', lignes: [
-        ['Accréditation à l’Invest Ghana Summit 2026', 'Y', 'Y', 'Y'],
-        ['Intégration à la délégation d’affaires marocaine', 'Y', 'Y', 'Y'],
-        ['Briefing pays avant le départ (climat des affaires, réglementation, opportunités)', 'Y', 'Y', 'Y'],
-        ['Dîner de networking de la délégation', 'Y', 'Y', 'Placement à la table protocolaire']
-      ] },
-      { groupe: 'Rendez-vous d’affaires', lignes: [
-        ['Programme de rendez-vous B2B', 'Accès au matchmaking du sommet', 'Agenda B2B qualifié selon votre profil', 'Agenda B2B garanti (8 rendez-vous minimum)'],
-        ['Rencontres B2G (institutions)', '-', 'Sollicitées', 'Organisées et préparées pour votre secteur'],
-        ['Visites de sites et d’entreprises', 'Y', 'Y', 'Y']
+      { groupe: 'Accès et rendez-vous', lignes: [
+        ['Accréditation à l\u2019Invest Ghana Summit 2026', 'Y', 'Y', 'Y'],
+        ['Intégration à la délégation d\u2019affaires marocaine et briefing pays', 'Y', 'Y', 'Y'],
+        ['Rendez-vous B2B', 'Matchmaking du sommet', 'Agenda B2B qualifié selon votre profil', 'Agenda B2B garanti (8 rendez-vous minimum)'],
+        ['Rencontres B2G (institutions)', '-', 'Sollicitées', 'Organisées pour votre secteur'],
+        ['Dîner de networking de la délégation', 'Y', 'Y', 'Y']
       ] },
       { groupe: 'Logistique et assistance', lignes: [
-        ['Transferts aéroport – hôtel – aéroport', 'Y', 'Y', 'Y'],
-        ['Transport sur place', 'Navette de délégation', 'Navette de délégation', 'Véhicule avec chauffeur'],
-        ['Assistance', 'Coordination de la délégation', 'Assistant dédié (1 pour 4 entreprises)', 'Assistant dédié et interprète']
+        ['Transferts et navette de la délégation', 'Y', 'Y', 'Y'],
+        ['Assistance', 'Coordination de groupe', 'Assistant dédié', 'Assistant personnel et interprète']
       ] },
-      { groupe: 'Visibilité et médias', lignes: [
-        ['Catalogue officiel de la délégation', 'Mention', 'Fiche entreprise', 'Page complète'],
-        ['Couverture photo et vidéo', 'Photo officielle de la délégation', 'Reportage photo de vos rendez-vous', 'Reportage photo et interview vidéo (60 s)'],
-        ['Communication digitale de la mission (LinkedIn et site)', 'Mention collective', 'Publication dédiée à votre entreprise', 'Publication dédiée et vidéo'],
-        ['Relations presse', 'Communiqué collectif de la délégation', 'Citation dans le communiqué', 'Interview proposée à la presse économique']
+      { groupe: 'Photo, vidéo et médias', lignes: [
+        ['Photos de groupe de la délégation', 'Y', 'Y', 'Y'],
+        ['Photographe et vidéaste dédiés à votre entreprise (créneau réservé : photos de vos rendez-vous et vidéo de 60 s)', '-', 'Y', 'Y'],
+        ['Communiqué de presse dédié à votre entreprise', '-', '-', 'Y'],
+        ['Relations médias (interviews proposées à la presse marocaine et ghanéenne)', '-', '-', 'Y']
       ] },
-      { groupe: 'Suivi après la mission', lignes: [
-        ['Bilan de la mission', 'Y', 'Y', 'Y'],
-        ['Suivi de vos contacts à J+30', '-', 'Y', 'Y'],
-        ['Rapport de mission personnalisé (contacts, pistes, prochaines étapes)', '-', '-', 'Y']
+      { groupe: 'Sur mesure et suivi', lignes: [
+        ['Programme personnalisé selon vos objectifs, défini avec vous avant le départ', '-', '-', 'Y'],
+        ['Suivi de vos contacts à J+30', '-', 'Y', 'Y']
       ] }
     ],
 
@@ -193,32 +187,26 @@ window.GPE_MISSIONS = [
         { nom: 'Executive Package' }
       ],
       comparatif: [
-        { groupe: 'Access and programme', lignes: [
+        { groupe: 'Access and meetings', lignes: [
           ['Accreditation to the Invest Ghana Summit 2026', 'Y', 'Y', 'Y'],
-          ['Membership of the Moroccan business delegation', 'Y', 'Y', 'Y'],
-          ['Pre-departure country briefing (business climate, regulations, opportunities)', 'Y', 'Y', 'Y'],
-          ['Delegation networking dinner', 'Y', 'Y', 'Seat at the official table']
-        ] },
-        { groupe: 'Business meetings', lignes: [
-          ['B2B meeting programme', 'Access to Summit matchmaking', 'Qualified B2B agenda based on your profile', 'Guaranteed B2B agenda (minimum 8 meetings)'],
-          ['B2G meetings (institutions)', '-', 'Requested', 'Arranged and prepared for your sector'],
-          ['Site and company visits', 'Y', 'Y', 'Y']
+          ['Membership of the Moroccan business delegation and country briefing', 'Y', 'Y', 'Y'],
+          ['B2B meetings', 'Summit matchmaking', 'Qualified B2B agenda based on your profile', 'Guaranteed B2B agenda (minimum 8 meetings)'],
+          ['B2G meetings (institutions)', '-', 'Requested', 'Arranged for your sector'],
+          ['Delegation networking dinner', 'Y', 'Y', 'Y']
         ] },
         { groupe: 'Logistics and assistance', lignes: [
-          ['Airport – hotel – airport transfers', 'Y', 'Y', 'Y'],
-          ['Local transport', 'Delegation shuttle', 'Delegation shuttle', 'Private car with driver'],
-          ['Assistance', 'Delegation coordination', 'Dedicated assistant (1 per 4 companies)', 'Dedicated assistant and interpreter']
+          ['Transfers and delegation shuttle', 'Y', 'Y', 'Y'],
+          ['Assistance', 'Group coordination', 'Dedicated assistant', 'Personal assistant and interpreter']
         ] },
-        { groupe: 'Visibility and media', lignes: [
-          ['Official delegation catalogue', 'Listing', 'Company profile', 'Full page'],
-          ['Photo and video coverage', 'Official delegation photo', 'Photo coverage of your meetings', 'Photo coverage and 60-second video interview'],
-          ['Digital communication of the mission (LinkedIn and website)', 'Group mention', 'Dedicated post about your company', 'Dedicated post and video'],
-          ['Press relations', 'Joint delegation press release', 'Quote in the press release', 'Interview offered to business media']
+        { groupe: 'Photo, video and media', lignes: [
+          ['Delegation group photos', 'Y', 'Y', 'Y'],
+          ['Photographer and videographer dedicated to your company (reserved slot: photos of your meetings and a 60-second video)', '-', 'Y', 'Y'],
+          ['Press release dedicated to your company', '-', '-', 'Y'],
+          ['Media relations (interviews offered to Moroccan and Ghanaian media)', '-', '-', 'Y']
         ] },
-        { groupe: 'Post-mission follow-up', lignes: [
-          ['Mission report', 'Y', 'Y', 'Y'],
-          ['Follow-up of your contacts at D+30', '-', 'Y', 'Y'],
-          ['Personalised mission report (contacts, leads, next steps)', '-', '-', 'Y']
+        { groupe: 'Tailor-made and follow-up', lignes: [
+          ['Personalised programme based on your objectives, agreed with you before departure', '-', '-', 'Y'],
+          ['Follow-up of your contacts at D+30', '-', 'Y', 'Y']
         ] }
       ],
       nonCompris: 'Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.',
