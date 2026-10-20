@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Éditeur de mission — Global Premium Events (interne)</title>
+<meta name="description" content="Outil interne.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Premium Events">
+<meta property="og:title" content="Éditeur de mission — Global Premium Events (interne)">
+<meta property="og:description" content="Outil interne.">
+<meta property="og:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://globalpremiumevents.com/missions/editeur/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#16294F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/missions/missions.css">
+<link rel="stylesheet" href="/assets/gpe.css">
+</head>
+<body>
+<main id="main" class="ed-wrap">
+  <p class="hero-kicker"><span class="rule"></span><span>Outil interne &middot; non référencé</span></p>
+  <h1 class="serif" style="color:var(--navy);font-size:34px;margin:0 0 8px">Éditeur de mission</h1>
+  <p style="color:var(--ink-dim);max-width:70ch;margin:0 0 28px">Remplissez la fiche d’un pays. L’aperçu montre la page et les 3 documents exactement comme ils seront publiés. Quand c’est prêt, copiez le code et collez-le dans <b>missions/missions-data.js</b>.</p>
+  <div class="ed-grid">
+    <div>
+      <div class="ed-card">
+        <h2>Partir d’une mission existante</h2>
+        <p>Pour dupliquer une mission (ex. même format, autre pays), chargez-la puis modifiez.</p>
+        <div class="cf-row"><div class="cf-field"><label for="e-load">Mission</label><select id="e-load"><option value="">— Nouvelle mission vide —</option></select></div>
+        <div class="cf-field" style="justify-content:flex-end"><div class="ed-actions"><button type="button" class="alt" id="e-load-btn">Charger</button></div></div></div>
+      </div>
+
+      <div class="ed-card">
+        <h2>1. L’essentiel</h2>
+        <p>Pays, dates et statut. L’identifiant apparaît dans l’adresse de la page.</p>
+        <div class="cf-row"><div class="cf-field"><label for="e-pays">Pays</label><input id="e-pays" type="text" placeholder="Ghana"></div><div class="cf-field"><label for="e-ville">Ville</label><input id="e-ville" type="text" placeholder="Accra"></div></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-id">Identifiant <span class="ed-hint">pays-année, sans accent</span></label><input id="e-id" type="text" placeholder="ghana-2026"></div><div class="cf-field"><label for="e-statut">Statut</label><select id="e-statut"><option value="ouverte">Ouverte (inscriptions ouvertes)</option><option value="bientot">Bientôt (liste d’intérêt)</option><option value="complete">Complète (liste d’attente)</option></select></div></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-debut">Date de début</label><input id="e-debut" type="date" placeholder=""></div><div class="cf-field"><label for="e-fin">Date de fin</label><input id="e-fin" type="date" placeholder=""></div></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-limite">Clôture des inscriptions</label><input id="e-limite" type="date" placeholder=""></div><div class="cf-field"><label for="e-places">Nombre de places</label><input id="e-places" type="number" placeholder="12"></div></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-langue">Langue de travail</label><input id="e-langue" type="text" placeholder="Anglais"></div><div class="cf-field"><label for="e-image">Image (optionnel)</label><input id="e-image" type="text" placeholder="/assets/img/xxx.webp"></div></div>
+        <div class="cf-field"><label for="e-titre">Titre de la mission</label><input id="e-titre" type="text" placeholder="Mission d’affaires au Ghana — Invest Ghana Summit"></div>
+        <div class="cf-field"><label for="e-accroche">Accroche (2 phrases max.)</label><textarea id="e-accroche" rows="4" placeholder="Ce que la mission apporte, en une ou deux phrases."></textarea></div>
+      </div>
+
+      <div class="ed-card">
+        <h2>2. Événement d’ancrage</h2>
+        <p>Le grand événement du pays sur lequel la mission s’appuie. Laissez le nom vide s’il n’y en a pas.</p>
+        <div class="cf-row"><div class="cf-field"><label for="e-ev-nom">Nom de l’événement</label><input id="e-ev-nom" type="text" placeholder="Invest Ghana Summit 2026"></div><div class="cf-field"><label for="e-ev-dates">Dates (texte libre)</label><input id="e-ev-dates" type="text" placeholder="16 – 17 novembre 2026"></div></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-ev-lieu">Lieu</label><input id="e-ev-lieu" type="text" placeholder="Kempinski Hotel, Accra"></div><div class="cf-field"><label for="e-ev-lien">Lien</label><input id="e-ev-lien" type="url" placeholder="https://"></div></div>
+        <div class="cf-field"><label for="e-ev-org">Organisateur</label><input id="e-ev-org" type="text" placeholder="Agence de promotion des investissements…"></div>
+        <div class="cf-field"><label for="e-ev-desc">Description courte</label><textarea id="e-ev-desc" rows="4" placeholder=""></textarea></div>
+      </div>
+
+      <div class="ed-card">
+        <h2>3. Contenu commercial</h2>
+        <p>Une ligne = un élément.</p>
+        <div class="cf-field"><label for="e-pourquoi">Pourquoi ce pays <span class="ed-hint">format : chiffre | texte</span></label><textarea id="e-pourquoi" rows="4" placeholder="2 000+ | investisseurs attendus au sommet"></textarea></div>
+        <div class="cf-field"><label for="e-secteurs">Secteurs ciblés</label><textarea id="e-secteurs" rows="4" placeholder="Agro-industrie"></textarea></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-prix">Forfait par entreprise</label><input id="e-prix" type="number" placeholder="9000"></div><div class="cf-field"><label for="e-prix2">Participant supplémentaire</label><input id="e-prix2" type="number" placeholder="4500"></div></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-eb">Early bird (montant) <span class="ed-hint">optionnel</span></label><input id="e-eb" type="number" placeholder=""></div><div class="cf-field"><label for="e-eb-date">Early bird jusqu’au</label><input id="e-eb-date" type="date" placeholder=""></div></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-devise">Devise</label><input id="e-devise" type="text" placeholder="MAD"></div><div></div></div>
+        <div class="cf-field"><label for="e-mention">Mention sous le prix</label><input id="e-mention" type="text" placeholder="Hors billet d’avion et hébergement."></div>
+        <div class="cf-field"><label for="e-inclus">Ce qui est inclus</label><textarea id="e-inclus" rows="4" placeholder="Transferts aéroport – hôtel – aéroport"></textarea></div>
+      </div>
+
+      <div class="ed-card">
+        <h2>4. Programme</h2>
+        <p>Un jour par bloc : le nom du jour sur la première ligne, puis une activité par ligne. Laissez une ligne vide entre deux jours.</p>
+        <div class="cf-field"><label for="e-programme">Programme</label><textarea id="e-programme" rows="12" placeholder="Lundi 16 novembre&#10;Ouverture du sommet&#10;Rendez-vous B2B&#10;&#10;Mardi 17 novembre&#10;Visites de sites"></textarea></div>
+      </div>
+
+      <div class="ed-card">
+        <h2>5. Infos pratiques</h2>
+        <p>Reprises dans la page et la note d’information.</p>
+        <div class="cf-field"><label for="e-vol">Vol</label><textarea id="e-vol" rows="4" placeholder=""></textarea></div>
+        <div class="cf-field"><label for="e-hotel">Hébergement</label><textarea id="e-hotel" rows="4" placeholder=""></textarea></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-visa">Visa & passeport</label><textarea id="e-visa" rows="4" placeholder=""></textarea></div><div class="cf-field"><label for="e-sante">Santé / vaccins</label><textarea id="e-sante" rows="4" placeholder=""></textarea></div></div>
+        <div class="cf-row"><div class="cf-field"><label for="e-monnaie">Monnaie</label><input id="e-monnaie" type="text" placeholder=""></div><div class="cf-field"><label for="e-autres">Bon à savoir</label><input id="e-autres" type="text" placeholder=""></div></div>
+      </div>
+    </div>
+
+    <aside class="ed-side">
+      <div class="ed-card">
+        <h2>Aperçu et publication</h2>
+        <div class="ed-actions" style="margin-bottom:14px">
+          <button type="button" id="e-preview">Aperçu de la page</button>
+          <button type="button" class="alt" id="e-prev-note">Note d’info</button>
+          <button type="button" class="alt" id="e-prev-fiche">Fiche d’inscription</button>
+          <button type="button" class="alt" id="e-prev-prog">Programme</button>
+        </div>
+        <pre id="e-code"></pre>
+        <div class="ed-actions"><button type="button" id="e-copy">Copier le code</button></div>
+        <p class="ed-msg" id="e-msg" role="status"></p>
+        <ol class="ed-steps">
+          <li>Copiez le code.</li>
+          <li>Ouvrez <b>missions/missions-data.js</b> sur GitHub (icône crayon).</li>
+          <li>Collez-le juste avant la ligne <b>];</b> à la fin de la liste (le code commence déjà par la virgule nécessaire).</li>
+          <li>Validez (« Commit changes ») : la page est en ligne en 1 à 2 minutes.</li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</main>
+<script src="/missions/missions-data.js"></script>
+<script src="/missions/missions.js"></script>
+<script src="/missions/editeur/editeur.js"></script>
+</body>
+</html>
