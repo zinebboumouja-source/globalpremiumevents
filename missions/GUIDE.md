@@ -12,6 +12,18 @@ Chaque mission (un pays, des dates) produit automatiquement :
 
 Il n'y a qu'**un seul fichier à modifier** : `missions/missions-data.js`.
 
+Chaque page existe en français et en anglais. Ajoutez `&lang=en` à l'adresse, par exemple `/missions/mission/?id=ghana-2026&lang=en`, ou utilisez le bouton « English » de la page. Envoyez le lien anglais aux délégués du Golfe.
+
+## Les forfaits
+
+Dans chaque mission :
+
+- `formules` liste les forfaits : nom, prix, prix du participant supplémentaire, nombre de places, et lequel est « Recommandé ».
+- `comparatif` liste les prestations, une ligne par prestation et une valeur par forfait. `'Y'` veut dire inclus, `'-'` veut dire non inclus. Sinon, c'est le texte à afficher.
+- Le bloc `en` contient la traduction anglaise des textes. Les prix ne se traduisent pas.
+
+Ces éléments apparaissent automatiquement sur la page, dans le formulaire (choix du forfait et calcul du total), dans la note d'information (tableau comparatif) et dans la fiche d'inscription (cases à cocher).
+
 ## Publier une nouvelle mission (10 minutes)
 
 1. Ouvrez **globalpremiumevents.com/missions/editeur/** (page interne, non référencée par Google).

@@ -9,7 +9,17 @@
   function lines(v) { return (v || '').split('\n').map(function (s) { return s.trim(); }).filter(Boolean); }
   function num(v) { return v === '' || v === null || v === undefined ? null : Number(v); }
 
+  var BASE = {};
   function read() {
+    var out = readFields();
+    var b = JSON.parse(JSON.stringify(BASE || {}));
+    var prix = Object.assign({}, b.prix || {}, out.prix);
+    Object.keys(prix).forEach(function (k) { if (prix[k] === null || prix[k] === '') delete prix[k]; });
+    var res = Object.assign(b, out); res.prix = prix;
+    if (!out.inclus.length) delete res.inclus;
+    return res;
+  }
+  function readFields() {
     var programme = ($('e-programme').value || '').split(/\n\s*\n/).map(function (block) {
       var l = lines(block); if (!l.length) return null;
       return { jour: l[0], items: l.slice(1).map(function (s) { return s.replace(/^[-•*]\s*/, ''); }) };
@@ -57,6 +67,7 @@
 
   function fill(m) {
     m = m || {};
+    BASE = JSON.parse(JSON.stringify(m));
     var ev = m.evenement || {}, pr = m.prix || {}, pt = m.pratique || {};
     $('e-id').value = m.id || ''; $('e-statut').value = m.statut || 'ouverte';
     $('e-pays').value = m.pays || ''; $('e-ville').value = m.ville || ''; $('e-langue').value = m.langue || '';
@@ -81,7 +92,7 @@
     var miss = [];
     if (!m.pays) miss.push('pays'); if (!m.dateDebut) miss.push('date de début'); if (!m.dateFin) miss.push('date de fin');
     if (m.statut === 'ouverte' && !m.dateLimite) miss.push('clôture des inscriptions');
-    if (!m.titre) miss.push('titre'); if (!m.prix.standard) miss.push('forfait');
+    if (!m.titre) miss.push('titre'); if (!m.prix.standard && !(m.formules && m.formules.length)) miss.push('forfait');
     if (m.dateDebut && m.dateFin && m.dateFin < m.dateDebut) miss.push('date de fin avant le début');
     if (m.dateLimite && m.dateDebut && m.dateLimite > m.dateDebut) miss.push('clôture après le début');
     return miss;
