@@ -345,3 +345,9 @@ body.dc-body{background:#E9ECF2;}
   .dc-cmp tr{break-inside:avoid;}
   .dc-fiche .dc-checks-pk{grid-template-columns:1fr 1fr 1fr!important;}
 }
+@media print{
+  .dc-fiche .dc-line,.dc-fiche .dc-checks,.dc-fiche .dc-p,.dc-fiche .dc-q,.dc-fiche .dc-intro{font-size:10.8px!important;}
+  .dc-fiche .dc-h2{margin:7px 0 4px!important;font-size:12.5px!important;}
+  .dc-fiche .dc-line{margin:2px 0!important;}
+  .dc-fiche .dc-line i{height:13px;}
+}

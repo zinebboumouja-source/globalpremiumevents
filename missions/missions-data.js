@@ -25,8 +25,11 @@ window.GPE_CONFIG = {
   emailInscriptions: 'info@globalpremiumevents.com',
   // Coordonnées bancaires imprimées sur la fiche d'inscription
   paiement: {
-    banque: 'À compléter',
-    rib: 'À compléter',
+    banque: 'Banque Populaire — Agence Al Yacout, Salé',
+    titulaire: 'GPE SARL',
+    rib: '181 815 2121146528040000 59',
+    iban: 'MA64 1818 1521 2114 6528 0400 0059',
+    swift: 'BCPOMAMC',
     modes: ['Virement bancaire', 'Chèque'],
     modesEn: ['Bank transfer', 'Cheque']
   },

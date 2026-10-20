@@ -588,7 +588,7 @@
       body += line(U.dProfile) + line(U.inst);
       body += '<p class="dc-p dc-small">' + esc(m.prix && m.prix.mention) + '</p>';
       body += '<div class="dc-cols dc-pay"><div><h2 class="dc-h2">' + U.dPay + '</h2><div class="dc-checks dc-checks-col">' + (((EN ? CFG.paiement.modesEn : CFG.paiement.modes) || CFG.paiement.modes) || []).map(function (x) { return '<span>' + box(x) + '</span>'; }).join('') + '</div>' +
-        '<p class="dc-small">' + U.dBank + (EN ? ': ' : ' : ') + esc(CFG.paiement && CFG.paiement.banque) + (EN ? '<br>Bank account (RIB): ' : '<br>RIB : ') + esc(CFG.paiement && CFG.paiement.rib) + '</p>' +
+        '<p class="dc-small">' + (CFG.paiement.titulaire ? esc(CFG.paiement.titulaire) + ' \u00b7 ' : '') + esc(CFG.paiement && CFG.paiement.banque) + '<br>RIB' + (EN ? ': ' : ' : ') + esc(CFG.paiement && CFG.paiement.rib) + (CFG.paiement.iban ? '<br>IBAN' + (EN ? ': ' : ' : ') + esc(CFG.paiement.iban) : '') + (CFG.paiement.swift ? ' \u00b7 SWIFT' + (EN ? ': ' : ' : ') + esc(CFG.paiement.swift) : '') + '</p>' +
         '<p class="dc-send"><b>' + U.dSend + '</b> ' + pieces().map(function (x) { return esc(x.split(' (')[0]); }).join(' · ') + '.</p></div>' +
         '<div class="dc-sign"><p>' + U.dConfirm + '</p><p>' + U.dDone + ' ' + esc((m.dateDebut || '').slice(0, 4)) + '</p><p class="dc-sign-box">' + U.dSign + '</p></div></div>';
     }
