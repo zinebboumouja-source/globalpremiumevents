@@ -139,7 +139,7 @@ window.GPE_MISSIONS = [
     ],
 
     pratique: {
-      vol: 'Vol direct Casablanca – Accra (environ 4 h 30). Billet aller-retour indicatif : 10 759 MAD. Tarif de groupe communiqué à l’inscription.',
+      vol: 'Vol direct Casablanca – Accra (environ 4 h 30). Tarif de groupe négocié communiqué à l’inscription.',
       hotel: 'Hôtel de délégation à proximité du Kempinski Gold Coast City. Tarif négocié communiqué à l’inscription.',
       visa: 'Pas de visa pour les ressortissants marocains (accord d’exemption Maroc – Ghana). Passeport valide 6 mois après le retour. Lettre d’invitation officielle disponible pour les délégués d’autres nationalités.',
       sante: 'Vaccin contre la fièvre jaune obligatoire (carnet international à présenter à l’arrivée).',
@@ -222,7 +222,7 @@ window.GPE_MISSIONS = [
         'Full refund if the mission is cancelled by the organiser.'
       ],
       pratique: {
-        vol: 'Direct flight Casablanca – Accra (about 4h30). Indicative return fare: MAD 10,759. Group fare provided upon registration.',
+        vol: 'Direct flight Casablanca – Accra (about 4h30). Negotiated group fare provided upon registration.',
         hotel: 'Delegation hotel near the Kempinski Gold Coast City. Negotiated rate provided upon registration.',
         visa: 'No visa required for Moroccan nationals (Morocco – Ghana visa exemption agreement). Passport valid 6 months after return. Official invitation letter available for delegates of other nationalities.',
         sante: 'Yellow fever vaccination required (international certificate to be shown on arrival).',
