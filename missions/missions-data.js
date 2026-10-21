@@ -170,6 +170,9 @@ window.GPE_MISSIONS = [
       legende: 'Ankara — rencontre officielle avec le Président de TİKA et la délégation ghanéenne du commerce et de l’investissement.'
     },
 
+    // Annonce mise en avant en haut de la page (supprimer la ligne pour la masquer)
+    annonce: 'Ouverture officielle par S.E. le Président John Dramani Mahama, avec Aliko Dangote annoncé comme invité spécial du Président.',
+
     // Affiche de l'événement (affichée en haut de la page)
     image: '/missions/img/ghana-2026-affiche.webp',
     // Couleurs de l'événement (vert, jaune, rouge du Ghana). Supprimer pour garder les couleurs GPE.
@@ -245,6 +248,7 @@ window.GPE_MISSIONS = [
         monnaie: 'Ghanaian cedi (GHS). Cards accepted in major hotels.',
         autres: 'English-speaking country: presentation materials in English recommended.'
       },
+      annonce: 'Officially opened by H.E. President John Dramani Mahama, with Aliko Dangote announced as Presidential Special Guest.',
       reference: {
         surtitre: 'Our engagement with Ghana',
         titre: 'A relationship already engaged at the highest level',
