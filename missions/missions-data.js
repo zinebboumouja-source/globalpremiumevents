@@ -59,7 +59,7 @@ window.GPE_MISSIONS = [
     dateDebut: '2026-11-15',          // format AAAA-MM-JJ
     dateFin: '2026-11-19',
     dateLimite: '2026-10-30',         // clôture des inscriptions
-    places: 15,
+    places: 'limitees',
     titre: 'Mission d’affaires au Ghana — Invest Ghana Summit 2026',
     accroche: 'Global Premium Events organise la délégation d’affaires marocaine à l’Invest Ghana Summit 2026, premier sommet de l’investissement organisé par la Ghana Investment Promotion Authority (GIPA). Plus de 2 000 investisseurs, décideurs publics et chefs d’entreprise sont attendus à Accra.',
 
