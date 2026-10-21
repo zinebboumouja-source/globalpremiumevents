@@ -19,6 +19,7 @@ Chaque page existe en français et en anglais. Ajoutez `&lang=en` à l'adresse, 
 La page publique présente la mission et le contenu des forfaits, sans prix. Elle peut donc être envoyée à des institutions comme la CGEM ou l'AMDIE.
 
 - **Formulaire « Recevoir l'offre de participation ».** Un visiteur le remplit : vous recevez son contact par email (objet : « Demande d'offre — Mission … »), puis les prix et le formulaire d'inscription complet s'affichent immédiatement pour lui.
+- **Documents.** Le programme est public. La note d'information et la fiche d'inscription (prix, RIB) ne s'ouvrent qu'après la demande d'offre ou avec le lien `&acces=offre`.
 - **Lien direct vers les prix.** Pour envoyer les prix à un prospect déjà contacté, ajoutez `&acces=offre` à l'adresse, par exemple `/missions/mission/?id=ghana-2026&acces=offre`.
 
 ## Affiche et couleurs de l'événement
