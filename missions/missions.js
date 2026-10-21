@@ -26,7 +26,7 @@
   var UI = {
     fr: {
       open: 'Inscriptions ouvertes', soon: 'Bientôt', full: 'Complet', closed: 'Inscriptions closes', done: 'Terminée',
-      kicker: 'Mission B2B', dates: 'Dates', place: 'Lieu', deleg: 'Délégation', companiesMax: 'entreprises maximum', deadline: 'Clôture des inscriptions',
+      kicker: 'Mission B2B', dates: 'Dates', place: 'Lieu', deleg: 'Délégation', companiesMax: 'entreprises maximum', limited: 'Places limitées', deadline: 'Clôture des inscriptions',
       notify: 'Être informé en priorité', notifyNext: 'Être informé des prochaines missions', infoNote: 'Note d’information',
       why: 'Pourquoi le {p} maintenant', anchor: 'Événement d’ancrage', moreEvent: 'Site officiel de l’événement',
       organiser: 'Organisateur', programme: 'Programme', dlProg: 'Télécharger le programme (PDF)',
@@ -89,7 +89,7 @@
     },
     en: {
       open: 'Registration open', soon: 'Coming soon', full: 'Fully booked', closed: 'Registration closed', done: 'Completed',
-      kicker: 'B2B Mission', dates: 'Dates', place: 'Location', deleg: 'Delegation', companiesMax: 'companies maximum', deadline: 'Registration deadline',
+      kicker: 'B2B Mission', dates: 'Dates', place: 'Location', deleg: 'Delegation', companiesMax: 'companies maximum', limited: 'Limited places', deadline: 'Registration deadline',
       notify: 'Get priority information', notifyNext: 'Hear about upcoming missions', infoNote: 'Information note',
       why: 'Why {p}, why now', anchor: 'Anchor event', moreEvent: 'Official event website',
       organiser: 'Organiser', programme: 'Programme', dlProg: 'Download the programme (PDF)',
@@ -220,6 +220,8 @@
     if (m.statut === 'ouverte' && m.dateLimite && m.dateLimite < today()) return 'cloturee';
     return m.statut || 'bientot';
   }
+  // places: un nombre ("15 entreprises maximum") ou 'limitees' ("Places limitées")
+  function seatsTxt(m) { return typeof m.places === 'number' ? esc(m.places) + ' ' + U.companiesMax : U.limited; }
   function statutLabel(s) { return { ouverte: U.open, bientot: U.soon, complete: U.full, cloturee: U.closed, terminee: U.done }[s]; }
 
   function getMission(id) {
@@ -289,7 +291,7 @@
         (m.evenement ? '<span class="ms-card-event">' + esc(m.evenement.nom) + '</span>' : '') + '</div>' +
         '<h3 class="ms-card-country serif">' + esc(m.pays) + '</h3><p class="ms-card-city">' + esc(m.ville) + '</p>' +
         '<ul class="ms-card-meta"><li>' + ICON.cal + '<span>' + esc(fmtRange(m.dateDebut, m.dateFin)) + '</span></li>' +
-        (m.places ? '<li>' + ICON.seat + '<span>' + esc(m.places) + ' ' + U.companiesMax + '</span></li>' : '') +
+        (m.places ? '<li>' + ICON.seat + '<span>' + seatsTxt(m) + '</span></li>' : '') +
         (s === 'ouverte' && m.dateLimite ? '<li class="' + (urgent ? 'is-urgent' : '') + '">' + ICON.clock + '<span>' + U.closes + ' ' + esc(fmtDate(m.dateLimite)) + (urgent ? ' — ' + (EN ? 'D-' : 'J-') + j : '') + '</span></li>' : '') +
         '</ul>' +
         (m.secteurs && m.secteurs.length ? '<p class="ms-card-sectors">' + m.secteurs.slice(0, 3).map(esc).join(' · ') + (m.secteurs.length > 3 ? ' …' : '') + '</p>' : '') +
@@ -368,7 +370,7 @@
       '<h1 class="ms-title serif">' + esc(m.titre) + '</h1><p class="ms-lede">' + esc(m.accroche) + '</p>' +
       '<ul class="ms-facts"><li>' + ICON.cal + '<span><b>' + U.dates + '</b>' + esc(fmtRange(m.dateDebut, m.dateFin)) + '</span></li>' +
       '<li>' + ICON.pin + '<span><b>' + U.place + '</b>' + esc(m.ville) + ', ' + esc(m.pays) + '</span></li>' +
-      (m.places ? '<li>' + ICON.seat + '<span><b>' + U.deleg + '</b>' + esc(m.places) + ' ' + U.companiesMax + '</span></li>' : '') +
+      (m.places ? '<li>' + ICON.seat + '<span><b>' + U.deleg + '</b>' + seatsTxt(m) + '</span></li>' : '') +
       (m.dateLimite ? '<li>' + ICON.clock + '<span><b>' + U.deadline + '</b>' + esc(fmtDate(m.dateLimite)) + (s === 'ouverte' && j !== null && j >= 0 ? ' (' + (EN ? 'D-' : 'J-') + j + ')' : '') + '</span></li>' : '') +
       '</ul><div class="ms-ctas">' +
       '<a class="ms-btn ms-btn-gold" href="#' + (s === 'ouverte' ? (isOpen(m) ? 'forfaits' : 'inscription') : 'inscription') + '">' + (s === 'ouverte' ? (isOpen(m) ? U.register : U.requestOffer) : (s === 'bientot' ? U.notify : U.notifyNext)) + ' &rarr;</a>' +

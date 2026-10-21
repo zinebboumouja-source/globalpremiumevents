@@ -56,6 +56,7 @@ Dans `missions-data.js`, modifiez directement la valeur concernée, par exemple 
 | `statut: 'ouverte'` | Formulaire d'inscription complet |
 | `statut: 'bientot'` | Page visible avec un formulaire « être informé en priorité » (pour annoncer une mission 2 à 3 mois avant) |
 | `statut: 'complete'` | Formulaire de liste d'attente |
+| `places: 'limitees'` | Affiche « Places limitées » au lieu d'un nombre d'entreprises (ex. `places: 15`) |
 | `dateLimite` passée | La mission passe automatiquement en « Inscriptions closes » |
 | `dateFin` passée | La mission passe automatiquement dans « Missions réalisées » |
 | `prix.earlyBird` | `{ montant: 8000, avant: '2026-10-25' }` affiche le tarif réduit jusqu'à cette date |
