@@ -81,7 +81,7 @@
       langSwitch: 'English', langHref: 'en',
       register: 'Rejoindre la délégation', requestOffer: 'Recevoir l\u2019offre de participation',
       priceOnRequest: 'Conditions de participation communiquées avec l\u2019offre',
-      leadKicker: 'Offre de participation', leadTitle: 'Recevez l\u2019offre de participation',
+      docLocked: 'Ce document est envoyé aux entreprises qui ont demandé l’offre de participation.', docLockedBtn: 'Recevoir l’offre de participation', leadKicker: 'Offre de participation', leadTitle: 'Recevez l\u2019offre de participation',
       leadText: 'Indiquez vos coordonnées : les conditions de participation de chaque formule s\u2019affichent immédiatement, et notre équipe vous contacte pour vous conseiller.',
       leadBtn: 'Afficher l\u2019offre', leadOk: 'Merci. Voici les conditions de participation de chaque formule. Notre équipe vous contactera sous 24 heures.',
       lead1: 'Présentation détaillée de la mission', lead2: 'Conditions de participation par formule', lead3: 'Conseil personnalisé par notre équipe',
@@ -144,7 +144,7 @@
       langSwitch: 'Français', langHref: 'fr',
       register: 'Join the delegation', requestOffer: 'Request the participation offer',
       priceOnRequest: 'Participation terms provided with the offer',
-      leadKicker: 'Participation offer', leadTitle: 'Receive the participation offer',
+      docLocked: 'This document is sent to companies that have requested the participation offer.', docLockedBtn: 'Receive the participation offer', leadKicker: 'Participation offer', leadTitle: 'Receive the participation offer',
       leadText: 'Leave your details: the participation terms for each package are displayed immediately, and our team will contact you to advise you.',
       leadBtn: 'Show the offer', leadOk: 'Thank you. Here are the participation terms for each package. Our team will contact you within 24 hours.',
       lead1: 'Detailed presentation of the mission', lead2: 'Participation terms for each package', lead3: 'Personalised advice from our team',
@@ -636,6 +636,13 @@
     var city = EN ? (CFG.villeEn || CFG.ville) : CFG.ville;
     var head = '<header class="dc-head"><img src="/assets/logo.webp" alt="" class="dc-logo"><div><p class="dc-org">' + esc(CFG.organisation) + '</p><p class="dc-contact">' + esc(city) + ' · ' + esc(CFG.telephone) + ' · ' + esc(CFG.email) + ' · ' + esc(CFG.site) + '</p></div></header>' +
       '<div class="dc-titlebox"><p class="dc-doctype">' + TT[doc] + '</p><h1 class="serif">' + esc(m.titre) + '</h1><p class="dc-dates">' + esc(m.ville) + ', ' + esc(m.pays) + ' · ' + esc(fmtRange(m.dateDebut, m.dateFin)) + '</p></div>';
+    // Note et fiche (prix, RIB) : réservées aux entreprises qui ont demandé l'offre
+    var allowed = unlocked(m) ? ['note', 'fiche', 'programme'] : ['programme'];
+    if (allowed.indexOf(doc) < 0) {
+      root.innerHTML = '<div class="dc-toolbar"><a href="' + pageUrl(m) + '">&larr; ' + U.dBack + '</a><span></span><span>' + langToggle() + '</span></div>' +
+        '<article class="dc-page">' + head + '<p class="dc-intro" style="margin-top:28px">' + U.docLocked + '</p><p><a class="ms-btn ms-btn-gold" href="' + pageUrl(m) + '#inscription">' + U.docLockedBtn + ' &rarr;</a></p></article>';
+      return;
+    }
     var foot = '<footer class="dc-foot">' + esc(CFG.organisation) + ' · ' + esc(CFG.email) + ' · ' + esc(CFG.telephone) + '</footer>';
     var body = '';
 
@@ -688,7 +695,7 @@
     }
 
     root.innerHTML = '<div class="dc-toolbar"><a href="' + pageUrl(m) + '">&larr; ' + U.dBack + '</a><span>' +
-      ['note', 'fiche', 'programme'].map(function (k) { return '<a class="' + (k === doc ? 'on' : '') + '" href="' + docUrl(m, k) + '">' + TT[k] + '</a>'; }).join('') +
+      allowed.map(function (k) { return '<a class="' + (k === doc ? 'on' : '') + '" href="' + docUrl(m, k) + '">' + TT[k] + '</a>'; }).join('') +
       '</span><span>' + langToggle() + '<button type="button" onclick="window.print()">' + U.dPrint + '</button></span></div>' +
       '<article class="dc-page dc-' + esc(doc) + '">' + head + body + foot + '</article>';
   }
