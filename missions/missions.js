@@ -368,6 +368,7 @@
     h += '<section class="ms-hero' + (m.image ? ' has-img' : '') + '"><div class="wrap ms-hero-grid"><div class="ms-hero-in">' +
       '<div class="hero-kicker"><span class="rule"></span><span>' + U.kicker + ' · ' + esc(m.pays) + '</span><span class="ms-badge ms-badge-' + s + '">' + statutLabel(s) + '</span>' + langToggle() + '</div>' +
       '<h1 class="ms-title serif">' + esc(m.titre) + '</h1><p class="ms-lede">' + esc(m.accroche) + '</p>' +
+      (m.annonce ? '<p class="ms-annonce"><span>' + (EN ? 'Announced' : 'Annonce') + '</span>' + esc(m.annonce) + '</p>' : '') +
       '<ul class="ms-facts"><li>' + ICON.cal + '<span><b>' + U.dates + '</b>' + esc(fmtRange(m.dateDebut, m.dateFin)) + '</span></li>' +
       '<li>' + ICON.pin + '<span><b>' + U.place + '</b>' + esc(m.ville) + ', ' + esc(m.pays) + '</span></li>' +
       (m.places ? '<li>' + ICON.seat + '<span><b>' + U.deleg + '</b>' + seatsTxt(m) + '</span></li>' : '') +
