@@ -70,7 +70,7 @@ window.GPE_MISSIONS = [
       slogan: 'Le premier rassemblement d’affaires du Ghana placé sous l’égide du Président de la République',
       theme: 'Investing in Ghana’s New Economy — Building a productive economy that creates value and competes globally.',
       description: 'Première édition. Sessions sectorielles, matchmaking, rendez-vous B2B et B2G, rencontres directes avec les décideurs publics, les entreprises et les porteurs de projets ghanéens.',
-      lien: 'https://igs.gipa.gov.gh/'
+      lien: null
     },
 
     pourquoi: [
