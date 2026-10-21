@@ -401,3 +401,14 @@ body.dc-body{background:#E9ECF2;}
 .ms-themed .hero-kicker{color:var(--ev-main);}
 .ms-themed .hero-kicker .rule{background:var(--ev-main);}
 .ms-themed .ms-hero .hero-kicker{color:var(--ev-accent);}
+
+/* Référence (réalisation passée liée au pays) */
+.ms-ref{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center;}
+.ms-ref-img{margin:0;}
+.ms-ref-img img{width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 18px 40px -24px rgba(0,0,0,.35);}
+.ms-ref-img figcaption{font-size:13px;color:var(--muted,#5b6470);margin-top:10px;line-height:1.45;}
+.ms-ref-kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ev-main,var(--gold));margin:0 0 10px;}
+.ms-ref-txt p{line-height:1.65;margin:0 0 14px;}
+.ms-ref-txt .ms-h2{margin-bottom:18px;}
+@media (max-width:860px){.ms-ref{grid-template-columns:1fr;gap:24px;}}
+@media print{.ms-ref{display:none;}}

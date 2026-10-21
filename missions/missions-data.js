@@ -157,6 +157,19 @@ window.GPE_MISSIONS = [
       { jour: 'Jeudi 19 novembre', items: ['Rencontres institutionnelles', 'Transfert et vol retour Accra – Casablanca'] }
     ],
 
+    // Référence : réalisation passée liée au pays (photo dans missions/img/)
+    reference: {
+      image: '/missions/img/ghana-tika-ankara.webp',
+      surtitre: 'Notre engagement avec le Ghana',
+      titre: 'Une relation déjà engagée au plus haut niveau',
+      textes: [
+        'Global Premium Events a pris part à Ankara à la rencontre officielle entre M. Abdullah Eren, Président de l’Agence turque de coopération et de coordination (TİKA), et une délégation ghanéenne de haut niveau dédiée au commerce et à l’investissement.',
+        'Les échanges ont porté sur le renforcement de la coopération avec l’Afrique, et en particulier le Ghana, en matière de développement, de coopération institutionnelle, de renforcement des capacités et de partenariat économique durable, dans l’éducation, la santé, l’agriculture, l’entrepreneuriat et les échanges culturels.',
+        'La mission Invest Ghana Summit 2026 prolonge cet engagement en faveur de partenariats durables avec le Ghana.'
+      ],
+      legende: 'Ankara — rencontre officielle avec le Président de TİKA et la délégation ghanéenne du commerce et de l’investissement.'
+    },
+
     // Affiche de l'événement (affichée en haut de la page)
     image: '/missions/img/ghana-2026-affiche.webp',
     // Couleurs de l'événement (vert, jaune, rouge du Ghana). Supprimer pour garder les couleurs GPE.
@@ -231,6 +244,16 @@ window.GPE_MISSIONS = [
         sante: 'Yellow fever vaccination required (international certificate to be shown on arrival).',
         monnaie: 'Ghanaian cedi (GHS). Cards accepted in major hotels.',
         autres: 'English-speaking country: presentation materials in English recommended.'
+      },
+      reference: {
+        surtitre: 'Our engagement with Ghana',
+        titre: 'A relationship already engaged at the highest level',
+        textes: [
+          'Global Premium Events took part in Ankara in the official meeting between Mr. Abdullah Eren, President of the Turkish Cooperation and Coordination Agency (TİKA), and a high-level Ghanaian trade and investment delegation.',
+          'Discussions focused on strengthening cooperation with Africa, particularly Ghana, in development, institutional collaboration, capacity building and sustainable economic partnership, across education, healthcare, agriculture, entrepreneurship and cultural exchange.',
+          'The Invest Ghana Summit 2026 mission builds on this commitment to long-term partnerships with Ghana.'
+        ],
+        legende: 'Ankara — official meeting with the President of TİKA and the Ghanaian trade and investment delegation.'
       },
       programme: [
         { jour: 'Sunday 15 November', items: ['Flight Casablanca – Accra', 'Welcome and transfer to the hotel', 'Evening: delegation briefing'] },

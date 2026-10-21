@@ -399,6 +399,15 @@
         m.secteurs.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div></section>';
     }
 
+    // Référence : une réalisation passée liée au pays (photo + texte)
+    if (m.reference && m.reference.image) {
+      var rf = m.reference;
+      h += '<section class="ms-sec"><div class="wrap ms-ref reveal"><figure class="ms-ref-img"><img src="' + esc(rf.image) + '" alt="' + esc(rf.legende || rf.titre || '') + '" loading="lazy">' +
+        (rf.legende ? '<figcaption>' + esc(rf.legende) + '</figcaption>' : '') + '</figure><div class="ms-ref-txt">' +
+        (rf.surtitre ? '<p class="ms-ref-kicker">' + esc(rf.surtitre) + '</p>' : '') + '<h2 class="ms-h2 serif">' + esc(rf.titre) + '</h2>' +
+        (rf.textes || []).map(function (t) { return '<p>' + esc(t) + '</p>'; }).join('') + '</div></div></section>';
+    }
+
     if (m.programme && m.programme.length) {
       h += '<section class="ms-sec"><div class="wrap"><div class="ms-sec-head"><h2 class="ms-h2 serif">' + U.programme + '</h2>' +
         '<a class="ms-textlink" href="' + docUrl(m, 'programme') + '" target="_blank" rel="noopener">' + U.dlProg + ' &rarr;</a></div><ol class="ms-days">' +
