@@ -77,12 +77,13 @@ window.GPE_MISSIONS = [
     pourquoi: [
       { chiffre: '2 000+', texte: 'investisseurs, décideurs et chefs d’entreprise attendus au sommet' },
       { chiffre: 'B2B & B2G', texte: 'rendez-vous pré-organisés avec des entreprises et des institutions ghanéennes' },
-      { chiffre: '4 h 30', texte: 'de vol direct entre Casablanca et Accra' },
+      { chiffre: 'Deal Room', texte: 'signatures d’accords et annonces d’investissements pendant le sommet' },
       { chiffre: 'ZLECAf', texte: 'Accra accueille le secrétariat de la Zone de libre-échange continentale africaine' }
     ],
 
     // Secteurs officiels du sommet
     secteurs: [
+      'Agro-industrie, transformation alimentaire et agriculture d’export',
       'Industrie, pharmacie et chaînes de valeur industrielles',
       'Économie numérique, technologies et services',
       'Énergie et croissance industrielle verte',
@@ -150,8 +151,8 @@ window.GPE_MISSIONS = [
 
     programme: [
       { jour: 'Dimanche 15 novembre', items: ['Vol Casablanca – Accra', 'Accueil et transfert à l’hôtel', 'Soir : briefing de la délégation'] },
-      { jour: 'Lundi 16 novembre', items: ['Invest Ghana Summit — cérémonie d’ouverture et sessions sectorielles', 'Rendez-vous B2B et B2G', 'Soir : dîner de networking de la délégation'] },
-      { jour: 'Mardi 17 novembre', items: ['Invest Ghana Summit — jour 2', 'Rendez-vous B2B et B2G', 'Rencontres avec les porteurs de projets'] },
+      { jour: 'Lundi 16 novembre', items: ['Invest Ghana Summit — ouverture officielle et discours d’ouverture du Président de la République, S.E. John Dramani Mahama', 'Interventions des ministres du Commerce et des Finances, et d’Aliko Dangote, invité spécial du Président', 'Déjeuner de networking', 'Après-midi : sessions d’investissement sectorielles, Ghana Deal Room et rendez-vous B2B', 'Soir : soirée diplomatique et culturelle Invest Ghana'] },
+      { jour: 'Mardi 17 novembre', items: ['Petit-déjeuner AfCFTA avec le Secrétaire général de la Zone de libre-échange continentale africaine', 'Sessions d’investissement par région, Ghana Deal Room et rendez-vous B2B', 'Déjeuner avec le ministre de l’Énergie, signatures d’accords et annonces d’investissements', 'Sessions FinTech, investisseurs et diaspora', 'Clôture par la Vice-Présidente de la République'] },
       { jour: 'Mercredi 18 novembre', items: ['Rendez-vous B2B complémentaires', 'Visites de sites et d’entreprises'] },
       { jour: 'Jeudi 19 novembre', items: ['Rencontres institutionnelles', 'Transfert et vol retour Accra – Casablanca'] }
     ],
@@ -175,10 +176,11 @@ window.GPE_MISSIONS = [
       pourquoi: [
         { chiffre: '2,000+', texte: 'investors, policymakers and business leaders expected at the Summit' },
         { chiffre: 'B2B & B2G', texte: 'pre-arranged meetings with Ghanaian companies and institutions' },
-        { chiffre: '4h30', texte: 'direct flight between Casablanca and Accra' },
+        { chiffre: 'Deal Room', texte: 'investment signings and announcements during the Summit' },
         { chiffre: 'AfCFTA', texte: 'Accra hosts the Secretariat of the African Continental Free Trade Area' }
       ],
       secteurs: [
+        'Agribusiness, Food Processing and Export Agriculture',
         'Manufacturing, Pharmaceuticals and Industrial Value Chains',
         'Digital Economy, Technology and Services',
         'Energy and Green Industrial Growth',
@@ -232,8 +234,8 @@ window.GPE_MISSIONS = [
       },
       programme: [
         { jour: 'Sunday 15 November', items: ['Flight Casablanca – Accra', 'Welcome and transfer to the hotel', 'Evening: delegation briefing'] },
-        { jour: 'Monday 16 November', items: ['Invest Ghana Summit — opening ceremony and sector sessions', 'B2B and B2G meetings', 'Evening: delegation networking dinner'] },
-        { jour: 'Tuesday 17 November', items: ['Invest Ghana Summit — day 2', 'B2B and B2G meetings', 'Meetings with investment project promoters'] },
+        { jour: 'Monday 16 November', items: ['Invest Ghana Summit — official opening and keynote address by H.E. President John Dramani Mahama', 'Remarks by the Ministers of Trade and Finance, and by Aliko Dangote, Presidential Special Guest', 'Networking lunch', 'Afternoon: sector investment deep dives, Ghana Deal Room and B2B meetings', 'Evening: Invest Ghana Diplomatic and Cultural Evening'] },
+        { jour: 'Tuesday 17 November', items: ['AfCFTA Investment Breakfast with the Secretary-General of the African Continental Free Trade Area', 'Regional investment deep dives, Ghana Deal Room and B2B meetings', 'Luncheon with the Minister for Energy, investment signings and announcements', 'FinTech, investor and diaspora sessions', 'Closing address by the Vice President of the Republic'] },
         { jour: 'Wednesday 18 November', items: ['Additional B2B meetings', 'Site and company visits'] },
         { jour: 'Thursday 19 November', items: ['Institutional meetings', 'Transfer and return flight Accra – Casablanca'] }
       ]
