@@ -52,6 +52,7 @@ Dans `missions-data.js`, modifiez directement la valeur concernée, par exemple 
 
 | Champ | Effet |
 | --- | --- |
+| `enLigne: false` | Mission masquée partout : calendrier, page et documents. Remettez `true` pour la republier |
 | `statut: 'ouverte'` | Formulaire d'inscription complet |
 | `statut: 'bientot'` | Page visible avec un formulaire « être informé en priorité » (pour annoncer une mission 2 à 3 mois avant) |
 | `statut: 'complete'` | Formulaire de liste d'attente |

@@ -6,7 +6,8 @@
   'use strict';
 
   var CFG = window.GPE_CONFIG || {};
-  var ALL = window.GPE_MISSIONS || [];
+  // enLigne: false masque une mission partout (calendrier, page, documents)
+  var ALL = (window.GPE_MISSIONS || []).filter(function (m) { return m.enLigne !== false; });
   var PREVIEW_KEY = 'gpe-mission-apercu';
 
   /* ---------------- langue ---------------- */

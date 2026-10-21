@@ -52,6 +52,7 @@ window.GPE_MISSIONS = [
   {
     id: 'ghana-2026',                 // identifiant unique dans l'URL : pays-année
     statut: 'ouverte',                // ouverte | bientot | complete | terminee
+    enLigne: false,                   // false = masquée du site (en attente de la lettre officielle) ; true = en ligne
     pays: 'Ghana',
     ville: 'Accra',
     langue: 'Anglais',
