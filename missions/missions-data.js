@@ -58,7 +58,7 @@ window.GPE_MISSIONS = [
     langue: 'Anglais',
     dateDebut: '2026-11-15',          // format AAAA-MM-JJ
     dateFin: '2026-11-19',
-    dateLimite: '2026-10-30',         // clôture des inscriptions
+    dateLimite: '2026-11-10',         // clôture des inscriptions
     places: 'limitees',
     titre: 'Mission d’affaires au Ghana — Invest Ghana Summit 2026',
     accroche: 'Global Premium Events organise la délégation d’affaires marocaine à l’Invest Ghana Summit 2026, premier sommet de l’investissement organisé par la Ghana Investment Promotion Authority (GIPA). Plus de 2 000 investisseurs, décideurs publics et chefs d’entreprise sont attendus à Accra.',
@@ -135,7 +135,7 @@ window.GPE_MISSIONS = [
     nonCompris: 'Billet d’avion, hébergement et dépenses personnelles. Les tarifs de groupe négociés pour le vol et l’hôtel sont communiqués à l’inscription.',
 
     conditions: [
-      'Inscription confirmée à réception du paiement intégral, au plus tard le 30 octobre 2026.',
+      'Inscription confirmée à réception du paiement intégral, au plus tard le 10 novembre 2026.',
       'Places attribuées par ordre de réception des paiements.',
       'Remboursement intégral si la mission est annulée par l’organisateur.'
     ],
@@ -236,7 +236,7 @@ window.GPE_MISSIONS = [
       ],
       nonCompris: 'Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.',
       conditions: [
-        'Registration is confirmed upon receipt of full payment, no later than 30 October 2026.',
+        'Registration is confirmed upon receipt of full payment, no later than 10 November 2026.',
         'Places are allocated in order of payment received.',
         'Full refund if the mission is cancelled by the organiser.'
       ],
