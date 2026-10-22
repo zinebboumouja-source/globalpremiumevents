@@ -2022,6 +2022,2742 @@ window.GPE_MISSIONS = [
         }
       ]
     }
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    "id": "qatar-investissement-2025",
+    "statut": "terminee",
+    "enLigne": true,
+    "pays": "Qatar",
+    "ville": "Doha",
+    "langue": "Anglais",
+    "dateDebut": "2025-05-19",
+    "dateFin": "2025-05-23",
+    "dateLimite": "2025-05-02",
+    "places": "limitees",
+    "titre": "Mission B2B investissement à Doha",
+    "accroche": "Global Premium Events a conduit une délégation d’entreprises à Doha, pendant un grand forum économique international, pour des rencontres B2B avec des investisseurs et des entreprises qatariennes.",
+    "pourquoi": [
+      {
+        "chiffre": "Investisseurs",
+        "texte": "fonds et entreprises du Golfe"
+      },
+      {
+        "chiffre": "B2B & B2G",
+        "texte": "rencontres avec des entreprises et institutions qatariennes"
+      }
+    ],
+    "secteurs": [
+      "Investissement et finance",
+      "Énergie",
+      "Infrastructures",
+      "Économie numérique"
+    ],
+    "prix": {
+      "devise": "MAD",
+      "mention": "Prix par entreprise, hors taxes (TVA 20 % en sus), hors billet d’avion et hébergement. Badge d’accès au salon inclus."
+    },
+    "formules": [
+      {
+        "id": "delegation",
+        "nom": "Forfait Délégation",
+        "prix": null,
+        "prixSup": null,
+        "places": 10,
+        "recommande": false
+      },
+      {
+        "id": "business",
+        "nom": "Forfait Business",
+        "prix": null,
+        "prixSup": null,
+        "places": null,
+        "recommande": true
+      },
+      {
+        "id": "executive",
+        "nom": "Forfait Executive",
+        "prix": null,
+        "prixSup": null,
+        "places": 3,
+        "recommande": false
+      }
+    ],
+    "comparatif": [
+      {
+        "groupe": "Accès et rendez-vous",
+        "lignes": [
+          [
+            "Badge d’accès au grand salon international du pays hôte",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Intégration à la délégation d’affaires marocaine et briefing pays",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Rendez-vous B2B",
+            "Rencontres de networking",
+            "Agenda B2B qualifié selon votre profil",
+            "Agenda B2B garanti (8 rendez-vous minimum)"
+          ],
+          [
+            "Rencontres B2G (institutions)",
+            "-",
+            "Sollicitées",
+            "Organisées pour votre secteur"
+          ],
+          [
+            "Dîner de networking de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ]
+        ]
+      },
+      {
+        "groupe": "Logistique et assistance",
+        "lignes": [
+          [
+            "Assistance visa (lettre d’invitation et dossier)",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Transferts et navette de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Assistance",
+            "Coordination de groupe",
+            "Assistant dédié",
+            "Assistant personnel et interprète"
+          ]
+        ]
+      },
+      {
+        "groupe": "Visibilité et suivi",
+        "lignes": [
+          [
+            "Photos de groupe de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Photographe dédié à vos rendez-vous",
+            "-",
+            "Y",
+            "Y"
+          ],
+          [
+            "Programme personnalisé selon vos objectifs",
+            "-",
+            "-",
+            "Y"
+          ],
+          [
+            "Suivi de vos contacts à J+30",
+            "-",
+            "Y",
+            "Y"
+          ]
+        ]
+      }
+    ],
+    "nonCompris": "Billet d’avion, hébergement et dépenses personnelles. Les tarifs de groupe négociés pour le vol et l’hôtel sont communiqués à l’inscription.",
+    "conditions": [
+      "Inscription confirmée à réception du paiement intégral, au plus tard à la date de clôture.",
+      "Places attribuées par ordre de réception des paiements.",
+      "Remboursement intégral si la mission est annulée par l’organisateur."
+    ],
+    "pratique": {
+      "visa": "GPE confirme les formalités d’entrée et accompagne les démarches (lettre d’invitation et dossier).",
+      "monnaie": "Riyal qatari (QAR).",
+      "autres": "Documents de présentation en anglais recommandés."
+    },
+    "programme": [
+      {
+        "jour": "Jour 1",
+        "items": [
+          "Arrivée à Doha et briefing de la délégation"
+        ]
+      },
+      {
+        "jour": "Jours 2 à 4",
+        "items": [
+          "Grand forum économique international : rendez-vous B2B",
+          "Rencontres institutionnelles sollicitées"
+        ]
+      },
+      {
+        "jour": "Jour 5",
+        "items": [
+          "Rendez-vous complémentaires et retour"
+        ]
+      }
+    ],
+    "en": {
+      "pays": "Qatar",
+      "ville": "Doha",
+      "langue": "English",
+      "titre": "Investment B2B Mission to Doha",
+      "accroche": "Global Premium Events led a business delegation to Doha during a major international economic forum, for B2B meetings with Qatari investors and companies.",
+      "pourquoi": [
+        {
+          "chiffre": "Investors",
+          "texte": "Gulf funds and companies"
+        },
+        {
+          "chiffre": "B2B & B2G",
+          "texte": "meetings with Qatari companies and institutions"
+        }
+      ],
+      "secteurs": [
+        "Investment and finance",
+        "Energy",
+        "Infrastructure",
+        "Digital economy"
+      ],
+      "prix": {
+        "mention": "Price per company, excluding VAT (20% VAT applies), excluding flights and accommodation. Show access badge included."
+      },
+      "formules": [
+        {
+          "nom": "Delegation Package"
+        },
+        {
+          "nom": "Business Package"
+        },
+        {
+          "nom": "Executive Package"
+        }
+      ],
+      "comparatif": [
+        {
+          "groupe": "Access and meetings",
+          "lignes": [
+            [
+              "Access badge to the host country’s major international show",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Membership of the Moroccan business delegation and country briefing",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "B2B meetings",
+              "Networking sessions",
+              "Qualified B2B agenda based on your profile",
+              "Guaranteed B2B agenda (minimum 8 meetings)"
+            ],
+            [
+              "B2G meetings (institutions)",
+              "-",
+              "Requested",
+              "Arranged for your sector"
+            ],
+            [
+              "Delegation networking dinner",
+              "Y",
+              "Y",
+              "Y"
+            ]
+          ]
+        },
+        {
+          "groupe": "Logistics and assistance",
+          "lignes": [
+            [
+              "Visa assistance (invitation letter and file)",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Transfers and delegation shuttle",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Assistance",
+              "Group coordination",
+              "Dedicated assistant",
+              "Personal assistant and interpreter"
+            ]
+          ]
+        },
+        {
+          "groupe": "Visibility and follow-up",
+          "lignes": [
+            [
+              "Delegation group photos",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Photographer dedicated to your meetings",
+              "-",
+              "Y",
+              "Y"
+            ],
+            [
+              "Personalised programme based on your objectives",
+              "-",
+              "-",
+              "Y"
+            ],
+            [
+              "Follow-up of your contacts at D+30",
+              "-",
+              "Y",
+              "Y"
+            ]
+          ]
+        }
+      ],
+      "nonCompris": "Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.",
+      "conditions": [
+        "Registration is confirmed upon receipt of full payment, no later than the closing date.",
+        "Places are allocated in order of payment received.",
+        "Full refund if the mission is cancelled by the organiser."
+      ],
+      "pratique": {
+        "visa": "GPE confirms entry requirements and supports the process (invitation letter and file).",
+        "monnaie": "Qatari riyal (QAR).",
+        "autres": "Presentation materials in English recommended."
+      },
+      "programme": [
+        {
+          "jour": "Day 1",
+          "items": [
+            "Arrival in Doha and delegation briefing"
+          ]
+        },
+        {
+          "jour": "Days 2 to 4",
+          "items": [
+            "Major international economic forum: B2B meetings",
+            "Requested institutional meetings"
+          ]
+        },
+        {
+          "jour": "Day 5",
+          "items": [
+            "Additional meetings and return"
+          ]
+        }
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    "id": "arabie-saoudite-investissement-2025",
+    "statut": "terminee",
+    "enLigne": true,
+    "pays": "Arabie saoudite",
+    "ville": "Riyad",
+    "langue": "Anglais / Arabe",
+    "dateDebut": "2025-10-26",
+    "dateFin": "2025-10-31",
+    "dateLimite": "2025-10-08",
+    "places": "limitees",
+    "titre": "Mission B2B investissement à Riyad",
+    "accroche": "Global Premium Events a conduit une délégation d’entreprises à Riyad, pendant le grand rendez-vous international de l’investissement du Royaume, pour des rencontres B2B avec des investisseurs, fonds et entreprises saoudiennes.",
+    "pourquoi": [
+      {
+        "chiffre": "Vision 2030",
+        "texte": "des investissements massifs dans tous les secteurs"
+      },
+      {
+        "chiffre": "B2B & B2G",
+        "texte": "rencontres avec des entreprises, fonds et institutions saoudiennes"
+      }
+    ],
+    "secteurs": [
+      "Investissement et fonds",
+      "Énergie et industrie",
+      "Infrastructures et immobilier",
+      "Technologies et IA"
+    ],
+    "prix": {
+      "devise": "MAD",
+      "mention": "Prix par entreprise, hors taxes (TVA 20 % en sus), hors billet d’avion et hébergement. Badge d’accès au salon inclus."
+    },
+    "formules": [
+      {
+        "id": "delegation",
+        "nom": "Forfait Délégation",
+        "prix": null,
+        "prixSup": null,
+        "places": 10,
+        "recommande": false
+      },
+      {
+        "id": "business",
+        "nom": "Forfait Business",
+        "prix": null,
+        "prixSup": null,
+        "places": null,
+        "recommande": true
+      },
+      {
+        "id": "executive",
+        "nom": "Forfait Executive",
+        "prix": null,
+        "prixSup": null,
+        "places": 3,
+        "recommande": false
+      }
+    ],
+    "comparatif": [
+      {
+        "groupe": "Accès et rendez-vous",
+        "lignes": [
+          [
+            "Badge d’accès au grand salon international du pays hôte",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Intégration à la délégation d’affaires marocaine et briefing pays",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Rendez-vous B2B",
+            "Rencontres de networking",
+            "Agenda B2B qualifié selon votre profil",
+            "Agenda B2B garanti (8 rendez-vous minimum)"
+          ],
+          [
+            "Rencontres B2G (institutions)",
+            "-",
+            "Sollicitées",
+            "Organisées pour votre secteur"
+          ],
+          [
+            "Dîner de networking de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ]
+        ]
+      },
+      {
+        "groupe": "Logistique et assistance",
+        "lignes": [
+          [
+            "Assistance visa (lettre d’invitation et dossier)",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Transferts et navette de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Assistance",
+            "Coordination de groupe",
+            "Assistant dédié",
+            "Assistant personnel et interprète"
+          ]
+        ]
+      },
+      {
+        "groupe": "Visibilité et suivi",
+        "lignes": [
+          [
+            "Photos de groupe de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Photographe dédié à vos rendez-vous",
+            "-",
+            "Y",
+            "Y"
+          ],
+          [
+            "Programme personnalisé selon vos objectifs",
+            "-",
+            "-",
+            "Y"
+          ],
+          [
+            "Suivi de vos contacts à J+30",
+            "-",
+            "Y",
+            "Y"
+          ]
+        ]
+      }
+    ],
+    "nonCompris": "Billet d’avion, hébergement et dépenses personnelles. Les tarifs de groupe négociés pour le vol et l’hôtel sont communiqués à l’inscription.",
+    "conditions": [
+      "Inscription confirmée à réception du paiement intégral, au plus tard à la date de clôture.",
+      "Places attribuées par ordre de réception des paiements.",
+      "Remboursement intégral si la mission est annulée par l’organisateur."
+    ],
+    "pratique": {
+      "visa": "Visa requis pour les ressortissants marocains. GPE accompagne la demande (lettre d’invitation et dossier).",
+      "monnaie": "Riyal saoudien (SAR).",
+      "autres": "Documents de présentation en anglais recommandés."
+    },
+    "programme": [
+      {
+        "jour": "Jour 1",
+        "items": [
+          "Arrivée à Riyad et briefing de la délégation"
+        ]
+      },
+      {
+        "jour": "Jours 2 à 5",
+        "items": [
+          "Grand forum international de l’investissement : rendez-vous B2B",
+          "Rencontres institutionnelles sollicitées"
+        ]
+      },
+      {
+        "jour": "Jour 6",
+        "items": [
+          "Rendez-vous complémentaires et retour"
+        ]
+      }
+    ],
+    "en": {
+      "pays": "Saudi Arabia",
+      "ville": "Riyadh",
+      "langue": "English / Arabic",
+      "titre": "Investment B2B Mission to Riyadh",
+      "accroche": "Global Premium Events led a business delegation to Riyadh during the Kingdom’s major international investment gathering, for B2B meetings with Saudi investors, funds and companies.",
+      "pourquoi": [
+        {
+          "chiffre": "Vision 2030",
+          "texte": "massive investment across all sectors"
+        },
+        {
+          "chiffre": "B2B & B2G",
+          "texte": "meetings with Saudi companies, funds and institutions"
+        }
+      ],
+      "secteurs": [
+        "Investment and funds",
+        "Energy and industry",
+        "Infrastructure and real estate",
+        "Technology and AI"
+      ],
+      "prix": {
+        "mention": "Price per company, excluding VAT (20% VAT applies), excluding flights and accommodation. Show access badge included."
+      },
+      "formules": [
+        {
+          "nom": "Delegation Package"
+        },
+        {
+          "nom": "Business Package"
+        },
+        {
+          "nom": "Executive Package"
+        }
+      ],
+      "comparatif": [
+        {
+          "groupe": "Access and meetings",
+          "lignes": [
+            [
+              "Access badge to the host country’s major international show",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Membership of the Moroccan business delegation and country briefing",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "B2B meetings",
+              "Networking sessions",
+              "Qualified B2B agenda based on your profile",
+              "Guaranteed B2B agenda (minimum 8 meetings)"
+            ],
+            [
+              "B2G meetings (institutions)",
+              "-",
+              "Requested",
+              "Arranged for your sector"
+            ],
+            [
+              "Delegation networking dinner",
+              "Y",
+              "Y",
+              "Y"
+            ]
+          ]
+        },
+        {
+          "groupe": "Logistics and assistance",
+          "lignes": [
+            [
+              "Visa assistance (invitation letter and file)",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Transfers and delegation shuttle",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Assistance",
+              "Group coordination",
+              "Dedicated assistant",
+              "Personal assistant and interpreter"
+            ]
+          ]
+        },
+        {
+          "groupe": "Visibility and follow-up",
+          "lignes": [
+            [
+              "Delegation group photos",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Photographer dedicated to your meetings",
+              "-",
+              "Y",
+              "Y"
+            ],
+            [
+              "Personalised programme based on your objectives",
+              "-",
+              "-",
+              "Y"
+            ],
+            [
+              "Follow-up of your contacts at D+30",
+              "-",
+              "Y",
+              "Y"
+            ]
+          ]
+        }
+      ],
+      "nonCompris": "Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.",
+      "conditions": [
+        "Registration is confirmed upon receipt of full payment, no later than the closing date.",
+        "Places are allocated in order of payment received.",
+        "Full refund if the mission is cancelled by the organiser."
+      ],
+      "pratique": {
+        "visa": "Visa required for Moroccan nationals. GPE supports the application (invitation letter and file).",
+        "monnaie": "Saudi riyal (SAR).",
+        "autres": "Presentation materials in English recommended."
+      },
+      "programme": [
+        {
+          "jour": "Day 1",
+          "items": [
+            "Arrival in Riyadh and delegation briefing"
+          ]
+        },
+        {
+          "jour": "Days 2 to 5",
+          "items": [
+            "Major international investment forum: B2B meetings",
+            "Requested institutional meetings"
+          ]
+        },
+        {
+          "jour": "Day 6",
+          "items": [
+            "Additional meetings and return"
+          ]
+        }
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    "id": "emirats-energie-2025",
+    "statut": "terminee",
+    "enLigne": true,
+    "pays": "Émirats arabes unis",
+    "ville": "Abou Dhabi",
+    "langue": "Anglais / Arabe",
+    "dateDebut": "2025-11-02",
+    "dateFin": "2025-11-07",
+    "dateLimite": "2025-10-15",
+    "places": "limitees",
+    "titre": "Mission B2B énergie à Abou Dhabi",
+    "accroche": "Global Premium Events a conduit une délégation d’entreprises de l’énergie à Abou Dhabi, pendant le plus grand salon mondial de l’énergie, pour des rencontres B2B avec des opérateurs, sous-traitants et fournisseurs.",
+    "pourquoi": [
+      {
+        "chiffre": "Énergie",
+        "texte": "pétrole, gaz, renouvelables et hydrogène réunis"
+      },
+      {
+        "chiffre": "B2B",
+        "texte": "rencontres avec des opérateurs, EPC et fournisseurs du Golfe"
+      }
+    ],
+    "secteurs": [
+      "Pétrole et gaz",
+      "Énergies renouvelables",
+      "Hydrogène",
+      "Services et équipements industriels"
+    ],
+    "prix": {
+      "devise": "MAD",
+      "mention": "Prix par entreprise, hors taxes (TVA 20 % en sus), hors billet d’avion et hébergement. Badge d’accès au salon inclus."
+    },
+    "formules": [
+      {
+        "id": "delegation",
+        "nom": "Forfait Délégation",
+        "prix": null,
+        "prixSup": null,
+        "places": 10,
+        "recommande": false
+      },
+      {
+        "id": "business",
+        "nom": "Forfait Business",
+        "prix": null,
+        "prixSup": null,
+        "places": null,
+        "recommande": true
+      },
+      {
+        "id": "executive",
+        "nom": "Forfait Executive",
+        "prix": null,
+        "prixSup": null,
+        "places": 3,
+        "recommande": false
+      }
+    ],
+    "comparatif": [
+      {
+        "groupe": "Accès et rendez-vous",
+        "lignes": [
+          [
+            "Badge d’accès au grand salon international du pays hôte",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Intégration à la délégation d’affaires marocaine et briefing pays",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Rendez-vous B2B",
+            "Rencontres de networking",
+            "Agenda B2B qualifié selon votre profil",
+            "Agenda B2B garanti (8 rendez-vous minimum)"
+          ],
+          [
+            "Rencontres B2G (institutions)",
+            "-",
+            "Sollicitées",
+            "Organisées pour votre secteur"
+          ],
+          [
+            "Dîner de networking de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ]
+        ]
+      },
+      {
+        "groupe": "Logistique et assistance",
+        "lignes": [
+          [
+            "Assistance visa (lettre d’invitation et dossier)",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Transferts et navette de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Assistance",
+            "Coordination de groupe",
+            "Assistant dédié",
+            "Assistant personnel et interprète"
+          ]
+        ]
+      },
+      {
+        "groupe": "Visibilité et suivi",
+        "lignes": [
+          [
+            "Photos de groupe de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Photographe dédié à vos rendez-vous",
+            "-",
+            "Y",
+            "Y"
+          ],
+          [
+            "Programme personnalisé selon vos objectifs",
+            "-",
+            "-",
+            "Y"
+          ],
+          [
+            "Suivi de vos contacts à J+30",
+            "-",
+            "Y",
+            "Y"
+          ]
+        ]
+      }
+    ],
+    "nonCompris": "Billet d’avion, hébergement et dépenses personnelles. Les tarifs de groupe négociés pour le vol et l’hôtel sont communiqués à l’inscription.",
+    "conditions": [
+      "Inscription confirmée à réception du paiement intégral, au plus tard à la date de clôture.",
+      "Places attribuées par ordre de réception des paiements.",
+      "Remboursement intégral si la mission est annulée par l’organisateur."
+    ],
+    "pratique": {
+      "visa": "Visa requis pour les ressortissants marocains. GPE accompagne la demande (lettre d’invitation et dossier).",
+      "monnaie": "Dirham des Émirats (AED).",
+      "autres": "Documents de présentation en anglais recommandés."
+    },
+    "programme": [
+      {
+        "jour": "Jour 1",
+        "items": [
+          "Arrivée à Abou Dhabi et briefing de la délégation"
+        ]
+      },
+      {
+        "jour": "Jours 2 à 5",
+        "items": [
+          "Grand salon international de l’énergie : rendez-vous B2B",
+          "Rencontres institutionnelles sollicitées"
+        ]
+      },
+      {
+        "jour": "Jour 6",
+        "items": [
+          "Rendez-vous complémentaires et retour"
+        ]
+      }
+    ],
+    "en": {
+      "pays": "United Arab Emirates",
+      "ville": "Abu Dhabi",
+      "langue": "English / Arabic",
+      "titre": "Energy B2B Mission to Abu Dhabi",
+      "accroche": "Global Premium Events led a delegation of energy companies to Abu Dhabi during the world’s largest energy show, for B2B meetings with operators, contractors and suppliers.",
+      "pourquoi": [
+        {
+          "chiffre": "Energy",
+          "texte": "oil, gas, renewables and hydrogen in one place"
+        },
+        {
+          "chiffre": "B2B",
+          "texte": "meetings with Gulf operators, EPC contractors and suppliers"
+        }
+      ],
+      "secteurs": [
+        "Oil and gas",
+        "Renewable energy",
+        "Hydrogen",
+        "Industrial services and equipment"
+      ],
+      "prix": {
+        "mention": "Price per company, excluding VAT (20% VAT applies), excluding flights and accommodation. Show access badge included."
+      },
+      "formules": [
+        {
+          "nom": "Delegation Package"
+        },
+        {
+          "nom": "Business Package"
+        },
+        {
+          "nom": "Executive Package"
+        }
+      ],
+      "comparatif": [
+        {
+          "groupe": "Access and meetings",
+          "lignes": [
+            [
+              "Access badge to the host country’s major international show",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Membership of the Moroccan business delegation and country briefing",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "B2B meetings",
+              "Networking sessions",
+              "Qualified B2B agenda based on your profile",
+              "Guaranteed B2B agenda (minimum 8 meetings)"
+            ],
+            [
+              "B2G meetings (institutions)",
+              "-",
+              "Requested",
+              "Arranged for your sector"
+            ],
+            [
+              "Delegation networking dinner",
+              "Y",
+              "Y",
+              "Y"
+            ]
+          ]
+        },
+        {
+          "groupe": "Logistics and assistance",
+          "lignes": [
+            [
+              "Visa assistance (invitation letter and file)",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Transfers and delegation shuttle",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Assistance",
+              "Group coordination",
+              "Dedicated assistant",
+              "Personal assistant and interpreter"
+            ]
+          ]
+        },
+        {
+          "groupe": "Visibility and follow-up",
+          "lignes": [
+            [
+              "Delegation group photos",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Photographer dedicated to your meetings",
+              "-",
+              "Y",
+              "Y"
+            ],
+            [
+              "Personalised programme based on your objectives",
+              "-",
+              "-",
+              "Y"
+            ],
+            [
+              "Follow-up of your contacts at D+30",
+              "-",
+              "Y",
+              "Y"
+            ]
+          ]
+        }
+      ],
+      "nonCompris": "Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.",
+      "conditions": [
+        "Registration is confirmed upon receipt of full payment, no later than the closing date.",
+        "Places are allocated in order of payment received.",
+        "Full refund if the mission is cancelled by the organiser."
+      ],
+      "pratique": {
+        "visa": "Visa required for Moroccan nationals. GPE supports the application (invitation letter and file).",
+        "monnaie": "UAE dirham (AED).",
+        "autres": "Presentation materials in English recommended."
+      },
+      "programme": [
+        {
+          "jour": "Day 1",
+          "items": [
+            "Arrival in Abu Dhabi and delegation briefing"
+          ]
+        },
+        {
+          "jour": "Days 2 to 5",
+          "items": [
+            "Major international energy show: B2B meetings",
+            "Requested institutional meetings"
+          ]
+        },
+        {
+          "jour": "Day 6",
+          "items": [
+            "Additional meetings and return"
+          ]
+        }
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    "id": "arabie-saoudite-immobilier-2025",
+    "statut": "terminee",
+    "enLigne": true,
+    "pays": "Arabie saoudite",
+    "ville": "Riyad",
+    "langue": "Anglais / Arabe",
+    "dateDebut": "2025-11-16",
+    "dateFin": "2025-11-21",
+    "dateLimite": "2025-10-30",
+    "places": "limitees",
+    "titre": "Mission B2B immobilier et construction à Riyad",
+    "accroche": "Global Premium Events a conduit une délégation d’entreprises de l’immobilier et de la construction à Riyad, pendant le grand salon international de l’immobilier du Royaume, pour des rencontres B2B avec promoteurs et donneurs d’ordre.",
+    "pourquoi": [
+      {
+        "chiffre": "Giga-projets",
+        "texte": "des programmes immobiliers et urbains sans précédent"
+      },
+      {
+        "chiffre": "B2B",
+        "texte": "rencontres avec promoteurs, développeurs et donneurs d’ordre"
+      }
+    ],
+    "secteurs": [
+      "Promotion immobilière",
+      "BTP et matériaux",
+      "Architecture et design",
+      "PropTech"
+    ],
+    "prix": {
+      "devise": "MAD",
+      "mention": "Prix par entreprise, hors taxes (TVA 20 % en sus), hors billet d’avion et hébergement. Badge d’accès au salon inclus."
+    },
+    "formules": [
+      {
+        "id": "delegation",
+        "nom": "Forfait Délégation",
+        "prix": null,
+        "prixSup": null,
+        "places": 10,
+        "recommande": false
+      },
+      {
+        "id": "business",
+        "nom": "Forfait Business",
+        "prix": null,
+        "prixSup": null,
+        "places": null,
+        "recommande": true
+      },
+      {
+        "id": "executive",
+        "nom": "Forfait Executive",
+        "prix": null,
+        "prixSup": null,
+        "places": 3,
+        "recommande": false
+      }
+    ],
+    "comparatif": [
+      {
+        "groupe": "Accès et rendez-vous",
+        "lignes": [
+          [
+            "Badge d’accès au grand salon international du pays hôte",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Intégration à la délégation d’affaires marocaine et briefing pays",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Rendez-vous B2B",
+            "Rencontres de networking",
+            "Agenda B2B qualifié selon votre profil",
+            "Agenda B2B garanti (8 rendez-vous minimum)"
+          ],
+          [
+            "Rencontres B2G (institutions)",
+            "-",
+            "Sollicitées",
+            "Organisées pour votre secteur"
+          ],
+          [
+            "Dîner de networking de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ]
+        ]
+      },
+      {
+        "groupe": "Logistique et assistance",
+        "lignes": [
+          [
+            "Assistance visa (lettre d’invitation et dossier)",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Transferts et navette de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Assistance",
+            "Coordination de groupe",
+            "Assistant dédié",
+            "Assistant personnel et interprète"
+          ]
+        ]
+      },
+      {
+        "groupe": "Visibilité et suivi",
+        "lignes": [
+          [
+            "Photos de groupe de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Photographe dédié à vos rendez-vous",
+            "-",
+            "Y",
+            "Y"
+          ],
+          [
+            "Programme personnalisé selon vos objectifs",
+            "-",
+            "-",
+            "Y"
+          ],
+          [
+            "Suivi de vos contacts à J+30",
+            "-",
+            "Y",
+            "Y"
+          ]
+        ]
+      }
+    ],
+    "nonCompris": "Billet d’avion, hébergement et dépenses personnelles. Les tarifs de groupe négociés pour le vol et l’hôtel sont communiqués à l’inscription.",
+    "conditions": [
+      "Inscription confirmée à réception du paiement intégral, au plus tard à la date de clôture.",
+      "Places attribuées par ordre de réception des paiements.",
+      "Remboursement intégral si la mission est annulée par l’organisateur."
+    ],
+    "pratique": {
+      "visa": "Visa requis pour les ressortissants marocains. GPE accompagne la demande (lettre d’invitation et dossier).",
+      "monnaie": "Riyal saoudien (SAR).",
+      "autres": "Documents de présentation en anglais recommandés."
+    },
+    "programme": [
+      {
+        "jour": "Jour 1",
+        "items": [
+          "Arrivée à Riyad et briefing de la délégation"
+        ]
+      },
+      {
+        "jour": "Jours 2 à 5",
+        "items": [
+          "Grand salon international de l’immobilier : rendez-vous B2B",
+          "Rencontres institutionnelles sollicitées"
+        ]
+      },
+      {
+        "jour": "Jour 6",
+        "items": [
+          "Rendez-vous complémentaires et retour"
+        ]
+      }
+    ],
+    "en": {
+      "pays": "Saudi Arabia",
+      "ville": "Riyadh",
+      "langue": "English / Arabic",
+      "titre": "Real Estate & Construction B2B Mission to Riyadh",
+      "accroche": "Global Premium Events led a delegation of real estate and construction companies to Riyadh during the Kingdom’s major international real estate show, for B2B meetings with developers and contractors.",
+      "pourquoi": [
+        {
+          "chiffre": "Giga-projects",
+          "texte": "unprecedented real estate and urban programmes"
+        },
+        {
+          "chiffre": "B2B",
+          "texte": "meetings with developers and contractors"
+        }
+      ],
+      "secteurs": [
+        "Real estate development",
+        "Construction and materials",
+        "Architecture and design",
+        "PropTech"
+      ],
+      "prix": {
+        "mention": "Price per company, excluding VAT (20% VAT applies), excluding flights and accommodation. Show access badge included."
+      },
+      "formules": [
+        {
+          "nom": "Delegation Package"
+        },
+        {
+          "nom": "Business Package"
+        },
+        {
+          "nom": "Executive Package"
+        }
+      ],
+      "comparatif": [
+        {
+          "groupe": "Access and meetings",
+          "lignes": [
+            [
+              "Access badge to the host country’s major international show",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Membership of the Moroccan business delegation and country briefing",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "B2B meetings",
+              "Networking sessions",
+              "Qualified B2B agenda based on your profile",
+              "Guaranteed B2B agenda (minimum 8 meetings)"
+            ],
+            [
+              "B2G meetings (institutions)",
+              "-",
+              "Requested",
+              "Arranged for your sector"
+            ],
+            [
+              "Delegation networking dinner",
+              "Y",
+              "Y",
+              "Y"
+            ]
+          ]
+        },
+        {
+          "groupe": "Logistics and assistance",
+          "lignes": [
+            [
+              "Visa assistance (invitation letter and file)",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Transfers and delegation shuttle",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Assistance",
+              "Group coordination",
+              "Dedicated assistant",
+              "Personal assistant and interpreter"
+            ]
+          ]
+        },
+        {
+          "groupe": "Visibility and follow-up",
+          "lignes": [
+            [
+              "Delegation group photos",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Photographer dedicated to your meetings",
+              "-",
+              "Y",
+              "Y"
+            ],
+            [
+              "Personalised programme based on your objectives",
+              "-",
+              "-",
+              "Y"
+            ],
+            [
+              "Follow-up of your contacts at D+30",
+              "-",
+              "Y",
+              "Y"
+            ]
+          ]
+        }
+      ],
+      "nonCompris": "Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.",
+      "conditions": [
+        "Registration is confirmed upon receipt of full payment, no later than the closing date.",
+        "Places are allocated in order of payment received.",
+        "Full refund if the mission is cancelled by the organiser."
+      ],
+      "pratique": {
+        "visa": "Visa required for Moroccan nationals. GPE supports the application (invitation letter and file).",
+        "monnaie": "Saudi riyal (SAR).",
+        "autres": "Presentation materials in English recommended."
+      },
+      "programme": [
+        {
+          "jour": "Day 1",
+          "items": [
+            "Arrival in Riyadh and delegation briefing"
+          ]
+        },
+        {
+          "jour": "Days 2 to 5",
+          "items": [
+            "Major international real estate show: B2B meetings",
+            "Requested institutional meetings"
+          ]
+        },
+        {
+          "jour": "Day 6",
+          "items": [
+            "Additional meetings and return"
+          ]
+        }
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    "id": "emirats-agroalimentaire-dubai-2026",
+    "statut": "terminee",
+    "enLigne": true,
+    "pays": "Émirats arabes unis",
+    "ville": "Dubaï",
+    "langue": "Anglais / Arabe",
+    "dateDebut": "2026-01-25",
+    "dateFin": "2026-01-31",
+    "dateLimite": "2026-01-08",
+    "places": "limitees",
+    "titre": "Mission B2B agroalimentaire à Dubaï",
+    "accroche": "Global Premium Events a conduit une délégation d’entreprises agroalimentaires à Dubaï, pendant le plus grand salon mondial de l’alimentation et des boissons, pour des rencontres B2B avec importateurs, distributeurs et acheteurs.",
+    "pourquoi": [
+      {
+        "chiffre": "Acheteurs",
+        "texte": "importateurs, distributeurs et grande distribution du Golfe"
+      },
+      {
+        "chiffre": "Export",
+        "texte": "une vitrine vers le Moyen-Orient, l’Asie et l’Afrique"
+      }
+    ],
+    "secteurs": [
+      "Agroalimentaire et boissons",
+      "Produits frais",
+      "Huile d’olive, dattes et terroir",
+      "Emballage et ingrédients"
+    ],
+    "prix": {
+      "devise": "MAD",
+      "mention": "Prix par entreprise, hors taxes (TVA 20 % en sus), hors billet d’avion et hébergement. Badge d’accès au salon inclus."
+    },
+    "formules": [
+      {
+        "id": "delegation",
+        "nom": "Forfait Délégation",
+        "prix": null,
+        "prixSup": null,
+        "places": 10,
+        "recommande": false
+      },
+      {
+        "id": "business",
+        "nom": "Forfait Business",
+        "prix": null,
+        "prixSup": null,
+        "places": null,
+        "recommande": true
+      },
+      {
+        "id": "executive",
+        "nom": "Forfait Executive",
+        "prix": null,
+        "prixSup": null,
+        "places": 3,
+        "recommande": false
+      }
+    ],
+    "comparatif": [
+      {
+        "groupe": "Accès et rendez-vous",
+        "lignes": [
+          [
+            "Badge d’accès au grand salon international du pays hôte",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Intégration à la délégation d’affaires marocaine et briefing pays",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Rendez-vous B2B",
+            "Rencontres de networking",
+            "Agenda B2B qualifié selon votre profil",
+            "Agenda B2B garanti (8 rendez-vous minimum)"
+          ],
+          [
+            "Rencontres B2G (institutions)",
+            "-",
+            "Sollicitées",
+            "Organisées pour votre secteur"
+          ],
+          [
+            "Dîner de networking de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ]
+        ]
+      },
+      {
+        "groupe": "Logistique et assistance",
+        "lignes": [
+          [
+            "Assistance visa (lettre d’invitation et dossier)",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Transferts et navette de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Assistance",
+            "Coordination de groupe",
+            "Assistant dédié",
+            "Assistant personnel et interprète"
+          ]
+        ]
+      },
+      {
+        "groupe": "Visibilité et suivi",
+        "lignes": [
+          [
+            "Photos de groupe de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Photographe dédié à vos rendez-vous",
+            "-",
+            "Y",
+            "Y"
+          ],
+          [
+            "Programme personnalisé selon vos objectifs",
+            "-",
+            "-",
+            "Y"
+          ],
+          [
+            "Suivi de vos contacts à J+30",
+            "-",
+            "Y",
+            "Y"
+          ]
+        ]
+      }
+    ],
+    "nonCompris": "Billet d’avion, hébergement et dépenses personnelles. Les tarifs de groupe négociés pour le vol et l’hôtel sont communiqués à l’inscription.",
+    "conditions": [
+      "Inscription confirmée à réception du paiement intégral, au plus tard à la date de clôture.",
+      "Places attribuées par ordre de réception des paiements.",
+      "Remboursement intégral si la mission est annulée par l’organisateur."
+    ],
+    "pratique": {
+      "visa": "Visa requis pour les ressortissants marocains. GPE accompagne la demande (lettre d’invitation et dossier).",
+      "monnaie": "Dirham des Émirats (AED).",
+      "autres": "Documents de présentation en anglais recommandés."
+    },
+    "programme": [
+      {
+        "jour": "Jour 1",
+        "items": [
+          "Arrivée à Dubaï et briefing de la délégation"
+        ]
+      },
+      {
+        "jour": "Jours 2 à 6",
+        "items": [
+          "Grand salon international de l’alimentation : rendez-vous B2B",
+          "Rencontres institutionnelles sollicitées"
+        ]
+      },
+      {
+        "jour": "Jour 7",
+        "items": [
+          "Rendez-vous complémentaires et retour"
+        ]
+      }
+    ],
+    "en": {
+      "pays": "United Arab Emirates",
+      "ville": "Dubai",
+      "langue": "English / Arabic",
+      "titre": "Food & Beverage B2B Mission to Dubai",
+      "accroche": "Global Premium Events led a delegation of food companies to Dubai during the world’s largest food and beverage show, for B2B meetings with importers, distributors and buyers.",
+      "pourquoi": [
+        {
+          "chiffre": "Buyers",
+          "texte": "Gulf importers, distributors and retailers"
+        },
+        {
+          "chiffre": "Export",
+          "texte": "a showcase to the Middle East, Asia and Africa"
+        }
+      ],
+      "secteurs": [
+        "Food and beverages",
+        "Fresh produce",
+        "Olive oil, dates and local specialities",
+        "Packaging and ingredients"
+      ],
+      "prix": {
+        "mention": "Price per company, excluding VAT (20% VAT applies), excluding flights and accommodation. Show access badge included."
+      },
+      "formules": [
+        {
+          "nom": "Delegation Package"
+        },
+        {
+          "nom": "Business Package"
+        },
+        {
+          "nom": "Executive Package"
+        }
+      ],
+      "comparatif": [
+        {
+          "groupe": "Access and meetings",
+          "lignes": [
+            [
+              "Access badge to the host country’s major international show",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Membership of the Moroccan business delegation and country briefing",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "B2B meetings",
+              "Networking sessions",
+              "Qualified B2B agenda based on your profile",
+              "Guaranteed B2B agenda (minimum 8 meetings)"
+            ],
+            [
+              "B2G meetings (institutions)",
+              "-",
+              "Requested",
+              "Arranged for your sector"
+            ],
+            [
+              "Delegation networking dinner",
+              "Y",
+              "Y",
+              "Y"
+            ]
+          ]
+        },
+        {
+          "groupe": "Logistics and assistance",
+          "lignes": [
+            [
+              "Visa assistance (invitation letter and file)",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Transfers and delegation shuttle",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Assistance",
+              "Group coordination",
+              "Dedicated assistant",
+              "Personal assistant and interpreter"
+            ]
+          ]
+        },
+        {
+          "groupe": "Visibility and follow-up",
+          "lignes": [
+            [
+              "Delegation group photos",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Photographer dedicated to your meetings",
+              "-",
+              "Y",
+              "Y"
+            ],
+            [
+              "Personalised programme based on your objectives",
+              "-",
+              "-",
+              "Y"
+            ],
+            [
+              "Follow-up of your contacts at D+30",
+              "-",
+              "Y",
+              "Y"
+            ]
+          ]
+        }
+      ],
+      "nonCompris": "Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.",
+      "conditions": [
+        "Registration is confirmed upon receipt of full payment, no later than the closing date.",
+        "Places are allocated in order of payment received.",
+        "Full refund if the mission is cancelled by the organiser."
+      ],
+      "pratique": {
+        "visa": "Visa required for Moroccan nationals. GPE supports the application (invitation letter and file).",
+        "monnaie": "UAE dirham (AED).",
+        "autres": "Presentation materials in English recommended."
+      },
+      "programme": [
+        {
+          "jour": "Day 1",
+          "items": [
+            "Arrival in Dubai and delegation briefing"
+          ]
+        },
+        {
+          "jour": "Days 2 to 6",
+          "items": [
+            "Major international food show: B2B meetings",
+            "Requested institutional meetings"
+          ]
+        },
+        {
+          "jour": "Day 7",
+          "items": [
+            "Additional meetings and return"
+          ]
+        }
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    "id": "emirats-sante-2026",
+    "statut": "terminee",
+    "enLigne": true,
+    "pays": "Émirats arabes unis",
+    "ville": "Dubaï",
+    "langue": "Anglais / Arabe",
+    "dateDebut": "2026-02-08",
+    "dateFin": "2026-02-13",
+    "dateLimite": "2026-01-22",
+    "places": "limitees",
+    "titre": "Mission B2B santé à Dubaï",
+    "accroche": "Global Premium Events a conduit une délégation d’entreprises de la santé à Dubaï, pendant le grand salon international de la santé de la région, pour des rencontres B2B avec hôpitaux, distributeurs et acheteurs.",
+    "pourquoi": [
+      {
+        "chiffre": "Santé",
+        "texte": "équipements, dispositifs médicaux et services réunis"
+      },
+      {
+        "chiffre": "B2B",
+        "texte": "rencontres avec hôpitaux, distributeurs et acheteurs du Golfe"
+      }
+    ],
+    "secteurs": [
+      "Dispositifs médicaux",
+      "Pharmacie",
+      "Laboratoires et diagnostic",
+      "Santé numérique"
+    ],
+    "prix": {
+      "devise": "MAD",
+      "mention": "Prix par entreprise, hors taxes (TVA 20 % en sus), hors billet d’avion et hébergement. Badge d’accès au salon inclus."
+    },
+    "formules": [
+      {
+        "id": "delegation",
+        "nom": "Forfait Délégation",
+        "prix": null,
+        "prixSup": null,
+        "places": 10,
+        "recommande": false
+      },
+      {
+        "id": "business",
+        "nom": "Forfait Business",
+        "prix": null,
+        "prixSup": null,
+        "places": null,
+        "recommande": true
+      },
+      {
+        "id": "executive",
+        "nom": "Forfait Executive",
+        "prix": null,
+        "prixSup": null,
+        "places": 3,
+        "recommande": false
+      }
+    ],
+    "comparatif": [
+      {
+        "groupe": "Accès et rendez-vous",
+        "lignes": [
+          [
+            "Badge d’accès au grand salon international du pays hôte",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Intégration à la délégation d’affaires marocaine et briefing pays",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Rendez-vous B2B",
+            "Rencontres de networking",
+            "Agenda B2B qualifié selon votre profil",
+            "Agenda B2B garanti (8 rendez-vous minimum)"
+          ],
+          [
+            "Rencontres B2G (institutions)",
+            "-",
+            "Sollicitées",
+            "Organisées pour votre secteur"
+          ],
+          [
+            "Dîner de networking de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ]
+        ]
+      },
+      {
+        "groupe": "Logistique et assistance",
+        "lignes": [
+          [
+            "Assistance visa (lettre d’invitation et dossier)",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Transferts et navette de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Assistance",
+            "Coordination de groupe",
+            "Assistant dédié",
+            "Assistant personnel et interprète"
+          ]
+        ]
+      },
+      {
+        "groupe": "Visibilité et suivi",
+        "lignes": [
+          [
+            "Photos de groupe de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Photographe dédié à vos rendez-vous",
+            "-",
+            "Y",
+            "Y"
+          ],
+          [
+            "Programme personnalisé selon vos objectifs",
+            "-",
+            "-",
+            "Y"
+          ],
+          [
+            "Suivi de vos contacts à J+30",
+            "-",
+            "Y",
+            "Y"
+          ]
+        ]
+      }
+    ],
+    "nonCompris": "Billet d’avion, hébergement et dépenses personnelles. Les tarifs de groupe négociés pour le vol et l’hôtel sont communiqués à l’inscription.",
+    "conditions": [
+      "Inscription confirmée à réception du paiement intégral, au plus tard à la date de clôture.",
+      "Places attribuées par ordre de réception des paiements.",
+      "Remboursement intégral si la mission est annulée par l’organisateur."
+    ],
+    "pratique": {
+      "visa": "Visa requis pour les ressortissants marocains. GPE accompagne la demande (lettre d’invitation et dossier).",
+      "monnaie": "Dirham des Émirats (AED).",
+      "autres": "Documents de présentation en anglais recommandés."
+    },
+    "programme": [
+      {
+        "jour": "Jour 1",
+        "items": [
+          "Arrivée à Dubaï et briefing de la délégation"
+        ]
+      },
+      {
+        "jour": "Jours 2 à 5",
+        "items": [
+          "Grand salon international de la santé : rendez-vous B2B",
+          "Rencontres institutionnelles sollicitées"
+        ]
+      },
+      {
+        "jour": "Jour 6",
+        "items": [
+          "Rendez-vous complémentaires et retour"
+        ]
+      }
+    ],
+    "en": {
+      "pays": "United Arab Emirates",
+      "ville": "Dubai",
+      "langue": "English / Arabic",
+      "titre": "Healthcare B2B Mission to Dubai",
+      "accroche": "Global Premium Events led a delegation of healthcare companies to Dubai during the region’s major international health show, for B2B meetings with hospitals, distributors and buyers.",
+      "pourquoi": [
+        {
+          "chiffre": "Healthcare",
+          "texte": "equipment, medical devices and services in one place"
+        },
+        {
+          "chiffre": "B2B",
+          "texte": "meetings with Gulf hospitals, distributors and buyers"
+        }
+      ],
+      "secteurs": [
+        "Medical devices",
+        "Pharmaceuticals",
+        "Laboratories and diagnostics",
+        "Digital health"
+      ],
+      "prix": {
+        "mention": "Price per company, excluding VAT (20% VAT applies), excluding flights and accommodation. Show access badge included."
+      },
+      "formules": [
+        {
+          "nom": "Delegation Package"
+        },
+        {
+          "nom": "Business Package"
+        },
+        {
+          "nom": "Executive Package"
+        }
+      ],
+      "comparatif": [
+        {
+          "groupe": "Access and meetings",
+          "lignes": [
+            [
+              "Access badge to the host country’s major international show",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Membership of the Moroccan business delegation and country briefing",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "B2B meetings",
+              "Networking sessions",
+              "Qualified B2B agenda based on your profile",
+              "Guaranteed B2B agenda (minimum 8 meetings)"
+            ],
+            [
+              "B2G meetings (institutions)",
+              "-",
+              "Requested",
+              "Arranged for your sector"
+            ],
+            [
+              "Delegation networking dinner",
+              "Y",
+              "Y",
+              "Y"
+            ]
+          ]
+        },
+        {
+          "groupe": "Logistics and assistance",
+          "lignes": [
+            [
+              "Visa assistance (invitation letter and file)",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Transfers and delegation shuttle",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Assistance",
+              "Group coordination",
+              "Dedicated assistant",
+              "Personal assistant and interpreter"
+            ]
+          ]
+        },
+        {
+          "groupe": "Visibility and follow-up",
+          "lignes": [
+            [
+              "Delegation group photos",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Photographer dedicated to your meetings",
+              "-",
+              "Y",
+              "Y"
+            ],
+            [
+              "Personalised programme based on your objectives",
+              "-",
+              "-",
+              "Y"
+            ],
+            [
+              "Follow-up of your contacts at D+30",
+              "-",
+              "Y",
+              "Y"
+            ]
+          ]
+        }
+      ],
+      "nonCompris": "Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.",
+      "conditions": [
+        "Registration is confirmed upon receipt of full payment, no later than the closing date.",
+        "Places are allocated in order of payment received.",
+        "Full refund if the mission is cancelled by the organiser."
+      ],
+      "pratique": {
+        "visa": "Visa required for Moroccan nationals. GPE supports the application (invitation letter and file).",
+        "monnaie": "UAE dirham (AED).",
+        "autres": "Presentation materials in English recommended."
+      },
+      "programme": [
+        {
+          "jour": "Day 1",
+          "items": [
+            "Arrival in Dubai and delegation briefing"
+          ]
+        },
+        {
+          "jour": "Days 2 to 5",
+          "items": [
+            "Major international health show: B2B meetings",
+            "Requested institutional meetings"
+          ]
+        },
+        {
+          "jour": "Day 6",
+          "items": [
+            "Additional meetings and return"
+          ]
+        }
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    "id": "arabie-saoudite-tech-2026",
+    "statut": "terminee",
+    "enLigne": true,
+    "pays": "Arabie saoudite",
+    "ville": "Riyad",
+    "langue": "Anglais / Arabe",
+    "dateDebut": "2026-08-30",
+    "dateFin": "2026-09-04",
+    "dateLimite": "2026-08-12",
+    "places": "limitees",
+    "titre": "Mission B2B technologies et IA à Riyad",
+    "accroche": "Global Premium Events a conduit une délégation d’entreprises technologiques à Riyad, pendant le grand salon international de la technologie du Royaume, pour des rencontres B2B avec investisseurs, grands groupes et partenaires.",
+    "pourquoi": [
+      {
+        "chiffre": "IA & tech",
+        "texte": "un marché en très forte croissance"
+      },
+      {
+        "chiffre": "B2B",
+        "texte": "rencontres avec investisseurs, grands comptes et partenaires saoudiens"
+      }
+    ],
+    "secteurs": [
+      "Intelligence artificielle",
+      "Cloud et data",
+      "Cybersécurité",
+      "Startups"
+    ],
+    "prix": {
+      "devise": "MAD",
+      "mention": "Prix par entreprise, hors taxes (TVA 20 % en sus), hors billet d’avion et hébergement. Badge d’accès au salon inclus."
+    },
+    "formules": [
+      {
+        "id": "delegation",
+        "nom": "Forfait Délégation",
+        "prix": null,
+        "prixSup": null,
+        "places": 10,
+        "recommande": false
+      },
+      {
+        "id": "business",
+        "nom": "Forfait Business",
+        "prix": null,
+        "prixSup": null,
+        "places": null,
+        "recommande": true
+      },
+      {
+        "id": "executive",
+        "nom": "Forfait Executive",
+        "prix": null,
+        "prixSup": null,
+        "places": 3,
+        "recommande": false
+      }
+    ],
+    "comparatif": [
+      {
+        "groupe": "Accès et rendez-vous",
+        "lignes": [
+          [
+            "Badge d’accès au grand salon international du pays hôte",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Intégration à la délégation d’affaires marocaine et briefing pays",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Rendez-vous B2B",
+            "Rencontres de networking",
+            "Agenda B2B qualifié selon votre profil",
+            "Agenda B2B garanti (8 rendez-vous minimum)"
+          ],
+          [
+            "Rencontres B2G (institutions)",
+            "-",
+            "Sollicitées",
+            "Organisées pour votre secteur"
+          ],
+          [
+            "Dîner de networking de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ]
+        ]
+      },
+      {
+        "groupe": "Logistique et assistance",
+        "lignes": [
+          [
+            "Assistance visa (lettre d’invitation et dossier)",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Transferts et navette de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Assistance",
+            "Coordination de groupe",
+            "Assistant dédié",
+            "Assistant personnel et interprète"
+          ]
+        ]
+      },
+      {
+        "groupe": "Visibilité et suivi",
+        "lignes": [
+          [
+            "Photos de groupe de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Photographe dédié à vos rendez-vous",
+            "-",
+            "Y",
+            "Y"
+          ],
+          [
+            "Programme personnalisé selon vos objectifs",
+            "-",
+            "-",
+            "Y"
+          ],
+          [
+            "Suivi de vos contacts à J+30",
+            "-",
+            "Y",
+            "Y"
+          ]
+        ]
+      }
+    ],
+    "nonCompris": "Billet d’avion, hébergement et dépenses personnelles. Les tarifs de groupe négociés pour le vol et l’hôtel sont communiqués à l’inscription.",
+    "conditions": [
+      "Inscription confirmée à réception du paiement intégral, au plus tard à la date de clôture.",
+      "Places attribuées par ordre de réception des paiements.",
+      "Remboursement intégral si la mission est annulée par l’organisateur."
+    ],
+    "pratique": {
+      "visa": "Visa requis pour les ressortissants marocains. GPE accompagne la demande (lettre d’invitation et dossier).",
+      "monnaie": "Riyal saoudien (SAR).",
+      "autres": "Documents de présentation en anglais recommandés."
+    },
+    "programme": [
+      {
+        "jour": "Jour 1",
+        "items": [
+          "Arrivée à Riyad et briefing de la délégation"
+        ]
+      },
+      {
+        "jour": "Jours 2 à 5",
+        "items": [
+          "Grand salon international de la technologie : rendez-vous B2B",
+          "Rencontres institutionnelles sollicitées"
+        ]
+      },
+      {
+        "jour": "Jour 6",
+        "items": [
+          "Rendez-vous complémentaires et retour"
+        ]
+      }
+    ],
+    "en": {
+      "pays": "Saudi Arabia",
+      "ville": "Riyadh",
+      "langue": "English / Arabic",
+      "titre": "Technology & AI B2B Mission to Riyadh",
+      "accroche": "Global Premium Events led a delegation of technology companies to Riyadh during the Kingdom’s major international technology show, for B2B meetings with investors, corporates and partners.",
+      "pourquoi": [
+        {
+          "chiffre": "AI & tech",
+          "texte": "a fast-growing market"
+        },
+        {
+          "chiffre": "B2B",
+          "texte": "meetings with Saudi investors, key accounts and partners"
+        }
+      ],
+      "secteurs": [
+        "Artificial intelligence",
+        "Cloud and data",
+        "Cybersecurity",
+        "Startups"
+      ],
+      "prix": {
+        "mention": "Price per company, excluding VAT (20% VAT applies), excluding flights and accommodation. Show access badge included."
+      },
+      "formules": [
+        {
+          "nom": "Delegation Package"
+        },
+        {
+          "nom": "Business Package"
+        },
+        {
+          "nom": "Executive Package"
+        }
+      ],
+      "comparatif": [
+        {
+          "groupe": "Access and meetings",
+          "lignes": [
+            [
+              "Access badge to the host country’s major international show",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Membership of the Moroccan business delegation and country briefing",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "B2B meetings",
+              "Networking sessions",
+              "Qualified B2B agenda based on your profile",
+              "Guaranteed B2B agenda (minimum 8 meetings)"
+            ],
+            [
+              "B2G meetings (institutions)",
+              "-",
+              "Requested",
+              "Arranged for your sector"
+            ],
+            [
+              "Delegation networking dinner",
+              "Y",
+              "Y",
+              "Y"
+            ]
+          ]
+        },
+        {
+          "groupe": "Logistics and assistance",
+          "lignes": [
+            [
+              "Visa assistance (invitation letter and file)",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Transfers and delegation shuttle",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Assistance",
+              "Group coordination",
+              "Dedicated assistant",
+              "Personal assistant and interpreter"
+            ]
+          ]
+        },
+        {
+          "groupe": "Visibility and follow-up",
+          "lignes": [
+            [
+              "Delegation group photos",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Photographer dedicated to your meetings",
+              "-",
+              "Y",
+              "Y"
+            ],
+            [
+              "Personalised programme based on your objectives",
+              "-",
+              "-",
+              "Y"
+            ],
+            [
+              "Follow-up of your contacts at D+30",
+              "-",
+              "Y",
+              "Y"
+            ]
+          ]
+        }
+      ],
+      "nonCompris": "Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.",
+      "conditions": [
+        "Registration is confirmed upon receipt of full payment, no later than the closing date.",
+        "Places are allocated in order of payment received.",
+        "Full refund if the mission is cancelled by the organiser."
+      ],
+      "pratique": {
+        "visa": "Visa required for Moroccan nationals. GPE supports the application (invitation letter and file).",
+        "monnaie": "Saudi riyal (SAR).",
+        "autres": "Presentation materials in English recommended."
+      },
+      "programme": [
+        {
+          "jour": "Day 1",
+          "items": [
+            "Arrival in Riyadh and delegation briefing"
+          ]
+        },
+        {
+          "jour": "Days 2 to 5",
+          "items": [
+            "Major international technology show: B2B meetings",
+            "Requested institutional meetings"
+          ]
+        },
+        {
+          "jour": "Day 6",
+          "items": [
+            "Additional meetings and return"
+          ]
+        }
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    "id": "arabie-saoudite-immobilier-2026",
+    "statut": "bientot",
+    "enLigne": true,
+    "pays": "Arabie saoudite",
+    "ville": "Riyad",
+    "langue": "Anglais / Arabe",
+    "dateDebut": "2026-11-15",
+    "dateFin": "2026-11-20",
+    "dateLimite": "2026-11-02",
+    "places": 15,
+    "titre": "Mission B2B immobilier et construction à Riyad",
+    "accroche": "Global Premium Events conduit une délégation d’entreprises de l’immobilier et de la construction à Riyad, pendant le grand salon international de l’immobilier du Royaume, pour des rencontres B2B avec promoteurs, développeurs et donneurs d’ordre.",
+    "pourquoi": [
+      {
+        "chiffre": "Giga-projets",
+        "texte": "des programmes immobiliers et urbains sans précédent"
+      },
+      {
+        "chiffre": "B2B",
+        "texte": "rencontres avec promoteurs, développeurs et donneurs d’ordre"
+      },
+      {
+        "chiffre": "Vision 2030",
+        "texte": "une demande forte en matériaux, services et savoir-faire"
+      }
+    ],
+    "secteurs": [
+      "Promotion immobilière",
+      "BTP et matériaux",
+      "Architecture et design",
+      "PropTech"
+    ],
+    "prix": {
+      "devise": "MAD",
+      "mention": "Prix par entreprise, hors taxes (TVA 20 % en sus), hors billet d’avion et hébergement. Badge d’accès au salon inclus."
+    },
+    "formules": [
+      {
+        "id": "delegation",
+        "nom": "Forfait Délégation",
+        "prix": null,
+        "prixSup": null,
+        "places": 10,
+        "recommande": false
+      },
+      {
+        "id": "business",
+        "nom": "Forfait Business",
+        "prix": null,
+        "prixSup": null,
+        "places": null,
+        "recommande": true
+      },
+      {
+        "id": "executive",
+        "nom": "Forfait Executive",
+        "prix": null,
+        "prixSup": null,
+        "places": 3,
+        "recommande": false
+      }
+    ],
+    "comparatif": [
+      {
+        "groupe": "Accès et rendez-vous",
+        "lignes": [
+          [
+            "Badge d’accès au grand salon international du pays hôte",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Intégration à la délégation d’affaires marocaine et briefing pays",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Rendez-vous B2B",
+            "Rencontres de networking",
+            "Agenda B2B qualifié selon votre profil",
+            "Agenda B2B garanti (8 rendez-vous minimum)"
+          ],
+          [
+            "Rencontres B2G (institutions)",
+            "-",
+            "Sollicitées",
+            "Organisées pour votre secteur"
+          ],
+          [
+            "Dîner de networking de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ]
+        ]
+      },
+      {
+        "groupe": "Logistique et assistance",
+        "lignes": [
+          [
+            "Assistance visa (lettre d’invitation et dossier)",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Transferts et navette de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Assistance",
+            "Coordination de groupe",
+            "Assistant dédié",
+            "Assistant personnel et interprète"
+          ]
+        ]
+      },
+      {
+        "groupe": "Visibilité et suivi",
+        "lignes": [
+          [
+            "Photos de groupe de la délégation",
+            "Y",
+            "Y",
+            "Y"
+          ],
+          [
+            "Photographe dédié à vos rendez-vous",
+            "-",
+            "Y",
+            "Y"
+          ],
+          [
+            "Programme personnalisé selon vos objectifs",
+            "-",
+            "-",
+            "Y"
+          ],
+          [
+            "Suivi de vos contacts à J+30",
+            "-",
+            "Y",
+            "Y"
+          ]
+        ]
+      }
+    ],
+    "nonCompris": "Billet d’avion, hébergement et dépenses personnelles. Les tarifs de groupe négociés pour le vol et l’hôtel sont communiqués à l’inscription.",
+    "conditions": [
+      "Inscription confirmée à réception du paiement intégral, au plus tard à la date de clôture.",
+      "Places attribuées par ordre de réception des paiements.",
+      "Remboursement intégral si la mission est annulée par l’organisateur."
+    ],
+    "pratique": {
+      "visa": "Visa requis pour les ressortissants marocains. GPE accompagne la demande (lettre d’invitation et dossier).",
+      "monnaie": "Riyal saoudien (SAR).",
+      "autres": "Documents de présentation en anglais recommandés."
+    },
+    "programme": [
+      {
+        "jour": "Jour 1",
+        "items": [
+          "Arrivée à Riyad et briefing de la délégation"
+        ]
+      },
+      {
+        "jour": "Jours 2 à 5",
+        "items": [
+          "Grand salon international de l’immobilier : rendez-vous B2B",
+          "Rencontres institutionnelles sollicitées"
+        ]
+      },
+      {
+        "jour": "Jour 6",
+        "items": [
+          "Rendez-vous complémentaires et retour"
+        ]
+      }
+    ],
+    "en": {
+      "pays": "Saudi Arabia",
+      "ville": "Riyadh",
+      "langue": "English / Arabic",
+      "titre": "Real Estate & Construction B2B Mission to Riyadh",
+      "accroche": "Global Premium Events is leading a delegation of real estate and construction companies to Riyadh during the Kingdom’s major international real estate show, for B2B meetings with developers and contractors.",
+      "pourquoi": [
+        {
+          "chiffre": "Giga-projects",
+          "texte": "unprecedented real estate and urban programmes"
+        },
+        {
+          "chiffre": "B2B",
+          "texte": "meetings with developers and contractors"
+        },
+        {
+          "chiffre": "Vision 2030",
+          "texte": "strong demand for materials, services and expertise"
+        }
+      ],
+      "secteurs": [
+        "Real estate development",
+        "Construction and materials",
+        "Architecture and design",
+        "PropTech"
+      ],
+      "prix": {
+        "mention": "Price per company, excluding VAT (20% VAT applies), excluding flights and accommodation. Show access badge included."
+      },
+      "formules": [
+        {
+          "nom": "Delegation Package"
+        },
+        {
+          "nom": "Business Package"
+        },
+        {
+          "nom": "Executive Package"
+        }
+      ],
+      "comparatif": [
+        {
+          "groupe": "Access and meetings",
+          "lignes": [
+            [
+              "Access badge to the host country’s major international show",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Membership of the Moroccan business delegation and country briefing",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "B2B meetings",
+              "Networking sessions",
+              "Qualified B2B agenda based on your profile",
+              "Guaranteed B2B agenda (minimum 8 meetings)"
+            ],
+            [
+              "B2G meetings (institutions)",
+              "-",
+              "Requested",
+              "Arranged for your sector"
+            ],
+            [
+              "Delegation networking dinner",
+              "Y",
+              "Y",
+              "Y"
+            ]
+          ]
+        },
+        {
+          "groupe": "Logistics and assistance",
+          "lignes": [
+            [
+              "Visa assistance (invitation letter and file)",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Transfers and delegation shuttle",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Assistance",
+              "Group coordination",
+              "Dedicated assistant",
+              "Personal assistant and interpreter"
+            ]
+          ]
+        },
+        {
+          "groupe": "Visibility and follow-up",
+          "lignes": [
+            [
+              "Delegation group photos",
+              "Y",
+              "Y",
+              "Y"
+            ],
+            [
+              "Photographer dedicated to your meetings",
+              "-",
+              "Y",
+              "Y"
+            ],
+            [
+              "Personalised programme based on your objectives",
+              "-",
+              "-",
+              "Y"
+            ],
+            [
+              "Follow-up of your contacts at D+30",
+              "-",
+              "Y",
+              "Y"
+            ]
+          ]
+        }
+      ],
+      "nonCompris": "Flights, accommodation and personal expenses. Negotiated group rates for flights and hotel are provided upon registration.",
+      "conditions": [
+        "Registration is confirmed upon receipt of full payment, no later than the closing date.",
+        "Places are allocated in order of payment received.",
+        "Full refund if the mission is cancelled by the organiser."
+      ],
+      "pratique": {
+        "visa": "Visa required for Moroccan nationals. GPE supports the application (invitation letter and file).",
+        "monnaie": "Saudi riyal (SAR).",
+        "autres": "Presentation materials in English recommended."
+      },
+      "programme": [
+        {
+          "jour": "Day 1",
+          "items": [
+            "Arrival in Riyadh and delegation briefing"
+          ]
+        },
+        {
+          "jour": "Days 2 to 5",
+          "items": [
+            "Major international real estate show: B2B meetings",
+            "Requested institutional meetings"
+          ]
+        },
+        {
+          "jour": "Day 6",
+          "items": [
+            "Additional meetings and return"
+          ]
+        }
+      ]
+    }
   }
 
   /* ------------------------------------------------------------------
