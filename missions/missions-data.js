@@ -4759,6 +4759,181 @@ window.GPE_MISSIONS = [
       ]
     }
   }
+  ,
+  /* ------------------------------------------------------------------ */
+  {
+    id: 'belgique-climat-2026',
+    statut: 'ouverte',
+    enLigne: true,
+    surDemande: true,                 // pas de prix en ligne : contact pour les détails (mission et sponsoring)
+    pays: 'Belgique',
+    ville: 'Bruxelles',
+    langue: 'Français',
+    dateDebut: '2026-12-07',
+    dateFin: '2026-12-09',
+    dateLimite: '2026-11-23',
+    places: 'limitees',
+    pourquoiTitre: 'Pourquoi participer',
+    secteursTitre: 'Thématiques des Rencontres',
+    titre: 'Mission B2B et sponsoring — Rencontres « Solutions numériques pour le climat » Bruxelles 2026',
+    accroche: 'Global Premium Events conduit une délégation d’entreprises à Bruxelles pour la 2e édition des Rencontres « Solutions numériques pour le climat : la Francophonie en action », organisées par le Groupement du Patronat Francophone au Conseil central de l’économie, et propose aux entreprises des offres de sponsoring pour y gagner en visibilité.',
+
+    evenement: {
+      nom: 'Rencontres « Solutions numériques pour le climat : la Francophonie en action » — 2e édition',
+      organisateur: 'Groupement du Patronat Francophone (GPF)',
+      dates: '8 décembre 2026',
+      lieu: 'Conseil central de l’économie, Bruxelles',
+      slogan: 'Après le Sénat à Paris, Bruxelles ouvre un nouveau chapitre, au cœur des décisions européennes.',
+      theme: 'Qui finance la transition, qui en fixe les règles, et comment en faire un levier de croissance et de compétitivité pour les entreprises francophones ?',
+      description: 'Une rencontre économique de haut niveau qui réunit dirigeants d’entreprises, responsables institutionnels européens, organisations patronales, investisseurs et experts. Accueil par Benoît Bayenet, Président du Conseil central de l’économie de Belgique ; clôture par David Clarinval, Vice-Premier ministre et ministre de l’Emploi, de l’Économie et de l’Agriculture de Belgique.',
+      lien: 'https://www.gpf-int.org'
+    },
+
+    pourquoi: [
+      { chiffre: '60', texte: 'organisations patronales membres du GPF, sur 5 continents' },
+      { chiffre: '1,5 M', texte: 'd’entreprises représentées dans l’espace francophone' },
+      { chiffre: '3', texte: 'tables rondes : retour sur investissement, réglementation européenne, financements' },
+      { chiffre: 'B2B', texte: 'rendez-vous avec des entreprises, investisseurs et institutions francophones et européens' }
+    ],
+
+    secteurs: [
+      'Numérique et intelligence artificielle',
+      'Technologies vertes et économie circulaire',
+      'Énergie et efficacité énergétique',
+      'Finance verte et investissement',
+      'Données, reporting et traçabilité',
+      'Conseil et services aux entreprises'
+    ],
+
+    // Offres de sponsoring : contenu affiché, montants communiqués sur demande
+    sponsoring: {
+      titre: 'Offres de sponsoring',
+      intro: 'Trois formules pour associer votre entreprise aux Rencontres et rencontrer les décideurs présents. Les conditions sont communiquées sur demande.',
+      niveaux: [
+        { nom: 'Partenaire', avantages: ['Logo sur le document officiel et pendant l’événement'] },
+        { nom: 'Partenaire Table ronde', avantages: ['Logo sur le document officiel et pendant l’événement', 'Participation à une table ronde comme intervenant'] },
+        { nom: 'Partenaire Premium', recommande: true, avantages: ['Logo sur le document officiel et pendant l’événement', 'Participation à une table ronde comme intervenant', 'Rendez-vous individuel de 5 à 10 minutes avec le Vice-Premier ministre et ministre de l’Emploi, de l’Économie et de l’Agriculture de Belgique'] }
+      ],
+      cta: 'Contactez-nous pour recevoir les conditions'
+    },
+
+    prix: {
+      devise: 'EUR',
+      mention: 'Conditions communiquées sur demande.'
+    },
+
+    formules: [
+      { id: 'delegation', nom: 'Délégation B2B', prix: null, prixSup: null, places: null, recommande: true }
+    ],
+    comparatif: [
+      { groupe: 'Ce que comprend la mission', lignes: [
+        ['Accès aux Rencontres du 8 décembre au Conseil central de l’économie', 'Y'],
+        ['Intégration à la délégation et briefing avant le départ', 'Y'],
+        ['Agenda de rendez-vous B2B qualifié selon votre profil', 'Y'],
+        ['Rencontres institutionnelles (sollicitées)', 'Y'],
+        ['Accompagnement sur place par l’équipe GPE', 'Y']
+      ] }
+    ],
+
+    nonCompris: 'Billet d’avion, hébergement, visa et dépenses personnelles.',
+
+    pratique: {
+      vol: 'Vols directs Casablanca – Bruxelles (environ 3 h).',
+      hotel: 'Hôtel de délégation à Bruxelles, tarif négocié communiqué avec l’offre.',
+      visa: 'Visa Schengen requis pour les ressortissants marocains : prévoir la demande au moins 4 semaines avant le départ. Lettre d’invitation disponible pour les délégués inscrits.',
+      monnaie: 'Euro (EUR).',
+      autres: 'Rencontres en français. Documents de présentation en français recommandés.'
+    },
+
+    programme: [
+      { jour: 'Lundi 7 décembre', items: ['Arrivée à Bruxelles', 'Soir : briefing de la délégation'] },
+      { jour: 'Mardi 8 décembre', items: ['Rencontres « Solutions numériques pour le climat » au Conseil central de l’économie', 'Accueil par Benoît Bayenet, Président du Conseil central de l’économie de Belgique', 'Table ronde 1 : numérique et transition climatique, quel retour sur investissement pour les entreprises ?', 'Table ronde 2 : numérique et climat, entre réglementation européenne et réalité opérationnelle', 'Table ronde 3 : comment transformer les ambitions européennes en opportunités pour les entreprises francophones ?', 'Clôture par David Clarinval, Vice-Premier ministre de Belgique', 'Networking'] },
+      { jour: 'Mercredi 9 décembre', items: ['Rendez-vous B2B et rencontres institutionnelles (sollicitées)', 'Retour'] }
+    ],
+
+    reference: {
+      image: '/missions/img/belgique-climat-2025-senat.webp',
+      surtitre: 'Première édition',
+      titre: 'Lancée au Sénat, à Paris',
+      textes: [
+        'La première édition s’est tenue au Sénat le 29 septembre 2025. Elle a réuni décideurs publics, dirigeants d’entreprises, institutions et experts de tout l’espace francophone, dont le ministre français chargé de la Francophonie.',
+        'Trois enjeux y ont été traités : intelligence artificielle et environnement, technologies vertes et économie circulaire, finance verte et transformation numérique.'
+      ],
+      legende: 'Sénat, Paris — 1re édition, 29 septembre 2025.'
+    },
+
+    image: '/missions/img/belgique-climat-2026-affiche.webp',
+    couleurs: { fonce: '#1F3D7A', principal: '#2E5AA8', accent: '#F2C500', rouge: '#E52630' },
+
+    en: {
+      pourquoiTitre: 'Why take part',
+      secteursTitre: 'Themes of the meetings',
+      pays: 'Belgium',
+      ville: 'Brussels',
+      langue: 'French',
+      titre: 'B2B Mission and Sponsorship — “Digital Solutions for the Climate” Meetings, Brussels 2026',
+      accroche: 'Global Premium Events is leading a business delegation to Brussels for the 2nd edition of the “Digital Solutions for the Climate: La Francophonie in Action” meetings, organised by the Groupement du Patronat Francophone at the Central Council of the Economy, and offers companies sponsorship packages to gain visibility there.',
+      evenement: {
+        nom: '“Digital Solutions for the Climate: La Francophonie in Action” — 2nd edition',
+        organisateur: 'Groupement du Patronat Francophone (GPF)',
+        dates: '8 December 2026',
+        lieu: 'Central Council of the Economy, Brussels',
+        slogan: 'After the French Senate in Paris, Brussels opens a new chapter at the heart of European decision-making.',
+        theme: 'Who finances the transition, who sets the rules, and how can it become a lever for growth and competitiveness for French-speaking businesses?',
+        description: 'A high-level business meeting bringing together business leaders, European officials, employers’ organisations, investors and experts. Welcome by Benoît Bayenet, President of Belgium’s Central Council of the Economy; closing by David Clarinval, Deputy Prime Minister and Minister of Employment, Economy and Agriculture of Belgium.'
+      },
+      pourquoi: [
+        { chiffre: '60', texte: 'employers’ organisations in the GPF network, across 5 continents' },
+        { chiffre: '1.5 M', texte: 'companies represented across the French-speaking world' },
+        { chiffre: '3', texte: 'round tables: return on investment, EU regulation, financing' },
+        { chiffre: 'B2B', texte: 'meetings with French-speaking and European companies, investors and institutions' }
+      ],
+      secteurs: ['Digital and artificial intelligence', 'Green technologies and circular economy', 'Energy and energy efficiency', 'Green finance and investment', 'Data, reporting and traceability', 'Business consulting and services'],
+      sponsoring: {
+        titre: 'Sponsorship opportunities',
+        intro: 'Three packages to associate your company with the meetings and meet the decision-makers attending. Terms are provided on request.',
+        niveaux: [
+          { nom: 'Partner', avantages: ['Logo on the official document and during the event'] },
+          { nom: 'Round Table Partner', avantages: ['Logo on the official document and during the event', 'Speaking slot on a round table'] },
+          { nom: 'Premium Partner', avantages: ['Logo on the official document and during the event', 'Speaking slot on a round table', 'One-to-one 5 to 10-minute meeting with Belgium’s Deputy Prime Minister and Minister of Employment, Economy and Agriculture'] }
+        ],
+        cta: 'Contact us to receive the terms'
+      },
+      prix: { mention: 'Terms provided on request.' },
+      formules: [{ nom: 'B2B Delegation' }],
+      comparatif: [
+        { groupe: 'What the mission includes', lignes: [
+          ['Access to the 8 December meetings at the Central Council of the Economy'],
+          ['Place in the delegation and pre-departure briefing'],
+          ['Qualified B2B meeting agenda based on your profile'],
+          ['Institutional meetings (requested)'],
+          ['On-site support from the GPE team']
+        ] }
+      ],
+      nonCompris: 'Flights, accommodation, visa and personal expenses.',
+      pratique: {
+        vol: 'Direct flights Casablanca – Brussels (about 3 h).',
+        hotel: 'Delegation hotel in Brussels; negotiated rate provided with the offer.',
+        visa: 'Schengen visa required for Moroccan nationals: apply at least 4 weeks before departure. Invitation letter available for registered delegates.',
+        monnaie: 'Euro (EUR).',
+        autres: 'Meetings held in French. Presentation materials in French recommended.'
+      },
+      programme: [
+        { jour: 'Monday 7 December', items: ['Arrival in Brussels', 'Evening: delegation briefing'] },
+        { jour: 'Tuesday 8 December', items: ['“Digital Solutions for the Climate” meetings at the Central Council of the Economy', 'Welcome by Benoît Bayenet, President of Belgium’s Central Council of the Economy', 'Round table 1: digital and the climate transition — what return on investment for companies?', 'Round table 2: digital and climate — between EU regulation and operational reality', 'Round table 3: how to turn European ambitions into opportunities for French-speaking companies?', 'Closing by David Clarinval, Deputy Prime Minister of Belgium', 'Networking'] },
+        { jour: 'Wednesday 9 December', items: ['B2B meetings and institutional meetings (requested)', 'Return'] }
+      ],
+      reference: {
+        surtitre: 'First edition',
+        titre: 'Launched at the French Senate in Paris',
+        textes: [
+          'The first edition was held at the French Senate on 29 September 2025, bringing together policymakers, business leaders, institutions and experts from across the French-speaking world, including the French minister responsible for La Francophonie.',
+          'It addressed three issues: artificial intelligence and the environment, green technologies and the circular economy, green finance and digital transformation.'
+        ],
+        legende: 'French Senate, Paris — 1st edition, 29 September 2025.'
+      }
+    }
+  }
 
   /* ------------------------------------------------------------------
      MODÈLE — dupliquez la mission ci-dessus (le plus simple), ou utilisez

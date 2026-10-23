@@ -85,7 +85,11 @@
       leadText: 'Indiquez vos coordonnées : les conditions de participation de chaque formule s\u2019affichent immédiatement, et notre équipe vous contacte pour vous conseiller.',
       leadBtn: 'Afficher l\u2019offre', leadOk: 'Merci. Voici les conditions de participation de chaque formule. Notre équipe vous contactera sous 24 heures.',
       lead1: 'Présentation détaillée de la mission', lead2: 'Conditions de participation par formule', lead3: 'Conseil personnalisé par notre équipe',
-      packagesTitle: 'Formules de participation', proceed: 'Finaliser mon inscription'
+      packagesTitle: 'Formules de participation', proceed: 'Finaliser mon inscription',
+      contactUs: 'Nous contacter', sponsorBtn: 'Offres de sponsoring', sponsorTop: 'Visibilité maximale', level: 'Niveau', onRequest: 'Conditions sur demande',
+      wantMission: 'Rejoindre la délégation B2B', wantSponsor: 'Sponsoring', interestedIn: 'Vous êtes intéressé par', message: 'Message',
+      contactKicker: 'Mission & sponsoring', contactTitle: 'Recevez les détails', contactText: 'Indiquez ce qui vous intéresse : notre équipe vous envoie les conditions de participation ou de sponsoring et vous rappelle sous 24 heures.',
+      contactBtn: 'Envoyer ma demande', contactOk: 'Merci. Notre équipe vous envoie les détails et vous contacte sous 24 heures.', errInterest: 'Cochez au moins une option : mission B2B ou sponsoring.'
     },
     en: {
       open: 'Registration open', soon: 'Coming soon', full: 'Fully booked', closed: 'Registration closed', done: 'Completed',
@@ -148,7 +152,11 @@
       leadText: 'Leave your details: the participation terms for each package are displayed immediately, and our team will contact you to advise you.',
       leadBtn: 'Show the offer', leadOk: 'Thank you. Here are the participation terms for each package. Our team will contact you within 24 hours.',
       lead1: 'Detailed presentation of the mission', lead2: 'Participation terms for each package', lead3: 'Personalised advice from our team',
-      packagesTitle: 'Participation packages', proceed: 'Complete my registration'
+      packagesTitle: 'Participation packages', proceed: 'Complete my registration',
+      contactUs: 'Contact us', sponsorBtn: 'Sponsorship', sponsorTop: 'Maximum visibility', level: 'Level', onRequest: 'Terms on request',
+      wantMission: 'Joining the B2B delegation', wantSponsor: 'Sponsorship', interestedIn: 'You are interested in', message: 'Message',
+      contactKicker: 'Mission & sponsorship', contactTitle: 'Receive the details', contactText: 'Tell us what interests you: our team will send you the participation or sponsorship terms and call you back within 24 hours.',
+      contactBtn: 'Send my request', contactOk: 'Thank you. Our team will send you the details and contact you within 24 hours.', errInterest: 'Tick at least one option: B2B mission or sponsorship.'
     }
   };
   var U = UI[LANG];
@@ -240,7 +248,7 @@
   }
   function unlock(m) { try { localStorage.setItem(unlockKey(m), '1'); } catch (e) {} UNLOCKED_NOW = true; }
   var UNLOCKED_NOW = false;
-  function isOpen(m) { return UNLOCKED_NOW || unlocked(m); }
+  function isOpen(m) { return !m.surDemande && (UNLOCKED_NOW || unlocked(m)); }
 
   function formules(m) {
     if (m.formules && m.formules.length) return m.formules;
@@ -327,7 +335,7 @@
           : '<ul class="ms-pk-meta ms-pk-meta-locked"><li>' + (f.places ? f.places + ' ' + U.places : U.availability) + '</li></ul>') +
         (s === 'ouverte' ? (open
           ? '<a class="ms-btn' + (f.recommande ? ' ms-btn-gold' : ' ms-btn-ghost') + ' ms-pk-cta" href="#inscription" data-pick="' + esc(f.id) + '">' + U.choose + ' &rarr;</a>'
-          : '<a class="ms-btn' + (f.recommande ? ' ms-btn-gold' : ' ms-btn-ghost') + ' ms-pk-cta" href="#inscription">' + U.requestOffer + ' &rarr;</a>') : '') +
+          : '<a class="ms-btn' + (f.recommande ? ' ms-btn-gold' : ' ms-btn-ghost') + ' ms-pk-cta" href="#inscription" data-interest="mission">' + (m.surDemande ? U.contactUs : U.requestOffer) + ' &rarr;</a>') : '') +
         '<div class="ms-pk-feats">' + feats + '</div></div>';
     }).join('');
     var after = '';
@@ -339,7 +347,7 @@
     }
     return '<section class="ms-sec ms-sec-panel" id="forfaits"><div class="wrap"><h2 class="ms-h2 serif">' + U.packagesTitle + '</h2>' +
       (UNLOCKED_NOW ? '<p class="ms-unlocked" role="status">' + U.leadOk + '</p>' : '') +
-      '<p class="ms-small ms-pk-note">' + (open ? esc(m.prix && m.prix.mention) : U.priceOnRequest + '.') + '</p>' +
+      '<p class="ms-small ms-pk-note">' + (open || m.surDemande ? esc(m.prix && m.prix.mention) : U.priceOnRequest + '.') + '</p>' +
       '<div class="ms-pks ms-pks-' + F.length + '">' + cards + '</div>' + after + '</div></section>';
   }
 
@@ -374,12 +382,13 @@
       (m.places ? '<li>' + ICON.seat + '<span><b>' + U.deleg + '</b>' + seatsTxt(m) + '</span></li>' : '') +
       (m.dateLimite ? '<li>' + ICON.clock + '<span><b>' + U.deadline + '</b>' + esc(fmtDate(m.dateLimite)) + (s === 'ouverte' && j !== null && j >= 0 ? ' (' + (EN ? 'D-' : 'J-') + j + ')' : '') + '</span></li>' : '') +
       '</ul><div class="ms-ctas">' +
-      '<a class="ms-btn ms-btn-gold" href="#' + (s === 'ouverte' ? (isOpen(m) ? 'forfaits' : 'inscription') : 'inscription') + '">' + (s === 'ouverte' ? (isOpen(m) ? U.register : U.requestOffer) : (s === 'bientot' ? U.notify : U.notifyNext)) + ' &rarr;</a>' +
+      '<a class="ms-btn ms-btn-gold" href="#' + (s === 'ouverte' ? (isOpen(m) ? 'forfaits' : 'inscription') : 'inscription') + '">' + (m.surDemande && s === 'ouverte' ? U.contactUs : s === 'ouverte' ? (isOpen(m) ? U.register : U.requestOffer) : (s === 'bientot' ? U.notify : U.notifyNext)) + ' &rarr;</a>' +
+      (m.sponsoring ? '<a class="ms-btn ms-btn-ghost" href="#sponsoring">' + U.sponsorBtn + '</a>' : '') +
       '<a class="ms-btn ms-btn-ghost" href="' + docUrl(m, 'programme') + '" target="_blank" rel="noopener">' + ICON.doc + U.docProg + '</a></div>' +
       '</div>' + (m.image ? '<figure class="ms-hero-img"><img src="' + esc(m.image) + '" alt="' + esc(m.evenement ? m.evenement.nom : m.titre) + '" width="900" height="1125"></figure>' : '') + '</div></section>';
 
     if (m.pourquoi && m.pourquoi.length) {
-      h += '<section class="ms-sec"><div class="wrap"><h2 class="ms-h2 serif">' + fill(U.why, { p: esc(m.pays) }) + '</h2><div class="ms-stats">' +
+      h += '<section class="ms-sec"><div class="wrap"><h2 class="ms-h2 serif">' + (m.pourquoiTitre ? esc(m.pourquoiTitre) : fill(U.why, { p: esc(m.pays) })) + '</h2><div class="ms-stats">' +
         m.pourquoi.map(function (p) { return '<div class="ms-stat reveal"><b class="serif">' + esc(p.chiffre) + '</b><span>' + esc(p.texte) + '</span></div>'; }).join('') + '</div></div></section>';
     }
 
@@ -395,8 +404,10 @@
         '</div></div></section>';
     }
 
+    if (m.sponsoring) h += sponsoringHtml(m, s);
+
     if (m.secteurs && m.secteurs.length) {
-      h += '<section class="ms-sec ms-sec-tight"><div class="wrap"><h2 class="ms-h2 serif">' + U.sectors + '</h2><ul class="ms-chips">' +
+      h += '<section class="ms-sec ms-sec-tight"><div class="wrap"><h2 class="ms-h2 serif">' + (m.secteursTitre ? esc(m.secteursTitre) : U.sectors) + '</h2><ul class="ms-chips">' +
         m.secteurs.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div></section>';
     }
 
@@ -432,10 +443,10 @@
         return '<a class="ms-doc" href="' + docUrl(m, d[0]) + '" target="_blank" rel="noopener"><span class="ms-ic">' + ICON.doc + '</span><div><h3>' + d[1] + '</h3><p>' + d[2] + '</p><span class="ms-textlink">' + U.openPdf + ' &rarr;</span></div></a>';
       }).join('') + '</div></div></section>';
 
-    h += '<section class="ms-sec ms-sec-form" id="inscription"><div class="wrap">' + (s === 'ouverte' ? (isOpen(m) ? formHtml(m) : leadHtml(m)) : interestHtml(m, s)) + '</div></section>';
+    h += '<section class="ms-sec ms-sec-form" id="inscription"><div class="wrap">' + (m.surDemande && s === 'ouverte' ? contactHtml(m) : s === 'ouverte' ? (isOpen(m) ? formHtml(m) : leadHtml(m)) : interestHtml(m, s)) + '</div></section>';
 
     root.innerHTML = h;
-    if (s === 'ouverte') { if (isOpen(m)) bindForm(m); else bindLead(m, root); } else bindInterest(m);
+    if (m.surDemande && s === 'ouverte') bindContact(m); else if (s === 'ouverte') { if (isOpen(m)) bindForm(m); else bindLead(m, root); } else bindInterest(m);
     revealInit();
   }
 
@@ -589,6 +600,62 @@
         renderMission(root);
         var t = document.getElementById('forfaits'); if (t) window.scrollTo({ top: t.offsetTop - 70 });
       }, true);
+    });
+  }
+
+  /* ---------------- sponsoring + demande de contact (missions « sur demande ») ---------------- */
+  function sponsoringHtml(m, s) {
+    var sp = m.sponsoring, N = sp.niveaux || [];
+    return '<section class="ms-sec ms-sec-panel" id="sponsoring"><div class="wrap"><h2 class="ms-h2 serif">' + esc(sp.titre) + '</h2>' +
+      (sp.intro ? '<p class="ms-small ms-pk-note">' + esc(sp.intro) + '</p>' : '') +
+      '<div class="ms-pks ms-pks-' + N.length + '">' + N.map(function (n, i) {
+        return '<div class="ms-pk' + (n.recommande ? ' is-reco' : '') + '">' +
+          (n.recommande ? '<span class="ms-pk-badge">' + U.sponsorTop + '</span>' : '') +
+          '<p class="ms-pk-group">' + U.level + ' ' + (i + 1) + '</p><h3 class="ms-pk-name serif">' + esc(n.nom) + '</h3>' +
+          '<ul class="ms-pk-meta ms-pk-meta-locked"><li>' + U.onRequest + '</li></ul>' +
+          '<a class="ms-btn' + (n.recommande ? ' ms-btn-gold' : ' ms-btn-ghost') + ' ms-pk-cta" href="#inscription" data-interest="sp-' + i + '">' + U.contactUs + ' &rarr;</a>' +
+          '<div class="ms-pk-feats"><ul class="ms-pk-list">' + (n.avantages || []).map(function (a) { return '<li>' + ICON.check + '<span>' + esc(a) + '</span></li>'; }).join('') + '</ul></div></div>';
+      }).join('') + '</div>' +
+      '<p class="ms-small" style="margin-top:18px">' + esc(sp.cta || '') + ' : <a href="mailto:' + esc(CFG.email) + '">' + esc(CFG.email) + '</a> · <a href="tel:' + esc((CFG.telephone || '').replace(/\s/g, '')) + '">' + esc(CFG.telephone) + '</a></p>' +
+      '</div></section>';
+  }
+  function contactHtml(m) {
+    var opts = [['mission', U.wantMission]].concat(((m.sponsoring && m.sponsoring.niveaux) || []).map(function (n, i) { return ['sp-' + i, U.wantSponsor + ' — ' + n.nom]; }));
+    return '<div class="ms-form-grid"><div class="ms-form-aside">' +
+      '<p class="hero-kicker"><span class="rule"></span><span>' + U.contactKicker + '</span></p>' +
+      '<h2 class="ms-h2 serif">' + U.contactTitle + '</h2><p>' + U.contactText + '</p>' +
+      '<p class="ms-small">' + U.question + ' <a href="mailto:' + esc(CFG.email) + '">' + esc(CFG.email) + '</a> · <a href="tel:' + esc((CFG.telephone || '').replace(/\s/g, '')) + '">' + esc(CFG.telephone) + '</a></p>' +
+      '</div><form class="ms-form" id="msContact" novalidate>' +
+      '<div class="cf-field"><span class="ms-label">' + U.interestedIn + ' *</span><div class="ms-checks">' + opts.map(function (o) {
+        return '<label class="ms-check"><input type="checkbox" name="interet" value="' + esc(o[1]) + '" data-key="' + o[0] + '"> <span>' + esc(o[1]) + '</span></label>';
+      }).join('') + '</div></div>' +
+      '<div class="cf-row"><div class="cf-field"><label for="c-nom">' + U.name + ' *</label><input id="c-nom" name="nom" required autocomplete="name"></div>' +
+      '<div class="cf-field"><label for="c-fonction">' + U.role + '</label><input id="c-fonction" name="fonction" autocomplete="organization-title"></div></div>' +
+      '<div class="cf-row"><div class="cf-field"><label for="c-ent">' + U.company + ' *</label><input id="c-ent" name="entreprise" required autocomplete="organization"></div>' +
+      '<div class="cf-field"><label for="c-tel">' + U.phone + ' *</label><input id="c-tel" name="telephone" type="tel" required autocomplete="tel"></div></div>' +
+      '<div class="cf-field"><label for="c-email">' + U.email + ' *</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>' +
+      '<div class="cf-field"><label for="c-msg">' + U.message + '</label><textarea id="c-msg" name="message" rows="3"></textarea></div>' +
+      '<p class="ms-error" id="msError" role="alert"></p>' +
+      '<button type="submit" class="cf-submit">' + U.contactBtn + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
+  }
+  function bindContact(m) {
+    var form = document.getElementById('msContact'); if (!form) return;
+    document.querySelectorAll('[data-interest]').forEach(function (a) {
+      a.addEventListener('click', function () { var c = form.querySelector('input[data-key="' + a.getAttribute('data-interest') + '"]'); if (c) c.checked = true; });
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var err = document.getElementById('msError'); err.textContent = '';
+      form.querySelectorAll('.is-invalid').forEach(function (el) { el.classList.remove('is-invalid'); });
+      var bad = Array.prototype.filter.call(form.querySelectorAll('[required]'), function (el) { return !el.value.trim(); });
+      bad.forEach(function (el) { el.classList.add('is-invalid'); });
+      if (bad.length) { err.textContent = U.errReq; bad[0].focus(); return; }
+      if (!form.querySelector('input[name=interet]:checked')) { err.textContent = U.errInterest; return; }
+      var email = document.getElementById('c-email');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { email.classList.add('is-invalid'); err.textContent = U.errMail; email.focus(); return; }
+      var d = collect(form); d.mission = m.titre; d.langue = LANG.toUpperCase();
+      send(form, d, (EN ? 'Request' : 'Demande') + ' — ' + m.ville + ' ' + (m.dateDebut || '').slice(0, 4) + ' (' + d.interet + ') — ' + d.entreprise,
+        '<div class="gpe-form-ok" role="status"><div class="gpe-form-ok-icon">&#10003;</div><h3>' + U.noted + '</h3><p>' + U.contactOk + '</p></div>');
     });
   }
 

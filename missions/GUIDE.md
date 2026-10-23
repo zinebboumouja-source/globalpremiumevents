@@ -76,3 +76,11 @@ Chaque inscription est envoyée par email à `info@globalpremiumevents.com`, via
 - La date de clôture doit tomber au moins 2 semaines avant le départ. C'est le délai minimum pour les visas, les billets de groupe et les agendas B2B.
 - Le prix doit correspondre au fichier de rentabilité de la mission.
 - Les rencontres institutionnelles sont écrites « sollicitées », jamais « garanties », tant qu'elles ne sont pas confirmées.
+
+## Mission avec sponsoring, sans prix en ligne
+
+Exemple : `belgique-climat-2026`.
+
+- `surDemande: true` : aucun prix n'est affiché, même avec `&acces=offre`. Les boutons deviennent « Nous contacter » et le formulaire du bas devient une demande de détails (mission B2B et/ou niveau de sponsoring). L'email arrive avec l'objet `Demande — Bruxelles 2026 (…) — Entreprise`.
+- `sponsoring` : `titre`, `intro`, `niveaux` (nom, avantages, `recommande`) et `cta`. Les montants ne sont jamais écrits dans ce fichier.
+- `pourquoiTitre` et `secteursTitre` remplacent les titres « Pourquoi le … maintenant » et « Secteurs du sommet ».
