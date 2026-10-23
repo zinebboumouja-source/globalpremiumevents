@@ -311,6 +311,18 @@
   }
 
   /* GALLERY - stand renders */
+  /* 3D CONCEPT */
+  .concept3d{ max-width:1240px; margin:0 auto; padding:24px 48px 72px; display:grid; grid-template-columns:1.45fr 1fr; gap:48px; align-items:center; }
+  .concept3d-media{ position:relative; margin:0; background:#ECEEF1; border-radius:4px; overflow:hidden; box-shadow:0 24px 48px rgba(22,41,79,.12); }
+  .concept3d-media img{ width:100%; display:block; }
+  .concept3d-media figcaption{ position:absolute; left:14px; top:14px; background:rgba(22,41,79,.88); color:#fff; font-size:11px; letter-spacing:.1em; text-transform:uppercase; padding:6px 10px; border-radius:2px; }
+  .concept3d-kicker{ font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-dark,#8E6E27); font-weight:600; margin:0 0 12px; }
+  .concept3d h2{ font-family:'Source Serif 4',Georgia,serif; font-size:clamp(26px,3vw,36px); line-height:1.15; color:var(--navy); margin:0 0 16px; font-weight:600; }
+  .concept3d p{ color:var(--ink-dim); font-size:16px; line-height:1.65; margin:0 0 18px; }
+  .concept3d ul{ list-style:none; margin:0; padding:0; }
+  .concept3d li{ padding:11px 0; border-top:1px solid var(--line); font-size:14.5px; color:var(--ink); display:flex; gap:12px; }
+  .concept3d li b{ color:var(--gold-dark,#8E6E27); font-weight:600; min-width:22px; }
+  @media (max-width:900px){ .concept3d{ grid-template-columns:1fr; gap:28px; padding:8px 24px 56px; } }
   .gallery{
     padding:60px 0 10px;
     border-top:1px solid var(--line);
@@ -1030,6 +1042,25 @@
         <div class="cap"><span>Received by government leadership</span><b>Stage 3</b></div>
       </div>
 
+    </div>
+  </section>
+
+
+  <section class="concept3d" aria-labelledby="concept3d-title">
+    <figure class="concept3d-media reveal">
+      <img loading="lazy" src="/assets/img/booth-3d-concept.webp" alt="Photorealistic 3D render of a custom exhibition booth: curved white and teal frame with LED edge lighting, branded wall panels, a screen, a reception counter, a lounge area with chairs and a plant">
+      <figcaption>3D concept render</figcaption>
+    </figure>
+    <div class="concept3d-text reveal">
+      <p class="concept3d-kicker">Booth Design &amp; Construction</p>
+      <h2 id="concept3d-title">See your stand in 3D before it&rsquo;s built</h2>
+      <p>Every stand starts as a photorealistic 3D concept, designed in-house around your brand, your space and the meetings you want to hold. You validate the design, then our team fabricates and installs exactly what you approved.</p>
+      <ul>
+        <li><b>01</b>Custom architecture: curved frames, LED edge lighting, branded wall panels</li>
+        <li><b>02</b>Reception counter, storage and AV integration (screens, lighting)</li>
+        <li><b>03</b>Meeting and lounge areas sized for B2B conversations</li>
+        <li><b>04</b>Your logo and graphics applied on every surface before fabrication</li>
+      </ul>
     </div>
   </section>
 
