@@ -176,6 +176,11 @@
   }
   @media (max-width:700px){ .hero-banner{ height:260px; } }
 
+  .feature-banner{ height:auto; }
+  .feature-banner img{ height:min(600px,52vw); }
+  .feature-banner .feature-cap{ position:static; background:var(--navy); padding:22px 32px 24px; font-size:15px; }
+  @media (max-width:700px){ .feature-banner{ height:auto; } .feature-banner img{ height:auto; aspect-ratio:4/3; } .feature-banner .feature-cap{ padding:16px 16px 18px; font-size:13.5px; } }
+
   /* RECOGNITION STRIP */
   .recognition{ padding:56px 0 10px; border-bottom:1px solid var(--line); }
   .recognition-split{
@@ -794,9 +799,9 @@
     </section>
   </div>
 
-<div class="hero-banner">
-  <img src="/assets/img/ahbs-group.webp" alt="Ministers, heads of delegation and healthcare federation leaders on stage at the Africa Healthcare Federation Summit, Addis Ababa, 2019, with Sarah Zineb Boumouja">
-  <div class="hero-banner-caption">Heads of delegation and federation leaders — Africa Healthcare Federation Summit, October 7, 2019</div>
+<div class="hero-banner feature-banner">
+  <img src="/assets/img/ahbs-panel.webp" style="object-position:50% 74%" alt="Sarah Zineb Boumouja facilitating the panel of national healthcare federation leaders on the AHBS IV stage, Addis Ababa, 2019">
+  <div class="hero-banner-caption feature-cap"><b style="display:block;font-family:'Source Serif 4',Georgia,serif;font-size:clamp(18px,2.4vw,26px);font-weight:600;margin-bottom:4px">On stage: Sarah Zineb Boumouja facilitating the panel</b>National healthcare federation leaders on private healthcare in Africa — AHBS IV, Addis Ababa, October 2019</div>
 </div>
 
 <div class="wrap">
