@@ -177,23 +177,99 @@
   @media (max-width:700px){ .hero-banner{ height:260px; } }
 
 
-  /* CLIMATE ENGAGEMENT */
-  .climate-line{list-style:none;margin:0 0 56px;padding:0;border-left:2px solid var(--line);}
-  .climate-line li{position:relative;display:grid;grid-template-columns:90px 1fr;gap:18px;padding:0 0 26px 26px;}
-  .climate-line li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--blue,#2C4E86);}
-  .climate-line li.is-next::before{background:#A9832E;border-color:#A9832E;box-shadow:0 0 0 5px rgba(169,131,46,.18);}
-  .cl-year{font-family:'Source Serif 4',Georgia,serif;font-size:22px;font-weight:600;color:var(--navy);line-height:1.1;}
-  .climate-line b{display:block;color:var(--navy);font-size:15.5px;margin-bottom:4px;}
-  .climate-line p{margin:0;color:var(--ink-dim);font-size:15px;line-height:1.6;}
-  .climate-line a{color:#8E6E27;font-weight:600;}
-  .speak{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:start;}
-  .video-frame{position:relative;padding-top:56.25%;background:#0F1E3D;border-radius:4px;overflow:hidden;box-shadow:0 24px 48px rgba(22,41,79,.16);}
-  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
-  .concept-k{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#8E6E27;font-weight:600;margin:0 0 10px;}
-  .speak-text h3{font-family:'Source Serif 4',Georgia,serif;font-size:28px;line-height:1.2;color:var(--navy);margin:0 0 14px;font-weight:600;}
-  .speak-text p{color:var(--ink-dim);font-size:15.5px;line-height:1.65;margin:0 0 16px;}
-  .speak-text ul{margin:0 0 24px;padding-left:18px;color:var(--ink);font-size:15px;line-height:1.8;}
-  @media (max-width:900px){.speak{grid-template-columns:1fr;gap:28px;}.climate-line li{grid-template-columns:1fr;gap:4px;}}
+  /* PURPLE ECONOMY LAYOUT */
+  .pe-cover{margin:0;background:#111;}
+  .pe-cover img{display:block;width:100%;height:auto;max-height:86vh;object-fit:cover;object-position:50% 50%;}
+  .pe-intro{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;padding:64px 0 40px;align-items:start;}
+  .pe-title{font-family:'Source Serif 4',Georgia,serif;font-size:clamp(34px,4.6vw,54px);line-height:1.05;color:var(--navy);margin:14px 0 14px;font-weight:700;}
+  .pe-theme{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:20px;color:#6B3E8E;margin:0 0 22px;}
+  .pe-lede{color:var(--ink-dim);font-size:16.5px;line-height:1.7;margin:0 0 14px;}
+  .pe-facts{border:1px solid var(--line);background:#fff;padding:26px 26px 10px;box-shadow:0 18px 40px rgba(22,41,79,.08);}
+  .pe-cop{display:block;width:120px;margin:0 auto;}
+  .pe-cop-cap{text-align:center;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#8E6E27;font-weight:600;margin:10px 0 16px;}
+  .pe-facts dl{margin:0;}
+  .pe-facts dl div{display:grid;grid-template-columns:104px 1fr;gap:10px;padding:11px 0;border-top:1px solid var(--line);}
+  .pe-facts dt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);font-weight:600;padding-top:2px;}
+  .pe-facts dd{margin:0;font-size:14.5px;color:var(--ink);line-height:1.45;}
+  .pe-k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8E6E27;font-weight:600;margin:0 0 10px;}
+  .pe-k-light{color:#D9C38F;}
+  .pe-press{padding:8px 0 56px;}
+  .pe-press blockquote{margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:clamp(22px,2.6vw,30px);line-height:1.3;color:var(--navy);max-width:860px;}
+  .pe-press-src{margin:12px 0 0;font-size:14px;color:var(--ink-dim);}
+  .pe-press-src a{color:#8E6E27;font-weight:600;}
+  .pe-concept{background:linear-gradient(135deg,#2B1840 0%,#4A2A6B 55%,#16294F 100%);color:#fff;padding:72px 0;}
+  .pe-concept-in{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;}
+  .pe-concept h2{font-family:'Source Serif 4',Georgia,serif;font-size:clamp(28px,3.4vw,40px);margin:0 0 16px;font-weight:600;}
+  .pe-concept p{color:#DCD3E8;font-size:16px;line-height:1.7;margin:0;}
+  .pe-three{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+  .pe-three li{border:1px solid rgba(255,255,255,.22);padding:16px 20px;display:flex;flex-direction:column;gap:3px;}
+  .pe-three b{font-family:'Source Serif 4',Georgia,serif;font-size:20px;font-weight:600;}
+  .pe-three span{font-size:13.5px;color:#C9BEDA;}
+  .pe-three li.is-purple{background:#8B5BB5;border-color:#8B5BB5;}
+  .pe-three li.is-purple span{color:#F1E9FA;}
+  .pe-prog{padding:72px 0 24px;}
+  .pe-quote{margin:40px 0 0;padding:0 0 0 22px;border-left:3px solid #8B5BB5;font-family:'Source Serif 4',Georgia,serif;font-size:clamp(20px,2.2vw,25px);line-height:1.45;color:var(--navy);max-width:860px;}
+  .pe-quote cite{display:block;margin-top:12px;font-family:Inter,sans-serif;font-style:normal;font-size:13.5px;color:var(--ink-dim);}
+  .pe-venue{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;padding:56px 0 72px;}
+  .pe-venue-img{margin:0;}
+  .pe-venue-img img{width:100%;display:block;box-shadow:0 24px 48px rgba(22,41,79,.16);}
+  .pe-venue h2{font-family:'Source Serif 4',Georgia,serif;font-size:clamp(28px,3.4vw,40px);color:var(--navy);margin:0 0 16px;font-weight:600;}
+  .pe-venue p{color:var(--ink-dim);font-size:16px;line-height:1.7;margin:0 0 14px;}
+  .pe-venue h3{font-family:'Source Serif 4',Georgia,serif;font-size:20px;color:var(--navy);margin:26px 0 10px;}
+  .pe-role{margin:0;padding:0;list-style:none;}
+  .pe-role li{padding:10px 0;border-top:1px solid var(--line);font-size:15px;color:var(--ink);}
+  .pe-speak{display:flex;justify-content:space-between;align-items:center;gap:32px;background:#F4F6FA;border:1px solid var(--line);padding:28px 32px;}
+  .pe-speak h3{font-family:'Source Serif 4',Georgia,serif;font-size:24px;color:var(--navy);margin:0 0 8px;}
+  .pe-speak p{margin:0;color:var(--ink-dim);font-size:15px;line-height:1.65;max-width:720px;}
+  .pe-speak p a{color:#8E6E27;font-weight:600;}
+  @media (max-width:900px){
+    .pe-intro,.pe-concept-in,.pe-venue{grid-template-columns:1fr;gap:32px;}
+    .pe-speak{flex-direction:column;align-items:flex-start;}
+    .pe-venue-img{max-width:420px;}
+  }
+
+  /* PURPLE ECONOMY PAGE */
+  .pe-cover{margin:0;background:#111;}
+  .pe-cover img{display:block;width:100%;height:auto;max-height:86vh;object-fit:cover;object-position:60% 50%;}
+  .pe-intro{display:block!important;padding:64px 0 48px;}
+  .pe-intro .hero-title{margin-top:14px;}
+  .pe-intro .hero-sub{max-width:760px;}
+  .pe-badges{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;}
+  .pe-badge{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:#fff;padding:14px 18px;border-radius:4px;min-width:260px;flex:1;}
+  .pe-badge img{height:54px;width:auto;flex-shrink:0;}
+  .pe-badge span{font-size:13px;line-height:1.45;color:var(--navy);font-weight:500;}
+  p.pe-k,.pe-k{font-size:12px!important;letter-spacing:.12em;text-transform:uppercase;color:#8E6E27!important;font-weight:600;margin:0 0 10px!important;line-height:1.5!important;}
+  .pe-h2{font-family:'Source Serif 4',Georgia,serif;font-size:clamp(28px,3.4vw,38px);line-height:1.15;color:var(--navy);margin:0 0 16px;font-weight:600;}
+  .pe-split{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;padding:80px 0 56px;align-items:start;}
+  .pe-split p{color:var(--ink-dim);font-size:16px;line-height:1.7;margin:0 0 14px;}
+  .pe-foot{background:#F6F3FA;border:1px solid #E4DCEF;border-radius:4px;padding:28px;}
+  .pe-foot ul{list-style:none;margin:0;padding:0;}
+  .pe-foot li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid #E4DCEF;}
+  .pe-foot li b{font-family:'Source Serif 4',Georgia,serif;font-size:19px;color:var(--navy);}
+  .pe-foot li span{font-size:14px;color:var(--ink-dim);text-align:right;}
+  .pe-foot li.is-purple b{color:#6B3FA0;}
+  .pe-venue{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;padding:72px 0;border-top:1px solid var(--line);}
+  .pe-venue figure{margin:0;}
+  .pe-venue-main img{width:100%;display:block;border-radius:4px;box-shadow:0 24px 48px rgba(22,41,79,.16);}
+  .pe-venue-text p{color:var(--ink-dim);font-size:16px;line-height:1.7;margin:0 0 14px;}
+  .pe-venue-small{margin-top:22px!important;}
+  .pe-venue-small img{width:100%;height:220px;object-fit:cover;display:block;border-radius:4px;}
+  .pe-venue-small figcaption{font-size:12.5px;color:var(--ink-dim);margin-top:8px;}
+  .pe-press{padding:40px 0 24px;}
+  .pe-press-card{display:flex;flex-direction:column;gap:8px;max-width:760px;padding:24px 28px;border:1px solid var(--line);border-left:3px solid #A9832E;border-radius:4px;text-decoration:none;background:#fff;transition:box-shadow .3s ease;}
+  .pe-press-card:hover{box-shadow:0 18px 36px rgba(22,41,79,.12);}
+  .pe-press-src{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);}
+  .pe-press-card b{font-family:'Source Serif 4',Georgia,serif;font-size:21px;color:var(--navy);font-weight:600;line-height:1.3;}
+  .pe-press-more{font-size:14px;font-weight:600;color:#8E6E27;}
+  .pe-resp{padding:72px 0 56px;border-top:1px solid var(--line);margin-top:40px;}
+  .pe-resp-head{max-width:780px;margin-bottom:34px;}
+  .pe-resp-head p{color:var(--ink-dim);font-size:16px;line-height:1.7;margin:0;}
+  .pe-resp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .pe-resp-item{background:#F4F7F3;border:1px solid #DDE7DA;border-radius:4px;padding:22px 22px 20px;}
+  .pe-resp-item b{display:block;color:#24522F;font-size:15.5px;margin-bottom:8px;}
+  .pe-resp-item p{margin:0;color:var(--ink-dim);font-size:14.5px;line-height:1.6;}
+  @media (max-width:900px){.pe-split,.pe-venue{grid-template-columns:1fr;gap:32px;}.pe-resp-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:600px){.pe-resp-grid{grid-template-columns:1fr;}.pe-badges{flex-direction:column;}.pe-badge{min-width:0;flex:none;}.pe-cover img{max-height:none;}}
 
   /* RECOGNITION STRIP */
   .recognition{ padding:56px 0 10px; border-bottom:1px solid var(--line); }
@@ -790,62 +866,32 @@
 
 <main id="main">
 
-  <div class="wrap">
-    <section class="hero">
-    <div class="hero-watermark" aria-hidden="true">2016</div>
-    <div class="hero-kicker">
-      <span class="rule"></span>
-      <span>Case Study — Climate &amp; Culture · Official COP22 Event</span>
-    </div>
-    <h1 class="hero-title">1st African Purple Economy Forum</h1>
-    <p class="hero-tagline">&ldquo;Climate threats, cultural responses&rdquo; &mdash; on the eve of COP22, at La Mamounia.</p>
-    <p class="hero-meta">La Mamounia, Marrakech — November 4–5, 2016</p>
-    <p class="hero-sub">
-      Placed just before the opening of COP22 and the entry into force of the Paris Agreement, the
-      1st African Purple Economy Forum brought business leaders, young professionals, elected officials,
-      academics, media and civil society to Marrakech to ask how culture can make the response to
-      climate change more human, more attractive and better adapted to each context. Held under the
-      High Patronage of His Majesty King Mohammed VI and the patronage of UNESCO, and officially
-      labelled by COP22, the forum was coordinated by Diversum, with Global Premium Events on the
-      ground at La Mamounia.
-    </p>
-    </section>
-  </div>
-
-<div class="hero-banner">
-  <img src="/assets/img/mauve-group.webp" style="object-position:50% 40%" alt="Participants of the 1st African Purple Economy Forum, with Sarah Zineb Boumouja, at La Mamounia, Marrakech, November 2016">
-  <div class="hero-banner-caption">Participants of the 1st African Purple Economy Forum — La Mamounia, Marrakech, 2016</div>
-</div>
+<figure class="pe-cover">
+  <img src="/assets/img/mauve-cover.webp" alt="Entrance of La Mamounia, Marrakech — official visual of the forum “Climate threats, cultural responses”, under the High Patronage of His Majesty King Mohammed VI, November 4–5, 2016">
+</figure>
 
 <div class="wrap">
-
-  <section class="recognition">
+  <section class="pe-intro">
     <div class="hero-kicker">
       <span class="rule"></span>
-      <span>Officially Labelled COP22</span>
+      <span>Case Study — Climate &amp; Culture</span>
     </div>
-    <div class="recognition-split">
-      <div class="recognition-note">
-        <p style="margin:0 0 16px">
-          The forum was officially labelled as a COP22 event &mdash; part of the programme around the
-          UN Climate Change Conference (COP22 / CMP12 / CMA1) hosted by Morocco in Marrakech in
-          November 2016.
-        </p>
-        <p style="margin:0">
-          It was opened by Hakima El Haite, Moroccan Minister of the Environment, designated by His
-          Majesty the King to represent him, and placed government representatives in direct dialogue
-          with cultural figures, SME founders and multinational leaders.
-        </p>
-      </div>
-      <div>
-        <div class="letter-frame" style="padding:22px">
-          <img loading="lazy" src="/assets/img/aa6395ee520a.webp" alt="Official COP22 logo — Marrakech 2016, COP22 / CMP12 / CMA1, UN Climate Change Conference">
-        </div>
-        <p class="letter-caption">Official COP22 label — UN Climate Change Conference, Marrakech 2016</p>
-      </div>
+    <h1 class="hero-title">1st African Purple Economy Forum</h1>
+    <p class="hero-tagline">&ldquo;Climate threats, cultural responses&rdquo;</p>
+    <p class="hero-meta">La Mamounia, Marrakech — November 4–5, 2016</p>
+    <p class="hero-sub">
+      On the eve of COP22 and the entry into force of the Paris Agreement, business leaders, young
+      professionals, elected officials, academics, media and civil society met at La Mamounia to
+      explore how culture can make the response to climate change more human, more attractive and
+      better adapted to each context. The forum was coordinated by Diversum, with Global Premium
+      Events delivering on the ground in Marrakech.
+    </p>
+    <div class="pe-badges">
+      <div class="pe-badge"><img loading="lazy" src="/assets/img/ef6bd3fa70cd.webp" alt="Kingdom of Morocco"><span>Under the High Patronage of<br>His Majesty King Mohammed VI</span></div>
+      <div class="pe-badge"><img loading="lazy" src="/assets/img/20e65a06396f.webp" alt="UNESCO"><span>Under the patronage<br>of UNESCO</span></div>
+      <div class="pe-badge"><img loading="lazy" src="/assets/img/aa6395ee520a.webp" alt="COP22 Marrakech 2016 — UN Climate Change Conference"><span>Officially labelled<br>COP22 event</span></div>
     </div>
   </section>
-
 </div>
 
 <div class="stat-band">
@@ -855,30 +901,33 @@
       <span class="stat-unit">Leaders invited</span>
     </div>
     <div class="stat-text">
-      From business, politics, culture and media, mainly from Africa, Europe and the Gulf &mdash;
-      <b>with debates interpreted in English, Arabic, French and Portuguese</b>, and reports sent to
-      more than two million French-speaking readers.
+      From business, politics, culture and media, mainly from Africa, Europe, the Gulf and Latin America &mdash;
+      <b>with debates interpreted in English, Arabic, French and Portuguese</b>. The forum was opened by
+      Hakima El Haite, Moroccan Minister of the Environment, designated by His Majesty the King to represent him.
     </div>
   </div>
 </div>
 
 <div class="wrap">
 
-  <section class="numbers">
-    <div class="sec-head">
-      <h2>What We Delivered</h2>
-      <p>An international climate forum at one of Morocco&rsquo;s most historic addresses, run so that ministers, CEOs and artists could focus on the conversation.</p>
+  <section class="pe-split">
+    <div>
+      <p class="pe-k">The Forum</p>
+      <h2 class="pe-h2">Why culture belongs in the climate answer</h2>
+      <p>The forum was deliberately placed before the opening of COP22. Its conviction: facing the planet&rsquo;s ecological challenges, technology alone is not enough &mdash; only a response that also mobilises culture offers solutions that people adopt.</p>
+      <p>It followed a call published in <i>Le Monde</i> in July 2015 by 25 business leaders, researchers and artists, and two earlier international forums in Paris (2011) and Abu Dhabi (2013).</p>
     </div>
-
-    <div class="bn-highlights">
-      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">01</span><span class="bn-hl-label">On-site delivery at La Mamounia</span></div>
-      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">02</span><span class="bn-hl-label">Delegate welcome, registration and accreditation</span></div>
-      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">03</span><span class="bn-hl-label">Speaker and VIP guest coordination</span></div>
-      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">04</span><span class="bn-hl-label">Hospitality: networking lunch in the Mamounia gardens</span></div>
-      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">05</span><span class="bn-hl-label">Signage and guest experience across the venue</span></div>
-      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">06</span><span class="bn-hl-label">Guest information in four languages: French, Arabic, English and Portuguese</span></div>
+    <div class="pe-foot">
+      <p class="pe-k">A sustainable economy has three footprints</p>
+      <ul>
+        <li><b>Green economy</b><span>the ecological footprint</span></li>
+        <li><b>Social economy</b><span>the social footprint</span></li>
+        <li class="is-purple"><b>Purple economy</b><span>the cultural footprint</span></li>
+      </ul>
     </div>
+  </section>
 
+  <section class="numbers" style="padding-top:8px">
     <p class="bn-detail-label">The programme</p>
     <div class="bn-columns">
       <div>
@@ -901,25 +950,29 @@
     </div>
   </section>
 
-</div>
+  <section class="pe-venue">
+    <figure class="pe-venue-main"><img loading="lazy" src="/assets/img/mamounia-interior.webp" alt="Interior courtyard of La Mamounia, Marrakech, with zellige columns and lanterns"></figure>
+    <div class="pe-venue-text">
+      <p class="pe-k">The Venue</p>
+      <h2 class="pe-h2">La Mamounia, Marrakech</h2>
+      <p>The forum was held at La Mamounia, Marrakech&rsquo;s legendary palace hotel, set in its centuries-old gardens inside the city walls &mdash; a setting that carried the forum&rsquo;s message that heritage and culture are part of a sustainable future.</p>
+      <p>Debates took place in the hotel&rsquo;s salons; between sessions, participants met over lunch on the garden terrace.</p>
+      <figure class="pe-venue-small"><img loading="lazy" src="/assets/img/mauve-lunch.webp" alt="Networking lunch on the garden terrace of La Mamounia"><figcaption>Lunch on the garden terrace</figcaption></figure>
+    </div>
+  </section>
 
-<div class="wrap">
-
-  <section class="objectives">
-    <div class="obj-split">
-      <div class="obj-photo">
-        <img loading="lazy" src="/assets/img/mauve-speaker.webp" style="object-position:40% 30%" alt="A speaker addressing the forum under the patronage of His Majesty King Mohammed VI and UNESCO, La Mamounia">
-      </div>
-      <div class="obj-panel">
-        <h2>The Purple Economy</h2>
-        <p class="obj-lead">A sustainable economy has three footprints:</p>
-        <ul class="obj-list">
-          <li><span class="ob-num">01</span> The green economy, which counts the ecological footprint</li>
-          <li><span class="ob-num">02</span> The social economy, which counts the social footprint</li>
-          <li><span class="ob-num">03</span> The purple economy, which counts the cultural footprint</li>
-        </ul>
-        <a class="cta-btn" href="mailto:info@globalpremiumevents.com">Talk to our team</a>
-      </div>
+  <section class="numbers">
+    <div class="sec-head">
+      <h2>What We Delivered</h2>
+      <p>An international forum at one of Morocco&rsquo;s most historic addresses, run so that ministers, CEOs and artists could focus on the conversation.</p>
+    </div>
+    <div class="bn-highlights">
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">01</span><span class="bn-hl-label">On-site delivery at La Mamounia</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">02</span><span class="bn-hl-label">Delegate welcome, registration and accreditation</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">03</span><span class="bn-hl-label">Speaker and VIP guest coordination</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">04</span><span class="bn-hl-label">Networking lunch in the Mamounia gardens</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">05</span><span class="bn-hl-label">Signage and guest experience across the venue</span></div>
+      <div class="bn-hl reveal glow-card"><span class="bn-hl-num">06</span><span class="bn-hl-label">Guest information in French, Arabic, English and Portuguese</span></div>
     </div>
   </section>
 
@@ -934,23 +987,6 @@
     <p style="margin:16px 0 0;font-size:14px;color:var(--ink-dim)"><b style="color:var(--ink)">Jérôme Bédier</b> &mdash; Deputy CEO, Carrefour Group, Marrakech, November 5, 2016</p>
   </section>
 
-  <section class="facilitation" style="padding:72px 0 8px">
-    <div class="hero-kicker">
-      <span class="rule"></span>
-      <span>The Venue</span>
-    </div>
-    <h2 style="font-family:'Source Serif 4',Georgia,serif;font-size:clamp(28px,3.6vw,40px);line-height:1.15;color:var(--navy);margin:0 0 14px">La Mamounia, Marrakech</h2>
-    <p style="max-width:760px;color:var(--ink-dim);font-size:16.5px;line-height:1.65;margin:0 0 28px">
-      The forum took place at La Mamounia, the historic palace hotel of Marrakech, set in its centuries-old
-      gardens inside the city walls. Debates were held in the hotel&rsquo;s salons, and participants met
-      between sessions over lunch in the gardens.
-    </p>
-    <figure style="margin:0">
-      <img loading="lazy" src="/assets/img/mauve-lunch.webp" alt="Forum participants at a networking lunch on the garden terrace of La Mamounia, Marrakech" style="width:100%;height:min(560px,56vw);object-fit:cover;object-position:50% 60%;display:block;border-radius:4px;box-shadow:0 24px 48px rgba(22,41,79,.16)">
-      <figcaption style="margin-top:12px;font-size:13px;color:var(--ink-dim)">Networking lunch on the garden terrace — La Mamounia, November 2016</figcaption>
-    </figure>
-  </section>
-
   <section class="moments">
     <div class="sec-head">
       <h2>Captured Moments</h2>
@@ -960,18 +996,23 @@
       <div class="mc-track" id="momentsTrack">
 
       <div class="mc-card">
-        <img loading="lazy" src="/assets/img/mauve-title.webp" alt="Forum title card: under the High Patronage of His Majesty King Mohammed VI, 1st African Purple Economy Forum, Climate threats, cultural responses, La Mamounia Marrakech">
-        <div class="mc-cap"><span>Official identity</span><b>Under the High Patronage of H.M. King Mohammed VI</b></div>
+        <img loading="lazy" src="/assets/img/mauve-group.webp" alt="Participants of the 1st African Purple Economy Forum, with Sarah Zineb Boumouja">
+        <div class="mc-cap"><span>Participants</span><b>Leaders of the forum</b></div>
+      </div>
+
+      <div class="mc-card">
+        <img loading="lazy" src="/assets/img/mauve-title.webp" alt="Forum title card under the High Patronage of His Majesty King Mohammed VI">
+        <div class="mc-cap"><span>Official identity</span><b>Climate threats, cultural responses</b></div>
       </div>
 
       <div class="mc-card">
         <img loading="lazy" src="/assets/img/mauve-welcome.webp" alt="Delegate welcome and registration desk at La Mamounia">
-        <div class="mc-cap"><span>Welcome</span><b>Delegate registration at La Mamounia</b></div>
+        <div class="mc-cap"><span>Welcome</span><b>Delegate registration</b></div>
       </div>
 
       <div class="mc-card">
-        <img loading="lazy" src="/assets/img/09ce3159b76d.webp" alt="Panel on climate threats and cultural responses, La Mamounia, under UNESCO patronage">
-        <div class="mc-cap"><span>On stage</span><b>Climate threats, cultural responses</b></div>
+        <img loading="lazy" src="/assets/img/09ce3159b76d.webp" alt="Panel at the forum, under UNESCO patronage">
+        <div class="mc-cap"><span>On stage</span><b>Panel debates</b></div>
       </div>
 
       <div class="mc-card">
@@ -980,13 +1021,8 @@
       </div>
 
       <div class="mc-card">
-        <img loading="lazy" src="/assets/img/mauve-signage.webp" alt="Forum signage in the gardens of La Mamounia, in French, Arabic, English and Portuguese">
+        <img loading="lazy" src="/assets/img/mauve-signage.webp" alt="Forum signage in four languages in the gardens of La Mamounia">
         <div class="mc-cap"><span>Four languages</span><b>Signage across La Mamounia</b></div>
-      </div>
-
-      <div class="mc-card">
-        <img loading="lazy" src="/assets/img/mauve-lunch.webp" alt="Networking lunch in the gardens of La Mamounia">
-        <div class="mc-cap"><span>Hospitality</span><b>Lunch in the Mamounia gardens</b></div>
       </div>
 
       </div>
@@ -996,73 +1032,36 @@
       <div class="mc-dots" id="momentsDots"></div>
       <button class="mc-btn mc-next" id="momentsNext" aria-label="Next photo">&#8250;</button>
     </div>
-
-    <p class="attendees-head">Under the Patronage &amp; With</p>
-    <div class="people-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
-      <div class="people-card">
-        <p class="people-name">His Majesty King Mohammed VI</p>
-        <p class="people-role">High Patronage</p>
-        <p class="people-org">Kingdom of Morocco</p>
-      </div>
-      <div class="people-card">
-        <p class="people-name">UNESCO</p>
-        <p class="people-role">Patronage</p>
-        <p class="people-org">United Nations Educational, Scientific and Cultural Organization</p>
-      </div>
-      <div class="people-card">
-        <p class="people-name">Hakima El Haite</p>
-        <p class="people-role">Minister of the Environment, representing H.M. the King</p>
-        <p class="people-org">Kingdom of Morocco</p>
-      </div>
-      <div class="people-card">
-        <p class="people-name">Sarah Zineb Boumouja</p>
-        <p class="people-role">Chief Executive Officer</p>
-        <p class="people-org">Global Premium Events</p>
-      </div>
-    </div>
   </section>
 
-  <section class="climate" id="climate" style="padding:80px 0 40px;border-top:1px solid var(--line)">
-    <div class="hero-kicker">
-      <span class="rule"></span>
-      <span>Our Climate Engagement</span>
-    </div>
-    <h2 style="font-family:'Source Serif 4',Georgia,serif;font-size:clamp(28px,3.6vw,40px);line-height:1.15;color:var(--navy);margin:0 0 14px">From COP22 in Marrakech to COP31 in Antalya</h2>
-    <p style="max-width:780px;color:var(--ink-dim);font-size:16.5px;line-height:1.65;margin:0 0 34px">
-      For ten years, Global Premium Events has brought business, culture and public institutions to the
-      same table on the climate transition, from Africa to Europe.
-    </p>
-    <ol class="climate-line">
-      <li><span class="cl-year">2016</span><div><b>COP22 &middot; Marrakech</b><p>1st African Purple Economy Forum, officially labelled COP22, at La Mamounia.</p></div></li>
-      <li><span class="cl-year">2018</span><div><b>Africa Trade &amp; Investment Global Summit &middot; Washington, D.C.</b><p>Sarah Zineb Boumouja, Head of the Organizing Committee, interviewed by Alhurra TV.</p></div></li>
-      <li><span class="cl-year">2026</span><div><b>Digital Solutions for the Climate &middot; Brussels</b><p>B2B delegation and sponsorship for the Groupement du Patronat Francophone&rsquo;s climate meetings. <a href="/missions/mission/?id=belgique-climat-2026&amp;lang=en">See the mission &rarr;</a></p></div></li>
-      <li class="is-next"><span class="cl-year">2026</span><div><b>COP31 &middot; Antalya, Türkiye &middot; November 9–20</b><p>Sarah Zineb Boumouja is available for panels, side events and moderation on climate, culture and Africa&ndash;Gulf&ndash;Europe partnerships.</p></div></li>
-    </ol>
+  <section class="pe-press">
+    <p class="pe-k">In the Press</p>
+    <a class="pe-press-card" href="https://levert.ma/marrakech-1er-forum-africain-sur-leconomie-mauve-en-octobre-par-diversum/" target="_blank" rel="noopener">
+      <span class="pe-press-src">Le Vert &middot; September 16, 2016</span>
+      <b>&laquo; Labellisé COP22 : 1er Forum africain sur l&rsquo;économie mauve &raquo;</b>
+      <span class="pe-press-more">Read the article (French) &rarr;</span>
+    </a>
+  </section>
 
-    <div class="speak">
-      <div class="speak-video">
-        <div class="video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/s2Mk1xL-QNw?start=20&amp;rel=0" title="Sarah Zineb Boumouja interviewed by Alhurra TV at the Africa Trade &amp; Investment Global Summit, 2018" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
-        </div>
-        <p class="letter-caption" style="text-align:left">Interviewed by Alhurra TV at the Africa Trade &amp; Investment Global Summit, Washington, D.C., 2018</p>
-      </div>
-      <div class="speak-text">
-        <p class="concept-k">Speaking &amp; Moderation</p>
-        <h3>Invite Sarah Zineb Boumouja to speak</h3>
-        <p>CEO of Global Premium Events, Sarah has led the organizing committee of a 2,345-delegate summit in Washington, presented an official delegation to the Ruler of Sharjah, facilitated ministerial panels in Addis Ababa and delivered a COP22-labelled forum in Marrakech. She works in English, French and Arabic.</p>
-        <ul>
-          <li>Climate and culture: the purple economy</li>
-          <li>Africa&ndash;Gulf&ndash;Europe investment and trade missions</li>
-          <li>Inclusive, accessible international events</li>
-        </ul>
-        <a class="cta-btn" href="mailto:info@globalpremiumevents.com?subject=Speaking%20invitation%20%E2%80%94%20COP31">Send a speaking invitation</a>
-      </div>
+  <section class="pe-resp" id="responsible-events">
+    <div class="pe-resp-head">
+      <p class="pe-k">Our Commitment</p>
+      <h2 class="pe-h2">Engaged for the climate, event after event</h2>
+      <p>Since COP22 in Marrakech, climate has been part of how we work. Every event has a footprint; our job is to make it smaller without making the experience poorer. Whenever our clients approve, we apply these practices:</p>
+    </div>
+    <div class="pe-resp-grid">
+      <div class="pe-resp-item"><b>Recycled &amp; certified paper</b><p>Programmes, badges and printed materials on recycled or FSC-certified paper, printed in the quantities really needed.</p></div>
+      <div class="pe-resp-item"><b>Digital first</b><p>E-invitations, online registration, QR-code programmes and digital badges to reduce printing.</p></div>
+      <div class="pe-resp-item"><b>Reusable stands &amp; signage</b><p>Modular stand structures and undated signage designed to be used again, event after event.</p></div>
+      <div class="pe-resp-item"><b>Local &amp; seasonal catering</b><p>Local suppliers and seasonal menus, accurate guest counts, and surplus food redistributed where possible.</p></div>
+      <div class="pe-resp-item"><b>Less plastic</b><p>Water fountains and glass bottles instead of single-use plastic, and no plastic giveaways.</p></div>
+      <div class="pe-resp-item"><b>Shared transport</b><p>Group shuttles for delegations and venues chosen for easy access, to cut individual trips.</p></div>
     </div>
   </section>
 
   <footer class="cta">
     <div class="cta-inner">
-      <h3>Planning a climate side event or forum?</h3>
+      <h3>Planning a responsible forum or side event?</h3>
       <a class="cta-btn2" href="mailto:info@globalpremiumevents.com">Talk to our team</a>
     </div>
   </footer>
