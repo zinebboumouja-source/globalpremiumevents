@@ -193,6 +193,11 @@
   .pe-facts dd{margin:0;font-size:14.5px;color:var(--ink);line-height:1.45;}
   .pe-k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8E6E27;font-weight:600;margin:0 0 10px;}
   .pe-k-light{color:#D9C38F;}
+  .pe-host{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;padding:24px 0 72px;}
+  .pe-host-img{margin:0;}
+  .pe-host-img img{width:100%;display:block;border-radius:4px;box-shadow:0 24px 48px rgba(22,41,79,.18);}
+  .pe-host-text p{color:var(--ink-dim);font-size:16px;line-height:1.7;margin:0;}
+  @media (max-width:900px){.pe-host{grid-template-columns:1fr;gap:24px;}}
   .pe-press{padding:8px 0 56px;}
   .pe-press blockquote{margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:clamp(22px,2.6vw,30px);line-height:1.3;color:var(--navy);max-width:860px;}
   .pe-press-src{margin:12px 0 0;font-size:14px;color:var(--ink-dim);}
@@ -961,6 +966,15 @@
     </div>
   </section>
 
+  <section class="pe-host">
+    <figure class="pe-host-img"><img loading="lazy" src="/assets/img/mauve-sarah.webp" alt="Sarah Zineb Boumouja, CEO of Global Premium Events, at La Mamounia during the evening reception of the 1st African Purple Economy Forum"></figure>
+    <div class="pe-host-text">
+      <p class="pe-k">On Site</p>
+      <h2 class="pe-h2">Sarah Zineb Boumouja at La Mamounia</h2>
+      <p>The CEO of Global Premium Events was on site throughout the forum, welcoming guests through to the evening reception in the palace&rsquo;s courtyards.</p>
+    </div>
+  </section>
+
   <section class="numbers">
     <div class="sec-head">
       <h2>What We Delivered</h2>
@@ -994,6 +1008,11 @@
     </div>
     <div class="mission-carousel">
       <div class="mc-track" id="momentsTrack">
+
+      <div class="mc-card">
+        <img loading="lazy" src="/assets/img/mauve-sarah.webp" alt="Sarah Zineb Boumouja at the evening reception, La Mamounia">
+        <div class="mc-cap"><span>Evening reception</span><b>Sarah Zineb Boumouja at La Mamounia</b></div>
+      </div>
 
       <div class="mc-card">
         <img loading="lazy" src="/assets/img/mauve-group.webp" alt="Participants of the 1st African Purple Economy Forum, with Sarah Zineb Boumouja">
