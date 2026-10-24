@@ -321,6 +321,15 @@
     .leader-card{ padding:32px 22px; border-radius:16px; }
   }
 
+  .leader-sign{ display:flex; flex-direction:column; margin:18px 0 0!important; }
+  .leader-sign b{ font-family:'Source Serif 4', serif; font-size:17px; color:var(--navy); font-weight:600; }
+  .leader-sign span{ font-size:11.5px; color:var(--gold-dark); font-weight:600; letter-spacing:.06em; text-transform:uppercase; }
+  .leader-actions{ display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; margin-top:24px; }
+  .leader-btn{ background:var(--navy); color:#fff; border:0; border-radius:4px; padding:12px 20px; font:600 13.5px 'Inter',sans-serif; cursor:pointer; }
+  .leader-btn:hover{ background:#22396A; }
+  .leader-link{ font-size:13.5px; font-weight:600; color:var(--gold-dark); text-decoration:none; }
+  .leader-link:hover{ text-decoration:underline; }
+
   /* ============ HOW WE WORK — 4 circular steps ============ */
   .hww{ padding:96px 0; background:#fff; }
   .hww-row{ max-width:1080px; margin:0 auto; padding:0 48px; display:flex; justify-content:space-between; gap:20px; position:relative; }
@@ -657,7 +666,7 @@
       </div>
       <a href="/missions/">B2B Missions</a>
       <a href="/our-work/">Our Work</a>
-      <a href="/inclusive-events/" class="gpe-nav-incl">Inclusive Events</a>
+      <a href="https://globalinclusiveevents.com/" target="_blank" rel="noopener" class="gpe-nav-incl">Inclusive Events</a>
       <a class="gpe-nav-cta" href="/contact-us/">Contact Us</a>
     </nav>
   </div>
@@ -730,7 +739,7 @@
   <section class="leadership" id="leadership">
     <div class="leader-card glow-card reveal">
       <div class="leader-portrait">
-        <div class="leader-photo-frame">
+        <div class="leader-photo-frame bio-open" data-open-bio role="button" tabindex="0" aria-label="Open the biography of Sarah Zineb Boumouja">
           <img class="leader-photo" src="/assets/img/sarah-ceo.webp" alt="Sarah Zineb Boumouja, Co-Founder and CEO of Global Premium Events" loading="lazy">
         </div>
         <div class="leader-caption">
@@ -739,12 +748,18 @@
         </div>
       </div>
       <div class="leader-inner">
-        <div class="hero-kicker"><span class="rule"></span><span>Leadership</span></div>
-        <h2>Led from the front.</h2>
-        <p>Sarah Zineb Boumouja is the Co-Founder and CEO of Global Premium Events — leading the organization for more than twelve years across trade shows, missions and corporate productions in Africa, Europe, the GCC and the United States.</p>
-        <p>She led the Organizing Committee behind the Africa Trade &amp; Investment Global Summit in Washington, D.C., and in 2025 brought GPE's own accessibility challenges back to her alma mater, Indiana University's Kelley School of Business — a partnership that became Global Inclusive Events.</p>
-        <p class="leader-quote">&ldquo;Certain voices remained unheard — women, young individuals from rural areas, and students with disabilities were consistently missing from the transformative circle.&rdquo;</p>
-
+        <div class="hero-kicker"><span class="rule"></span><span>A Message from Our CEO</span></div>
+        <h2>We build the rooms where capital, policy and diplomacy meet.</h2>
+        <p>For more than a decade, Global Premium Events has designed and delivered economic forums, investment summits and official missions across Africa, Europe, the United States and the GCC. Our work sits where investment, diplomacy and governance meet: bringing governments, institutional leaders, investors and decision-makers into the same room, so that dialogue turns into capital and cross-border partnerships.</p>
+        <p>From the Africa Trade &amp; Investment Global Summit in Washington, D.C. to the Sharjah FDI Forum, the Africa Health Business Symposium in Addis Ababa and a COP22-labelled forum at La Mamounia, I have seen what a well-convened room can do. I have also seen who is missing from it.</p>
+        <p class="leader-quote">&ldquo;Certain voices remained unheard &mdash; women, young individuals from rural areas, and students with disabilities were consistently missing from the transformative circle.&rdquo;</p>
+        <p>That is why we combine strategic vision with inclusive design, and why we work with Indiana University to build events that welcome everyone. Thoughtfully convened dialogue mobilizes capital, strengthens institutions and creates lasting economic and social impact. That is the standard we hold ourselves to, event after event.</p>
+        <p class="leader-sign"><b>Sarah Zineb Boumouja</b><span>Co-Founder &amp; CEO</span></p>
+        <div class="leader-actions">
+          <button type="button" class="leader-btn" data-open-bio>Biography &amp; speaking engagements</button>
+          <a class="leader-link" href="mailto:ceo@globalpremiumevents.com">ceo@globalpremiumevents.com</a>
+          <a class="leader-link" href="https://www.linkedin.com/in/sarah-zineb-boumouja-323b4826/" target="_blank" rel="noopener">LinkedIn &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
@@ -855,7 +870,7 @@
           <span class="gie-flow-step">Solutions</span><span class="gie-flow-arrow">&rarr;</span>
           <span class="gie-flow-step">Future Events</span>
         </div>
-        <a class="btn-crimson" href="/inclusive-events/">Explore the Initiative &rarr;</a>
+        <a class="btn-crimson" href="https://globalinclusiveevents.com/" target="_blank" rel="noopener">Explore the Initiative &rarr;</a>
         <div class="gie-caption"><span class="rule"></span><span>Indiana University's Kelley School of Business &middot; BUS-X190 &middot; CLIP Grant</span></div>
       </div>
     </div>
@@ -935,7 +950,7 @@
           <li><a href="/missions/">B2B Missions</a></li>
           <li><a href="/our-work/">Our Work</a></li>
           <li><a href="/services/">Services</a></li>
-          <li><a href="/inclusive-events/">Inclusive Events</a></li>
+          <li><a href="https://globalinclusiveevents.com/" target="_blank" rel="noopener">Inclusive Events</a></li>
           <li><a href="/partner-with-us/">Partner With Us</a></li>
           <li><a href="/careers/">Careers</a></li>
           <li><a href="/contact-us/">Contact</a></li>
@@ -1096,5 +1111,85 @@
 })();
 </script>
 <script src="/assets/gpe.js" defer></script>
+<!-- CEO BIO POPUP -->
+<style>
+.bio-dlg{border:0;padding:0;max-width:880px;width:calc(100% - 32px);max-height:calc(100vh - 48px);border-radius:16px;box-shadow:0 40px 90px rgba(10,18,38,.45);color:#1B1E24;font-family:'Inter',Arial,sans-serif;}
+.bio-dlg::backdrop{background:rgba(10,18,38,.62);backdrop-filter:blur(3px);}
+.bio-in{display:grid;grid-template-columns:260px 1fr;}
+.bio-side{background:#16294F;color:#fff;padding:32px 26px;display:flex;flex-direction:column;gap:14px;}
+.bio-side img{width:100%;border-radius:10px;display:block;}
+.bio-side h2{font-family:'Source Serif 4',Georgia,serif;font-size:22px;line-height:1.2;margin:6px 0 0;font-weight:600;color:#fff;}
+.bio-side .bio-role{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C3A86D;font-weight:600;margin:0;}
+.bio-links{display:flex;flex-direction:column;gap:8px;margin-top:6px;}
+.bio-links a{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-size:12.5px;word-break:break-all;padding:10px 12px;border:1px solid rgba(195,168,109,.45);border-radius:6px;transition:background .2s;}
+.bio-links a:hover{background:rgba(195,168,109,.15);}
+.bio-links svg{width:16px;height:16px;flex-shrink:0;fill:#C3A86D;}
+.bio-main{padding:34px 36px 30px;overflow:auto;max-height:calc(100vh - 48px);}
+.bio-k{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8E6E27;font-weight:600;margin:0 0 8px;}
+.bio-main h3{font-family:'Source Serif 4',Georgia,serif;font-size:20px;color:#16294F;margin:26px 0 12px;font-weight:600;}
+.bio-main h3:first-of-type{margin-top:0;}
+.bio-main p{font-size:14.5px;line-height:1.75;color:#4A5160;margin:0 0 12px;}
+.bio-talks{list-style:none;margin:0;padding:0;}
+.bio-talks li{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:12px 0;border-top:1px solid #DDE3EC;}
+.bio-talks .y{font-family:'Source Serif 4',Georgia,serif;font-weight:600;color:#16294F;font-size:16px;}
+.bio-talks b{display:block;color:#16294F;font-size:14px;line-height:1.45;}
+.bio-talks span{display:block;font-size:13px;color:#5B6270;line-height:1.5;margin-top:2px;}
+.bio-talks a{color:#8E6E27;font-weight:600;font-size:13px;}
+.bio-topics{display:flex;flex-wrap:wrap;gap:8px;}
+.bio-topics span{font-size:12.5px;color:#16294F;background:#F4F6FA;border:1px solid #DDE3EC;border-radius:999px;padding:6px 12px;}
+.bio-x{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;border:0;background:#fff;color:#16294F;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18);z-index:2;}
+.bio-x:focus-visible{outline:3px solid #C3A86D;outline-offset:2px;}
+.bio-open{cursor:pointer;}
+@media (max-width:760px){.bio-in{grid-template-columns:1fr}.bio-side{padding:26px 22px}.bio-side img{max-width:180px}.bio-main{padding:26px 22px;max-height:none}.bio-dlg{overflow:auto}}
+</style>
+<dialog class="bio-dlg" id="ceoBio" aria-labelledby="bioName">
+  <button class="bio-x" type="button" aria-label="Close" data-close-bio>&times;</button>
+  <div class="bio-in">
+    <aside class="bio-side">
+      <img src="/assets/img/sarah-ceo.webp" alt="Sarah Zineb Boumouja" loading="lazy">
+      <h2 id="bioName">Sarah Zineb Boumouja</h2>
+      <p class="bio-role">Co-Founder &amp; CEO, Global Premium Events</p>
+      <div class="bio-links">
+        <a href="mailto:ceo@globalpremiumevents.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="#C3A86D" stroke-width="1.8"/><path d="M3 6l9 7 9-7" fill="none" stroke="#C3A86D" stroke-width="1.8"/></svg>ceo@globalpremiumevents.com</a>
+        <a href="https://www.linkedin.com/in/sarah-zineb-boumouja-323b4826/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>LinkedIn profile</a>
+      </div>
+    </aside>
+    <div class="bio-main">
+      <p class="bio-k">Biography</p>
+      <h3>Strategic convening for investment, diplomacy &amp; inclusive growth</h3>
+      <p>Sarah Zineb Boumouja is Co-Founder and CEO of Global Premium Events, an international platform that designs and delivers high-level economic forums, investment summits and multi-stakeholder dialogues across Africa, Europe, the United States and the GCC.</p>
+      <p>Trained in business administration and law, with a master&rsquo;s degree in public policy, she works where investment, diplomacy and governance meet: building the platforms where governments, institutional leaders, investors and decision-makers shape dialogue, unlock capital and form cross-border partnerships in emerging markets. Over the past decade, her work has engaged thousands of delegates from dozens of countries.</p>
+      <p>An alumna of Indiana University, she partners with the university&rsquo;s Global CLIP Program to mentor students on inclusive event design, investment facilitation and strategic convening, and to guide startups and hackathons. A committed advocate for women&rsquo;s leadership in Africa, she led Global Premium Events to the &ldquo;Best Global Event Management Company &ndash; North Africa&rdquo; award from MEA Markets (African Excellence Awards 2022).</p>
+
+      <h3>Speaking &amp; Moderation</h3>
+      <ul class="bio-talks">
+        <li><span class="y">2019</span><div><b>Moderator &mdash; Africa Health Business Symposium IV</b><span>Addis Ababa. Session with Dr. Amit N. Thakker, the African Union, ministers of health and national healthcare federation leaders.</span></div></li>
+        <li><span class="y">2018</span><div><b>Moderator &mdash; &ldquo;Advancing Women Leadership in Key Sectors in Africa&rdquo;</b><span>World Trade Center, Washington, D.C. &mdash; Africa Trade &amp; Investment Global Summit.</span></div></li>
+        <li><span class="y">2018</span><div><b>Middle East &ndash; Africa Partnership Panel</b><span>Enhancing Africa&ndash;UAE business and investment dynamics, ATIGS, Washington, D.C.</span></div></li>
+        <li><span class="y">2018</span><div><b>Head of the Organizing Committee &mdash; ATIGS</b><span>2,345 delegates from 92 countries. Interviewed by Alhurra TV. <a href="https://www.youtube.com/watch?v=s2Mk1xL-QNw&amp;t=20s" target="_blank" rel="noopener">Watch &rarr;</a></span></div></li>
+        <li><span class="y">2018</span><div><b>On stage &mdash; Sharjah FDI Forum</b><span>With African investment delegations; presented the official Zimbabwe delegation to H.H. the Ruler of Sharjah.</span></div></li>
+        <li><span class="y">2016</span><div><b>1st African Purple Economy Forum &mdash; officially labelled COP22</b><span>La Mamounia, Marrakech, under the High Patronage of His Majesty King Mohammed VI.</span></div></li>
+        <li><span class="y">2025</span><div><b>Mentor &mdash; Indiana University, Kelley School of Business</b><span>Global CLIP Program: inclusive event design, investment facilitation and strategic convening.</span></div></li>
+      </ul>
+
+      <h3>Topics</h3>
+      <div class="bio-topics"><span>Trade &amp; investment facilitation</span><span>Africa&ndash;GCC partnerships</span><span>Public&ndash;private collaboration</span><span>Women&rsquo;s leadership in Africa</span><span>Inclusive, accessible events</span><span>Climate &amp; culture</span></div>
+    </div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var d=document.getElementById('ceoBio'); if(!d||!d.showModal) return; var last=null;
+  document.querySelectorAll('[data-open-bio]').forEach(function(el){
+    el.addEventListener('click',function(e){e.preventDefault(); last=el; d.showModal(); document.body.style.overflow='hidden';});
+    el.addEventListener('keydown',function(e){ if(el.tagName!=='A'&&el.tagName!=='BUTTON'&&(e.key==='Enter'||e.key===' ')){e.preventDefault(); el.click();} });
+  });
+  d.addEventListener('close',function(){ document.body.style.overflow=''; if(last) last.focus(); });
+  d.querySelector('[data-close-bio]').addEventListener('click',function(){ d.close(); });
+  d.addEventListener('click',function(e){ if(e.target===d) d.close(); });
+  if(location.hash==='#ceo-bio'){ d.showModal(); }
+})();
+</script>
+
 </body>
 </html>
