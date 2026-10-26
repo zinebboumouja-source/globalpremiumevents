@@ -451,6 +451,12 @@
   }
 
   /* ---------------- formulaire d'inscription ---------------- */
+  function pdNote() {
+    return '<p class="ms-small" style="font-size:12px;line-height:1.55;margin:4px 0 12px">' + (EN
+      ? 'Your data is used only to answer your request. Under Moroccan Law No. 09-08, you have the right to access, correct and object to the processing of your personal data: '
+      : 'Vos donn\u00e9es servent uniquement \u00e0 r\u00e9pondre \u00e0 votre demande. Conform\u00e9ment \u00e0 la loi n\u00b0 09-08, vous disposez d\u2019un droit d\u2019acc\u00e8s, de rectification et d\u2019opposition au traitement de vos donn\u00e9es personnelles : ') +
+      '<a href="mailto:' + esc(CFG.email) + '">' + esc(CFG.email) + '</a>. <a href="/privacy-policy/">' + (EN ? 'Privacy policy' : 'Politique de confidentialit\u00e9') + '</a>.</p>';
+  }
   function opt(list) { return list.map(function (x) { return '<option value="' + esc(x) + '">' + esc(x) + '</option>'; }).join(''); }
   function checks(name, list) {
     return '<div class="ms-checks">' + list.map(function (x, i) {
@@ -502,7 +508,7 @@
         '<label class="ms-check ms-consent" for="f-ok"><input type="checkbox" id="f-ok" name="accord" value="' + U.yes + '" required><span>' +
           fill(U.consent, { note: '<a href="' + docUrl(m, 'note') + '" target="_blank" rel="noopener">' + U.infoNote.toLowerCase() + '</a>', priv: '<a href="/privacy-policy/">' + U.privacy + '</a>' }) + '</span></label>' +
       '</fieldset><p class="ms-error" id="msError" role="alert"></p>' +
-      '<button type="submit" class="cf-submit">' + U.send + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
+      pdNote() + '<button type="submit" class="cf-submit">' + U.send + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
   }
 
   function collect(form) { var data = {}, fd = new FormData(form); fd.forEach(function (v, k) { data[k] = data[k] ? data[k] + ', ' + v : v; }); return data; }
@@ -580,7 +586,7 @@
       '<div class="cf-row"><div class="cf-field"><label for="l-email">' + U.email + ' *</label><input id="l-email" name="email" type="email" required autocomplete="email"></div>' +
       '<div class="cf-field"><label for="l-tel">' + U.phone + ' *</label><input id="l-tel" name="telephone" type="tel" required autocomplete="tel"></div></div>' +
       '<p class="ms-error" id="msError" role="alert"></p>' +
-      '<button type="submit" class="cf-submit">' + U.leadBtn + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
+      pdNote() + '<button type="submit" class="cf-submit">' + U.leadBtn + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
   }
   function bindLead(m, root) {
     var form = document.getElementById('msLead'); if (!form) return;
@@ -636,7 +642,7 @@
       '<div class="cf-field"><label for="c-email">' + U.email + ' *</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>' +
       '<div class="cf-field"><label for="c-msg">' + U.message + '</label><textarea id="c-msg" name="message" rows="3"></textarea></div>' +
       '<p class="ms-error" id="msError" role="alert"></p>' +
-      '<button type="submit" class="cf-submit">' + U.contactBtn + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
+      pdNote() + '<button type="submit" class="cf-submit">' + U.contactBtn + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
   }
   function bindContact(m) {
     var form = document.getElementById('msContact'); if (!form) return;
@@ -667,7 +673,7 @@
       '<div class="cf-field"><label for="i-ent">' + U.company + ' *</label><input id="i-ent" name="entreprise" required></div>' +
       '<div class="cf-field"><label for="i-email">' + U.email + ' *</label><input id="i-email" name="email" type="email" required></div>' +
       '<div class="cf-field"><label for="i-tel">' + U.phone + '</label><input id="i-tel" name="telephone" type="tel"></div>' +
-      '<p class="ms-error" id="msError" role="alert"></p><button type="submit" class="cf-submit">' + U.keepMe + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
+      '<p class="ms-error" id="msError" role="alert"></p>' + pdNote() + '<button type="submit" class="cf-submit">' + U.keepMe + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
   }
   function bindInterest(m) {
     var form = document.getElementById('msInterest'); if (!form) return;
