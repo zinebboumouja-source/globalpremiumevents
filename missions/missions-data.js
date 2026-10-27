@@ -172,6 +172,33 @@ window.GPE_MISSIONS = [
       legende: 'Ankara — rencontre officielle avec le Président de TİKA et la délégation ghanéenne du commerce et de l’investissement.'
     },
 
+    // Ce que la délégation apporte au-delà du sommet
+    accompagnement: {
+      surtitre: 'Plus qu’un sommet',
+      titre: 'Un accompagnement complet de l’investisseur',
+      intro: 'Rejoindre la délégation, c’est bénéficier d’un programme pensé pour faire des affaires : de la préparation en amont jusqu’au suivi de vos contacts après la mission.',
+      items: [
+        { titre: 'Rencontres B2B et B2G ciblées', texte: 'Un agenda de rendez-vous préparé selon votre profil, avec des entreprises, des institutions et des décideurs ghanéens.' },
+        { titre: 'Visites de terrain', texte: 'Découverte de sites industriels, de zones économiques et de projets, sollicitées auprès des autorités ghanéennes.' },
+        { titre: 'Analyse de marché par nos experts', texte: 'Une note sectorielle avant le départ : réglementation, opportunités, acteurs clés et partenaires potentiels.' },
+        { titre: 'Forums et networking', texte: 'Rencontre d’affaires Maroc–Ghana, temps d’échange avec les entreprises marocaines installées au Ghana et les acteurs clés du sommet.' },
+        { titre: 'Logistique clé en main', texte: 'Accréditation, hébergement, transferts et accompagnement sur place, pour vous concentrer sur l’essentiel : vos rendez-vous.' },
+        { titre: 'Suivi après la mission', texte: 'Relance de vos contacts, mises en relation complémentaires et compte rendu de mission.' }
+      ]
+    },
+
+    // Opportunités par secteur (affichées à la place de la liste des secteurs)
+    opportunitesTitre: 'Les opportunités par secteur',
+    opportunitesIntro: 'Les six secteurs prioritaires du sommet, et les opportunités que notre équipe vous aide à saisir.',
+    opportunites: [
+      { secteur: 'Agro-industrie et agriculture d’export', texte: 'Transformation du cacao et des produits agricoles, intrants, agroalimentaire et chaîne du froid.' },
+      { secteur: 'Industrie et pharmacie', texte: 'Production locale de médicaments, matériaux de construction, emballage et chaînes de valeur industrielles.' },
+      { secteur: 'Énergie et croissance verte', texte: 'Solaire, gaz pour la production d’électricité, réseaux et efficacité énergétique.' },
+      { secteur: 'Mines et transformation locale', texte: 'Premier producteur d’or d’Afrique : raffinage local, services miniers et transformation des minerais.' },
+      { secteur: 'Infrastructures, transport et logistique', texte: 'Ports de Tema et de Takoradi, rail, routes, logement et zones économiques.' },
+      { secteur: 'Économie numérique et services', texte: 'FinTech et paiement mobile, centres de données, services numériques aux entreprises.' }
+    ],
+
     // Annonce mise en avant en haut de la page (supprimer la ligne pour la masquer)
     annonce: 'Ouverture officielle par S.E. le Président John Dramani Mahama, avec Aliko Dangote annoncé comme invité spécial du Président.',
 
@@ -250,6 +277,29 @@ window.GPE_MISSIONS = [
         monnaie: 'Ghanaian cedi (GHS). Cards accepted in major hotels.',
         autres: 'English-speaking country: presentation materials in English recommended.'
       },
+      accompagnement: {
+        surtitre: 'More than a summit',
+        titre: 'End-to-end support for investors',
+        intro: 'Joining the delegation means a programme built for doing business, from preparation before departure to following up your contacts after the mission.',
+        items: [
+          { titre: 'Targeted B2B and B2G meetings', texte: 'A meeting agenda tailored to your profile, with Ghanaian companies, institutions and decision-makers.' },
+          { titre: 'Site visits', texte: 'Visits to industrial sites, economic zones and projects, requested from the Ghanaian authorities.' },
+          { titre: 'Expert market analysis', texte: 'A sector briefing before departure: regulations, opportunities, key players and potential partners.' },
+          { titre: 'Forums and networking', texte: 'A Morocco–Ghana business meeting and networking with Moroccan companies established in Ghana and key Summit stakeholders.' },
+          { titre: 'Turnkey logistics', texte: 'Accreditation, accommodation, transfers and on-site support, so you can focus on what matters: your meetings.' },
+          { titre: 'Post-mission follow-up', texte: 'Follow-up with your contacts, further introductions and a mission report.' }
+        ]
+      },
+      opportunitesTitre: 'Opportunities by sector',
+      opportunitesIntro: 'The Summit’s six priority sectors, and the opportunities our team helps you seize.',
+      opportunites: [
+        { secteur: 'Agribusiness and export agriculture', texte: 'Cocoa and agri-processing, inputs, food industry and cold chain.' },
+        { secteur: 'Manufacturing and pharmaceuticals', texte: 'Local pharmaceutical production, construction materials, packaging and industrial value chains.' },
+        { secteur: 'Energy and green growth', texte: 'Solar, gas-to-power, grids and energy efficiency.' },
+        { secteur: 'Mining and local processing', texte: 'Africa’s leading gold producer: local refining, mining services and mineral processing.' },
+        { secteur: 'Infrastructure, transport and logistics', texte: 'Tema and Takoradi ports, rail, roads, housing and economic zones.' },
+        { secteur: 'Digital economy and services', texte: 'FinTech and mobile money, data centres and digital business services.' }
+      ],
       annonce: 'Officially opened by H.E. President John Dramani Mahama, with Aliko Dangote announced as Presidential Special Guest.',
       reference: {
         surtitre: 'Our engagement with Ghana',

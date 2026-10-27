@@ -406,7 +406,25 @@
 
     if (m.sponsoring) h += sponsoringHtml(m, s);
 
-    if (m.secteurs && m.secteurs.length) {
+    // Accompagnement : ce que la délégation apporte au-delà de l'événement
+    if (m.accompagnement && (m.accompagnement.items || []).length) {
+      var ac = m.accompagnement;
+      h += '<section class="ms-sec ms-sec-panel" id="accompagnement"><div class="wrap">' +
+        (ac.surtitre ? '<p class="hero-kicker"><span class="rule"></span><span>' + esc(ac.surtitre) + '</span></p>' : '') +
+        '<h2 class="ms-h2 serif">' + esc(ac.titre) + '</h2>' + (ac.intro ? '<p class="ms-acc-intro">' + esc(ac.intro) + '</p>' : '') +
+        '<div class="ms-acc">' + ac.items.map(function (it, i) {
+          return '<div class="ms-acc-item reveal"><span class="ms-acc-n serif">' + String(i + 1).padStart(2, '0') + '</span><h3>' + esc(it.titre) + '</h3><p>' + esc(it.texte) + '</p></div>';
+        }).join('') + '</div></div></section>';
+    }
+
+    // Opportunités par secteur (remplace la liste simple des secteurs)
+    if (m.opportunites && m.opportunites.length) {
+      h += '<section class="ms-sec"><div class="wrap"><h2 class="ms-h2 serif">' + esc(m.opportunitesTitre || U.sectors) + '</h2>' +
+        (m.opportunitesIntro ? '<p class="ms-acc-intro">' + esc(m.opportunitesIntro) + '</p>' : '') +
+        '<div class="ms-opp">' + m.opportunites.map(function (o) {
+          return '<div class="ms-opp-item reveal"><h3>' + esc(o.secteur) + '</h3><p>' + esc(o.texte) + '</p></div>';
+        }).join('') + '</div></div></section>';
+    } else if (m.secteurs && m.secteurs.length) {
       h += '<section class="ms-sec ms-sec-tight"><div class="wrap"><h2 class="ms-h2 serif">' + (m.secteursTitre ? esc(m.secteursTitre) : U.sectors) + '</h2><ul class="ms-chips">' +
         m.secteurs.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div></section>';
     }
