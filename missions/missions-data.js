@@ -63,7 +63,7 @@ window.GPE_MISSIONS = [
     dateLimite: '2026-11-10',         // clôture des inscriptions
     places: 'limitees',
     titre: 'Mission d’affaires au Ghana — Invest Ghana Summit 2026',
-    accroche: 'Global Premium Events conduit les délégations d’affaires marocaine et saoudienne à l’Invest Ghana Summit 2026, premier sommet de l’investissement organisé par la Ghana Investment Promotion Authority (GIPA). Plus de 2 000 investisseurs, décideurs publics et chefs d’entreprise sont attendus à Accra.',
+    accroche: 'Global Premium Events conduit des délégations d’investisseurs et d’entreprises à l’Invest Ghana Summit 2026, premier sommet de l’investissement organisé par la Ghana Investment Promotion Authority (GIPA). Plus de 2 000 investisseurs, décideurs publics et chefs d’entreprise sont attendus à Accra.',
 
     evenement: {
       nom: 'Invest Ghana Summit 2026',
@@ -113,7 +113,7 @@ window.GPE_MISSIONS = [
     comparatif: [
       { groupe: 'Accès et rendez-vous', lignes: [
         ['Accréditation à l\u2019Invest Ghana Summit 2026', 'Y', 'Y', 'Y'],
-        ['Intégration à la délégation d\u2019affaires (Maroc ou Arabie saoudite) et briefing pays', 'Y', 'Y', 'Y'],
+        ['Intégration à la délégation d\u2019investisseurs et briefing pays', 'Y', 'Y', 'Y'],
         ['Rendez-vous B2B', 'Matchmaking du sommet', 'Agenda B2B qualifié selon votre profil', 'Agenda B2B garanti (8 rendez-vous minimum)'],
         ['Rencontres B2G (institutions)', '-', 'Sollicitées', 'Organisées pour votre secteur'],
         ['Dîner de networking de la délégation', 'Y', 'Y', 'Y']
@@ -126,7 +126,7 @@ window.GPE_MISSIONS = [
         ['Photos de groupe de la délégation', 'Y', 'Y', 'Y'],
         ['Photographe et vidéaste dédiés à votre entreprise (créneau réservé : photos de vos rendez-vous et vidéo de 60 s)', '-', 'Y', 'Y'],
         ['Communiqué de presse dédié à votre entreprise', '-', '-', 'Y'],
-        ['Relations médias (interviews proposées à la presse marocaine, saoudienne et ghanéenne)', '-', '-', 'Y']
+        ['Relations médias (interviews proposées à la presse internationale et ghanéenne)', '-', '-', 'Y']
       ] },
       { groupe: 'Sur mesure et suivi', lignes: [
         ['Programme personnalisé selon vos objectifs, défini avec vous avant le départ', '-', '-', 'Y'],
@@ -181,7 +181,7 @@ window.GPE_MISSIONS = [
         { titre: 'Rencontres B2B et B2G ciblées', texte: 'Un agenda de rendez-vous préparé selon votre profil, avec des entreprises, des institutions et des décideurs ghanéens.' },
         { titre: 'Visites de terrain', texte: 'Découverte de sites industriels, de zones économiques et de projets, sollicitées auprès des autorités ghanéennes.' },
         { titre: 'Analyse de marché par nos experts', texte: 'Une note sectorielle avant le départ : réglementation, opportunités, acteurs clés et partenaires potentiels.' },
-        { titre: 'Forums et networking', texte: 'Rencontres d’affaires Maroc–Ghana et Arabie saoudite–Ghana, temps d’échange avec les entreprises marocaines et saoudiennes présentes au Ghana et les acteurs clés du sommet.' },
+        { titre: 'Forums et networking', texte: 'Rencontres d’affaires bilatérales avec le Ghana, temps d’échange avec les entreprises internationales présentes au Ghana et les acteurs clés du sommet.' },
         { titre: 'Logistique clé en main', texte: 'Accréditation, hébergement, transferts et accompagnement sur place, pour vous concentrer sur l’essentiel : vos rendez-vous.' },
         { titre: 'Suivi après la mission', texte: 'Relance de vos contacts, mises en relation complémentaires et compte rendu de mission.' }
       ]
@@ -212,7 +212,7 @@ window.GPE_MISSIONS = [
       pays: 'Ghana',
       langue: 'English',
       titre: 'Business Mission to Ghana — Invest Ghana Summit 2026',
-      accroche: 'Global Premium Events is leading the Moroccan and Saudi business delegations to the Invest Ghana Summit 2026, the first investment summit hosted by the Ghana Investment Promotion Authority (GIPA). More than 2,000 investors, policymakers and business leaders are expected in Accra.',
+      accroche: 'Global Premium Events is leading investor and business delegations to the Invest Ghana Summit 2026, the first investment summit hosted by the Ghana Investment Promotion Authority (GIPA). More than 2,000 investors, policymakers and business leaders are expected in Accra.',
       evenement: {
         slogan: 'Ghana’s premier President-led business gathering',
         dates: '16 – 17 November 2026',
@@ -243,7 +243,7 @@ window.GPE_MISSIONS = [
       comparatif: [
         { groupe: 'Access and meetings', lignes: [
           ['Accreditation to the Invest Ghana Summit 2026', 'Y', 'Y', 'Y'],
-          ['Membership of the business delegation (Morocco or Saudi Arabia) and country briefing', 'Y', 'Y', 'Y'],
+          ['Membership of the investor delegation and country briefing', 'Y', 'Y', 'Y'],
           ['B2B meetings', 'Summit matchmaking', 'Qualified B2B agenda based on your profile', 'Guaranteed B2B agenda (minimum 8 meetings)'],
           ['B2G meetings (institutions)', '-', 'Requested', 'Arranged for your sector'],
           ['Delegation networking dinner', 'Y', 'Y', 'Y']
@@ -256,7 +256,7 @@ window.GPE_MISSIONS = [
           ['Delegation group photos', 'Y', 'Y', 'Y'],
           ['Photographer and videographer dedicated to your company (reserved slot: photos of your meetings and a 60-second video)', '-', 'Y', 'Y'],
           ['Press release dedicated to your company', '-', '-', 'Y'],
-          ['Media relations (interviews offered to Moroccan, Saudi and Ghanaian media)', '-', '-', 'Y']
+          ['Media relations (interviews offered to international and Ghanaian media)', '-', '-', 'Y']
         ] },
         { groupe: 'Tailor-made and follow-up', lignes: [
           ['Personalised programme based on your objectives, agreed with you before departure', '-', '-', 'Y'],
@@ -285,7 +285,7 @@ window.GPE_MISSIONS = [
           { titre: 'Targeted B2B and B2G meetings', texte: 'A meeting agenda tailored to your profile, with Ghanaian companies, institutions and decision-makers.' },
           { titre: 'Site visits', texte: 'Visits to industrial sites, economic zones and projects, requested from the Ghanaian authorities.' },
           { titre: 'Expert market analysis', texte: 'A sector briefing before departure: regulations, opportunities, key players and potential partners.' },
-          { titre: 'Forums and networking', texte: 'Morocco–Ghana and Saudi Arabia–Ghana business meetings, and networking with Moroccan and Saudi companies present in Ghana and key Summit stakeholders.' },
+          { titre: 'Forums and networking', texte: 'Bilateral business meetings with Ghana, and networking with international companies present in Ghana and key Summit stakeholders.' },
           { titre: 'Turnkey logistics', texte: 'Accreditation, accommodation, transfers and on-site support, so you can focus on what matters: your meetings.' },
           { titre: 'Post-mission follow-up', texte: 'Follow-up with your contacts, further introductions and a mission report.' }
         ]
