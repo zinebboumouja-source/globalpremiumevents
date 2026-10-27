@@ -87,7 +87,7 @@
       lead1: 'Présentation détaillée de la mission', lead2: 'Conditions de participation par formule', lead3: 'Conseil personnalisé par notre équipe',
       packagesTitle: 'Formules de participation', proceed: 'Finaliser mon inscription',
       contactUs: 'Nous contacter', sponsorBtn: 'Offres de sponsoring', sponsorTop: 'Visibilité maximale', level: 'Niveau', onRequest: 'Conditions sur demande',
-      wantMission: 'Rejoindre la délégation B2B', wantSponsor: 'Sponsoring', interestedIn: 'Vous êtes intéressé par', message: 'Message',
+      ixKicker: 'Délégation d’affaires', ixTitle: 'Manifestez votre intérêt', ixText: 'Laissez vos coordonnées : notre équipe vous recontacte pour vous présenter les modalités de participation à la délégation.', ixBtn: 'Manifester mon intérêt', wantMission: 'Rejoindre la délégation B2B', wantSponsor: 'Sponsoring', interestedIn: 'Vous êtes intéressé par', message: 'Message',
       contactKicker: 'Mission & sponsoring', contactTitle: 'Recevez les détails', contactText: 'Indiquez ce qui vous intéresse : notre équipe vous envoie les conditions de participation ou de sponsoring et vous rappelle sous 24 heures.',
       contactBtn: 'Envoyer ma demande', contactOk: 'Merci. Notre équipe vous envoie les détails et vous contacte sous 24 heures.', errInterest: 'Cochez au moins une option : mission B2B ou sponsoring.'
     },
@@ -154,7 +154,7 @@
       lead1: 'Detailed presentation of the mission', lead2: 'Participation terms for each package', lead3: 'Personalised advice from our team',
       packagesTitle: 'Participation packages', proceed: 'Complete my registration',
       contactUs: 'Contact us', sponsorBtn: 'Sponsorship', sponsorTop: 'Maximum visibility', level: 'Level', onRequest: 'Terms on request',
-      wantMission: 'Joining the B2B delegation', wantSponsor: 'Sponsorship', interestedIn: 'You are interested in', message: 'Message',
+      ixKicker: 'Business delegation', ixTitle: 'Express your interest', ixText: 'Leave your details: our team will get back to you to present the terms of participation in the delegation.', ixBtn: 'Express my interest', wantMission: 'Joining the B2B delegation', wantSponsor: 'Sponsorship', interestedIn: 'You are interested in', message: 'Message',
       contactKicker: 'Mission & sponsorship', contactTitle: 'Receive the details', contactText: 'Tell us what interests you: our team will send you the participation or sponsorship terms and call you back within 24 hours.',
       contactBtn: 'Send my request', contactOk: 'Thank you. Our team will send you the details and contact you within 24 hours.', errInterest: 'Tick at least one option: B2B mission or sponsorship.'
     }
@@ -382,7 +382,7 @@
       (m.places ? '<li>' + ICON.seat + '<span><b>' + U.deleg + '</b>' + seatsTxt(m) + '</span></li>' : '') +
       (m.dateLimite ? '<li>' + ICON.clock + '<span><b>' + U.deadline + '</b>' + esc(fmtDate(m.dateLimite)) + (s === 'ouverte' && j !== null && j >= 0 ? ' (' + (EN ? 'D-' : 'J-') + j + ')' : '') + '</span></li>' : '') +
       '</ul><div class="ms-ctas">' +
-      '<a class="ms-btn ms-btn-gold" href="#' + (s === 'ouverte' ? (isOpen(m) ? 'forfaits' : 'inscription') : 'inscription') + '">' + (m.surDemande && s === 'ouverte' ? U.contactUs : s === 'ouverte' ? (isOpen(m) ? U.register : U.requestOffer) : (s === 'bientot' ? U.notify : U.notifyNext)) + ' &rarr;</a>' +
+      '<a class="ms-btn ms-btn-gold" href="#' + (s === 'ouverte' ? (isOpen(m) ? 'forfaits' : 'inscription') : 'inscription') + '">' + (m.surDemande && s === 'ouverte' ? (m.sponsoring ? U.contactUs : U.ixBtn) : s === 'ouverte' ? (isOpen(m) ? U.register : U.requestOffer) : (s === 'bientot' ? U.notify : U.notifyNext)) + ' &rarr;</a>' +
       (m.sponsoring ? '<a class="ms-btn ms-btn-ghost" href="#sponsoring">' + U.sponsorBtn + '</a>' : '') +
       '<a class="ms-btn ms-btn-ghost" href="' + docUrl(m, 'programme') + '" target="_blank" rel="noopener">' + ICON.doc + U.docProg + '</a></div>' +
       '</div>' + (m.image ? '<figure class="ms-hero-img"><img src="' + esc(m.image) + '" alt="' + esc(m.evenement ? m.evenement.nom : m.titre) + '" width="900" height="1125"></figure>' : '') + '</div></section>';
@@ -429,7 +429,8 @@
         }).join('') + '</ol><p class="ms-small">' + U.progNote + '</p></div></section>';
     }
 
-    h += packagesHtml(m, s);
+    // masquerFormules : aucun forfait affiché (formulaire d'intérêt seulement)
+    if (!m.masquerFormules) h += packagesHtml(m, s);
 
     var pr = m.pratique || {};
     var prItems = [['vol', U.flight, ICON.plane], ['hotel', U.hotel, ICON.bed], ['visa', U.visa, ICON.pass], ['sante', U.health, ICON.health], ['monnaie', U.money, ICON.coin], ['autres', U.good, ICON.info]].filter(function (x) { return pr[x[0]]; });
@@ -628,13 +629,14 @@
   function contactHtml(m) {
     var opts = [['mission', U.wantMission]].concat(((m.sponsoring && m.sponsoring.niveaux) || []).map(function (n, i) { return ['sp-' + i, U.wantSponsor + ' — ' + n.nom]; }));
     return '<div class="ms-form-grid"><div class="ms-form-aside">' +
-      '<p class="hero-kicker"><span class="rule"></span><span>' + U.contactKicker + '</span></p>' +
-      '<h2 class="ms-h2 serif">' + U.contactTitle + '</h2><p>' + U.contactText + '</p>' +
+      '<p class="hero-kicker"><span class="rule"></span><span>' + (m.sponsoring ? U.contactKicker : U.ixKicker) + '</span></p>' +
+      '<h2 class="ms-h2 serif">' + (m.sponsoring ? U.contactTitle : U.ixTitle) + '</h2><p>' + (m.sponsoring ? U.contactText : U.ixText) + '</p>' +
       '<p class="ms-small">' + U.question + ' <a href="mailto:' + esc(CFG.email) + '">' + esc(CFG.email) + '</a> · <a href="tel:' + esc((CFG.telephone || '').replace(/\s/g, '')) + '">' + esc(CFG.telephone) + '</a></p>' +
       '</div><form class="ms-form" id="msContact" novalidate>' +
+      (opts.length === 1 ? '<input type="checkbox" name="interet" value="' + esc(opts[0][1]) + '" data-key="' + opts[0][0] + '" checked hidden>' :
       '<div class="cf-field"><span class="ms-label">' + U.interestedIn + ' *</span><div class="ms-checks">' + opts.map(function (o) {
         return '<label class="ms-check"><input type="checkbox" name="interet" value="' + esc(o[1]) + '" data-key="' + o[0] + '"> <span>' + esc(o[1]) + '</span></label>';
-      }).join('') + '</div></div>' +
+      }).join('') + '</div></div>') +
       '<div class="cf-row"><div class="cf-field"><label for="c-nom">' + U.name + ' *</label><input id="c-nom" name="nom" required autocomplete="name"></div>' +
       '<div class="cf-field"><label for="c-fonction">' + U.role + '</label><input id="c-fonction" name="fonction" autocomplete="organization-title"></div></div>' +
       '<div class="cf-row"><div class="cf-field"><label for="c-ent">' + U.company + ' *</label><input id="c-ent" name="entreprise" required autocomplete="organization"></div>' +
@@ -642,7 +644,7 @@
       '<div class="cf-field"><label for="c-email">' + U.email + ' *</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>' +
       '<div class="cf-field"><label for="c-msg">' + U.message + '</label><textarea id="c-msg" name="message" rows="3"></textarea></div>' +
       '<p class="ms-error" id="msError" role="alert"></p>' +
-      pdNote() + '<button type="submit" class="cf-submit">' + U.contactBtn + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
+      pdNote() + '<button type="submit" class="cf-submit">' + (m.sponsoring ? U.contactBtn : U.ixBtn) + ' <span aria-hidden="true">&rarr;</span></button></form></div>';
   }
   function bindContact(m) {
     var form = document.getElementById('msContact'); if (!form) return;
