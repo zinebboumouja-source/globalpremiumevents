@@ -248,7 +248,8 @@
   }
   function unlock(m) { try { localStorage.setItem(unlockKey(m), '1'); } catch (e) {} UNLOCKED_NOW = true; }
   var UNLOCKED_NOW = false;
-  function isOpen(m) { return !m.surDemande && (UNLOCKED_NOW || unlocked(m)); }
+  // &acces=offre : lien privé qui affiche toujours l'offre complète (forfaits, prix, formulaire)
+  function isOpen(m) { return param('acces') === 'offre' || (!m.surDemande && (UNLOCKED_NOW || unlocked(m))); }
 
   function formules(m) {
     if (m.formules && m.formules.length) return m.formules;
@@ -382,7 +383,7 @@
       (m.places ? '<li>' + ICON.seat + '<span><b>' + U.deleg + '</b>' + seatsTxt(m) + '</span></li>' : '') +
       (m.dateLimite ? '<li>' + ICON.clock + '<span><b>' + U.deadline + '</b>' + esc(fmtDate(m.dateLimite)) + (s === 'ouverte' && j !== null && j >= 0 ? ' (' + (EN ? 'D-' : 'J-') + j + ')' : '') + '</span></li>' : '') +
       '</ul><div class="ms-ctas">' +
-      '<a class="ms-btn ms-btn-gold" href="#' + (s === 'ouverte' ? (isOpen(m) ? 'forfaits' : 'inscription') : 'inscription') + '">' + (m.surDemande && s === 'ouverte' ? (m.sponsoring ? U.contactUs : U.ixBtn) : s === 'ouverte' ? (isOpen(m) ? U.register : U.requestOffer) : (s === 'bientot' ? U.notify : U.notifyNext)) + ' &rarr;</a>' +
+      '<a class="ms-btn ms-btn-gold" href="#' + (s === 'ouverte' ? (isOpen(m) ? 'forfaits' : 'inscription') : 'inscription') + '">' + (m.surDemande && !isOpen(m) && s === 'ouverte' ? (m.sponsoring ? U.contactUs : U.ixBtn) : s === 'ouverte' ? (isOpen(m) ? U.register : U.requestOffer) : (s === 'bientot' ? U.notify : U.notifyNext)) + ' &rarr;</a>' +
       (m.sponsoring ? '<a class="ms-btn ms-btn-ghost" href="#sponsoring">' + U.sponsorBtn + '</a>' : '') +
       '<a class="ms-btn ms-btn-ghost" href="' + docUrl(m, 'programme') + '" target="_blank" rel="noopener">' + ICON.doc + U.docProg + '</a></div>' +
       '</div>' + (m.image ? '<figure class="ms-hero-img"><img src="' + esc(m.image) + '" alt="' + esc(m.evenement ? m.evenement.nom : m.titre) + '" width="900" height="1125"></figure>' : '') + '</div></section>';
@@ -448,7 +449,7 @@
     }
 
     // masquerFormules : aucun forfait affiché (formulaire d'intérêt seulement)
-    if (!m.masquerFormules) h += packagesHtml(m, s);
+    if (!m.masquerFormules || isOpen(m)) h += packagesHtml(m, s);
 
     var pr = m.pratique || {};
     var prItems = [['vol', U.flight, ICON.plane], ['hotel', U.hotel, ICON.bed], ['visa', U.visa, ICON.pass], ['sante', U.health, ICON.health], ['monnaie', U.money, ICON.coin], ['autres', U.good, ICON.info]].filter(function (x) { return pr[x[0]]; });
@@ -462,10 +463,10 @@
         return '<a class="ms-doc" href="' + docUrl(m, d[0]) + '" target="_blank" rel="noopener"><span class="ms-ic">' + ICON.doc + '</span><div><h3>' + d[1] + '</h3><p>' + d[2] + '</p><span class="ms-textlink">' + U.openPdf + ' &rarr;</span></div></a>';
       }).join('') + '</div></div></section>';
 
-    h += '<section class="ms-sec ms-sec-form" id="inscription"><div class="wrap">' + (m.surDemande && s === 'ouverte' ? contactHtml(m) : s === 'ouverte' ? (isOpen(m) ? formHtml(m) : leadHtml(m)) : interestHtml(m, s)) + '</div></section>';
+    h += '<section class="ms-sec ms-sec-form" id="inscription"><div class="wrap">' + (m.surDemande && !isOpen(m) && s === 'ouverte' ? contactHtml(m) : s === 'ouverte' ? (isOpen(m) ? formHtml(m) : leadHtml(m)) : interestHtml(m, s)) + '</div></section>';
 
     root.innerHTML = h;
-    if (m.surDemande && s === 'ouverte') bindContact(m); else if (s === 'ouverte') { if (isOpen(m)) bindForm(m); else bindLead(m, root); } else bindInterest(m);
+    if (m.surDemande && !isOpen(m) && s === 'ouverte') bindContact(m); else if (s === 'ouverte') { if (isOpen(m)) bindForm(m); else bindLead(m, root); } else bindInterest(m);
     revealInit();
   }
 
