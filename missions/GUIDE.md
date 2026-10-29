@@ -85,3 +85,10 @@ Exemple : `belgique-climat-2026`.
 - `surDemande: true` : aucun prix n'est affiché, même avec `&acces=offre`. Les boutons deviennent « Nous contacter » et le formulaire du bas devient une demande de détails (mission B2B et/ou niveau de sponsoring). L'email arrive avec l'objet `Demande — Bruxelles 2026 (…) — Entreprise`.
 - `sponsoring` : `titre`, `intro`, `niveaux` (nom, avantages, `recommande`) et `cta`. Les montants ne sont jamais écrits dans ce fichier.
 - `pourquoiTitre` et `secteursTitre` remplacent les titres « Pourquoi le … maintenant » et « Secteurs du sommet ».
+
+## Billetterie et paiement en ligne (idée pour les prochaines missions)
+
+Pour encaisser les inscriptions en ligne (carte bancaire, devises), une piste à étudier est **Angel Communities**, la plateforme de billetterie utilisée par l'Invest Ghana Summit 2026 pour ses billets en dollars :
+https://angelcommunities.org/event/ticket-booking/usd-invest-ghana-summit-igs-2026/KbC9oBd8
+
+Avant de l'utiliser : vérifier les frais prélevés, les devises et moyens de paiement acceptés (carte, mobile money), les délais de versement et la possibilité d'émettre des factures à l'entreprise.
