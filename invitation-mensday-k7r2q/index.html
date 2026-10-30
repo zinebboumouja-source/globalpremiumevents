@@ -76,6 +76,10 @@ body{
 .seal:focus-visible{outline:2px solid var(--champagne);outline-offset:6px}
 .seal::after{content:"";position:absolute;inset:-8%;border-radius:50%;border:1px solid rgba(227,210,174,.7);animation:pulse 2.2s ease-out infinite}
 @keyframes pulse{0%{transform:scale(.9);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+.lang{display:flex;gap:6px;justify-content:center;margin:-14px 0 0}
+.lang a{min-height:32px;display:inline-flex;align-items:center;padding:0 10px;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(227,210,174,.65);text-decoration:none;border-bottom:1px solid transparent}
+.lang a[aria-current]{color:var(--champagne);border-bottom-color:var(--champagne)}
+.lang a:focus-visible{outline:2px solid var(--champagne);outline-offset:2px}
 .hint{margin:0;font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--champagne);text-align:center;transition:opacity .4s}
 .is-open-page .hint{opacity:0}
 
@@ -181,6 +185,7 @@ body{
 <body>
 <main class="stage">
   <p class="brand">Global Premium Events</p>
+  <nav class="lang" aria-label="Langue"><a href="/invitation-mensday-k7r2q/" lang="fr" aria-current="page">Français</a><a href="/invitation-mensday-k7r2q/en/" lang="en">English</a></nav>
 
   <div class="scene" id="scene">
     <div class="envelope" aria-hidden="false">
