@@ -6,11 +6,11 @@
 <title>Invitation — International Men's Day Breakfast — Global Premium Events</title>
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="googlebot" content="noindex, nofollow">
-<meta name="description" content="Invitation personnelle au petit-déjeuner privé de l'International Men's Day, jeudi 19 novembre 2026, Royal Mansour Casablanca.">
+<meta name="description" content="Invitation personnelle au petit-déjeuner privé de l'International Men's Day, jeudi 19 novembre 2026, Casablanca.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Global Premium Events">
 <meta property="og:title" content="Vous êtes invité · International Men's Day Breakfast">
-<meta property="og:description" content="Jeudi 19 novembre 2026 · Le Rooftop, Royal Mansour Casablanca. Invitation personnelle.">
+<meta property="og:description" content="Jeudi 19 novembre 2026 · Casablanca. Un cercle restreint de vingt dirigeants. Invitation personnelle.">
 <meta property="og:image" content="https://globalpremiumevents.com/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
@@ -225,11 +225,11 @@ body{
       <div class="g1" style="width:100%">
         <div class="details">
           <div><span class="k">Date</span><span class="v">Jeudi 19 novembre 2026</span><span class="s">8h30 – 11h00</span></div>
-          <div><span class="k">Lieu</span><span class="v">Le Rooftop</span><span class="s">Royal Mansour Casablanca<br>27, avenue de l'Armée Royale</span></div>
+          <div><span class="k">Lieu</span><span class="v">Un rooftop d'exception</span><span class="s">Casablanca<br>Adresse communiquée aux participants confirmés</span></div>
         </div>
       </div>
       <div class="g1">
-        <p class="note">Un cercle restreint de vingt invités.<br>Invitation personnelle.</p>
+        <p class="note">Un cercle restreint de vingt dirigeants.<br>Invitation personnelle.</p>
         <p class="rsvp">Demandes avant le 12 novembre</p>
         <a class="cta" href="#demande" id="openReq" aria-controls="demande" aria-expanded="false">Demander une invitation</a>
       </div>
@@ -244,7 +244,7 @@ body{
 
 <section class="request" id="demande" aria-labelledby="demande-title" hidden>
   <h2 id="demande-title">Demander une invitation</h2>
-  <p class="intro">Le cercle est limité à vingt personnes. Chaque demande est étudiée, et nous vous répondons personnellement par email.</p>
+  <p class="intro">Le cercle est réservé à vingt dirigeants. Chaque demande fait l’objet d’une sélection, et nous vous répondons personnellement par email.</p>
   <form id="reqForm" novalidate>
     <fieldset>
       <legend>Vous souhaitez venir en tant que</legend>
@@ -363,10 +363,10 @@ body{
     fetch('https://formsubmit.co/ajax/info@globalpremiumevents.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)==='false')throw j;return j;});})
       .then(function(){
-        var msg={Participant:'Nous étudions votre demande et revenons vers vous par email avec la confirmation de votre place et les informations de règlement.',
-          Intervenant:'Merci pour votre proposition. Nous revenons vers vous très vite pour en parler.',
-          Sponsor:'Merci pour votre intérêt. Nous vous envoyons le dossier partenaire et vous proposons un échange.'}[cur];
-        form.outerHTML='<div class="thanks" role="status"><h3>Demande envoyée</h3><p>'+msg+'</p></div>';
+        var msg={Participant:'Les places étant réservées à un cercle restreint de dirigeants, chaque demande est examinée par notre équipe. Si votre demande est retenue, vous recevrez par email votre confirmation, le lieu et les modalités de participation.',
+          Intervenant:'Notre comité examine chaque proposition avec attention. Si votre intervention est retenue, nous reviendrons vers vous personnellement.',
+          Sponsor:'Les partenariats sont limités et exclusifs par secteur. Notre équipe étudie votre demande et vous contactera personnellement.'}[cur];
+        form.outerHTML='<div class="thanks" role="status"><h3>Demande reçue</h3><p>'+msg+'</p></div>';
       })
       .catch(function(){btn.disabled=false;btn.textContent=label;
         err.textContent='L\'envoi n\'a pas abouti. Votre messagerie va s\'ouvrir avec votre demande déjà rédigée.';
