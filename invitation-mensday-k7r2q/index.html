@@ -34,6 +34,7 @@
   color-scheme:dark;
 }
 html,body{min-height:100%;margin:0}
+[hidden]{display:none!important}
 body{
   background-color:var(--bg);
   background-image:linear-gradient(rgba(6,16,38,.3),rgba(6,16,38,.3)),url(blue-texture.jpg);
@@ -113,6 +114,50 @@ body{
 .btn:hover{background:rgba(227,210,174,.1)}
 .btn:focus-visible{outline:2px solid var(--champagne);outline-offset:3px}
 
+
+.cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 26px;background:var(--ink);color:var(--paper);text-decoration:none;
+  font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;border-radius:2px}
+.cta:hover{background:#0B1838}
+.cta:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* Request form */
+.request{color-scheme:light;width:min(640px,100%);box-sizing:border-box;margin:0 auto 64px;background:var(--paper);color:var(--ink);border-radius:3px;
+  padding:clamp(28px,6vw,48px) clamp(20px,6vw,44px);box-shadow:0 30px 70px rgba(2,8,24,.5),inset 0 0 0 10px var(--paper),inset 0 0 0 11px rgba(140,106,42,.55);scroll-margin-top:24px}
+.request h2{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(28px,6vw,38px);letter-spacing:.08em;text-transform:uppercase;text-align:center}
+.request .intro{margin:12px auto 0;max-width:46ch;text-align:center;font-size:14px;line-height:1.6;color:var(--ink-soft)}
+.request form{margin-top:28px;display:flex;flex-direction:column;gap:22px}
+.request fieldset{border:0;margin:0;padding:0;min-width:0}
+.request legend{padding:0;margin-bottom:12px;font-size:10px;font-weight:600;letter-spacing:.38em;text-transform:uppercase;color:var(--gold)}
+.roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.role{position:relative}
+.role input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.role label{display:flex;flex-direction:column;gap:6px;height:100%;box-sizing:border-box;padding:16px 14px;border:1px solid rgba(20,36,79,.22);border-radius:2px;cursor:pointer;transition:border-color .2s,background .2s}
+.role .rn{font-family:var(--display);font-size:22px}
+.role .rd{font-size:12px;line-height:1.45;color:var(--ink-soft)}
+.role input:checked+label{border-color:var(--gold);background:#FBF7EE;box-shadow:inset 0 0 0 1px var(--gold)}
+.role input:focus-visible+label{outline:2px solid var(--gold);outline-offset:2px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.field .opt{font-weight:400;letter-spacing:.04em;text-transform:none;color:var(--ink-soft)}
+.field input,.field select,.field textarea{font:inherit;font-size:15px;color:var(--ink);background:#FFFDF8;border:1px solid rgba(20,36,79,.25);border-radius:2px;padding:12px 12px;min-height:46px;box-sizing:border-box;width:100%}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--gold);outline-offset:0;border-color:var(--gold)}
+.is-invalid{border-color:#9B2C2C!important}
+.panel{display:flex;flex-direction:column;gap:16px;padding:18px;border-left:2px solid var(--gold);background:#FBF7EE}
+.panel p{margin:0;font-size:13px;line-height:1.55;color:var(--ink-soft)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5;color:var(--ink-soft)}
+.check input{width:18px;height:18px;margin-top:2px;flex:0 0 auto;accent-color:var(--ink)}
+.form-error{margin:0;min-height:1em;font-size:13px;color:#9B2C2C}
+.submit{align-self:center;min-height:48px;padding:0 32px;border:0;border-radius:2px;background:var(--ink);color:var(--paper);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;cursor:pointer}
+.submit:hover{background:#0B1838}
+.submit:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.submit[disabled]{opacity:.6;cursor:wait}
+.thanks{text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;padding-block:12px}
+.thanks h3{margin:0;font-family:var(--display);font-weight:400;font-size:28px}
+.thanks p{margin:0;font-size:14px;line-height:1.6;color:var(--ink-soft);max-width:44ch}
+@media (max-width:560px){.roles{grid-template-columns:minmax(0,1fr)}.grid2{grid-template-columns:minmax(0,1fr)}}
+
 @media (max-width:440px){
   .details{grid-template-columns:minmax(0,1fr)}
   .details>div+div{border-left:0;border-top:1px solid rgba(140,106,42,.45)}
@@ -182,8 +227,8 @@ body{
       </div>
       <div class="g1">
         <p class="note">Un cercle restreint de vingt invités.<br>Invitation personnelle.</p>
-        <p class="rsvp">RSVP avant le 12 novembre</p>
-        <p class="contact"><a href="mailto:info@globalpremiumevents.com?subject=RSVP%20%E2%80%93%20Men%27s%20Day%20Breakfast%2019%20novembre">info@globalpremiumevents.com</a></p>
+        <p class="rsvp">Demandes avant le 12 novembre</p>
+        <a class="cta" href="#demande">Demander une invitation</a>
       </div>
     </article>
   </div>
@@ -193,6 +238,55 @@ body{
     <button class="btn" id="action" type="button">Ouvrir l'invitation</button>
   </div>
 </main>
+
+<section class="request" id="demande" aria-labelledby="demande-title">
+  <h2 id="demande-title">Demander une invitation</h2>
+  <p class="intro">Le cercle est limité à vingt personnes. Chaque demande est étudiée, et nous vous répondons personnellement par email.</p>
+  <form id="reqForm" novalidate>
+    <fieldset>
+      <legend>Vous souhaitez venir en tant que</legend>
+      <div class="roles">
+        <div class="role"><input type="radio" name="role" id="r-part" value="Participant" checked><label for="r-part"><span class="rn">Participant</span><span class="rd">Participation de 1 000 DH, petit-déjeuner et cadeau inclus.</span></label></div>
+        <div class="role"><input type="radio" name="role" id="r-speak" value="Intervenant"><label for="r-speak"><span class="rn">Intervenant</span><span class="rd">Partager votre expérience pendant la conversation.</span></label></div>
+        <div class="role"><input type="radio" name="role" id="r-spon" value="Sponsor"><label for="r-spon"><span class="rn">Sponsor</span><span class="rd">Associer votre marque à ce rendez-vous.</span></label></div>
+      </div>
+    </fieldset>
+
+    <div class="grid2">
+      <div class="field"><label for="f-prenom">Prénom</label><input id="f-prenom" name="Prénom" autocomplete="given-name" required></div>
+      <div class="field"><label for="f-nom">Nom</label><input id="f-nom" name="Nom" autocomplete="family-name" required></div>
+      <div class="field"><label for="f-fonction">Fonction</label><input id="f-fonction" name="Fonction" autocomplete="organization-title" required></div>
+      <div class="field"><label for="f-org">Entreprise ou institution</label><input id="f-org" name="Entreprise" autocomplete="organization" required></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-tel">Téléphone / WhatsApp</label><input id="f-tel" name="Téléphone" type="tel" autocomplete="tel" required></div>
+    </div>
+
+    <div class="panel" id="p-part">
+      <p>Après confirmation de votre place, nous vous envoyons les informations de règlement par virement.</p>
+      <div class="field"><label for="f-diet">Régime alimentaire <span class="opt">(facultatif)</span></label>
+        <select id="f-diet" name="Régime alimentaire"><option value="">Aucun</option><option>Sans sucre</option><option>Sans gluten</option><option>Végan</option><option>Végétarien</option><option>Autre (préciser ci-dessous)</option></select></div>
+    </div>
+
+    <div class="panel" id="p-speak" hidden>
+      <div class="field"><label for="f-sujet">Ce que vous aimeriez partager</label><textarea id="f-sujet" name="Sujet proposé" placeholder="Votre expérience, votre angle, en quelques lignes"></textarea></div>
+      <div class="field"><label for="f-li">Profil LinkedIn <span class="opt">(facultatif)</span></label><input id="f-li" name="LinkedIn" type="url" placeholder="https://www.linkedin.com/in/…"></div>
+    </div>
+
+    <div class="panel" id="p-spon" hidden>
+      <div class="field"><label for="f-niveau">Niveau qui vous intéresse</label>
+        <select id="f-niveau" name="Niveau de sponsoring"><option value="Sponsor principal (15 000 DH)">Sponsor principal · 15 000 DH · 2 places</option><option value="Partenaire (5 000 DH)">Partenaire · 5 000 DH · 1 place</option><option value="Partenaire en nature">Partenaire en nature (produits, cadeaux)</option><option value="À discuter">À discuter</option></select></div>
+      <p>Le sponsor principal bénéficie de l'exclusivité dans son secteur. Nous vous envoyons le dossier complet.</p>
+    </div>
+
+    <div class="field"><label for="f-msg">Message <span class="opt">(facultatif)</span></label><textarea id="f-msg" name="Message"></textarea></div>
+
+    <label class="check" for="f-photo"><input type="checkbox" id="f-photo" name="Photos" value="Accepte d'apparaître sur les photos"> J'accepte d'apparaître sur les photos de l'événement.</label>
+    <label class="check" for="f-consent"><input type="checkbox" id="f-consent" name="Consentement" value="Oui" required> J'accepte que Global Premium Events utilise ces informations pour traiter ma demande.</label>
+
+    <p class="form-error" id="reqError" role="alert"></p>
+    <button class="submit" type="submit">Envoyer ma demande</button>
+  </form>
+</section>
 
 <script>
 (function(){
@@ -221,6 +315,53 @@ body{
   }
   btn.onclick=open;
   seal.addEventListener('click',open);
+})();
+</script>
+
+<script>
+(function(){
+  var form=document.getElementById('reqForm');
+  var panels={Participant:'p-part',Intervenant:'p-speak',Sponsor:'p-spon'};
+  function role(){var r=form.querySelector('input[name=role]:checked');return r?r.value:'Participant';}
+  function sync(){var cur=role();Object.keys(panels).forEach(function(k){document.getElementById(panels[k]).hidden=(k!==cur);});
+    document.getElementById('f-sujet').required=(cur==='Intervenant');}
+  form.querySelectorAll('input[name=role]').forEach(function(r){r.addEventListener('change',sync);});
+  var q=(location.hash||'').replace('#','');
+  if(q==='speaker'){document.getElementById('r-speak').checked=true;} if(q==='sponsor'){document.getElementById('r-spon').checked=true;}
+  sync();
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=document.getElementById('reqError');err.textContent='';
+    form.querySelectorAll('.is-invalid').forEach(function(el){el.classList.remove('is-invalid');});
+    var bad=Array.prototype.filter.call(form.querySelectorAll('[required]'),function(el){
+      if(el.closest('[hidden]'))return false;
+      if(el.type==='checkbox')return !el.checked;
+      if(el.type==='email')return !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+      return !el.value.trim();});
+    if(bad.length){bad.forEach(function(el){el.classList.add('is-invalid');});
+      err.textContent='Merci de compléter les champs indiqués en rouge et d\'accepter le traitement de votre demande.';bad[0].focus();return;}
+    var cur=role(),data={};
+    new FormData(form).forEach(function(v,k){
+      var el=form.querySelector('[name="'+k+'"]');
+      if(el&&el.closest('[hidden]'))return;
+      if(v!=='')data[k]=v;});
+    data._subject='Men\'s Day Breakfast · Demande '+cur+' · '+(data['Prénom']||'')+' '+(data['Nom']||'');
+    data._replyto=data.email;data._captcha='false';data._template='table';
+    var lines=Object.keys(data).filter(function(k){return k.charAt(0)!=='_';}).map(function(k){return k+' : '+data[k];});
+    var mailto='mailto:info@globalpremiumevents.com?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(lines.join('\n'));
+    var btn=form.querySelector('.submit'),label=btn.textContent;btn.disabled=true;btn.textContent='Envoi en cours…';
+    fetch('https://formsubmit.co/ajax/info@globalpremiumevents.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)==='false')throw j;return j;});})
+      .then(function(){
+        var msg={Participant:'Nous étudions votre demande et revenons vers vous par email avec la confirmation de votre place et les informations de règlement.',
+          Intervenant:'Merci pour votre proposition. Nous revenons vers vous très vite pour en parler.',
+          Sponsor:'Merci pour votre intérêt. Nous vous envoyons le dossier partenaire et vous proposons un échange.'}[cur];
+        form.outerHTML='<div class="thanks" role="status"><h3>Demande envoyée</h3><p>'+msg+'</p></div>';
+      })
+      .catch(function(){btn.disabled=false;btn.textContent=label;
+        err.textContent='L\'envoi n\'a pas abouti. Votre messagerie va s\'ouvrir avec votre demande déjà rédigée.';
+        window.location.href=mailto;});
+  });
 })();
 </script>
 </body>
