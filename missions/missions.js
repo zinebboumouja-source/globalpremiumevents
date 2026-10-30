@@ -60,7 +60,7 @@
       waitTitle: 'Liste d’attente', notifyTitle: 'Être informé en priorité',
       soonMsg: 'Les inscriptions ouvrent bientôt. Laissez vos coordonnées : vous recevrez le programme et les tarifs avant tout le monde.',
       fullMsg: 'La délégation est complète. Inscrivez-vous sur la liste d’attente ou pour être prévenu des prochaines missions.',
-      closedMsg: 'Les inscriptions à cette mission sont closes. Laissez vos coordonnées pour être prévenu des prochaines missions.',
+      fermeeMsg: 'Les inscriptions à cette mission sont closes. Pour être informé de nos prochaines missions d’affaires, laissez-nous vos coordonnées.', closedMsg: 'Les inscriptions à cette mission sont closes. Laissez vos coordonnées pour être prévenu des prochaines missions.',
       keepMe: 'Me tenir informé', noted: 'C’est noté.', notedText: 'Vous serez parmi les premiers informés.',
       preview: 'Aperçu : cette page n’est visible que sur votre ordinateur.', backEditor: 'Retour à l’éditeur',
       notFound: 'Mission introuvable', notFoundText: 'Cette mission n’existe pas ou n’est plus en ligne.', allMissions: 'Voir toutes les missions',
@@ -127,7 +127,7 @@
       waitTitle: 'Waiting list', notifyTitle: 'Get priority information',
       soonMsg: 'Registration opens soon. Leave your details and receive the programme and prices before anyone else.',
       fullMsg: 'The delegation is fully booked. Join the waiting list or be informed of upcoming missions.',
-      closedMsg: 'Registration for this mission is closed. Leave your details to hear about upcoming missions.',
+      fermeeMsg: 'Registration for this mission is closed. To hear about our upcoming business missions, leave us your details.', closedMsg: 'Registration for this mission is closed. Leave your details to hear about upcoming missions.',
       keepMe: 'Keep me informed', noted: 'Noted, thank you.', notedText: 'You will be among the first to know.',
       preview: 'Preview: this page is only visible on your computer.', backEditor: 'Back to the editor',
       notFound: 'Mission not found', notFoundText: 'This mission does not exist or is no longer online.', allMissions: 'See all missions',
@@ -225,6 +225,7 @@
 
   function statut(m) {
     if (m.dateFin && m.dateFin < today()) return 'terminee';
+    if (m.fermee) return 'cloturee';
     if (m.statut === 'ouverte' && m.dateLimite && m.dateLimite < today()) return 'cloturee';
     return m.statut || 'bientot';
   }
@@ -249,7 +250,7 @@
   function unlock(m) { try { localStorage.setItem(unlockKey(m), '1'); } catch (e) {} UNLOCKED_NOW = true; }
   var UNLOCKED_NOW = false;
   // &acces=offre : lien privé qui affiche toujours l'offre complète (forfaits, prix, formulaire)
-  function isOpen(m) { return param('acces') === 'offre' || (!m.surDemande && (UNLOCKED_NOW || unlocked(m))); }
+  function isOpen(m) { if (m.fermee) return false; return param('acces') === 'offre' || (!m.surDemande && (UNLOCKED_NOW || unlocked(m))); }
 
   function formules(m) {
     if (m.formules && m.formules.length) return m.formules;
@@ -297,13 +298,13 @@
       var pm = prixMin(m), cur = (m.prix && m.prix.devise) || 'MAD';
       return '<a class="ms-card" href="' + pageUrl(m) + '">' +
         '<div class="ms-card-top"><span class="ms-badge ms-badge-' + s + '">' + statutLabel(s) + '</span>' +
-        (m.evenement ? '<span class="ms-card-event">' + esc(m.evenement.nom) + '</span>' : '') + '</div>' +
+        (m.evenement && !m.fermee ? '<span class="ms-card-event">' + esc(m.evenement.nom) + '</span>' : '') + '</div>' +
         '<h3 class="ms-card-country serif">' + esc(m.pays) + '</h3><p class="ms-card-city">' + esc(m.ville) + '</p>' +
         '<ul class="ms-card-meta"><li>' + ICON.cal + '<span>' + esc(fmtRange(m.dateDebut, m.dateFin)) + '</span></li>' +
         (m.places ? '<li>' + ICON.seat + '<span>' + seatsTxt(m) + '</span></li>' : '') +
         (s === 'ouverte' && m.dateLimite ? '<li class="' + (urgent ? 'is-urgent' : '') + '">' + ICON.clock + '<span>' + U.closes + ' ' + esc(fmtDate(m.dateLimite)) + (urgent ? ' — ' + (EN ? 'D-' : 'J-') + j : '') + '</span></li>' : '') +
         '</ul>' +
-        (m.secteurs && m.secteurs.length ? '<p class="ms-card-sectors">' + m.secteurs.slice(0, 3).map(esc).join(' · ') + (m.secteurs.length > 3 ? ' …' : '') + '</p>' : '') +
+        (m.secteurs && m.secteurs.length && !m.fermee ? '<p class="ms-card-sectors">' + m.secteurs.slice(0, 3).map(esc).join(' · ') + (m.secteurs.length > 3 ? ' …' : '') + '</p>' : '') +
         '<div class="ms-card-foot"><span class="ms-card-price">' + (isFinite(pm) && unlocked(m) ? U.from + ' <b>' + money(pm, cur) + '</b>' : '') + '</span>' +
         '<span class="ms-card-link">' + (s === 'ouverte' ? U.register.split(' ')[0] + (EN ? '' : '') : U.seeMission) + ' &rarr;</span></div></a>';
     }
@@ -359,6 +360,18 @@
       return;
     }
     var s = statut(m), j = daysUntil(m.dateLimite);
+    // fermee : mission close, aucun détail affiché (ni événement, ni forfaits, ni documents)
+    if (m.fermee) {
+      var tf = m.titreFerme || m.pays;
+      document.title = tf + ' — Global Premium Events';
+      document.documentElement.lang = LANG;
+      var mdf = document.querySelector('meta[name="description"]'); if (mdf) mdf.setAttribute('content', U.fermeeMsg);
+      root.innerHTML = '<section class="ms-hero"><div class="wrap"><div class="ms-hero-txt"><div class="hero-kicker"><span class="rule"></span><span>' + U.kicker + ' · ' + esc(m.pays) + '</span><span class="ms-badge ms-badge-cloturee">' + U.closed + '</span>' + langToggle() + '</div>' +
+        '<h1 class="ms-title serif">' + esc(tf) + '</h1><p class="ms-lede">' + U.closed + '.</p>' +
+        '<p><a class="ms-btn ms-btn-ghost" href="/missions/' + (EN ? '?lang=en' : '') + '">' + U.allMissions + ' &rarr;</a></p></div></div></section>' +
+        '<section class="ms-sec ms-sec-form" id="inscription"><div class="wrap">' + interestHtml(m, 'cloturee') + '</div></section>';
+      bindInterest(m); revealInit(); return;
+    }
     document.title = m.titre + ' — Global Premium Events';
     document.documentElement.lang = LANG;
     var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute('content', m.accroche || '');
@@ -725,6 +738,7 @@
   function renderDoc(root) {
     var m = getMission(param('id')), doc = param('doc') || 'note';
     if (!m) { root.innerHTML = '<p style="padding:40px">' + U.notFound + '.</p>'; return; }
+    if (m.fermee) { root.innerHTML = '<div class="dc-toolbar"><a href="' + pageUrl(m) + '">&larr; ' + U.dBack + '</a><span></span><span></span></div><article class="dc-page"><p class="dc-intro" style="margin-top:28px">' + U.fermeeMsg + '</p></article>'; return; }
     document.documentElement.lang = LANG;
     var cur = (m.prix && m.prix.devise) || 'MAD', F = formules(m), TT = U.dTitle;
     document.title = TT[doc] + ' — ' + m.titre;

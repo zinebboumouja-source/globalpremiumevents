@@ -55,6 +55,8 @@ window.GPE_MISSIONS = [
     enLigne: true,                    // false = masquée du site ; true = en ligne
     surDemande: true,                 // pas de prix en ligne : formulaire d'intérêt, l'équipe recontacte
     masquerFormules: true,            // n'affiche pas les forfaits sur la page
+    fermee: true,                     // mission close : page minimale « Inscriptions closes », aucun détail affiché
+    titreFerme: 'Mission d’affaires au Ghana',
     pays: 'Ghana',
     ville: 'Accra',
     langue: 'Anglais',
@@ -301,6 +303,7 @@ window.GPE_MISSIONS = [
         { secteur: 'Digital economy and services', texte: 'FinTech and mobile money, data centres and digital business services.' }
       ],
       annonce: 'Officially opened by H.E. President John Dramani Mahama, with Aliko Dangote announced as Presidential Special Guest.',
+      titreFerme: 'Business mission to Ghana',
       reference: {
         surtitre: 'Our engagement with Ghana',
         titre: 'A relationship already engaged at the highest level',
