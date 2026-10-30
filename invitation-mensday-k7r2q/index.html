@@ -200,10 +200,12 @@ body{
           <circle cx="60" cy="60" r="36" fill="url(#well)"/>
           <circle cx="60" cy="60" r="36" fill="none" stroke="#6B4E18" stroke-width="1.6"/>
           <circle cx="60.9" cy="60.9" r="36.6" fill="none" stroke="#FBE7B0" stroke-opacity=".45"/>
-          <circle cx="60" cy="60" r="31" fill="none" stroke="#6B4E18" stroke-width=".8" opacity=".7"/>
-          <text x="59.2" y="66.2" text-anchor="middle" font-family="Italiana, serif" font-size="20" letter-spacing="1.5" fill="#5C4214">GPE</text>
-          <text x="60.8" y="67.8" text-anchor="middle" font-family="Italiana, serif" font-size="20" letter-spacing="1.5" fill="#FFF1C8" opacity=".55">GPE</text>
-          <text x="60" y="67" text-anchor="middle" font-family="Italiana, serif" font-size="20" letter-spacing="1.5" fill="#B8903F">GPE</text>
+          <filter id="tdark" x="0" y="0" width="100%" height="100%"><feColorMatrix type="matrix" values="0 0 0 0 .36 0 0 0 0 .26 0 0 0 0 .08 0 0 0 1 0"/></filter>
+          <filter id="tlight" x="0" y="0" width="100%" height="100%"><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .78 0 0 0 .55 0"/></filter>
+          <filter id="tmain" x="0" y="0" width="100%" height="100%"><feColorMatrix type="matrix" values="0 0 0 0 .72 0 0 0 0 .56 0 0 0 0 .25 0 0 0 1 0"/></filter>
+          <image href="/invitation-mensday-k7r2q/seal-logo.png" x="28.4" y="28.4" width="62" height="62" filter="url(#tdark)"/>
+          <image href="/invitation-mensday-k7r2q/seal-logo.png" x="29.6" y="29.6" width="62" height="62" filter="url(#tlight)"/>
+          <image href="/invitation-mensday-k7r2q/seal-logo.png" x="29" y="29" width="62" height="62" filter="url(#tmain)"/>
           <ellipse cx="40" cy="30" rx="15" ry="5.5" fill="#FFFFFF" opacity=".34" filter="url(#soft)" transform="rotate(-32 40 30)"/>
         </svg>
       </button>
