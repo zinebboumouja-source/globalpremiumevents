@@ -123,6 +123,9 @@ body{
 /* Request form */
 .request{color-scheme:light;width:min(640px,100%);box-sizing:border-box;margin:0 auto 64px;background:var(--paper);color:var(--ink);border-radius:3px;
   padding:clamp(28px,6vw,48px) clamp(20px,6vw,44px);box-shadow:0 30px 70px rgba(2,8,24,.5),inset 0 0 0 10px var(--paper),inset 0 0 0 11px rgba(140,106,42,.55);scroll-margin-top:24px}
+.request.is-shown{animation:reqIn .7s ease both}
+@keyframes reqIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.request.is-shown{animation:none}}
 .request h2{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(28px,6vw,38px);letter-spacing:.08em;text-transform:uppercase;text-align:center}
 .request .intro{margin:12px auto 0;max-width:46ch;text-align:center;font-size:14px;line-height:1.6;color:var(--ink-soft)}
 .request form{margin-top:28px;display:flex;flex-direction:column;gap:22px}
@@ -228,7 +231,7 @@ body{
       <div class="g1">
         <p class="note">Un cercle restreint de vingt invités.<br>Invitation personnelle.</p>
         <p class="rsvp">Demandes avant le 12 novembre</p>
-        <a class="cta" href="#demande">Demander une invitation</a>
+        <a class="cta" href="#demande" id="openReq" aria-controls="demande" aria-expanded="false">Demander une invitation</a>
       </div>
     </article>
   </div>
@@ -239,7 +242,7 @@ body{
   </div>
 </main>
 
-<section class="request" id="demande" aria-labelledby="demande-title">
+<section class="request" id="demande" aria-labelledby="demande-title" hidden>
   <h2 id="demande-title">Demander une invitation</h2>
   <p class="intro">Le cercle est limité à vingt personnes. Chaque demande est étudiée, et nous vous répondons personnellement par email.</p>
   <form id="reqForm" novalidate>
@@ -321,6 +324,13 @@ body{
 <script>
 (function(){
   var form=document.getElementById('reqForm');
+  var sec=document.getElementById('demande'),opener=document.getElementById('openReq');
+  opener.addEventListener('click',function(e){
+    e.preventDefault();
+    sec.hidden=false;sec.classList.add('is-shown');opener.setAttribute('aria-expanded','true');
+    sec.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+    setTimeout(function(){document.getElementById('f-prenom').focus({preventScroll:true});},600);
+  });
   var panels={Participant:'p-part',Intervenant:'p-speak',Sponsor:'p-spon'};
   function role(){var r=form.querySelector('input[name=role]:checked');return r?r.value:'Participant';}
   function sync(){var cur=role();Object.keys(panels).forEach(function(k){document.getElementById(panels[k]).hidden=(k!==cur);});
