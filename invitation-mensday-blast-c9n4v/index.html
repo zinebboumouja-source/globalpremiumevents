@@ -6,11 +6,11 @@
 <title>Invitation — Men's Day Blast — Global Premium Events</title>
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="googlebot" content="noindex, nofollow">
-<meta name="description" content="Personal invitation to Men's Day Blast, Casablanca and Cabo Negro, November 2026.">
+<meta name="description" content="Personal invitation to Men's Day Blast, Cabo Negro, 19 November 2026.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Global Premium Events">
 <meta property="og:title" content="An invitation awaits you">
-<meta property="og:description" content="Global Premium Events · Men's Day Blast · Casablanca · Cabo Negro">
+<meta property="og:description" content="Global Premium Events · Men's Day Blast · Thursday 19 November 2026 · Cabo Negro">
 <meta property="og:url" content="https://globalpremiumevents.com/invitation-mensday-blast-c9n4v/">
 <meta property="og:image" content="https://globalpremiumevents.com/invitation-mensday-blast-c9n4v/og-envelope.jpg">
 <meta property="og:image:secure_url" content="https://globalpremiumevents.com/invitation-mensday-blast-c9n4v/og-envelope.jpg">
@@ -226,7 +226,7 @@ body{
         <p class="lede">is delighted to invite you to the</p>
         <h1 class="title">Men's Day<br>Blast</h1>
         <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
-        <p class="label">Casablanca · Cabo Negro</p>
+        <p class="label">Cabo Negro</p>
       </div>
       <div class="g1">
         <p class="theme">The leader who is well</p>
@@ -234,8 +234,8 @@ body{
       </div>
       <div class="g1" style="width:100%">
         <div class="details">
-          <div><span class="k">Date</span><span class="v">From 19 November 2026</span><span class="s">International Men's Day</span></div>
-          <div><span class="k">Venues</span><span class="v">Casablanca · Cabo Negro</span><span class="s">Exceptional settings<br>Details shared with confirmed guests</span></div>
+          <div><span class="k">Date</span><span class="v">Thursday 19 November 2026</span><span class="s">International Men's Day</span></div>
+          <div><span class="k">Venue</span><span class="v">Cabo Negro</span><span class="s">An exceptional setting<br>Details shared with confirmed guests</span></div>
         </div>
       </div>
       <div class="g1">
@@ -265,14 +265,6 @@ body{
       </div>
     </fieldset>
 
-    <fieldset>
-      <legend>Your city</legend>
-      <div class="roles roles2">
-        <div class="role"><input type="radio" name="Ville" id="c-casa" value="Casablanca" checked><label for="c-casa"><span class="rn">Casablanca</span></label></div>
-        <div class="role"><input type="radio" name="Ville" id="c-cabo" value="Cabo Negro"><label for="c-cabo"><span class="rn">Cabo Negro</span></label></div>
-      </div>
-    </fieldset>
-
     <div class="grid2">
       <div class="field"><label for="f-prenom">First name</label><input id="f-prenom" name="Prénom" autocomplete="given-name" required></div>
       <div class="field"><label for="f-nom">Last name</label><input id="f-nom" name="Nom" autocomplete="family-name" required></div>
@@ -283,7 +275,7 @@ body{
     </div>
 
     <div class="panel" id="p-part">
-      <p>The venue, date and programme for your city will be sent to you personally by email.</p>
+      <p>The venue and programme will be sent to you personally by email.</p>
       <div class="field"><label for="f-diet">Dietary requirements <span class="opt">(optional)</span></label>
         <select id="f-diet" name="Régime alimentaire"><option value="">None</option><option>Sugar-free</option><option>Gluten-free</option><option>Vegan</option><option>Vegetarian</option><option>Other (please specify below)</option></select></div>
     </div>
@@ -373,7 +365,7 @@ body{
       var el=form.querySelector('[name="'+k+'"]');
       if(el&&el.closest('[hidden]'))return;
       if(v!=='')data[k]=v;});
-    data._subject='Men\'s Day Blast · VVIP · '+(data['Ville']||'')+' · '+cur+' · '+(data['Prénom']||'')+' '+(data['Nom']||'');
+    data._subject='Men\'s Day Blast · Cabo Negro · VVIP · '+cur+' · '+(data['Prénom']||'')+' '+(data['Nom']||'');
     data._replyto=data.email;data._captcha='false';data._template='table';
     var lines=Object.keys(data).filter(function(k){return k.charAt(0)!=='_';}).map(function(k){return k+' : '+data[k];});
     var mailto='mailto:info@globalpremiumevents.com?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(lines.join('\n'));
@@ -381,7 +373,7 @@ body{
     fetch('https://formsubmit.co/ajax/info@globalpremiumevents.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)==='false')throw j;return j;});})
       .then(function(){
-        var msg={Participant:'Your attendance is confirmed. We will personally send you the venue, date and programme for your city. We look forward to welcoming you.',
+        var msg={Participant:'Your attendance is confirmed. We will personally send you the venue and the programme. We look forward to welcoming you.',
           Intervenant:'Thank you for your proposal. We will be in touch personally to prepare your contribution.',
           Sponsor:'Thank you for your interest. We will contact you personally to present the partnership details.'}[cur];
         form.outerHTML='<div class="thanks" role="status"><h3>Thank you</h3><p>'+msg+'</p></div>';
