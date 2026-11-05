@@ -277,6 +277,9 @@
     .hero2 .grid{grid-template-columns:1fr}
     .shapes{height:460px}
   }
+  .coach .photo .asma-img{position:relative;z-index:1;height:600px;width:auto;max-width:none;filter:drop-shadow(0 24px 30px rgba(0,0,0,.3))}
+  .coach .photo .badge-c{z-index:2}
+  @media (max-width:600px){.coach .photo .asma-img{height:480px}}
 </style>
 </head>
 <body data-lang="fr">
@@ -439,10 +442,7 @@
     </div>
     <div class="photo">
       <div class="halo" aria-hidden="true"></div><div class="arch" aria-hidden="true"></div>
-      <div class="ph-img">
-        <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-        <span><span class="fr">Photo d’Asma en tenue de sport</span><span class="en">Photo of Asma in sportswear</span><br><i class="ph">[à ajouter]</i></span>
-      </div>
+      <img class="asma-img" src="/assets/img/asma-boumouja-coach.webp" alt="Asma Boumouja, coach sportive, en tenue de sport" width="900" height="1125">
       <div class="badge-c">Asma Boumouja<small>Coach · Inclusion</small></div>
     </div>
   </div>
