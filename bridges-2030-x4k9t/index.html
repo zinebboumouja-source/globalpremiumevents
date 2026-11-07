@@ -20,7 +20,7 @@
 <style>
   :root{
     --deep:#123A22; --deep-2:#1B4A2D; --deep-3:#24583A;
-    --pitch:#6FA83A; --lime:#A9D96B; --sun:#F2B01E; --red:#C1272D;
+    --pitch:#6FA83A; --lime:#A9D96B; --sun:#C1272D; --red:#C1272D;
     --ink:#132018; --dim:#55615A; --line:#E0E5DC; --paper:#F5F4EC; --white:#FFFFFF;
   }
   *{box-sizing:border-box}
@@ -30,7 +30,7 @@
   img{max-width:100%}
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
   [data-lang="en"] .fr, [data-lang="fr"] .en{display:none !important}
-  .ph{background:rgba(242,176,30,.22);border:1px dashed var(--sun);border-radius:4px;padding:1px 8px;font-style:normal;color:inherit}
+  .ph{background:rgba(169,217,107,.22);border:1px dashed var(--pitch);border-radius:4px;padding:1px 8px;font-style:normal;color:inherit}
   .disp{font-family:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;text-transform:uppercase;font-weight:900;letter-spacing:.005em}
   .outline{color:transparent;-webkit-text-stroke:2px currentColor}
   .chip{display:inline-flex;align-items:center;gap:8px;font:600 12px 'Space Grotesk',Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:#fff;color:var(--deep);border:1px solid var(--line)}
@@ -86,7 +86,7 @@
   .c1{background:#fff;border:1px solid var(--line)} .c1 .ic{background:#EEF6E4;color:var(--deep)} .c1 p{color:var(--dim)}
   .c2{background:var(--lime);color:var(--deep)} .c2 .ic{background:rgba(18,58,34,.1)} .c2 p{color:#2D4A33}
   .c3{background:var(--deep);color:#fff} .c3 .ic{background:rgba(169,217,107,.15);color:var(--lime)} .c3 p{color:#C3D6C8}
-  .c4{background:var(--sun);color:var(--deep)} .c4 .ic{background:rgba(18,58,34,.1)} .c4 p{color:#4A3A10}
+  .c4{background:var(--red);color:#fff} .c4 .ic{background:rgba(255,255,255,.15)} .c4 p{color:#F6DADB}
 
   /* About / why */
   .about{background:#fff}
@@ -100,7 +100,7 @@
   .tile.lime{background:var(--lime);color:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
   .tile.lime b{font:900 50px/1 'Big Shoulders Display',Impact,sans-serif}
   .tile.lime small{font:600 14px 'Space Grotesk',Arial,sans-serif}
-  .tile.sun{background:var(--sun);color:var(--deep);display:flex;flex-direction:column;justify-content:center;padding:22px}
+  .tile.sun{background:var(--red);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:22px}
   .tile.sun b{font:900 44px/1 'Big Shoulders Display',Impact,sans-serif}
   .tile.sun small{font:600 14px 'Space Grotesk',Arial,sans-serif}
   .author{display:flex;align-items:center;gap:14px;margin-top:26px;flex-wrap:wrap}
@@ -137,7 +137,7 @@
   .ini h3{font:700 22px 'Space Grotesk',Arial,sans-serif;margin:4px 0 0;color:var(--deep)}
   .ini p{margin:0;color:var(--dim)}
   .ini.feat{grid-column:span 2;background:var(--deep);border:0;color:#fff;position:relative;overflow:hidden}
-  .ini.feat:after{content:"";position:absolute;right:0;bottom:0;width:240px;height:100%;background:var(--sun);clip-path:polygon(100% 25%,100% 100%,0 100%);opacity:.95}
+  .ini.feat:after{content:"";position:absolute;right:0;bottom:0;width:240px;height:100%;background:var(--red);clip-path:polygon(100% 25%,100% 100%,0 100%);opacity:.95}
   .ini.feat > *{position:relative;z-index:1}
   .ini.feat h3{font-family:'Big Shoulders Display',Impact,sans-serif;text-transform:uppercase;font-weight:900;font-size:56px;line-height:1;color:#fff}
   .ini.feat h3 em{font-style:normal;color:var(--lime)}
@@ -270,7 +270,7 @@
   .hp-inner{position:relative;padding-top:110px;padding-bottom:150px;width:100%}
   .hero-photo h1{font-size:clamp(68px,10vw,140px);line-height:.88;margin:22px 0 10px;color:#fff}
   .hero-photo h1 em{font-style:normal;color:var(--lime)}
-  .hp-tag{font:600 clamp(14px,1.6vw,18px) 'Space Grotesk',Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--sun);margin:0 0 18px}
+  .hp-tag{font:600 clamp(14px,1.6vw,18px) 'Space Grotesk',Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--lime);margin:0 0 18px}
   .hero-photo .sub{font:500 clamp(17px,2vw,21px)/1.5 'Space Grotesk',Arial,sans-serif;color:#D6E4DA;max-width:540px;margin:0 0 32px}
   .hero-photo .ctas{display:flex;gap:14px;flex-wrap:wrap}
   .hero-photo .chip{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18)}
@@ -298,6 +298,8 @@
   .hp-bar > a strong{font:700 17px 'Space Grotesk',Arial,sans-serif;color:var(--deep);margin-top:4px}
   .hp-bar > a:hover strong{color:var(--pitch)}
   @media (max-width:980px){.hp-bar > a:nth-child(3){border-left:0}}
+  .mini.one{grid-template-columns:1fr}
+  .tags span.fr,.tags span.en{}
 </style>
 </head>
 <body data-lang="fr">
@@ -325,11 +327,6 @@
 <header class="hero hero-photo">
   <img class="hp-bg" src="/assets/img/bridges-hero.webp" alt="" width="1748" height="744">
   <div class="hp-shade" aria-hidden="true"></div>
-  <svg class="hp-arcs" viewBox="0 0 760 300" aria-hidden="true" fill="none">
-    <path d="M20 300 Q 190 40 360 300" stroke="#C1272D" stroke-width="8" stroke-linecap="round"/>
-    <path d="M200 300 Q 380 0 560 300" stroke="#F2B01E" stroke-width="8" stroke-linecap="round"/>
-    <path d="M400 300 Q 570 40 740 300" stroke="#A9D96B" stroke-width="8" stroke-linecap="round"/>
-  </svg>
   <div class="wrap hp-inner">
     <h1 class="disp">Bridges <em>2030</em><span class="rdot">.</span></h1>
     <p class="hp-tag">Sport · Diplomacy · Inclusion</p>
@@ -345,7 +342,7 @@
     <a href="#initiatives"><b>01</b><strong><span class="fr">Événements sportifs</span><span class="en">Sporting events</span></strong><span class="fr">Une série d’événements inclusifs</span><span class="en">A series of inclusive events</span></a>
     <a href="#initiatives"><b>02</b><strong>Dialogues 2030</strong><span class="fr">Rencontres mensuelles en ligne</span><span class="en">Monthly online meetings</span></a>
     <a href="#initiatives"><b>03</b><strong><span class="fr">Ateliers sécurité</span><span class="en">Safety workshops</span></strong><span class="fr">Former les organisateurs</span><span class="en">Training organisers</span></a>
-    <a href="#initiatives"><b>04</b><strong><span class="fr">Jeunes ambassadeurs</span><span class="en">Youth ambassadors</span></strong><span class="fr">La relève de 2030</span><span class="en">The 2030 generation</span></a>
+    <a href="#initiatives"><b>04</b><strong>Team building</strong><span class="fr">Pour les entreprises, avec nos coachs</span><span class="en">For companies, with our coaches</span></a>
   </div>
 </div>
 
@@ -366,11 +363,10 @@
   <div class="wrap grid">
     <div class="mosaic" aria-hidden="true">
       <div class="tile big">
-        <svg viewBox="0 0 300 200" fill="none"><path d="M10 190 Q 90 40 170 190" stroke="#C1272D" stroke-width="9" stroke-linecap="round"/><path d="M70 190 Q 150 10 230 190" stroke="#F1BF00" stroke-width="9" stroke-linecap="round"/><path d="M130 190 Q 210 40 290 190" stroke="#A9D96B" stroke-width="9" stroke-linecap="round"/></svg>
         <div class="disp">Road<br>to <em>2030</em></div>
       </div>
-      <div class="tile lime"><b>3</b><small class="fr">pays co-organisateurs</small><small class="en">co-host countries</small></div>
-      <div class="tile sun"><b>2</b><small class="fr">continents réunis par le sport</small><small class="en">continents united by sport</small></div>
+      <div class="tile lime"><b>4</b><small class="fr">axes d’action</small><small class="en">pillars of action</small></div>
+      <div class="tile sun"><b>12</b><small class="fr">ans d’événements internationaux</small><small class="en">years of international events</small></div>
     </div>
     <div>
       <span class="chip"><span class="fr">Pourquoi maintenant</span><span class="en">Why now</span></span>
@@ -381,17 +377,10 @@
         <img src="/assets/img/sarah-ceo-avatar.webp?v=2" alt="Sarah Zineb Boumouja">
         <div><b>Sarah Zineb Boumouja</b><small class="fr">Co-fondatrice &amp; CEO, Global Premium Events</small><small class="en">Co-founder &amp; CEO, Global Premium Events</small></div>
       </div>
-      <div class="mini">
-        <div>
-          <h4><span class="fr">Diplomatie sportive</span><span class="en">Sports diplomacy</span></h4>
-          <ul>
-            <li><span class="fr">Thèse : </span><span class="en">Thesis: </span><i class="ph">[titre, université, année]</i></li>
-            <li><span class="fr">Forum Maroc–Espagne–Portugal : </span><span class="en">Morocco–Spain–Portugal forum: </span><i class="ph">[nom, ville, date]</i></li>
-          </ul>
-        </div>
+      <div class="mini one">
         <div>
           <h4><span class="fr">Expertise</span><span class="en">Expertise</span></h4>
-          <div class="tags"><span>Forums</span><span>Délégations</span><span>Protocole</span><span>B2B</span><span>Inclusion</span></div>
+          <div class="tags"><span class="fr">Diplomatie sportive</span><span class="en">Sports diplomacy</span><span>Forums</span><span class="fr">Délégations</span><span class="en">Delegations</span><span class="fr">Protocole</span><span class="en">Protocol</span><span>B2B</span><span>Inclusion</span></div>
         </div>
       </div>
     </div>
@@ -431,7 +420,7 @@
       <div class="ini"><span class="badge"><span class="fr">Événements</span><span class="en">Events</span></span><h3><span class="fr">Événements sportifs inclusifs</span><span class="en">Inclusive sporting events</span></h3><p class="fr">Des rencontres sportives ouvertes à tous, pensées pour l’accessibilité et la mixité.</p><p class="en">Sporting events open to all, designed for accessibility and diversity.</p></div>
       <div class="ini"><span class="badge"><span class="fr">Forum &amp; délégations</span><span class="en">Forum &amp; delegations</span></span><h3><span class="fr">Forum de la diplomatie sportive</span><span class="en">Sports Diplomacy Forum</span></h3><p class="fr">Réunir le Maroc, l’Espagne, le Portugal et l’Afrique autour de l’héritage de 2030.</p><p class="en">Bringing Morocco, Spain, Portugal and Africa together around the 2030 legacy.</p></div>
       <div class="ini"><span class="badge"><span class="fr">Formation</span><span class="en">Training</span></span><h3><span class="fr">Ateliers sécurité &amp; organisation</span><span class="en">Safety &amp; organisation workshops</span></h3><p class="fr">Former les organisateurs, clubs et bénévoles à la sécurité des événements sportifs.</p><p class="en">Training organisers, clubs and volunteers in sporting event safety.</p></div>
-      <div class="ini"><span class="badge"><span class="fr">Jeunesse</span><span class="en">Youth</span></span><h3><span class="fr">Jeunes ambassadeurs 2030</span><span class="en">2030 Youth Ambassadors</span></h3><p class="fr">Un programme pour former des jeunes aux valeurs du sport, du dialogue et de l’accueil.</p><p class="en">A programme training young people in the values of sport, dialogue and hospitality.</p></div>
+      <div class="ini"><span class="badge"><span class="fr">Entreprises</span><span class="en">Companies</span></span><h3><span class="fr">Team building sportif</span><span class="en">Sports team building</span></h3><p class="fr">Des journées de cohésion pour les équipes en entreprise, animées par nos coachs sportifs.</p><p class="en">Team-bonding days for corporate teams, led by our sports coaches.</p></div>
     </div>
   </div>
 </section>
