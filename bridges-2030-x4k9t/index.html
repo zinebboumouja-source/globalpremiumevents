@@ -283,6 +283,21 @@
   #axes{padding-top:80px}
   @media (max-width:980px){.hp-bar{grid-template-columns:1fr 1fr;row-gap:18px}.hp-bar > div:nth-child(3){border-left:0}}
   @media (max-width:600px){.hero-photo{min-height:auto}.hp-inner{padding-top:70px;padding-bottom:120px}.hero-photo .hp-arcs{width:340px}.hp-tag{letter-spacing:.14em}}
+  .hp-bar > a{padding:6px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px;color:var(--dim);font-size:14px;text-decoration:none}
+  .hp-bar > a:first-child{border-left:0}
+  .hp-bar > a b{font:900 30px/1 'Big Shoulders Display',Impact,sans-serif;color:var(--red)}
+  .hp-bar > a strong{font:700 17px/1.25 'Space Grotesk',Arial,sans-serif;color:var(--deep)}
+  .hp-bar > a:hover strong{color:var(--pitch)}
+  @media (max-width:980px){.hp-bar > a:nth-child(3){border-left:0}}
+
+  .hp-kick{font:700 14px 'Space Grotesk',Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--lime);margin:0;display:flex;align-items:center;gap:12px}
+  .hp-kick:before{content:"";width:36px;height:3px;background:var(--red);border-radius:2px}
+  .hp-bar > a{padding:6px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:2px;color:var(--dim);font-size:14px;text-decoration:none}
+  .hp-bar > a:first-child{border-left:0}
+  .hp-bar > a b{font:900 34px/1 'Big Shoulders Display',Impact,sans-serif;color:var(--pitch)}
+  .hp-bar > a strong{font:700 17px 'Space Grotesk',Arial,sans-serif;color:var(--deep);margin-top:4px}
+  .hp-bar > a:hover strong{color:var(--pitch)}
+  @media (max-width:980px){.hp-bar > a:nth-child(3){border-left:0}}
 </style>
 </head>
 <body data-lang="fr">
@@ -316,22 +331,21 @@
     <path d="M400 300 Q 570 40 740 300" stroke="#A9D96B" stroke-width="8" stroke-linecap="round"/>
   </svg>
   <div class="wrap hp-inner">
-    <span class="chip"><span class="fr">Maroc · Espagne · Portugal · Afrique</span><span class="en">Morocco · Spain · Portugal · Africa</span></span>
     <h1 class="disp">Bridges <em>2030</em><span class="rdot">.</span></h1>
     <p class="hp-tag">Sport · Diplomacy · Inclusion</p>
-    <p class="sub"><span class="fr">Le sport comme pont entre l’Afrique et l’Europe, en route vers 2030.</span><span class="en">Sport as a bridge between Africa and Europe, on the road to 2030.</span></p>
+    <p class="sub"><span class="fr">À l’horizon 2030, nous lançons une série d’événements sportifs inclusifs, de rencontres et de dialogues pour faire du sport un pont entre les peuples.</span><span class="en">Towards 2030, we are launching a series of inclusive sporting events, meetings and dialogues to make sport a bridge between people.</span></p>
     <div class="ctas">
-      <a class="btn" href="#rejoindre"><span class="fr">Rejoindre l’initiative</span><span class="en">Join the initiative</span><span class="ar">»</span></a>
-      <a class="btn ghost" href="#video"><span class="fr">▶ Voir la vidéo</span><span class="en">▶ Watch the video</span></a>
+      <a class="btn" href="#initiatives"><span class="fr">Découvrir nos initiatives</span><span class="en">Discover our initiatives</span><span class="ar">»</span></a>
+      <a class="btn ghost" href="#rejoindre"><span class="fr">Rejoindre l’initiative</span><span class="en">Join the initiative</span></a>
     </div>
   </div>
 </header>
 <div class="wrap hp-bar-wrap">
   <div class="hp-bar">
-    <div><b>3</b><span class="fr">pays co-organisateurs</span><span class="en">co-host countries</span><div class="flags"><i style="background:#C1272D"></i><i style="background:#F1BF00"></i><i style="background:#046A38"></i></div></div>
-    <div><b>2</b><span class="fr">continents réunis</span><span class="en">continents united</span></div>
-    <div><b>4</b><span class="fr">axes d’action</span><span class="en">pillars of action</span></div>
-    <div><b>12</b><span class="fr">ans d’événements internationaux</span><span class="en">years of international events</span></div>
+    <a href="#initiatives"><b>01</b><strong><span class="fr">Événements sportifs</span><span class="en">Sporting events</span></strong><span class="fr">Une série d’événements inclusifs</span><span class="en">A series of inclusive events</span></a>
+    <a href="#initiatives"><b>02</b><strong>Dialogues 2030</strong><span class="fr">Rencontres mensuelles en ligne</span><span class="en">Monthly online meetings</span></a>
+    <a href="#initiatives"><b>03</b><strong><span class="fr">Ateliers sécurité</span><span class="en">Safety workshops</span></strong><span class="fr">Former les organisateurs</span><span class="en">Training organisers</span></a>
+    <a href="#initiatives"><b>04</b><strong><span class="fr">Jeunes ambassadeurs</span><span class="en">Youth ambassadors</span></strong><span class="fr">La relève de 2030</span><span class="en">The 2030 generation</span></a>
   </div>
 </div>
 
