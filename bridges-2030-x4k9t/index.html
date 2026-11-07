@@ -223,6 +223,44 @@
   .coach .photo .asma-img{position:relative;z-index:1;height:600px;width:auto;max-width:none;filter:drop-shadow(0 24px 30px rgba(0,0,0,.3))}
   .coach .photo .badge-c{z-index:2}
   @media (max-width:600px){.coach .photo .asma-img{height:480px}}
+
+  /* hero v3: Asma in arch */
+  .hero .grid{align-items:end;padding-bottom:0}
+  .hero .grid > div:first-child{padding-bottom:90px;align-self:center}
+  .rdot{color:var(--red)}
+  .visual2{position:relative;height:600px}
+  .visual2 .v-lime{position:absolute;right:0;top:0;width:72%;height:44%;background:linear-gradient(160deg,var(--lime),var(--pitch));border-radius:0 0 0 200px}
+  .visual2 .v-arch{position:absolute;right:4%;bottom:0;width:68%;height:82%;background:linear-gradient(170deg,var(--deep-3),#0E2E1A);border-radius:220px 220px 0 0;border:1px solid rgba(255,255,255,.08)}
+  .visual2 .v-sun{position:absolute;left:6%;bottom:0;width:20%;height:34%;background:var(--sun);border-radius:160px 160px 0 0}
+  .visual2 .v-red{position:absolute;right:0;top:50%;width:26px;height:110px;background:var(--red);border-radius:14px}
+  .visual2 .v-asma{position:absolute;right:2%;bottom:0;height:560px;width:auto;max-width:none;filter:drop-shadow(0 24px 34px rgba(0,0,0,.4))}
+  .visual2 .stat{z-index:2}
+  .visual2 .s-a{left:-30px;top:10px}
+  .visual2 .s-b{right:0;bottom:60px}
+  .cred-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-self:center;padding:60px 0}
+  .cc{border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:10px}
+  .cc .ic{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center}
+  .cc h3{margin:6px 0 0;font:700 22px 'Space Grotesk',Arial,sans-serif}
+  .cc p{margin:0;font-size:15px}
+  .cc1{background:var(--lime);color:var(--deep)} .cc1 .ic{background:rgba(18,58,34,.12)}
+  .cc2{background:#fff;color:var(--deep);transform:translateY(40px)} .cc2 .ic{background:#EEF6E4} .cc2 p{color:var(--dim)}
+  .cc3{grid-column:span 2;background:var(--deep-2);color:#fff;border:1px solid rgba(255,255,255,.1);border-left:6px solid var(--red)} .cc3 .ic{background:rgba(169,217,107,.15);color:var(--lime)} .cc3 p{color:#C9DACD}
+  @media (max-width:980px){
+    .visual2{height:520px;max-width:520px;width:100%;margin:0 auto}
+    .visual2 .v-asma{height:480px;right:50%;transform:translateX(50%)}
+    .hero .grid > div:first-child{padding-bottom:20px}
+    .cred-cards{padding:10px 0 80px}
+  }
+  @media (max-width:600px){
+    .visual2{height:440px}
+    .visual2 .v-asma{height:410px}
+    .visual2 .stat b{font-size:24px}
+    .visual2 .s-a{left:0;top:-20px}
+    .visual2 .s-b{bottom:20px}
+    .cc2{transform:none}
+    .cred-cards{grid-template-columns:1fr}
+    .cc3{grid-column:auto}
+  }
 </style>
 </head>
 <body data-lang="fr">
@@ -251,33 +289,21 @@
   <div class="wrap grid">
     <div>
       <span class="chip"><span class="fr">Maroc · Espagne · Portugal · Afrique</span><span class="en">Morocco · Spain · Portugal · Africa</span></span>
-      <h1 class="disp">Bridges<br><em>2030</em></h1>
+      <h1 class="disp">Bridges<br><em>2030</em><span class="rdot">.</span></h1>
       <p class="sub"><span class="fr">Sport, diplomatie et inclusion : le sport comme pont entre l’Afrique et l’Europe, en route vers 2030.</span><span class="en">Sport, diplomacy and inclusion: sport as a bridge between Africa and Europe, on the road to 2030.</span></p>
       <div class="ctas">
         <a class="btn" href="#rejoindre"><span class="fr">Rejoindre l’initiative</span><span class="en">Join the initiative</span><span class="ar">»</span></a>
         <a class="btn ghost" href="#video"><span class="fr">▶ Voir la vidéo</span><span class="en">▶ Watch the video</span></a>
       </div>
     </div>
-    <div class="visual" aria-hidden="true">
-      <div class="tri"></div>
-      <div class="ring"></div>
-      <svg class="ball" viewBox="0 0 200 200">
-        <defs><clipPath id="bc"><circle cx="100" cy="100" r="96"/></clipPath></defs>
-        <circle cx="100" cy="100" r="96" fill="#F6F5EF"/>
-        <g clip-path="url(#bc)" fill="#132018">
-          <polygon points="100,62 128,82 118,114 82,114 72,82"/>
-          <polygon points="40,40 66,30 72,60 52,78 30,64"/>
-          <polygon points="160,40 170,64 148,78 128,60 134,30"/>
-          <polygon points="18,120 44,112 60,138 46,166 18,160"/>
-          <polygon points="182,120 182,160 154,166 140,138 156,112"/>
-          <polygon points="86,170 114,170 124,200 76,200"/>
-        </g>
-        <g clip-path="url(#bc)" stroke="#132018" stroke-width="3" fill="none">
-          <path d="M100 62 V28 M128 82 L150 74 M118 114 L136 132 M82 114 L64 132 M72 82 L50 74 M64 132 L86 170 M136 132 L114 170"/>
-        </g>
-      </svg>
-      <div class="stat" style="left:0;top:40px"><b>3</b><small class="fr">pays hôtes, 2 continents</small><small class="en">host countries, 2 continents</small><div class="flags"><i style="background:#C1272D"></i><i style="background:#F1BF00"></i><i style="background:#046A38"></i></div></div>
-      <div class="stat" style="right:10px;bottom:30px"><b>12</b><small class="fr">ans d’événements internationaux</small><small class="en">years of international events</small></div>
+    <div class="visual2" aria-hidden="true">
+      <div class="v-lime"></div>
+      <div class="v-arch"></div>
+      <div class="v-sun"></div>
+      <div class="v-red"></div>
+      <img class="v-asma" src="/assets/img/asma-boumouja-coach.webp" alt="" width="900" height="1125">
+      <div class="stat s-a"><b>3</b><small class="fr">pays hôtes, 2 continents</small><small class="en">host countries, 2 continents</small><div class="flags"><i style="background:#C1272D"></i><i style="background:#F1BF00"></i><i style="background:#046A38"></i></div></div>
+      <div class="stat s-b"><b>12</b><small class="fr">ans d’événements internationaux</small><small class="en">years of international events</small></div>
     </div>
   </div>
 </header>
@@ -388,10 +414,10 @@
       </div>
       <div class="qr"><img src="/bridges-2030-x4k9t/qr.png" alt="QR code vers le formulaire"><p><span class="fr">Scannez pour rejoindre nos événements sportifs inclusifs</span><span class="en">Scan to join our inclusive sporting events</span></p></div>
     </div>
-    <div class="photo">
-      <div class="halo" aria-hidden="true"></div>
-      <img class="asma-img" src="/assets/img/asma-boumouja-coach.webp" alt="Asma Boumouja, coach sportive, en tenue de sport" width="900" height="1125">
-      <div class="badge-c">Asma Boumouja<small>Coach · Inclusion</small></div>
+    <div class="cred-cards">
+      <div class="cc cc1"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><h3><span class="fr">Coach diplômée</span><span class="en">Certified coach</span></h3><p class="fr">Encadrement sportif professionnel</p><p class="en">Professional sports coaching</p></div>
+      <div class="cc cc2"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h3><span class="fr">Sécurité</span><span class="en">Safety</span></h3><p class="fr">Formée à la sécurité des événements sportifs</p><p class="en">Trained in sporting event safety</p></div>
+      <div class="cc cc3"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2 1-4 3-4s3 1.5 3 4"/></svg></div><h3>Inclusion</h3><p class="fr">Un sport accessible à toutes et à tous</p><p class="en">Sport accessible to all</p></div>
     </div>
   </div>
 </section>
