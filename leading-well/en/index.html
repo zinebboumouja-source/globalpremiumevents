@@ -106,6 +106,43 @@ footer p{margin:0;color:var(--muted);font-size:14px}
 @media (max-width:640px){.grid2{grid-template-columns:minmax(0,1fr)}.prog div{grid-template-columns:70px minmax(0,1fr)}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 html{scroll-behavior:smooth}
+
+/* institutional / academic layer */
+main{background:#F7F8FC;color:var(--ink);color-scheme:light}
+main a{color:var(--blue)}
+main section+section{border-top:1px solid #DCE2F0}
+main .label{color:var(--blue)}
+main h2{color:var(--navy)}
+.sec-head{display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 20px;align-items:baseline}
+.sec-num{font-family:var(--serif);font-size:44px;line-height:1;color:var(--blue)}
+.body{max-width:70ch;margin-top:20px;font-size:17px;line-height:1.75;color:#2B3555}
+.body p{margin:0 0 14px}
+.body sup a{text-decoration:none;font-weight:800;font-size:12px;padding:0 1px}
+.cols3{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#fff;border:1px solid #DCE2F0;border-radius:14px;padding:22px}
+.card b{display:block;font-family:var(--serif);font-weight:400;font-size:28px;color:var(--blue);line-height:1}
+.card h3{margin:10px 0 6px;font-size:18px;font-weight:800;color:var(--navy)}
+.card p{margin:0;font-size:15px;line-height:1.6;color:var(--ink-soft)}
+.facts{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.fact{border-left:3px solid var(--blue);padding:4px 0 4px 16px}
+.fact b{display:block;font-family:var(--serif);font-weight:400;font-size:40px;line-height:1;color:var(--navy)}
+.fact span{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:var(--ink-soft)}
+.fact sup a{font-weight:800;text-decoration:none}
+dl.meta{margin:26px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:1px solid #DCE2F0}
+dl.meta div{padding:14px 0;border-bottom:1px solid #DCE2F0}
+dl.meta dt{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+dl.meta dd{margin:4px 0 0;font-size:16px;color:var(--navy);font-weight:600}
+main .prog{border-top-color:#DCE2F0}main .prog div{border-bottom-color:#DCE2F0}
+main .prog b{color:var(--blue)}main .prog small{color:var(--ink-soft)}
+main .sp p{color:var(--ink-soft)}main .sp h3{color:var(--navy)}
+main .sp .ph.soon{background:#fff;border-color:#AFC0EA;color:var(--blue)}
+main .access span{border-color:#AFC0EA;color:var(--navy)}
+.formcard{border:1px solid #DCE2F0;background:#fff}
+ol.refs{margin:18px 0 0;padding-left:22px;max-width:80ch;font-size:14px;line-height:1.7;color:var(--ink-soft)}
+ol.refs li{margin-bottom:6px}
+.sdg{margin-top:28px;display:inline-flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;border:1px solid rgba(156,194,255,.5);border-radius:12px;font-size:14px;color:var(--mist)}
+.sdg i{display:grid;place-items:center;width:40px;height:40px;border-radius:6px;background:#4C9F38;color:#fff;font-style:normal;font-weight:800;font-size:18px}
+@media (max-width:640px){.sec-head{grid-template-columns:minmax(0,1fr)}.sec-num{font-size:32px}}
 </style>
 </head>
 <body>
@@ -132,58 +169,93 @@ html{scroll-behavior:smooth}
       </div>
       <a class="cta" href="#inscription">Save my seat</a>
     </div>
+    <p class="sdg"><i aria-hidden="true">3</i><span>Aligned with the United Nations 2030 Agenda · Sustainable Development Goal 3, target 3.4</span></p>
   </div>
 </header>
 
 <main>
 <section>
   <div class="wrap">
-    <p class="label">Why this webinar</p>
-    <h2>Leaders are the ones who talk least about their mental health.</h2>
-    <p class="lead">On International Men's Day, whose official 2026 theme is "The Future Is Everyone", Global Premium Events brings together business leaders, employers, doctors and experts for an honest conversation: how to take care of yourself in order to lead others well, and what companies can do in practice. One of the first gatherings dedicated to this day in Morocco.</p>
+    <div class="sec-head"><span class="sec-num">01</span><div><p class="label">Context and rationale</p><h2>Men's mental health, a public health and leadership issue</h2></div></div>
+    <div class="body">
+      <p>According to the World Health Organization, more than 700,000 people died by suicide in 2019, one in every 100 deaths worldwide. The suicide rate among men is more than twice that of women: 12.6 per 100,000 compared with 5.4.<sup><a href="#ref1" aria-label="Reference 1">[1]</a></sup></p>
+      <p>In Morocco, the Economic, Social and Environmental Council (CESE) reports, based on the national survey on mental disorders, that 48.9% of the surveyed population aged 15 and over show or have shown signs of a mental disorder, while the country has only 454 psychiatrists.<sup><a href="#ref2" aria-label="Reference 2">[2]</a></sup></p>
+      <p>In this context, the role of leaders deserves particular attention: their decisions affect entire teams, and their own relationship with mental health shapes the culture of their organisations. On the occasion of International Men's Day, Leading Well opens this conversation with leaders, employers and experts.</p>
+      <p>This initiative is aligned with the United Nations 2030 Agenda and contributes to target 3.4 of Sustainable Development Goal 3: promoting mental health and well-being.<sup><a href="#ref3" aria-label="Reference 3">[3]</a></sup></p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>×2.3</b><span>men's suicide rate compared with women's, worldwide (WHO, 2019)<sup><a href="#ref1">[1]</a></sup></span></div>
+      <div class="fact"><b>48.9%</b><span>of the surveyed population in Morocco show or have shown signs of a mental disorder (CESE)<sup><a href="#ref2">[2]</a></sup></span></div>
+      <div class="fact"><b>454</b><span>psychiatrists practising in Morocco (CESE)<sup><a href="#ref2">[2]</a></sup></span></div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <p class="label">Programme · 10–11 am (GMT+1)</p>
-    <h2>Running order</h2>
+    <div class="sec-head"><span class="sec-num">02</span><div><p class="label">Objectives</p><h2>What the webinar sets out to achieve</h2></div></div>
+    <div class="cols3">
+      <div class="card"><b>1</b><h3>Raise awareness</h3><p>Make International Men's Day better known in Morocco and break the taboos around men's mental health.</p></div>
+      <div class="card"><b>2</b><h3>Share practices</h3><p>Present the experience of leaders and employers on prevention and well-being at work.</p></div>
+      <div class="card"><b>3</b><h3>Build a gathering</h3><p>Lay the foundations of an annual platform for dialogue, from the 2027 edition.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><div><p class="label">Key questions</p><h2>Three questions at the heart of the discussion</h2></div></div>
+    <div class="cols3">
+      <div class="card"><h3>Leaders and their own mental health</h3><p>How can leaders recognise their limits and stay balanced in high-pressure roles?</p></div>
+      <div class="card"><h3>The organisation as a protective factor</h3><p>Which management practices and work environments support teams' mental health?</p></div>
+      <div class="card"><h3>Social norms and help-seeking</h3><p>How do ideas associated with masculinity shape whether men seek support?</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><div><p class="label">Format</p><h2>Practical information</h2></div></div>
+    <dl class="meta">
+      <div><dt>Date</dt><dd>Thursday 19 November 2026</dd></div>
+      <div><dt>Time</dt><dd>10–11 am (GMT+1)</dd></div>
+      <div><dt>Format</dt><dd>Online webinar, Zoom</dd></div>
+      <div><dt>Languages</dt><dd>French and English</dd></div>
+      <div><dt>Audience</dt><dd>Leaders, HR directors, health professionals, policymakers</dd></div>
+      <div><dt>Accessibility</dt><dd>Moroccan Sign Language, subtitles, replay</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><div><p class="label">Programme · 10–11 am (GMT+1)</p><h2>Running order</h2></div></div>
     <div class="prog">
       <div><b>10:00</b><p>Welcome and opening<small>Sarah Zineb Boumouja, CEO, Global Premium Events</small></p></div>
-      <div><b>10:03</b><p>The leader's wellbeing<small>Keynote by Moundir Zniber, CEO, Gaia Energy</small></p></div>
+      <div><b>10:03</b><p>Keynote: the leader's wellbeing<small>Moundir Zniber, CEO, Gaia Energy</small></p></div>
       <div><b>10:15</b><p>The employer's view: why a healthy workplace matters for mental health<small>Amine Sekhri, Country Director, AstraZeneca Morocco</small></p></div>
-      <div><b>10:25</b><p>Panel: "Leading Well"<small>With more speakers to be announced</small></p></div>
-      <div><b>10:50</b><p>Your questions to the speakers</p></div>
-      <div><b>11:00</b><p>Closing</p></div>
+      <div><b>10:25</b><p>Panel: "Leading Well"<small>Speakers to be announced</small></p></div>
+      <div><b>10:50</b><p>Questions from the audience</p></div>
+      <div><b>11:00</b><p>Summary and closing</p></div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <p class="label">Speakers</p>
-    <h2>Who you will hear</h2>
+    <div class="sec-head"><span class="sec-num">06</span><div><p class="label">Speakers</p><h2>Who is speaking</h2></div></div>
     <div class="speakers">
       <div class="sp"><div class="ph" aria-hidden="true">MZ</div><p class="label">Keynote</p><h3>Moundir Zniber</h3><p>CEO, Gaia Energy · Author of “Le Chemin”</p></div>
+      <div class="sp"><div class="ph" aria-hidden="true">AS</div><p class="label">Talk</p><h3>Amine Sekhri</h3><p>Country Director, AstraZeneca Morocco</p></div>
       <div class="sp"><div class="ph" aria-hidden="true">SZ</div><p class="label">Moderator</p><h3>Sarah Zineb Boumouja</h3><p>CEO, Global Premium Events</p></div>
-      <div class="sp"><div class="ph" aria-hidden="true">AS</div><p class="label">Panel</p><h3>Amine Sekhri</h3><p>Country Director, AstraZeneca Morocco</p></div>
-      <div class="sp"><div class="ph soon">Coming soon</div><p class="label">Panel</p><h3>More speakers to be announced</h3><p>Education, medicine</p></div>
+      <div class="sp"><div class="ph soon">Coming soon</div><p class="label">Panel</p><h3>More speakers to be announced</h3><p>Diplomacy, education, medicine</p></div>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="label">Accessibility</p>
-    <h2>Open to everyone</h2>
-    <div class="access"><span>Moroccan Sign Language interpretation</span><span>Subtitles</span><span>Replay sent to registrants</span></div>
   </div>
 </section>
 
 <section id="inscription">
   <div class="wrap">
-    <p class="label">Registration · Limited places</p>
-    <h2>Save your seat</h2>
+    <div class="sec-head"><span class="sec-num">07</span><div><p class="label">Registration · Limited places</p><h2>Save my seat</h2></div></div>
     <div class="formcard">
       <form id="regForm" novalidate>
         <div class="grid2">
@@ -205,6 +277,17 @@ html{scroll-behavior:smooth}
         <button class="submit" type="submit">Register</button>
       </form>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="label">References</p>
+    <ol class="refs">
+      <li id="ref1">World Health Organization (2021). <i>One in 100 deaths is by suicide</i>. News release, 17 June 2021. <a href="https://www.who.int/news/item/17-06-2021-one-in-100-deaths-is-by-suicide" rel="noopener" target="_blank">who.int</a></li>
+      <li id="ref2">Economic, Social and Environmental Council of Morocco (CESE), study on mental health in Morocco, as reported by TelQuel (11 October 2022). <a href="https://telquel.ma/instant-t/2022/10/11/manque-de-psychiatres-cadre-legal-insuffisant-le-cese-se-penche-sur-la-sante-mentale-des-marocains_1787358/" rel="noopener" target="_blank">telquel.ma</a></li>
+      <li id="ref3">United Nations. <i>Goal 3: Ensure healthy lives and promote well-being for all at all ages</i>, target 3.4. <a href="https://sdgs.un.org/goals/goal3" rel="noopener" target="_blank">sdgs.un.org</a></li>
+    </ol>
   </div>
 </section>
 </main>

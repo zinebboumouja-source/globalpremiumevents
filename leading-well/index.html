@@ -106,6 +106,43 @@ footer p{margin:0;color:var(--muted);font-size:14px}
 @media (max-width:640px){.grid2{grid-template-columns:minmax(0,1fr)}.prog div{grid-template-columns:70px minmax(0,1fr)}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 html{scroll-behavior:smooth}
+
+/* institutional / academic layer */
+main{background:#F7F8FC;color:var(--ink);color-scheme:light}
+main a{color:var(--blue)}
+main section+section{border-top:1px solid #DCE2F0}
+main .label{color:var(--blue)}
+main h2{color:var(--navy)}
+.sec-head{display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 20px;align-items:baseline}
+.sec-num{font-family:var(--serif);font-size:44px;line-height:1;color:var(--blue)}
+.body{max-width:70ch;margin-top:20px;font-size:17px;line-height:1.75;color:#2B3555}
+.body p{margin:0 0 14px}
+.body sup a{text-decoration:none;font-weight:800;font-size:12px;padding:0 1px}
+.cols3{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#fff;border:1px solid #DCE2F0;border-radius:14px;padding:22px}
+.card b{display:block;font-family:var(--serif);font-weight:400;font-size:28px;color:var(--blue);line-height:1}
+.card h3{margin:10px 0 6px;font-size:18px;font-weight:800;color:var(--navy)}
+.card p{margin:0;font-size:15px;line-height:1.6;color:var(--ink-soft)}
+.facts{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.fact{border-left:3px solid var(--blue);padding:4px 0 4px 16px}
+.fact b{display:block;font-family:var(--serif);font-weight:400;font-size:40px;line-height:1;color:var(--navy)}
+.fact span{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:var(--ink-soft)}
+.fact sup a{font-weight:800;text-decoration:none}
+dl.meta{margin:26px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:1px solid #DCE2F0}
+dl.meta div{padding:14px 0;border-bottom:1px solid #DCE2F0}
+dl.meta dt{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+dl.meta dd{margin:4px 0 0;font-size:16px;color:var(--navy);font-weight:600}
+main .prog{border-top-color:#DCE2F0}main .prog div{border-bottom-color:#DCE2F0}
+main .prog b{color:var(--blue)}main .prog small{color:var(--ink-soft)}
+main .sp p{color:var(--ink-soft)}main .sp h3{color:var(--navy)}
+main .sp .ph.soon{background:#fff;border-color:#AFC0EA;color:var(--blue)}
+main .access span{border-color:#AFC0EA;color:var(--navy)}
+.formcard{border:1px solid #DCE2F0;background:#fff}
+ol.refs{margin:18px 0 0;padding-left:22px;max-width:80ch;font-size:14px;line-height:1.7;color:var(--ink-soft)}
+ol.refs li{margin-bottom:6px}
+.sdg{margin-top:28px;display:inline-flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;border:1px solid rgba(156,194,255,.5);border-radius:12px;font-size:14px;color:var(--mist)}
+.sdg i{display:grid;place-items:center;width:40px;height:40px;border-radius:6px;background:#4C9F38;color:#fff;font-style:normal;font-weight:800;font-size:18px}
+@media (max-width:640px){.sec-head{grid-template-columns:minmax(0,1fr)}.sec-num{font-size:32px}}
 </style>
 </head>
 <body>
@@ -132,58 +169,93 @@ html{scroll-behavior:smooth}
       </div>
       <a class="cta" href="#inscription">Je réserve ma place</a>
     </div>
+    <p class="sdg"><i aria-hidden="true">3</i><span>S'inscrit dans l'Agenda 2030 des Nations unies · Objectif de développement durable 3, cible 3.4</span></p>
   </div>
 </header>
 
 <main>
 <section>
   <div class="wrap">
-    <p class="label">Pourquoi ce webinaire</p>
-    <h2>Les dirigeants sont ceux qui parlent le moins de leur santé mentale.</h2>
-    <p class="lead">À l'occasion de l'International Men's Day, dont le thème officiel 2026 est « The Future Is Everyone », Global Premium Events réunit des dirigeants, des employeurs, des médecins et des experts pour une conversation franche : comment prendre soin de soi pour mieux mener les autres, et ce que les entreprises peuvent faire concrètement. L'un des premiers rendez-vous consacrés à cette journée au Maroc.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="label">Programme · 10h – 11h (GMT+1)</p>
-    <h2>Le déroulé</h2>
-    <div class="prog">
-      <div><b>10h00</b><p>Ouverture et bienvenue<small>Sarah Zineb Boumouja, CEO, Global Premium Events</small></p></div>
-      <div><b>10h03</b><p>Le bien-être du dirigeant<small>Keynote de Moundir Zniber, CEO, Gaia Energy</small></p></div>
-      <div><b>10h15</b><p>Le regard de l'employeur : un lieu de travail sain pour la santé mentale<small>Amine Sekhri, Country Director, AstraZeneca Maroc</small></p></div>
-      <div><b>10h25</b><p>Table ronde « Leading Well »<small>Avec d'autres intervenants annoncés prochainement</small></p></div>
-      <div><b>10h50</b><p>Vos questions aux intervenants</p></div>
-      <div><b>11h00</b><p>Clôture</p></div>
+    <div class="sec-head"><span class="sec-num">01</span><div><p class="label">Contexte et justification</p><h2>La santé mentale des hommes, un enjeu de santé publique et de leadership</h2></div></div>
+    <div class="body">
+      <p>Selon l'Organisation mondiale de la santé, plus de 700 000 personnes sont décédées par suicide en 2019, soit un décès sur cent dans le monde. Le taux de suicide des hommes y est plus de deux fois supérieur à celui des femmes : 12,6 pour 100 000 contre 5,4.<sup><a href="#ref1" aria-label="Référence 1">[1]</a></sup></p>
+      <p>Au Maroc, le Conseil économique, social et environnemental (CESE) rapporte, à partir de l'enquête nationale sur les troubles mentaux, que 48,9 % de la population enquêtée âgée de 15 ans et plus présente ou a présenté des signes d'un trouble mental, alors que le pays ne compte que 454 psychiatres.<sup><a href="#ref2" aria-label="Référence 2">[2]</a></sup></p>
+      <p>Dans ce contexte, la place des dirigeants mérite une attention particulière : leurs décisions engagent des équipes entières, et leur propre rapport à la santé mentale influence la culture des organisations. À l'occasion de l'International Men's Day, Leading Well propose d'ouvrir cette réflexion avec des dirigeants, des employeurs et des experts.</p>
+      <p>Cette initiative s'inscrit dans l'Agenda 2030 des Nations unies et contribue à la cible 3.4 de l'Objectif de développement durable 3 : promouvoir la santé mentale et le bien-être.<sup><a href="#ref3" aria-label="Référence 3">[3]</a></sup></p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>×2,3</b><span>taux de suicide des hommes par rapport aux femmes dans le monde (OMS, 2019)<sup><a href="#ref1">[1]</a></sup></span></div>
+      <div class="fact"><b>48,9 %</b><span>de la population enquêtée au Maroc présente ou a présenté des signes de trouble mental (CESE)<sup><a href="#ref2">[2]</a></sup></span></div>
+      <div class="fact"><b>454</b><span>psychiatres exerçant au Maroc (CESE)<sup><a href="#ref2">[2]</a></sup></span></div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <p class="label">Intervenants</p>
-    <h2>Ils prennent la parole</h2>
+    <div class="sec-head"><span class="sec-num">02</span><div><p class="label">Objectifs</p><h2>Ce que le webinaire se propose d'atteindre</h2></div></div>
+    <div class="cols3">
+      <div class="card"><b>1</b><h3>Sensibiliser</h3><p>Faire connaître l'International Men's Day au Maroc et lever les tabous autour de la santé mentale des hommes.</p></div>
+      <div class="card"><b>2</b><h3>Partager des pratiques</h3><p>Présenter des retours d'expérience de dirigeants et d'employeurs sur la prévention et le bien-être au travail.</p></div>
+      <div class="card"><b>3</b><h3>Construire un rendez-vous</h3><p>Poser les bases d'une plateforme annuelle de dialogue, dès l'édition 2027.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><div><p class="label">Axes de réflexion</p><h2>Trois questions au cœur des échanges</h2></div></div>
+    <div class="cols3">
+      <div class="card"><h3>Le dirigeant face à sa propre santé mentale</h3><p>Comment reconnaître ses limites et préserver son équilibre dans des fonctions à forte pression ?</p></div>
+      <div class="card"><h3>L'organisation comme facteur de protection</h3><p>Quelles pratiques managériales et quel environnement de travail favorisent la santé mentale des équipes ?</p></div>
+      <div class="card"><h3>Normes sociales et recours à l'aide</h3><p>Comment les représentations associées à la masculinité influencent-elles la demande de soutien ?</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><div><p class="label">Format</p><h2>Modalités</h2></div></div>
+    <dl class="meta">
+      <div><dt>Date</dt><dd>Jeudi 19 novembre 2026</dd></div>
+      <div><dt>Horaire</dt><dd>10h – 11h (GMT+1)</dd></div>
+      <div><dt>Format</dt><dd>Webinaire en ligne, Zoom</dd></div>
+      <div><dt>Langues</dt><dd>Français et anglais</dd></div>
+      <div><dt>Public</dt><dd>Dirigeants, DRH, professionnels de santé, décideurs publics</dd></div>
+      <div><dt>Accessibilité</dt><dd>Langue des signes marocaine, sous-titres, replay</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><div><p class="label">Programme · 10h – 11h (GMT+1)</p><h2>Déroulé de la session</h2></div></div>
+    <div class="prog">
+      <div><b>10h00</b><p>Ouverture et mot de bienvenue<small>Sarah Zineb Boumouja, CEO, Global Premium Events</small></p></div>
+      <div><b>10h03</b><p>Keynote : le bien-être du dirigeant<small>Moundir Zniber, CEO, Gaia Energy</small></p></div>
+      <div><b>10h15</b><p>Le regard de l'employeur : un lieu de travail sain pour la santé mentale<small>Amine Sekhri, Country Director, AstraZeneca Maroc</small></p></div>
+      <div><b>10h25</b><p>Table ronde « Leading Well »<small>Intervenants annoncés prochainement</small></p></div>
+      <div><b>10h50</b><p>Questions du public</p></div>
+      <div><b>11h00</b><p>Synthèse et clôture</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><div><p class="label">Intervenants</p><h2>Ils prennent la parole</h2></div></div>
     <div class="speakers">
       <div class="sp"><div class="ph" aria-hidden="true">MZ</div><p class="label">Keynote</p><h3>Moundir Zniber</h3><p>CEO, Gaia Energy · Auteur de « Le Chemin »</p></div>
+      <div class="sp"><div class="ph" aria-hidden="true">AS</div><p class="label">Intervention</p><h3>Amine Sekhri</h3><p>Country Director, AstraZeneca Maroc</p></div>
       <div class="sp"><div class="ph" aria-hidden="true">SZ</div><p class="label">Modération</p><h3>Sarah Zineb Boumouja</h3><p>CEO, Global Premium Events</p></div>
-      <div class="sp"><div class="ph" aria-hidden="true">AS</div><p class="label">Table ronde</p><h3>Amine Sekhri</h3><p>Country Director, AstraZeneca Maroc</p></div>
-      <div class="sp"><div class="ph soon">Annonce à venir</div><p class="label">Table ronde</p><h3>Autres intervenants annoncés prochainement</h3><p>Éducation, médecine</p></div>
+      <div class="sp"><div class="ph soon">Annonce à venir</div><p class="label">Table ronde</p><h3>Autres intervenants annoncés prochainement</h3><p>Diplomatie, éducation, médecine</p></div>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="label">Accessibilité</p>
-    <h2>Un webinaire ouvert à tous</h2>
-    <div class="access"><span>Interprétation en langue des signes marocaine</span><span>Sous-titres</span><span>Replay envoyé aux inscrits</span></div>
   </div>
 </section>
 
 <section id="inscription">
   <div class="wrap">
-    <p class="label">Inscription · Places limitées</p>
-    <h2>Je réserve ma place</h2>
+    <div class="sec-head"><span class="sec-num">07</span><div><p class="label">Inscription · Places limitées</p><h2>Je réserve ma place</h2></div></div>
     <div class="formcard">
       <form id="regForm" novalidate>
         <div class="grid2">
@@ -205,6 +277,17 @@ html{scroll-behavior:smooth}
         <button class="submit" type="submit">Je m'inscris</button>
       </form>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="label">Références</p>
+    <ol class="refs">
+      <li id="ref1">Organisation mondiale de la santé (2021). <i>One in 100 deaths is by suicide</i>. Communiqué du 17 juin 2021. <a href="https://www.who.int/news/item/17-06-2021-one-in-100-deaths-is-by-suicide" rel="noopener" target="_blank">who.int</a></li>
+      <li id="ref2">Conseil économique, social et environnemental (CESE), étude sur la santé mentale au Maroc, rapportée par TelQuel (11 octobre 2022). <a href="https://telquel.ma/instant-t/2022/10/11/manque-de-psychiatres-cadre-legal-insuffisant-le-cese-se-penche-sur-la-sante-mentale-des-marocains_1787358/" rel="noopener" target="_blank">telquel.ma</a></li>
+      <li id="ref3">Nations unies. <i>Objectif 3 : Permettre à tous de vivre en bonne santé et promouvoir le bien-être de tous à tout âge</i>, cible 3.4. <a href="https://sdgs.un.org/goals/goal3" rel="noopener" target="_blank">sdgs.un.org</a></li>
+    </ol>
   </div>
 </section>
 </main>
