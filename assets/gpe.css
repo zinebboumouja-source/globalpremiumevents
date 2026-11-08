@@ -156,3 +156,6 @@ body.gpe-leaving{opacity:0;transition:opacity .22s ease;}
   .hero-cover-bg{animation:none!important;}
   .marquee-track{animation:none!important;}
 }
+
+/* White logo on dark backgrounds (dark-top header, footer) */
+.gpe-dark-top .gpe-nav-logo img,.footer-logo{filter:brightness(0) invert(1);}
