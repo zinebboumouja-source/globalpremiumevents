@@ -25,126 +25,116 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
 :root{
-  --navy:#0C1A4F; --blue:#2457FF; --sky:#9CC2FF; --mist:#E8EEFF; --paper:#F7F8FC; --white:#FFFFFF;
-  --ink:#0C1A4F; --ink-soft:#4A5578; --line:#DCE2F0; --green:#4C9F38;
+  --navy:#0C1A4F; --navy-2:#091440; --blue:#2457FF; --sky:#9CC2FF; --mist:#DCE5FF; --orange:#FF6B4A;
+  --line:rgba(156,194,255,.22); --card:rgba(255,255,255,.05); --soft:#C7D3F2; --green:#4C9F38;
   --serif:'DM Serif Display',Georgia,'Times New Roman',serif;
   --sans:'Manrope','Helvetica Neue',Arial,sans-serif;
-  color-scheme:light;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;overflow-x:hidden;
+body{background:var(--navy);color:#fff;font-family:var(--sans);line-height:1.6;overflow-x:hidden;
   padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
-a{color:var(--blue)}
+a{color:var(--sky)}
 .wrap{width:min(1080px,100%);margin:0 auto;padding-inline:24px}
-.label{margin:0;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
-
-/* hero */
-header.hero{position:relative;overflow:hidden;background:var(--white);border-bottom:1px solid var(--line);padding-block:24px 64px}
+.label{margin:0;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
+header.hero{position:relative;overflow:hidden;padding-block:24px 72px;border-bottom:1px solid var(--line)}
 .bg{position:absolute;inset:0;pointer-events:none;z-index:0}
 .bg i{position:absolute;border-radius:50%;display:block}
-.bg .glow,.bg .shade{display:none}
-.bg .c1{width:560px;height:560px;right:-180px;top:-120px;background:radial-gradient(circle at 30% 30%,rgba(36,87,255,.18),rgba(36,87,255,0) 70%)}
-.bg .c2{width:420px;height:420px;right:120px;top:260px;background:radial-gradient(circle at 50% 50%,rgba(156,194,255,.35),rgba(156,194,255,0) 70%)}
-.bg .c3{width:360px;height:360px;right:-120px;top:420px;background:radial-gradient(circle at 50% 50%,rgba(36,87,255,.12),rgba(36,87,255,0) 70%)}
+.bg .glow{inset:0;border-radius:0;background:radial-gradient(900px 700px at 88% 10%,rgba(46,107,255,.5),transparent 70%),radial-gradient(700px 700px at 0% 100%,rgba(110,76,255,.35),transparent 70%)}
+.bg .c1{width:600px;height:600px;right:-160px;top:20px;background:linear-gradient(200deg,var(--blue),rgba(36,87,255,.05))}
+.bg .c2{width:480px;height:480px;right:200px;top:320px;background:linear-gradient(20deg,rgba(110,76,255,.5),rgba(110,76,255,.04))}
+.bg .c3{width:420px;height:420px;right:-120px;top:560px;background:linear-gradient(300deg,rgba(255,107,74,.35),rgba(255,107,74,.02))}
+.bg .shade{inset:0;border-radius:0;background:linear-gradient(90deg,rgba(12,26,79,.75),rgba(12,26,79,0) 60%)}
 .hero .wrap{position:relative;z-index:1}
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.top img{width:52px;height:52px;display:block;filter:brightness(0);opacity:.85}
+.top img{width:52px;height:52px;display:block;filter:brightness(0) invert(1)}
 .lang{display:flex;gap:4px}
-.lang a{min-height:40px;display:inline-flex;align-items:center;padding:0 12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;border-bottom:2px solid transparent}
-.lang a[aria-current]{color:var(--navy);border-bottom-color:var(--blue)}
-.kicker{margin:48px 0 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.kicker span{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
-.pill{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--mist);color:var(--blue)!important;letter-spacing:.14em!important}
-h1{margin:18px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(64px,11vw,128px);line-height:.92;letter-spacing:-.02em;color:var(--navy)}
-.theme{margin:22px 0 0}
-.theme .label{display:none}
-.theme p.t{margin:0;font-family:var(--serif);font-size:clamp(26px,4vw,36px);line-height:1.15;color:var(--navy)}
-.theme p.s{margin:6px 0 0;font-size:clamp(16px,2vw,19px);color:var(--ink-soft)}
-.when{margin-top:32px;display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center}
+.lang a{min-height:40px;display:inline-flex;align-items:center;padding:0 12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);text-decoration:none;border-bottom:2px solid transparent}
+.lang a[aria-current]{color:#fff;border-bottom-color:var(--orange)}
+.kicker{margin:56px 0 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.kicker span{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.pill{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--orange);color:#fff;letter-spacing:.14em!important}
+h1{margin:18px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(68px,13vw,150px);line-height:.9;letter-spacing:-.02em}
+.theme{margin:24px 0 0}.theme .label{display:none}
+.theme p.t{margin:0;font-family:var(--serif);font-size:clamp(28px,4.4vw,42px);line-height:1.1}
+.theme p.s{margin:6px 0 0;font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.6vw,24px);color:var(--soft)}
+.when{margin-top:36px;display:flex;flex-wrap:wrap;gap:20px 36px;align-items:center}
 .when .label{display:none}
-.when .d{margin:0;font-family:var(--serif);font-size:clamp(28px,4vw,36px);line-height:1.1;color:var(--navy)}
-.when .h{margin:4px 0 0;font-size:16px;font-weight:700;color:var(--ink-soft)}
-.cta{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;background:var(--navy);color:#fff;font-weight:800;font-size:15px;letter-spacing:.04em;text-decoration:none}
-.cta:hover{background:var(--blue)}
+.when .d{margin:0;font-family:var(--serif);font-size:clamp(48px,8vw,88px);line-height:.95}
+.when .h{margin:6px 0 0;font-size:17px;font-weight:700;color:var(--mist)}
+.cta{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;background:var(--orange);color:#fff;font-weight:800;font-size:15px;letter-spacing:.04em;text-decoration:none}
+.cta:hover{background:#FF5530}
 .cta:focus-visible,.lang a:focus-visible,button:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
-.sdg{margin-top:28px;display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 8px;background:var(--white);border:1px solid var(--line);border-radius:12px;font-size:14px;color:var(--ink-soft)}
+.sdg{margin-top:30px;display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 8px;border:1px solid var(--line);border-radius:12px;font-size:14px;color:var(--mist);background:rgba(255,255,255,.04)}
 .sdg i{display:grid;place-items:center;width:36px;height:36px;border-radius:6px;background:var(--green);color:#fff;font-style:normal;font-weight:800;font-size:17px;flex:0 0 auto}
-
-/* sections */
-main{background:var(--paper)}
+main{background:var(--navy)}
 section{padding-block:72px}
 section+section{border-top:1px solid var(--line)}
-section:nth-of-type(even){background:var(--white)}
+section:nth-of-type(even){background:var(--navy-2)}
 .sec-head{display:grid;grid-template-columns:64px minmax(0,1fr);gap:6px 18px;align-items:baseline}
-.sec-num{font-family:var(--serif);font-size:40px;line-height:1;color:var(--sky)}
-h2{margin:6px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.2vw,42px);line-height:1.12;color:var(--navy)}
-.body{max-width:70ch;margin:24px 0 0 82px;font-size:17px;line-height:1.75;color:#2B3555}
+.sec-num{font-family:var(--serif);font-size:40px;line-height:1;color:var(--orange)}
+h2{margin:6px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.2vw,44px);line-height:1.12}
+.body{max-width:70ch;margin:24px 0 0 82px;font-size:17px;line-height:1.75;color:var(--mist)}
 .body p{margin:0 0 14px}
-sup a{text-decoration:none;font-weight:800;font-size:12px;padding:0 1px}
-.target{margin:8px 0 18px;padding:18px 22px;background:var(--white);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:10px}
-section:nth-of-type(even) .target{background:var(--paper)}
-.target b{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#3B7F2C}
-.target p{margin:6px 0 0!important;font-family:var(--serif);font-size:20px;line-height:1.4;color:var(--navy)}
+sup a{text-decoration:none;font-weight:800;font-size:12px;padding:0 1px;color:var(--orange)}
+.target{margin:8px 0 18px;padding:18px 22px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:10px}
+.target b{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8BD07A}
+.target p{margin:6px 0 0!important;font-family:var(--serif);font-size:20px;line-height:1.4;color:#fff}
 .facts,.cols3,dl.meta,.prog,.speakers,.formcard,ol.refs{margin-left:82px}
-.facts{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.fact{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px}
-.fact b{display:block;font-family:var(--serif);font-weight:400;font-size:38px;line-height:1;color:var(--blue)}
-.fact span{display:block;margin-top:8px;font-size:14px;line-height:1.5;color:var(--ink-soft)}
+.facts{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.fact b{display:block;font-family:var(--serif);font-weight:400;font-size:40px;line-height:1;color:var(--orange)}
+.fact span{display:block;margin-top:8px;font-size:14px;line-height:1.5;color:var(--soft)}
 .cols3{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
-section:nth-of-type(odd) .card{background:var(--white)}
-.card b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--mist);color:var(--blue);font-weight:800;font-size:15px}
-.card h3{margin:12px 0 6px;font-size:18px;font-weight:800;line-height:1.3;color:var(--navy)}
-.card p{margin:0;font-size:15px;line-height:1.6;color:var(--ink-soft)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;font-size:15px}
+.card h3{margin:12px 0 6px;font-size:18px;font-weight:800;line-height:1.3}
+.card p{margin:0;font-size:15px;line-height:1.6;color:var(--soft)}
 dl.meta{margin-top:28px;margin-bottom:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 24px;border-top:1px solid var(--line)}
 dl.meta div{padding:16px 0;border-bottom:1px solid var(--line)}
-dl.meta dt{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
-dl.meta dd{margin:4px 0 0;font-size:16px;font-weight:600;color:var(--navy)}
+dl.meta dt{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+dl.meta dd{margin:4px 0 0;font-size:16px;font-weight:600}
 .prog{margin-top:28px;display:grid;border-top:1px solid var(--line)}
 .prog div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
-.prog b{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--blue);font-variant-numeric:tabular-nums}
-.prog p{margin:0;font-weight:700;color:var(--navy)}
-.prog small{display:block;font-weight:500;color:var(--ink-soft);font-size:14px}
+.prog b{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--orange);font-variant-numeric:tabular-nums}
+.prog p{margin:0;font-weight:700}
+.prog small{display:block;font-weight:500;color:var(--soft);font-size:14px}
 .speakers{margin-top:32px;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px}
 .sp{display:flex;flex-direction:column;gap:4px}
-.sp .ph{width:100%;max-width:200px;aspect-ratio:5/6;border-radius:100px 100px 14px 14px;background:var(--mist);display:grid;place-items:center;font-family:var(--serif);font-size:52px;color:var(--blue);margin-bottom:12px}
-.sp .ph.soon{background:transparent;border:1px dashed var(--sky);font-family:var(--sans);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:20px}
-.sp h3{margin:2px 0 0;font-size:20px;font-weight:800;line-height:1.25;color:var(--navy)}
-.sp p{margin:0;font-size:15px;color:var(--ink-soft)}
-.formcard{margin-top:28px;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,4vw,40px)}
+.sp .ph{width:100%;max-width:200px;aspect-ratio:5/6;border-radius:100px 100px 14px 14px;margin-bottom:12px;display:grid;place-items:center;text-align:center;padding:20px;background:var(--card);border:1px dashed rgba(156,194,255,.5);color:var(--sky);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.sp h3{margin:2px 0 0;font-size:20px;font-weight:800;line-height:1.25}
+.sp p{margin:0;font-size:15px;color:var(--soft)}
+.formcard{margin-top:28px;background:#fff;color:var(--navy);border-radius:18px;padding:clamp(22px,4vw,40px);color-scheme:light}
 form{display:flex;flex-direction:column;gap:18px}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .field{display:flex;flex-direction:column;gap:6px;min-width:0}
 .field label{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
-.opt{font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink-soft)}
-.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid #C9D1E6;border-radius:10px;padding:12px;min-height:48px;width:100%}
+.opt{font-weight:500;letter-spacing:0;text-transform:none;color:#4A5578}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--navy);background:#F7F8FC;border:1px solid #C9D1E6;border-radius:10px;padding:12px;min-height:48px;width:100%}
 .field textarea{min-height:96px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--blue);border-color:var(--blue);background:#fff}
 .is-invalid{border-color:#B42318!important}
-.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-soft)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#4A5578}
 .check input{width:20px;height:20px;margin-top:1px;flex:0 0 auto;accent-color:var(--blue)}
 .err{margin:0;min-height:1em;color:#B42318;font-size:14px}
-button.submit{align-self:flex-start;min-height:52px;padding:0 30px;border:0;border-radius:999px;background:var(--navy);color:#fff;font:inherit;font-weight:800;font-size:15px;letter-spacing:.04em;cursor:pointer}
-button.submit:hover{background:var(--blue)}
+button.submit{align-self:flex-start;min-height:52px;padding:0 30px;border:0;border-radius:999px;background:var(--orange);color:#fff;font:inherit;font-weight:800;font-size:15px;letter-spacing:.04em;cursor:pointer}
+button.submit:hover{background:#FF5530}
 button.submit[disabled]{opacity:.6;cursor:wait}
 .thanks h3{margin:0;font-family:var(--serif);font-weight:400;font-size:30px;color:var(--navy)}
-.thanks p{margin:10px 0 0;color:var(--ink-soft)}
-ol.refs{margin-top:16px;padding-left:22px;max-width:80ch;font-size:14px;line-height:1.7;color:var(--ink-soft)}
-ol.refs li{margin-bottom:6px}
+.thanks p{margin:10px 0 0;color:#4A5578}
 section.refs-sec{padding-block:48px}
-footer{background:var(--navy);padding-block:28px}
+ol.refs{margin-top:16px;padding-left:22px;max-width:80ch;font-size:14px;line-height:1.7;color:var(--soft)}
+ol.refs li{margin-bottom:6px}
+footer{background:var(--navy-2);border-top:1px solid var(--line);padding-block:28px}
 footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
 footer img{width:48px;height:48px;filter:brightness(0) invert(1)}
-footer p{margin:0;color:#B8BFD2;font-size:14px}
-footer a{color:var(--sky)}
+footer p{margin:0;color:var(--soft);font-size:14px}
 @media (max-width:720px){
-  .sec-head{grid-template-columns:minmax(0,1fr)}
-  .sec-num{font-size:30px}
+  .sec-head{grid-template-columns:minmax(0,1fr)}.sec-num{font-size:30px}
   .body,.facts,.cols3,dl.meta,.prog,.speakers,.formcard,ol.refs{margin-left:0}
-  .grid2{grid-template-columns:minmax(0,1fr)}
-  .prog div{grid-template-columns:72px minmax(0,1fr)}
+  .grid2{grid-template-columns:minmax(0,1fr)}.prog div{grid-template-columns:72px minmax(0,1fr)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -183,16 +173,14 @@ footer a{color:var(--sky)}
     <div class="sec-head"><span class="sec-num">01</span><div><p class="label">Contexte et justification</p><h2>La santé mentale des hommes, un enjeu de santé publique et de leadership</h2></div></div>
     <div class="body">
       <p>Selon l'Organisation mondiale de la santé, 15 % des adultes en âge de travailler vivaient avec un trouble mental en 2019. La dépression et l'anxiété entraînent la perte d'environ 12 milliards de journées de travail chaque année, pour un coût proche de 1 000 milliards de dollars pour l'économie mondiale.<sup><a href="#ref1" aria-label="Référence 1">[1]</a></sup></p>
-      <p>Au Maroc, le Conseil économique, social et environnemental (CESE) rapporte, à partir de l'enquête nationale sur les troubles mentaux, que 48,9 % de la population enquêtée âgée de 15 ans et plus présente ou a présenté des signes d'un trouble mental, alors que le pays ne compte que 454 psychiatres.<sup><a href="#ref2" aria-label="Référence 2">[2]</a></sup></p>
       <p>Dans ce contexte, la place des dirigeants mérite une attention particulière : leurs décisions engagent des équipes entières, et leur propre rapport à la santé mentale influence la culture des organisations. À l'occasion de l'International Men's Day, Leading Well propose d'ouvrir cette réflexion avec des dirigeants, des employeurs et des experts.</p>
-      <p>Cette initiative s'inscrit dans l'Agenda 2030 des Nations unies et contribue à la cible 3.4 de l'Objectif de développement durable 3 : promouvoir la santé mentale et le bien-être.<sup><a href="#ref3" aria-label="Référence 3">[3]</a></sup></p>
+      <p>Cette initiative s'inscrit dans l'Agenda 2030 des Nations unies et contribue à la cible 3.4 de l'Objectif de développement durable 3 : promouvoir la santé mentale et le bien-être.<sup><a href="#ref2" aria-label="Référence 2">[2]</a></sup></p>
       <blockquote class="target"><b>ODD 3 · Cible 3.4</b><p>« D'ici à 2030, réduire d'un tiers, par la prévention et le traitement, le taux de mortalité prématurée due à des maladies non transmissibles et promouvoir la santé mentale et le bien-être. »</p></blockquote>
     </div>
     <div class="facts">
+      <div class="fact"><b>15 %</b><span>des adultes en âge de travailler vivaient avec un trouble mental en 2019 (OMS)<sup><a href="#ref1">[1]</a></sup></span></div>
       <div class="fact"><b>12 Mds</b><span>de journées de travail perdues chaque année à cause de la dépression et de l'anxiété (OMS, OIT)<sup><a href="#ref1">[1]</a></sup></span></div>
-      <div class="fact"><b>48,9 %</b><span>de la population enquêtée au Maroc présente ou a présenté des signes de trouble mental (CESE)<sup><a href="#ref2">[2]</a></sup></span></div>
-      <div class="fact"><b>454</b><span>psychiatres exerçant au Maroc (CESE)<sup><a href="#ref2">[2]</a></sup></span></div>
-    </div>
+      </div>
   </div>
 </section>
 
@@ -236,10 +224,10 @@ footer a{color:var(--sky)}
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">05</span><div><p class="label">Programme · 10h – 11h (GMT+1)</p><h2>Déroulé de la session</h2></div></div>
     <div class="prog">
-      <div><b>10h00</b><p>Ouverture et mot de bienvenue<small>Sarah Zineb Boumouja, CEO, Global Premium Events</small></p></div>
-      <div><b>10h03</b><p>Keynote : le bien-être du dirigeant<small>Moundir Zniber, CEO, Gaia Energy</small></p></div>
-      <div><b>10h15</b><p>Le regard de l'employeur : un lieu de travail sain pour la santé mentale<small>Amine Sekhri, Country Director, AstraZeneca Maroc</small></p></div>
-      <div><b>10h25</b><p>Table ronde « Leading Well »<small>Intervenants annoncés prochainement</small></p></div>
+      <div><b>10h00</b><p>Ouverture et mot de bienvenue</p></div>
+      <div><b>10h03</b><p>Keynote : le bien-être du dirigeant</p></div>
+      <div><b>10h15</b><p>Le regard de l'employeur : un lieu de travail sain pour la santé mentale</p></div>
+      <div><b>10h25</b><p>Table ronde « Leading Well »</p></div>
       <div><b>10h50</b><p>Questions du public</p></div>
       <div><b>11h00</b><p>Synthèse et clôture</p></div>
     </div>
@@ -250,10 +238,10 @@ footer a{color:var(--sky)}
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">06</span><div><p class="label">Intervenants</p><h2>Ils prennent la parole</h2></div></div>
     <div class="speakers">
-      <div class="sp"><div class="ph" aria-hidden="true">MZ</div><p class="label">Keynote</p><h3>Moundir Zniber</h3><p>CEO, Gaia Energy · Auteur de « Le Chemin »</p></div>
-      <div class="sp"><div class="ph" aria-hidden="true">AS</div><p class="label">Intervention</p><h3>Amine Sekhri</h3><p>Country Director, AstraZeneca Maroc</p></div>
-      <div class="sp"><div class="ph" aria-hidden="true">SZ</div><p class="label">Modération</p><h3>Sarah Zineb Boumouja</h3><p>CEO, Global Premium Events</p></div>
-      <div class="sp"><div class="ph soon">Annonce à venir</div><p class="label">Table ronde</p><h3>Autres intervenants annoncés prochainement</h3><p>Diplomatie, éducation, médecine</p></div>
+      <div class="sp"><div class="ph">Annonce à venir</div><p class="label">Keynote</p><h3>Un dirigeant engagé</h3></div>
+      <div class="sp"><div class="ph">Annonce à venir</div><p class="label">Intervention</p><h3>Le regard de l'employeur</h3></div>
+      <div class="sp"><div class="ph">Annonce à venir</div><p class="label">Table ronde</p><h3>Diplomatie, éducation, médecine</h3></div>
+      <div class="sp"><div class="ph">Annonce à venir</div><p class="label">Modération</p><h3>Global Premium Events</h3></div>
     </div>
   </div>
 </section>
@@ -290,8 +278,7 @@ footer a{color:var(--sky)}
     <p class="label">Références</p>
     <ol class="refs">
       <li id="ref1">Organisation mondiale de la santé et Organisation internationale du travail (2022), <i>Lignes directrices sur la santé mentale au travail</i>, rapportées par ONU Info (28 septembre 2022). <a href="https://news.un.org/en/story/2022/09/1128171" rel="noopener" target="_blank">news.un.org</a></li>
-      <li id="ref2">Conseil économique, social et environnemental (CESE), étude sur la santé mentale au Maroc, rapportée par TelQuel (11 octobre 2022). <a href="https://telquel.ma/instant-t/2022/10/11/manque-de-psychiatres-cadre-legal-insuffisant-le-cese-se-penche-sur-la-sante-mentale-des-marocains_1787358/" rel="noopener" target="_blank">telquel.ma</a></li>
-      <li id="ref3">Nations unies. <i>Objectif 3 : Permettre à tous de vivre en bonne santé et promouvoir le bien-être de tous à tout âge</i>, cible 3.4. <a href="https://sdgs.un.org/goals/goal3" rel="noopener" target="_blank">sdgs.un.org</a></li>
+      <li id="ref2">Nations unies. <i>Objectif 3 : Permettre à tous de vivre en bonne santé et promouvoir le bien-être de tous à tout âge</i>, cible 3.4. <a href="https://sdgs.un.org/goals/goal3" rel="noopener" target="_blank">sdgs.un.org</a></li>
     </ol>
   </div>
 </section>

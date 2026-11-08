@@ -393,84 +393,88 @@
 <meta name="theme-color" content="#16294F">
 <link rel="stylesheet" href="/assets/gpe.css">
 <style id="dialogues-css">
-.dg{--dg-navy:#0C1A4F;--dg-blue:#2457FF;--dg-sky:#9CC2FF;--dg-mist:#E8EEFF;--dg-coral:#FF6B4A;--dg-ink:#0C1A4F;--dg-soft:#4A5578;--dg-line:#DCE2F0}
+.dg{--dg-navy:#0C1A4F;--dg-blue:#2457FF;--dg-sky:#9CC2FF;--dg-mist:#E8EEFF;--dg-or:#FF6B4A;--dg-soft:#4A5578;--dg-line:#DCE2F0;background:#fff}
 .dg *{box-sizing:border-box}
 .dg .disp{font-family:'Space Grotesk','Inter',Arial,sans-serif;letter-spacing:-.02em}
-/* hero */
-.dg-hero{position:relative;overflow:hidden;background:var(--dg-navy);color:#fff;border-radius:28px;margin:24px 0 0;padding:clamp(40px,7vw,88px) clamp(24px,5vw,64px)}
-.dg-blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75;pointer-events:none}
-.dg-blob.b1{width:520px;height:520px;right:-120px;top:-160px;background:#2457FF;animation:dgf1 16s ease-in-out infinite alternate}
-.dg-blob.b2{width:380px;height:380px;right:240px;bottom:-200px;background:#6E4CFF;animation:dgf2 19s ease-in-out infinite alternate}
-.dg-blob.b3{width:260px;height:260px;left:-80px;bottom:-120px;background:#FF6B4A;opacity:.35;animation:dgf1 22s ease-in-out infinite alternate}
-@keyframes dgf1{to{transform:translate(-60px,50px) scale(1.12)}}
-@keyframes dgf2{to{transform:translate(70px,-40px) scale(.9)}}
-.dg-hero .in{position:relative;z-index:1;max-width:760px}
-.dg-tag{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:13px;font-weight:600;letter-spacing:.04em}
-.dg-dot{width:8px;height:8px;border-radius:50%;background:var(--dg-coral);box-shadow:0 0 0 0 rgba(255,107,74,.6);animation:dgp 1.8s infinite}
-@keyframes dgp{70%{box-shadow:0 0 0 10px rgba(255,107,74,0)}100%{box-shadow:0 0 0 0 rgba(255,107,74,0)}}
-.dg-hero h1{margin:22px 0 0;font-size:clamp(52px,9vw,104px);font-weight:700;line-height:.95}
-.dg-hero h1 span{background:linear-gradient(90deg,#9CC2FF,#FFFFFF 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.dg-hero p.lead{margin:22px 0 0;font-size:clamp(17px,2vw,20px);line-height:1.6;color:#DCE5FF;max-width:56ch}
-.dg-hero .acts{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
-.dg-btn{display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .2s ease,background .2s ease}
+/* full cover hero */
+.dg-cover{position:relative;min-height:min(78vh,720px);display:flex;align-items:flex-end;color:#fff;background:#0C1A4F url('/assets/img/sharjah-panel.webp') center/cover no-repeat}
+.dg-cover::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,26,79,.94) 0%,rgba(12,26,79,.82) 45%,rgba(12,26,79,.35) 100%),linear-gradient(0deg,rgba(12,26,79,.9),rgba(12,26,79,0) 55%)}
+.dg-cover .wrap{position:relative;z-index:1;padding-block:clamp(96px,14vh,140px) clamp(48px,8vh,80px)}
+.dg-eyebrow{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#DCE5FF}
+.dg-eyebrow::before{content:"";width:36px;height:2px;background:var(--dg-or)}
+.dg-cover h1{margin:18px 0 0;font-size:clamp(52px,9vw,112px);font-weight:700;line-height:.95;letter-spacing:-.03em}
+.dg-cover h1 em{font-style:normal;color:var(--dg-or)}
+.dg-cover p.lead{margin:22px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);line-height:1.6;color:#DCE5FF}
+.dg-cover .acts{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.dg-btn{display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .2s ease,background .2s ease}
 .dg-btn:hover{transform:translateY(-2px)}
-.dg-btn.pri{background:#fff;color:var(--dg-navy)}
-.dg-btn.pri:hover{background:var(--dg-mist)}
-.dg-btn.ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
-.dg-btn.ghost:hover{background:rgba(255,255,255,.08)}
-.dg-btn.dark{background:var(--dg-navy);color:#fff}
-.dg-btn.dark:hover{background:var(--dg-blue)}
+.dg-btn.or{background:var(--dg-or);color:#fff}.dg-btn.or:hover{background:#FF5530}
+.dg-btn.ghost{border:1px solid rgba(255,255,255,.45);color:#fff;background:transparent}.dg-btn.ghost:hover{background:rgba(255,255,255,.1)}
+.dg-btn.dark{background:var(--dg-navy);color:#fff}.dg-btn.dark:hover{background:var(--dg-blue)}
 .dg-btn:focus-visible{outline:3px solid var(--dg-sky);outline-offset:3px}
-/* marquee */
-.dg-marq{margin:22px 0 0;overflow:hidden;border-block:1px solid var(--dg-line);padding-block:14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.dg-marq .track{display:flex;gap:40px;width:max-content;animation:dgm 32s linear infinite}
-.dg-marq span{font-family:'Space Grotesk','Inter',sans-serif;font-size:20px;font-weight:600;color:var(--dg-navy);white-space:nowrap}
-.dg-marq span i{font-style:normal;color:var(--dg-coral);margin-left:40px}
-@keyframes dgm{to{transform:translateX(-50%)}}
-/* sections */
-.dg-sec{padding:72px 0 0}
+.dg-sec{padding:80px 0 0}
+.dg-sec .kick{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dg-or)}
 .dg-sec h2{margin:0;font-size:clamp(30px,4.5vw,44px);font-weight:700;color:var(--dg-navy);line-height:1.1}
-.dg-sec .kick{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dg-blue)}
 /* featured */
-.dg-feat{margin-top:28px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0;background:#fff;border:1px solid var(--dg-line);border-radius:24px;overflow:hidden;transition:box-shadow .3s ease,transform .3s ease}
+.dg-feat{margin-top:28px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);border:1px solid var(--dg-line);border-radius:24px;overflow:hidden;background:#fff;transition:box-shadow .3s ease,transform .3s ease}
 .dg-feat:hover{box-shadow:0 24px 60px rgba(12,26,79,.14);transform:translateY(-3px)}
-.dg-feat .pic{background:var(--dg-navy);display:block;min-height:100%}
-.dg-feat .pic img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5}
-.dg-feat .info{padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:16px}
+.dg-vis{position:relative;overflow:hidden;background:var(--dg-navy);color:#fff;padding:36px;display:flex;flex-direction:column;justify-content:space-between;min-height:380px;text-decoration:none}
+.dg-vis span.c{position:absolute;border-radius:50%}
+.dg-vis .c1{width:340px;height:340px;right:-120px;top:-100px;background:linear-gradient(200deg,#2457FF,rgba(36,87,255,.05))}
+.dg-vis .c2{width:260px;height:260px;right:40px;bottom:-140px;background:linear-gradient(20deg,rgba(255,107,74,.6),rgba(255,107,74,.04))}
+.dg-vis > *{position:relative}
+.dg-vis small{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#DCE5FF}
+.dg-vis b{display:block;font-family:'DM Serif Display','Source Serif 4',Georgia,serif;font-weight:400;font-size:clamp(52px,6vw,72px);line-height:.9}
+.dg-vis i{font-style:normal;display:inline-block;margin-top:14px;padding:6px 14px;border-radius:999px;background:var(--dg-or);font-weight:700;font-size:14px}
+.dg-info{padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px}
 .dg-chips{display:flex;flex-wrap:wrap;gap:8px}
 .dg-chip{padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--dg-mist);color:var(--dg-blue)}
-.dg-chip.live{background:#FFE9E4;color:#C2410C}
-.dg-feat h3{margin:0;font-family:'Space Grotesk','Inter',sans-serif;font-size:clamp(34px,4vw,48px);font-weight:700;letter-spacing:-.02em;color:var(--dg-navy);line-height:1}
-.dg-feat .sub{margin:-6px 0 0;font-size:18px;color:var(--dg-soft)}
-.dg-when{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:15px;font-weight:600;color:var(--dg-navy)}
+.dg-chip.or{background:#FFE9E4;color:#C2410C}
+.dg-info h3{margin:0;font-family:'Space Grotesk','Inter',sans-serif;font-size:clamp(30px,3.6vw,42px);font-weight:700;letter-spacing:-.02em;color:var(--dg-navy);line-height:1.05}
+.dg-when{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:15px;font-weight:600;color:var(--dg-navy)}
 .dg-count{display:flex;gap:10px}
 .dg-count div{min-width:72px;padding:12px 8px;border-radius:14px;background:var(--dg-navy);color:#fff;text-align:center}
-.dg-count b{display:block;font-family:'Space Grotesk','Inter',sans-serif;font-size:30px;font-weight:700;line-height:1}
+.dg-count b{display:block;font-family:'Space Grotesk','Inter',sans-serif;font-size:28px;font-weight:700;line-height:1}
 .dg-count small{display:block;margin-top:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dg-sky)}
-.dg-spk{display:flex;flex-wrap:wrap;gap:14px}
-.dg-spk div{display:flex;align-items:center;gap:10px}
-.dg-av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#2457FF,#9CC2FF);color:#fff;font-weight:700;font-size:15px;flex:0 0 auto}
-.dg-spk p{margin:0;font-size:14px;line-height:1.3;color:var(--dg-soft)}
-.dg-spk p strong{display:block;color:var(--dg-navy);font-size:15px}
-.dg-feat .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:6px}
-/* tiles */
+.dg-roles{display:flex;flex-wrap:wrap;gap:8px}
+.dg-roles span{padding:8px 14px;border-radius:12px;border:1px solid var(--dg-line);font-size:14px;font-weight:700;color:var(--dg-navy)}
+.dg-roles span em{font-style:normal;color:var(--dg-or);font-weight:600;margin-left:6px}
+.dg-info .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:4px}
+/* format */
 .dg-tiles{margin-top:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .dg-tile{border-radius:20px;padding:28px;background:#fff;border:1px solid var(--dg-line);transition:transform .25s ease,border-color .25s ease}
-.dg-tile:hover{transform:translateY(-4px);border-color:var(--dg-sky)}
-.dg-tile .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--dg-mist);color:var(--dg-blue);font-size:20px;font-weight:700}
-.dg-tile h4{margin:16px 0 6px;font-family:'Space Grotesk','Inter',sans-serif;font-size:21px;font-weight:700;color:var(--dg-navy)}
+.dg-tile:hover{transform:translateY(-4px);border-color:var(--dg-or)}
+.dg-tile .n{font-family:'Space Grotesk','Inter',sans-serif;font-size:15px;font-weight:700;color:var(--dg-or)}
+.dg-tile h4{margin:12px 0 6px;font-family:'Space Grotesk','Inter',sans-serif;font-size:21px;font-weight:700;color:var(--dg-navy)}
 .dg-tile p{margin:0;font-size:15px;line-height:1.6;color:var(--dg-soft)}
-.dg-tile.accent{background:var(--dg-navy);border-color:var(--dg-navy)}
-.dg-tile.accent h4{color:#fff}.dg-tile.accent p{color:#C7D3F2}.dg-tile.accent .ic{background:rgba(255,255,255,.12);color:#fff}
-/* replay + partner */
-.dg-soon{margin-top:24px;border:1px dashed var(--dg-sky);border-radius:20px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--dg-soft)}
-.dg-soon strong{color:var(--dg-navy);font-family:'Space Grotesk','Inter',sans-serif;font-size:20px}
-.dg-part{margin:72px 0 96px;border-radius:28px;padding:clamp(32px,5vw,56px);background:linear-gradient(120deg,#2457FF,#0C1A4F 70%);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.dg-part h2{margin:0;color:#fff;font-family:'Space Grotesk','Inter',sans-serif;font-size:clamp(26px,3.6vw,38px);font-weight:700;letter-spacing:-.02em;max-width:22ch}
-.dg-part p{margin:8px 0 0;color:#DCE5FF}
-.dg-hash{margin-top:14px;font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;color:var(--dg-sky)}
-@media (max-width:860px){.dg-feat{grid-template-columns:minmax(0,1fr)}.dg-feat .pic img{aspect-ratio:16/10;object-position:top}.dg-tiles{grid-template-columns:minmax(0,1fr)}}
-@media (prefers-reduced-motion:reduce){.dg-blob,.dg-dot,.dg-marq .track{animation:none}.dg-feat,.dg-tile,.dg-btn{transition:none}}
+/* form */
+.dg-form{margin:80px 0 96px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:40px;align-items:start}
+.dg-form .intro p{margin:14px 0 0;color:var(--dg-soft);line-height:1.6}
+.dg-form .intro .mail{margin-top:18px;font-weight:700;color:var(--dg-navy)}
+.dg-card{background:#fff;border:1px solid var(--dg-line);border-radius:20px;padding:clamp(22px,4vw,36px);box-shadow:0 10px 40px rgba(12,26,79,.06)}
+.dg-card form{display:flex;flex-direction:column;gap:16px}
+.dg-type{display:flex;flex-wrap:wrap;gap:8px;border:0;margin:0;padding:0}
+.dg-type legend{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--dg-navy);margin-bottom:8px;padding:0}
+.dg-type label{position:relative}
+.dg-type input{position:absolute;opacity:0;inset:0}
+.dg-type span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #C9D1E6;font-weight:700;font-size:14px;color:var(--dg-navy);cursor:pointer;transition:all .2s ease}
+.dg-type input:checked + span{background:var(--dg-navy);border-color:var(--dg-navy);color:#fff}
+.dg-type input:focus-visible + span{outline:3px solid var(--dg-sky);outline-offset:2px}
+.dg-g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.dg-f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.dg-f label{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--dg-navy)}
+.dg-f .o{font-weight:500;letter-spacing:0;text-transform:none;color:var(--dg-soft)}
+.dg-f input,.dg-f textarea{font:inherit;font-size:16px;color:var(--dg-navy);background:#F7F8FC;border:1px solid #C9D1E6;border-radius:12px;padding:12px;min-height:48px;width:100%}
+.dg-f textarea{min-height:96px;resize:vertical}
+.dg-f input:focus,.dg-f textarea:focus{outline:2px solid var(--dg-blue);border-color:var(--dg-blue);background:#fff}
+.dg-bad{border-color:#B42318!important}
+.dg-chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--dg-soft)}
+.dg-chk input{width:20px;height:20px;margin-top:1px;flex:0 0 auto;accent-color:var(--dg-blue)}
+.dg-err{margin:0;min-height:1em;color:#B42318;font-size:14px}
+.dg-thanks h3{margin:0;font-family:'Space Grotesk','Inter',sans-serif;font-size:26px;color:var(--dg-navy)}
+.dg-thanks p{margin:8px 0 0;color:var(--dg-soft)}
+@media (max-width:860px){.dg-feat,.dg-form{grid-template-columns:minmax(0,1fr)}.dg-tiles{grid-template-columns:minmax(0,1fr)}.dg-g2{grid-template-columns:minmax(0,1fr)}.dg-vis{min-height:300px}}
+@media (prefers-reduced-motion:reduce){.dg-feat,.dg-tile,.dg-btn,.dg-type span{transition:none}}
 </style>
 </head>
 <body>
@@ -503,37 +507,31 @@
 </header>
 
 <main id="main" class="dg">
+  <section class="dg-cover">
+    <div class="wrap">
+      <p class="dg-eyebrow">Global Premium Events</p>
+      <h1 class="disp">GPE <em>Dialogues</em></h1>
+      <p class="lead">Live conversations with leaders, experts and institutions on the topics that shape our societies. From Morocco to the world.</p>
+      <div class="acts"><a class="dg-btn or" href="#next">Next dialogue &rarr;</a><a class="dg-btn ghost" href="#join">Take part</a></div>
+    </div>
+  </section>
+
   <div class="wrap">
-    <section class="dg-hero">
-      <span class="dg-blob b1" aria-hidden="true"></span><span class="dg-blob b2" aria-hidden="true"></span><span class="dg-blob b3" aria-hidden="true"></span>
-      <div class="in">
-        <span class="dg-tag"><span class="dg-dot" aria-hidden="true"></span>Live online · Next: 19 November 2026</span>
-        <h1 class="disp">GPE <span>Dialogues</span></h1>
-        <p class="lead">Live conversations with leaders, experts and institutions on the topics that shape our societies. Open, interactive and accessible, from Morocco to the world.</p>
-        <div class="acts"><a class="dg-btn pri" href="#next">Discover the next dialogue &rarr;</a><a class="dg-btn ghost" href="/partner-with-us/">Partner with us</a></div>
-      </div>
-    </section>
-
-    <div class="dg-marq" aria-hidden="true"><div class="track"><span>Mental health<i aria-hidden="true">✦</i></span><span>Leadership<i aria-hidden="true">✦</i></span><span>Wellbeing at work<i aria-hidden="true">✦</i></span><span>Africa<i aria-hidden="true">✦</i></span><span>Gulf<i aria-hidden="true">✦</i></span><span>Innovation<i aria-hidden="true">✦</i></span><span>Inclusion<i aria-hidden="true">✦</i></span><span>Next generation<i aria-hidden="true">✦</i></span><span>Mental health<i aria-hidden="true">✦</i></span><span>Leadership<i aria-hidden="true">✦</i></span><span>Wellbeing at work<i aria-hidden="true">✦</i></span><span>Africa<i aria-hidden="true">✦</i></span><span>Gulf<i aria-hidden="true">✦</i></span><span>Innovation<i aria-hidden="true">✦</i></span><span>Inclusion<i aria-hidden="true">✦</i></span><span>Next generation<i aria-hidden="true">✦</i></span></div></div>
-
     <section class="dg-sec" id="next">
       <p class="kick">Next dialogue</p>
-      <h2 class="disp">Leading Well · Edition 01</h2>
+      <h2 class="disp">Edition 01</h2>
       <article class="dg-feat">
-        <a class="pic" href="/leading-well/en/" aria-label="Leading Well, programme and registration"><img src="/assets/img/leading-well-poster.jpg" alt="Leading Well poster: International Men's Day webinar, Thursday 19 November 2026, 10 to 11 am GMT+1" width="1080" height="1350" loading="lazy"></a>
-        <div class="info">
-          <div class="dg-chips"><span class="dg-chip live">International Men's Day</span><span class="dg-chip">Webinar</span><span class="dg-chip">FR · EN</span><span class="dg-chip">SDG 3</span></div>
-          <h3>Leading Well</h3>
-          <p class="sub">Lead well, be well · Men's mental health &amp; leadership</p>
-          <div class="dg-when"><span>Thursday 19 November 2026</span><span>10–11 am GMT+1</span><span>Online on Zoom</span></div>
-          <div class="dg-count" id="dgCount" aria-label="Countdown to the webinar">
-            <div><b data-k="d">--</b><small>Days</small></div><div><b data-k="h">--</b><small>Hours</small></div><div><b data-k="m">--</b><small>Min</small></div>
-          </div>
-          <div class="dg-spk">
-            <div><span class="dg-av" aria-hidden="true">MZ</span><p><strong>Moundir Zniber</strong>CEO, Gaia Energy</p></div>
-            <div><span class="dg-av" aria-hidden="true">AS</span><p><strong>Amine Sekhri</strong>Country Director, AstraZeneca Morocco</p></div>
-            <div><span class="dg-av" aria-hidden="true">+</span><p><strong>More voices</strong>To be announced</p></div>
-          </div>
+        <a class="dg-vis" href="/leading-well/en/" aria-label="Leading Well, programme and registration">
+          <span class="c c1" aria-hidden="true"></span><span class="c c2" aria-hidden="true"></span>
+          <small>International Men's Day</small>
+          <div><b>Leading<br>Well</b><i>19.11.2026</i></div>
+        </a>
+        <div class="dg-info">
+          <div class="dg-chips"><span class="dg-chip or">Webinar</span><span class="dg-chip">FR · EN</span><span class="dg-chip">SDG 3</span></div>
+          <h3>Men's mental health &amp; leadership</h3>
+          <div class="dg-when"><span>Thursday 19 November 2026</span><span>10–11 am GMT+1</span><span>Online</span></div>
+          <div class="dg-count" id="dgCount" aria-label="Countdown to the webinar"><div><b data-k="d">--</b><small>Days</small></div><div><b data-k="h">--</b><small>Hours</small></div><div><b data-k="m">--</b><small>Min</small></div></div>
+          <div class="dg-roles"><span>Keynote<em>Soon</em></span><span>Talk<em>Soon</em></span><span>Panel<em>Soon</em></span><span>Moderation<em>Soon</em></span></div>
           <div class="acts"><a class="dg-btn dark" href="/leading-well/en/">Register (EN) &rarr;</a><a class="dg-btn dark" href="/leading-well/" lang="fr">S'inscrire (FR) &rarr;</a></div>
         </div>
       </article>
@@ -543,30 +541,66 @@
       <p class="kick">The format</p>
       <h2 class="disp">One hour. Real conversations.</h2>
       <div class="dg-tiles">
-        <div class="dg-tile accent"><span class="ic" aria-hidden="true">◉</span><h4>Live &amp; interactive</h4><p>Keynotes, panels and your questions to the speakers, in real time.</p></div>
-        <div class="dg-tile"><span class="ic" aria-hidden="true">✦</span><h4>Accessible to all</h4><p>French and English, Moroccan Sign Language and subtitles.</p></div>
-        <div class="dg-tile"><span class="ic" aria-hidden="true">↺</span><h4>Watch again</h4><p>Every registered participant receives the replay after the session.</p></div>
+        <div class="dg-tile"><span class="n">01</span><h4>Live &amp; interactive</h4><p>Keynotes, panels and your questions to the speakers, in real time.</p></div>
+        <div class="dg-tile"><span class="n">02</span><h4>Accessible to all</h4><p>French and English, Moroccan Sign Language and subtitles.</p></div>
+        <div class="dg-tile"><span class="n">03</span><h4>Watch again</h4><p>Every registered participant receives the replay after the session.</p></div>
       </div>
     </section>
 
-    <section class="dg-sec">
-      <p class="kick">Replays</p>
-      <h2 class="disp">Watch our past dialogues</h2>
-      <div class="dg-soon"><p style="margin:0"><strong>First replay coming soon.</strong><br>The replay of Leading Well will be available here after 19 November.</p><a class="dg-btn dark" href="/leading-well/en/">Save my seat</a></div>
-    </section>
-
-    <section class="dg-part">
-      <div><h2>Host a dialogue with GPE</h2><p>Brands, institutions and media: shape the next conversations with us.</p><p class="dg-hash">#GPEDialogues</p></div>
-      <a class="dg-btn pri" href="/partner-with-us/">Become a partner &rarr;</a>
+    <section class="dg-form" id="join">
+      <div class="intro">
+        <p class="kick" style="margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#FF6B4A">Take part</p>
+        <h2 class="disp" style="margin:0;font-size:clamp(30px,4.5vw,44px);font-weight:700;color:#0C1A4F;line-height:1.1">Join the dialogue</h2>
+        <p>Register as a participant, propose a partnership, apply as a speaker or request media accreditation. Our team will get back to you shortly.</p>
+        <p class="mail">info@globalpremiumevents.com</p>
+      </div>
+      <div class="dg-card">
+        <form id="dgForm" novalidate>
+          <fieldset class="dg-type"><legend>I would like to join as</legend>
+            <label><input type="radio" name="Profile" value="Participant" checked><span>Participant</span></label>
+            <label><input type="radio" name="Profile" value="Partner"><span>Partner</span></label>
+            <label><input type="radio" name="Profile" value="Speaker"><span>Speaker</span></label>
+            <label><input type="radio" name="Profile" value="Media"><span>Media</span></label>
+          </fieldset>
+          <div class="dg-g2">
+            <div class="dg-f"><label for="d-fn">First name</label><input id="d-fn" name="First name" autocomplete="given-name" required></div>
+            <div class="dg-f"><label for="d-ln">Last name</label><input id="d-ln" name="Last name" autocomplete="family-name" required></div>
+            <div class="dg-f"><label for="d-role">Position</label><input id="d-role" name="Position" autocomplete="organization-title" required></div>
+            <div class="dg-f"><label for="d-org">Organisation</label><input id="d-org" name="Organisation" autocomplete="organization" required></div>
+            <div class="dg-f"><label for="d-em">Email</label><input id="d-em" name="email" type="email" autocomplete="email" required></div>
+            <div class="dg-f"><label for="d-ph">Phone / WhatsApp <span class="o">(optional)</span></label><input id="d-ph" name="Phone" type="tel" autocomplete="tel"></div>
+            <div class="dg-f"><label for="d-ct">City and country</label><input id="d-ct" name="City and country" autocomplete="address-level2" required></div>
+            <div class="dg-f"><label for="d-ev">Dialogue</label><input id="d-ev" name="Dialogue" value="Leading Well · 19 November 2026" readonly></div>
+          </div>
+          <div class="dg-f"><label for="d-msg">Message <span class="o">(optional)</span></label><textarea id="d-msg" name="Message"></textarea></div>
+          <label class="dg-chk" for="d-ok"><input type="checkbox" id="d-ok" name="Consent" value="Yes" required> I agree that Global Premium Events may use this information to contact me about GPE Dialogues.</label>
+          <p class="dg-err" id="dgErr" role="alert"></p>
+          <button class="dg-btn or" type="submit" style="align-self:flex-start">Send my request &rarr;</button>
+        </form>
+      </div>
     </section>
   </div>
 </main>
 <script>
-(function(){var el=document.getElementById('dgCount');if(!el)return;var t=Date.parse('2026-11-19T10:00:00+01:00');
+(function(){var el=document.getElementById('dgCount');if(el){var t=Date.parse('2026-11-19T10:00:00+01:00');
 function pad(n){return n<10?'0'+n:''+n}
-function tick(){var s=Math.max(0,Math.floor((t-Date.now())/1000));var d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);
-el.querySelector('[data-k=d]').textContent=pad(d);el.querySelector('[data-k=h]').textContent=pad(h);el.querySelector('[data-k=m]').textContent=pad(m);}
-tick();setInterval(tick,30000);})();
+function tick(){var s=Math.max(0,Math.floor((t-Date.now())/1000));el.querySelector('[data-k=d]').textContent=pad(Math.floor(s/86400));el.querySelector('[data-k=h]').textContent=pad(Math.floor(s%86400/3600));el.querySelector('[data-k=m]').textContent=pad(Math.floor(s%3600/60));}
+tick();setInterval(tick,30000);}
+var f=document.getElementById('dgForm'),err=document.getElementById('dgErr');if(!f)return;
+f.addEventListener('submit',function(e){e.preventDefault();err.textContent='';
+f.querySelectorAll('.dg-bad').forEach(function(x){x.classList.remove('dg-bad');});
+var bad=Array.prototype.filter.call(f.querySelectorAll('[required]'),function(x){if(x.type==='checkbox')return !x.checked;if(x.type==='email')return !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x.value.trim());return !x.value.trim();});
+if(bad.length){bad.forEach(function(x){x.classList.add('dg-bad');});err.textContent='Please complete the fields in red and accept the use of your information.';bad[0].focus();return;}
+var d={};new FormData(f).forEach(function(v,k){if(v!=='')d[k]=v;});
+d._subject='GPE Dialogues · '+d.Profile+' · '+d['First name']+' '+d['Last name'];d._replyto=d.email;d._captcha='false';d._template='table';
+var lines=Object.keys(d).filter(function(k){return k.charAt(0)!=='_';}).map(function(k){return k+': '+d[k];});
+var mailto='mailto:info@globalpremiumevents.com?subject='+encodeURIComponent(d._subject)+'&body='+encodeURIComponent(lines.join('\n'));
+var b=f.querySelector('button'),lab=b.innerHTML;b.disabled=true;b.textContent='Sending…';
+fetch('https://formsubmit.co/ajax/info@globalpremiumevents.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+.then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)==='false')throw j;return j;});})
+.then(function(){f.outerHTML='<div class="dg-thanks" role="status"><h3>Thank you, your request has been sent.</h3><p>Our team will get back to you shortly.</p></div>';})
+.catch(function(){b.disabled=false;b.innerHTML=lab;err.textContent='Sending failed. Your email app will open with your request ready to send.';window.location.href=mailto;});});
+})();
 </script>
 
 
