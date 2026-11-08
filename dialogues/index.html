@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPE Dialogues &mdash; Global Premium Events</title>
+<meta name="description" content="GPE Dialogues: live online conversations with leaders, experts and institutions on the topics that shape our societies. Discover the next dialogue and save your seat.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Premium Events">
+<meta property="og:title" content="GPE Dialogues — Global Premium Events">
+<meta property="og:description" content="GPE Dialogues: live online conversations with leaders, experts and institutions on the topics that shape our societies. Discover the next dialogue and save your seat.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GPE Dialogues — Global Premium Events">
+<meta name="twitter:description" content="GPE Dialogues: live online conversations with leaders, experts and institutions on the topics that shape our societies. Discover the next dialogue and save your seat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #16294F;
+    --blue: #2C4E86;
+    --blue-mid: #45659B;
+    --ink: #1B1E24;
+    --ink-dim: #5B6270;
+    --line: #DDE3EC;
+    --panel: #F4F6FA;
+    --bg: #FFFFFF;
+    --gold: #A9832E;
+    --gold-light: #C3A86D;
+    --gold-dark: #8E6E27;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', Arial, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{ font-family:'Source Serif 4', Georgia, serif; }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:72px 0 64px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-watermark{
+    position:absolute;
+    top:-70px;
+    right:-30px;
+    font-family:'Source Serif 4', serif;
+    font-size:280px;
+    font-weight:600;
+    color:var(--navy);
+    opacity:0.045;
+    line-height:1;
+    pointer-events:none;
+    user-select:none;
+    z-index:0;
+  }
+  .hero-inner{ position:relative; z-index:1; max-width:62ch; }
+  .hero-kicker{
+    display:flex; align-items:center; gap:10px; color:var(--blue); font-size:13px; margin-bottom:22px; font-weight:500;
+  }
+  .hero-kicker .rule{ width:36px; height:1px; background:var(--blue-mid); }
+  h1.hero-title{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(36px, 4.4vw, 52px);
+    line-height:1.1;
+    font-weight:600;
+    margin:0 0 20px;
+    color:var(--navy);
+  }
+  .hero-sub{
+    font-size:15.5px;
+    color:var(--ink-dim);
+    line-height:1.75;
+    margin:0;
+    max-width:58ch;
+  }
+
+  /* CONTACT SPLIT */
+  .contact-main{ padding:72px 0 88px; }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:start;
+  }
+  .contact-info-card{
+    background:var(--navy);
+    color:#fff;
+    padding:44px 38px;
+    position:relative;
+    overflow:hidden;
+  }
+  .contact-info-card::before{
+    content:"";
+    position:absolute;
+    top:-40px; right:-40px;
+    width:220px; height:220px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(169,131,46,0.22), transparent 70%);
+    pointer-events:none;
+  }
+  .contact-info-card h2{
+    font-family:'Source Serif 4', serif;
+    font-size:23px;
+    font-weight:600;
+    margin:0 0 12px;
+    position:relative;
+    z-index:1;
+  }
+  .contact-info-card > p{
+    font-size:14.5px;
+    color:#C7D1E3;
+    line-height:1.7;
+    margin:0 0 32px;
+    max-width:36ch;
+    position:relative;
+    z-index:1;
+  }
+  .contact-detail-list{
+    list-style:none;
+    margin:0 0 32px;
+    padding:0;
+    display:grid;
+    gap:22px;
+    position:relative;
+    z-index:1;
+  }
+  .contact-detail-list li{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .cd-icon{
+    flex-shrink:0;
+    width:38px; height:38px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.18);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .cd-icon svg{ width:17px; height:17px; stroke:var(--gold-light); fill:none; stroke-width:1.8; }
+  .cd-text{ font-size:14px; color:#E4E9F2; line-height:1.6; }
+  .cd-text b{ display:block; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#8FA1C4; font-weight:600; margin-bottom:4px; }
+  .cd-text a{ color:#E4E9F2; text-decoration:none; border-bottom:1px solid rgba(228,233,242,0.35); transition:border-color .25s ease, color .25s ease; }
+  .cd-text a:hover{ color:#fff; border-color:var(--gold-light); }
+  .contact-email-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--gold);
+    color:var(--navy);
+    font-weight:600;
+    font-size:14px;
+    padding:14px 22px;
+    text-decoration:none;
+    border-radius:2px;
+    transition:background-color .3s ease, transform .3s ease;
+    position:relative;
+    z-index:1;
+  }
+  .contact-email-btn:hover{ background:var(--gold-light); transform:translateY(-2px); }
+
+  /* FORM */
+  .contact-form-card{
+    border:1px solid var(--line);
+    padding:44px 40px;
+  }
+  .contact-form-card h2{
+    font-family:'Source Serif 4', serif;
+    font-size:22px;
+    font-weight:600;
+    color:var(--navy);
+    margin:0 0 8px;
+  }
+  .contact-form-card > p{
+    font-size:14.5px;
+    color:var(--ink-dim);
+    line-height:1.7;
+    margin:0 0 32px;
+  }
+  .cf-row{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:22px; min-width:0; }
+  .cf-field{ display:flex; flex-direction:column; gap:8px; margin-bottom:22px; min-width:0; }
+  .cf-field label{ font-size:12.5px; font-weight:600; color:var(--navy); letter-spacing:0.02em; }
+  .cf-field input, .cf-field select, .cf-field textarea{
+    width:100%;
+    max-width:100%;
+    font-family:'Inter', Arial, sans-serif;
+    font-size:14.5px;
+    color:var(--ink);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:13px 14px;
+    background:var(--panel);
+    transition:border-color .25s ease, background-color .25s ease;
+    box-sizing:border-box;
+  }
+  .cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus{
+    outline:none;
+    border-color:var(--blue-mid);
+    background:#fff;
+  }
+  .cf-field textarea{ resize:vertical; min-height:130px; font-family:'Inter', Arial, sans-serif; }
+  .cf-submit{
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    padding:15px 30px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    border-radius:2px;
+    cursor:pointer;
+    transition:background-color .3s ease, transform .3s ease, box-shadow .3s ease;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .cf-submit:hover{ background:var(--blue); transform:translateY(-3px); box-shadow:0 16px 32px rgba(22,41,79,0.2); }
+  .cf-dynamic-note{
+    font-size:13px;
+    color:var(--blue);
+    background:var(--panel);
+    border-left:3px solid var(--gold);
+    padding:11px 14px;
+    border-radius:2px;
+    margin:-4px 0 22px;
+    line-height:1.55;
+    display:none;
+  }
+  .cf-dynamic-note.is-visible{ display:block; }
+  .cf-branch{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    transition:max-height .4s ease, opacity .35s ease, margin .4s ease;
+  }
+  .cf-branch.is-visible{
+    max-height:260px;
+    opacity:1;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .cf-branch{ transition:none; }
+  }
+  .cf-note{ font-size:12.5px; color:var(--ink-dim); margin-top:16px; line-height:1.6; }
+  .cf-note a{ color:var(--blue); }
+  @media (max-width:900px){
+    .contact-grid{ grid-template-columns:1fr; gap:40px; }
+  }
+  @media (max-width:560px){
+    .cf-row{ grid-template-columns:1fr; gap:0; }
+    .contact-info-card, .contact-form-card{ padding:32px 24px; }
+  }
+
+  /* WHAT HAPPENS NEXT */
+  .next-steps{ padding:20px 0 80px; border-top:1px solid var(--line); }
+  .next-steps-head{ max-width:640px; margin:56px auto 40px; padding:0 48px; text-align:center; }
+  .next-steps-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:clamp(24px,2.8vw,30px);
+    font-weight:600;
+    color:var(--navy);
+    margin:0 0 12px;
+    letter-spacing:-0.01em;
+  }
+  .next-steps-head p{ font-size:14.5px; color:var(--ink-dim); line-height:1.7; margin:0; }
+  .next-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+  }
+  .next-card{
+    text-align:center;
+    padding:8px 20px;
+  }
+  .next-num{
+    width:52px; height:52px;
+    border-radius:50%;
+    background:var(--panel);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 18px;
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    color:var(--gold);
+    font-size:17px;
+  }
+  .next-card h3{ font-family:'Source Serif 4', serif; font-size:16px; font-weight:600; color:var(--navy); margin:0 0 8px; }
+  .next-card p{ font-size:13.5px; color:var(--ink-dim); line-height:1.6; margin:0; }
+  @media (max-width:760px){
+    .next-grid{ grid-template-columns:1fr; gap:32px; }
+  }
+
+  /* SITE FOOTER (shared) */
+  .site-footer{
+    background:var(--navy);
+    color:#C7D1E3;
+    padding:64px 0 0;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.95fr 1fr 1.35fr;
+    gap:32px;
+    padding-bottom:44px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-brand{ display:flex; flex-direction:column; gap:18px; }
+  .footer-logo{ width:84px; height:84px; display:block; }
+  .footer-brand p{ font-size:13px; color:#9FACC6; line-height:1.65; max-width:30ch; margin:0; }
+  .footer-col-title{ font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin:0 0 20px; }
+  .footer-contact{ list-style:none; margin:0; padding:0; display:grid; gap:13px; }
+  .footer-contact li{ font-size:14px; color:#E4E9F2; line-height:1.6; display:flex; gap:12px; }
+  .footer-contact li b{ color:#7F93B8; font-weight:600; flex-shrink:0; width:14px; }
+  .footer-cta-text{ font-size:13.5px; color:#9FACC6; line-height:1.65; margin:0 0 14px; max-width:26ch; }
+  .footer-cta-link{ display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; letter-spacing:0.02em; color:#fff; text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:3px; transition:color .3s ease, gap .3s ease; }
+  .footer-cta-link:hover{ color:var(--gold-light); gap:12px; }
+  .footer-relocating{ margin:10px 0 0; font-size:12px; font-style:italic; color:#8394B3; line-height:1.5; }
+  .footer-partners-list{ font-size:13px; font-weight:600; letter-spacing:0.06em; color:#E4E9F2; line-height:2; }
+  .footer-partners-list .sep{ color:var(--gold); margin:0 10px; }
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding:22px 0; font-size:12px; color:#7F93B8; }
+  @media (max-width:760px){ .footer-bottom{ justify-content:flex-start; } }
+  @media (max-width:900px){ .footer-grid{ grid-template-columns:1fr 1fr; gap:36px 40px; } }
+  @media (max-width:560px){ .footer-grid{ grid-template-columns:1fr; gap:32px; } }
+
+  /* ============ ACCESSIBILITY: skip link + focus-visible ============ */
+  .skip-link{
+    position:absolute; top:-48px; left:12px; z-index:9999;
+    background:var(--navy); color:#fff; padding:12px 20px; border-radius:4px;
+    font-family:'Inter', Arial, sans-serif; font-size:14px; font-weight:600; text-decoration:none;
+    transition:top .25s ease;
+  }
+  .skip-link:focus{ top:12px; }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  /* ============ SCROLL PROGRESS + REVEAL/GLOW (shared with Home/About) ============ */
+  .scroll-progress{ position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; background:transparent; pointer-events:none; }
+  .scroll-progress-bar{ height:100%; width:0%; background:linear-gradient(90deg, var(--gold), var(--navy)); transition:width .1s linear; }
+  @media (prefers-reduced-motion: reduce){ .scroll-progress-bar{ transition:none; } }
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .5s ease, box-shadow .35s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  .glow-card, .glow-card-dark{ position:relative; overflow:hidden; }
+  .glow-card::before, .glow-card-dark::before{
+    content:""; position:absolute; inset:0; opacity:0; transition:opacity .4s ease; pointer-events:none; z-index:0;
+  }
+  .glow-card::before{ background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(169,131,46,0.14), transparent 70%); }
+  .glow-card-dark::before{ background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.10), transparent 70%); }
+  .glow-card:hover::before, .glow-card-dark:hover::before{ opacity:1; }
+  .glow-card > *, .glow-card-dark > *{ position:relative; z-index:1; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .glow-card::before, .glow-card-dark::before{ display:none; }
+  }
+
+</style>
+<style id="gpe-form-css">
+.gpe-form-ok{text-align:center;padding:40px 16px;}
+.gpe-form-ok-icon{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:#A9832E;color:#fff;font-size:28px;line-height:56px;}
+.gpe-form-ok h3{font-family:'Source Serif 4',Georgia,serif;color:#16294F;font-size:22px;margin:0 0 8px;}
+.gpe-form-ok p{color:#5B6270;margin:0;font-size:15px;}
+.contact-form-note,.cf-note{display:none;}
+</style>
+<link rel="canonical" href="https://globalpremiumevents.com/dialogues/">
+<meta property="og:url" content="https://globalpremiumevents.com/dialogues/">
+<meta property="og:image" content="https://globalpremiumevents.com/leading-well/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://globalpremiumevents.com/leading-well/og.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#16294F">
+<link rel="stylesheet" href="/assets/gpe.css">
+<style id="dialogues-css">
+.dg{--dg-navy:#0C1A4F;--dg-blue:#2457FF;--dg-sky:#9CC2FF;--dg-mist:#E8EEFF;--dg-coral:#FF6B4A;--dg-ink:#0C1A4F;--dg-soft:#4A5578;--dg-line:#DCE2F0}
+.dg *{box-sizing:border-box}
+.dg .disp{font-family:'Space Grotesk','Inter',Arial,sans-serif;letter-spacing:-.02em}
+/* hero */
+.dg-hero{position:relative;overflow:hidden;background:var(--dg-navy);color:#fff;border-radius:28px;margin:24px 0 0;padding:clamp(40px,7vw,88px) clamp(24px,5vw,64px)}
+.dg-blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75;pointer-events:none}
+.dg-blob.b1{width:520px;height:520px;right:-120px;top:-160px;background:#2457FF;animation:dgf1 16s ease-in-out infinite alternate}
+.dg-blob.b2{width:380px;height:380px;right:240px;bottom:-200px;background:#6E4CFF;animation:dgf2 19s ease-in-out infinite alternate}
+.dg-blob.b3{width:260px;height:260px;left:-80px;bottom:-120px;background:#FF6B4A;opacity:.35;animation:dgf1 22s ease-in-out infinite alternate}
+@keyframes dgf1{to{transform:translate(-60px,50px) scale(1.12)}}
+@keyframes dgf2{to{transform:translate(70px,-40px) scale(.9)}}
+.dg-hero .in{position:relative;z-index:1;max-width:760px}
+.dg-tag{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:13px;font-weight:600;letter-spacing:.04em}
+.dg-dot{width:8px;height:8px;border-radius:50%;background:var(--dg-coral);box-shadow:0 0 0 0 rgba(255,107,74,.6);animation:dgp 1.8s infinite}
+@keyframes dgp{70%{box-shadow:0 0 0 10px rgba(255,107,74,0)}100%{box-shadow:0 0 0 0 rgba(255,107,74,0)}}
+.dg-hero h1{margin:22px 0 0;font-size:clamp(52px,9vw,104px);font-weight:700;line-height:.95}
+.dg-hero h1 span{background:linear-gradient(90deg,#9CC2FF,#FFFFFF 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dg-hero p.lead{margin:22px 0 0;font-size:clamp(17px,2vw,20px);line-height:1.6;color:#DCE5FF;max-width:56ch}
+.dg-hero .acts{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.dg-btn{display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .2s ease,background .2s ease}
+.dg-btn:hover{transform:translateY(-2px)}
+.dg-btn.pri{background:#fff;color:var(--dg-navy)}
+.dg-btn.pri:hover{background:var(--dg-mist)}
+.dg-btn.ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+.dg-btn.ghost:hover{background:rgba(255,255,255,.08)}
+.dg-btn.dark{background:var(--dg-navy);color:#fff}
+.dg-btn.dark:hover{background:var(--dg-blue)}
+.dg-btn:focus-visible{outline:3px solid var(--dg-sky);outline-offset:3px}
+/* marquee */
+.dg-marq{margin:22px 0 0;overflow:hidden;border-block:1px solid var(--dg-line);padding-block:14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.dg-marq .track{display:flex;gap:40px;width:max-content;animation:dgm 32s linear infinite}
+.dg-marq span{font-family:'Space Grotesk','Inter',sans-serif;font-size:20px;font-weight:600;color:var(--dg-navy);white-space:nowrap}
+.dg-marq span i{font-style:normal;color:var(--dg-coral);margin-left:40px}
+@keyframes dgm{to{transform:translateX(-50%)}}
+/* sections */
+.dg-sec{padding:72px 0 0}
+.dg-sec h2{margin:0;font-size:clamp(30px,4.5vw,44px);font-weight:700;color:var(--dg-navy);line-height:1.1}
+.dg-sec .kick{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dg-blue)}
+/* featured */
+.dg-feat{margin-top:28px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0;background:#fff;border:1px solid var(--dg-line);border-radius:24px;overflow:hidden;transition:box-shadow .3s ease,transform .3s ease}
+.dg-feat:hover{box-shadow:0 24px 60px rgba(12,26,79,.14);transform:translateY(-3px)}
+.dg-feat .pic{background:var(--dg-navy);display:block;min-height:100%}
+.dg-feat .pic img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5}
+.dg-feat .info{padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:16px}
+.dg-chips{display:flex;flex-wrap:wrap;gap:8px}
+.dg-chip{padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--dg-mist);color:var(--dg-blue)}
+.dg-chip.live{background:#FFE9E4;color:#C2410C}
+.dg-feat h3{margin:0;font-family:'Space Grotesk','Inter',sans-serif;font-size:clamp(34px,4vw,48px);font-weight:700;letter-spacing:-.02em;color:var(--dg-navy);line-height:1}
+.dg-feat .sub{margin:-6px 0 0;font-size:18px;color:var(--dg-soft)}
+.dg-when{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:15px;font-weight:600;color:var(--dg-navy)}
+.dg-count{display:flex;gap:10px}
+.dg-count div{min-width:72px;padding:12px 8px;border-radius:14px;background:var(--dg-navy);color:#fff;text-align:center}
+.dg-count b{display:block;font-family:'Space Grotesk','Inter',sans-serif;font-size:30px;font-weight:700;line-height:1}
+.dg-count small{display:block;margin-top:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dg-sky)}
+.dg-spk{display:flex;flex-wrap:wrap;gap:14px}
+.dg-spk div{display:flex;align-items:center;gap:10px}
+.dg-av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#2457FF,#9CC2FF);color:#fff;font-weight:700;font-size:15px;flex:0 0 auto}
+.dg-spk p{margin:0;font-size:14px;line-height:1.3;color:var(--dg-soft)}
+.dg-spk p strong{display:block;color:var(--dg-navy);font-size:15px}
+.dg-feat .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:6px}
+/* tiles */
+.dg-tiles{margin-top:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.dg-tile{border-radius:20px;padding:28px;background:#fff;border:1px solid var(--dg-line);transition:transform .25s ease,border-color .25s ease}
+.dg-tile:hover{transform:translateY(-4px);border-color:var(--dg-sky)}
+.dg-tile .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--dg-mist);color:var(--dg-blue);font-size:20px;font-weight:700}
+.dg-tile h4{margin:16px 0 6px;font-family:'Space Grotesk','Inter',sans-serif;font-size:21px;font-weight:700;color:var(--dg-navy)}
+.dg-tile p{margin:0;font-size:15px;line-height:1.6;color:var(--dg-soft)}
+.dg-tile.accent{background:var(--dg-navy);border-color:var(--dg-navy)}
+.dg-tile.accent h4{color:#fff}.dg-tile.accent p{color:#C7D3F2}.dg-tile.accent .ic{background:rgba(255,255,255,.12);color:#fff}
+/* replay + partner */
+.dg-soon{margin-top:24px;border:1px dashed var(--dg-sky);border-radius:20px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--dg-soft)}
+.dg-soon strong{color:var(--dg-navy);font-family:'Space Grotesk','Inter',sans-serif;font-size:20px}
+.dg-part{margin:72px 0 96px;border-radius:28px;padding:clamp(32px,5vw,56px);background:linear-gradient(120deg,#2457FF,#0C1A4F 70%);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.dg-part h2{margin:0;color:#fff;font-family:'Space Grotesk','Inter',sans-serif;font-size:clamp(26px,3.6vw,38px);font-weight:700;letter-spacing:-.02em;max-width:22ch}
+.dg-part p{margin:8px 0 0;color:#DCE5FF}
+.dg-hash{margin-top:14px;font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;color:var(--dg-sky)}
+@media (max-width:860px){.dg-feat{grid-template-columns:minmax(0,1fr)}.dg-feat .pic img{aspect-ratio:16/10;object-position:top}.dg-tiles{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.dg-blob,.dg-dot,.dg-marq .track{animation:none}.dg-feat,.dg-tile,.dg-btn{transition:none}}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<header class="gpe-nav" id="gpeNav">
+  <div class="gpe-nav-in">
+    <a class="gpe-nav-logo" href="/" aria-label="Global Premium Events — Home"><img src="/assets/logo.webp" alt="Global Premium Events" width="44" height="44"></a>
+    <button class="gpe-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="gpeNavLinks"><span></span><span></span><span></span></button>
+    <nav class="gpe-nav-links" id="gpeNavLinks" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/about-us/">About</a>
+      <div class="gpe-dd">
+        <button class="gpe-dd-toggle" aria-expanded="false" aria-haspopup="true">Services <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="gpe-dd-menu"><a href="/services/missions-partnerships/"><b>Missions, Delegations &amp; Matchmaking</b><span>Official delegations, trade missions, B2B / G2G meetings</span></a><a href="/services/exhibitions-trade-shows/"><b>Trade Shows &amp; Exhibitions</b><span>Stand design, build and full participation management</span></a><a href="/services/event-production/"><b>Corporate Event Production</b><span>Launches, conferences, ceremonies and galas</span></a><a class="gpe-dd-all" href="/services/">View all services &rarr;</a></div>
+      </div>
+      <div class="gpe-dd">
+        <button class="gpe-dd-toggle" aria-expanded="false" aria-haspopup="true">B2B Missions <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="gpe-dd-menu"><a href="/missions/"><b>B2B Missions Calendar</b><span>Upcoming business missions in Africa, the Gulf, Europe and the US</span></a><a href="/africa-business-china/" lang="zh-Hans"><b>中国企业 &rarr; 非洲</b><span>For Chinese companies</span></a><a href="/africa-business-japan/" lang="ja"><b>日本企業 &rarr; アフリカ</b><span>For Japanese companies</span></a><a href="/africa-business-korea/" lang="ko"><b>한국 기업 &rarr; 아프리카</b><span>For Korean companies</span></a><a class="gpe-dd-all" href="/missions/#faq">B2B in Africa: FAQ &rarr;</a></div>
+      </div>
+      <a href="/our-work/">Our Work</a>
+      <a href="/dialogues/">Dialogues</a>
+      <a href="/inclusive-events/" class="gpe-nav-incl">Inclusive Events</a>
+      <a class="gpe-nav-cta" href="/contact-us/">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="dg">
+  <div class="wrap">
+    <section class="dg-hero">
+      <span class="dg-blob b1" aria-hidden="true"></span><span class="dg-blob b2" aria-hidden="true"></span><span class="dg-blob b3" aria-hidden="true"></span>
+      <div class="in">
+        <span class="dg-tag"><span class="dg-dot" aria-hidden="true"></span>Live online · Next: 19 November 2026</span>
+        <h1 class="disp">GPE <span>Dialogues</span></h1>
+        <p class="lead">Live conversations with leaders, experts and institutions on the topics that shape our societies. Open, interactive and accessible, from Morocco to the world.</p>
+        <div class="acts"><a class="dg-btn pri" href="#next">Discover the next dialogue &rarr;</a><a class="dg-btn ghost" href="/partner-with-us/">Partner with us</a></div>
+      </div>
+    </section>
+
+    <div class="dg-marq" aria-hidden="true"><div class="track"><span>Mental health<i aria-hidden="true">✦</i></span><span>Leadership<i aria-hidden="true">✦</i></span><span>Wellbeing at work<i aria-hidden="true">✦</i></span><span>Africa<i aria-hidden="true">✦</i></span><span>Gulf<i aria-hidden="true">✦</i></span><span>Innovation<i aria-hidden="true">✦</i></span><span>Inclusion<i aria-hidden="true">✦</i></span><span>Next generation<i aria-hidden="true">✦</i></span><span>Mental health<i aria-hidden="true">✦</i></span><span>Leadership<i aria-hidden="true">✦</i></span><span>Wellbeing at work<i aria-hidden="true">✦</i></span><span>Africa<i aria-hidden="true">✦</i></span><span>Gulf<i aria-hidden="true">✦</i></span><span>Innovation<i aria-hidden="true">✦</i></span><span>Inclusion<i aria-hidden="true">✦</i></span><span>Next generation<i aria-hidden="true">✦</i></span></div></div>
+
+    <section class="dg-sec" id="next">
+      <p class="kick">Next dialogue</p>
+      <h2 class="disp">Leading Well · Edition 01</h2>
+      <article class="dg-feat">
+        <a class="pic" href="/leading-well/en/" aria-label="Leading Well, programme and registration"><img src="/assets/img/leading-well-poster.jpg" alt="Leading Well poster: International Men's Day webinar, Thursday 19 November 2026, 10 to 11 am GMT+1" width="1080" height="1350" loading="lazy"></a>
+        <div class="info">
+          <div class="dg-chips"><span class="dg-chip live">International Men's Day</span><span class="dg-chip">Webinar</span><span class="dg-chip">FR · EN</span><span class="dg-chip">SDG 3</span></div>
+          <h3>Leading Well</h3>
+          <p class="sub">Lead well, be well · Men's mental health &amp; leadership</p>
+          <div class="dg-when"><span>Thursday 19 November 2026</span><span>10–11 am GMT+1</span><span>Online on Zoom</span></div>
+          <div class="dg-count" id="dgCount" aria-label="Countdown to the webinar">
+            <div><b data-k="d">--</b><small>Days</small></div><div><b data-k="h">--</b><small>Hours</small></div><div><b data-k="m">--</b><small>Min</small></div>
+          </div>
+          <div class="dg-spk">
+            <div><span class="dg-av" aria-hidden="true">MZ</span><p><strong>Moundir Zniber</strong>CEO, Gaia Energy</p></div>
+            <div><span class="dg-av" aria-hidden="true">AS</span><p><strong>Amine Sekhri</strong>Country Director, AstraZeneca Morocco</p></div>
+            <div><span class="dg-av" aria-hidden="true">+</span><p><strong>More voices</strong>To be announced</p></div>
+          </div>
+          <div class="acts"><a class="dg-btn dark" href="/leading-well/en/">Register (EN) &rarr;</a><a class="dg-btn dark" href="/leading-well/" lang="fr">S'inscrire (FR) &rarr;</a></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="dg-sec">
+      <p class="kick">The format</p>
+      <h2 class="disp">One hour. Real conversations.</h2>
+      <div class="dg-tiles">
+        <div class="dg-tile accent"><span class="ic" aria-hidden="true">◉</span><h4>Live &amp; interactive</h4><p>Keynotes, panels and your questions to the speakers, in real time.</p></div>
+        <div class="dg-tile"><span class="ic" aria-hidden="true">✦</span><h4>Accessible to all</h4><p>French and English, Moroccan Sign Language and subtitles.</p></div>
+        <div class="dg-tile"><span class="ic" aria-hidden="true">↺</span><h4>Watch again</h4><p>Every registered participant receives the replay after the session.</p></div>
+      </div>
+    </section>
+
+    <section class="dg-sec">
+      <p class="kick">Replays</p>
+      <h2 class="disp">Watch our past dialogues</h2>
+      <div class="dg-soon"><p style="margin:0"><strong>First replay coming soon.</strong><br>The replay of Leading Well will be available here after 19 November.</p><a class="dg-btn dark" href="/leading-well/en/">Save my seat</a></div>
+    </section>
+
+    <section class="dg-part">
+      <div><h2>Host a dialogue with GPE</h2><p>Brands, institutions and media: shape the next conversations with us.</p><p class="dg-hash">#GPEDialogues</p></div>
+      <a class="dg-btn pri" href="/partner-with-us/">Become a partner &rarr;</a>
+    </section>
+  </div>
+</main>
+<script>
+(function(){var el=document.getElementById('dgCount');if(!el)return;var t=Date.parse('2026-11-19T10:00:00+01:00');
+function pad(n){return n<10?'0'+n:''+n}
+function tick(){var s=Math.max(0,Math.floor((t-Date.now())/1000));var d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);
+el.querySelector('[data-k=d]').textContent=pad(d);el.querySelector('[data-k=h]').textContent=pad(h);el.querySelector('[data-k=m]').textContent=pad(m);}
+tick();setInterval(tick,30000);})();
+</script>
+
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img loading="lazy" class="footer-logo" src="/assets/logo.webp" alt="Global Premium Events">
+        <p>Structuring international missions, delegations and business matchmaking between Africa and global markets.</p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Headquarters</div>
+        <ul class="footer-contact">
+          <li><b>T</b> +212 653512995</li>
+          <li><b>E</b> info@globalpremiumevents.com</li>
+          <li><b>A</b><span>12 Rue Dar El Beida, Hassan<br>Rabat, Morocco<span style="display:block;margin-top:6px;font-size:.78em;letter-spacing:.04em;color:#C3A86D;font-style:italic">Relocating soon &mdash; our new address will be announced shortly.</span></span></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="gpe-foot-links">
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/missions/">B2B Missions</a></li>
+          <li><a href="/africa-business-japan/" lang="ja">日本 &rarr; アフリカ</a></li>
+          <li><a href="/africa-business-korea/" lang="ko">한국 &rarr; 아프리카</a></li>
+          <li><a href="/africa-business-china/" lang="zh-Hans">中国 &rarr; 非洲</a></li>
+          <li><a href="/our-work/">Our Work</a></li>
+          <li><a href="/dialogues/">Dialogues</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/inclusive-events/">Inclusive Events</a></li>
+          <li><a href="/partner-with-us/">Partner With Us</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Global Presence</div>
+        <div class="footer-partners-list">AFRICA <span class="sep">&bull;</span> G.C.C <span class="sep">&bull;</span> EUROPE <span class="sep">&bull;</span> U.S.A</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Global Premium Events. All rights reserved.</span><span class="gpe-legal-links"><a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/privacy-policy/#legal-notice">Legal Notice</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion) {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  if (!reduceMotion) {
+    var glowEls = document.querySelectorAll('.glow-card, .glow-card-dark');
+    glowEls.forEach(function(el){
+      el.addEventListener('mousemove', function(e){
+        var rect = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+      });
+    });
+  }
+
+  var progressBar = document.getElementById('scrollProgressBar');
+  if (progressBar) {
+    var updateProgress = function(){
+      var doc = document.documentElement;
+      var scrollTop = window.scrollY || doc.scrollTop;
+      var height = doc.scrollHeight - doc.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    };
+    var progressTicking = false;
+    window.addEventListener('scroll', function(){
+      if (!progressTicking) {
+        requestAnimationFrame(function(){ updateProgress(); progressTicking = false; });
+        progressTicking = true;
+      }
+    });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  }
+})();
+</script>
+<script src="/assets/gpe.js" defer></script>
+<script>
+(function(){
+  var form=document.getElementById('careersForm'); if(!form) return;
+  if (/[?&]sent=1/.test(location.search)) {
+    form.innerHTML='<div class="gpe-form-ok" role="status"><div class="gpe-form-ok-icon">&#10003;</div><h3>Thank you &mdash; your application has been sent.</h3><p>Our team reads every application personally. If your profile matches a current or upcoming project, we will contact you.</p></div>';
+    return;
+  }
+  var cv=document.getElementById('cr-cv'), err=document.getElementById('crFileError');
+  function check(){
+    err.textContent='';
+    var f=cv.files&&cv.files[0]; if(!f) return true;
+    if(!/\.(pdf|docx?)$/i.test(f.name)){ err.textContent='Please upload a PDF or Word file.'; return false; }
+    if(f.size>5*1024*1024){ err.textContent='This file is larger than 5 MB. Please upload a smaller file.'; return false; }
+    return true;
+  }
+  cv.addEventListener('change',check);
+  form.addEventListener('submit',function(e){
+    if(!check()){ e.preventDefault(); cv.focus(); return; }
+    var name=document.getElementById('cr-name').value, area=document.getElementById('cr-area').value;
+    form.querySelector('[name=_subject]').value='New application — '+area+' — '+name;
+    var btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Sending…';
+  });
+})();
+</script>
+</body>
+</html>
