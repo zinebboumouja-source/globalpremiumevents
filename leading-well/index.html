@@ -25,250 +25,258 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
 :root{
-  --navy:#0C1A4F; --navy-2:#091440; --blue:#2457FF; --sky:#9CC2FF; --mist:#DCE5FF; --orange:#FF6B4A;
-  --line:rgba(156,194,255,.22); --card:rgba(255,255,255,.05); --soft:#C7D3F2; --green:#4C9F38;
-  --serif:'DM Serif Display',Georgia,'Times New Roman',serif;
-  --sans:'Manrope','Helvetica Neue',Arial,sans-serif;
-  color-scheme:dark;
+  --navy:#0A1F66; --deep:#061247; --blue:#2457FF; --sky:#9CC2FF; --mist:#DCE5FF; --orange:#FF6B4A;
+  --cream:#F8F6F2; --ink:#0A1F66; --soft:#5A6585; --line:#E4E1DA;
+  --serif:'DM Serif Display',Georgia,serif; --sans:'Manrope','Helvetica Neue',Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--navy);color:#fff;font-family:var(--sans);line-height:1.6;overflow-x:hidden;
-  padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
-a{color:var(--sky)}
-.wrap{width:min(1080px,100%);margin:0 auto;padding-inline:24px}
-.label{margin:0;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
-header.hero{position:relative;overflow:hidden;padding-block:24px 72px;border-bottom:1px solid var(--line)}
-.bg{position:absolute;inset:0;pointer-events:none;z-index:0}
-.bg i{position:absolute;border-radius:50%;display:block}
-.bg .glow{inset:0;border-radius:0;background:radial-gradient(900px 700px at 88% 10%,rgba(46,107,255,.5),transparent 70%),radial-gradient(700px 700px at 0% 100%,rgba(110,76,255,.35),transparent 70%)}
-.bg .c1{width:600px;height:600px;right:-160px;top:20px;background:linear-gradient(200deg,var(--blue),rgba(36,87,255,.05))}
-.bg .c2{width:480px;height:480px;right:200px;top:320px;background:linear-gradient(20deg,rgba(110,76,255,.5),rgba(110,76,255,.04))}
-.bg .c3{width:420px;height:420px;right:-120px;top:560px;background:linear-gradient(300deg,rgba(255,107,74,.35),rgba(255,107,74,.02))}
-.bg .shade{inset:0;border-radius:0;background:linear-gradient(90deg,rgba(12,26,79,.75),rgba(12,26,79,0) 60%)}
-.hero .wrap{position:relative;z-index:1}
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.top img{width:52px;height:52px;display:block;filter:brightness(0) invert(1)}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1120px,100%);margin:0 auto;padding-inline:24px}
+.kick{margin:0 0 12px;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+.h2{margin:0;font-weight:800;font-size:clamp(30px,4.4vw,48px);line-height:1.08;letter-spacing:-.02em}
+.h2 em,.hero h1 em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:0;color:var(--blue)}
+.lead{color:var(--soft);font-size:17px;line-height:1.75;max-width:62ch}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:800;font-size:15px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.or{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(255,107,74,.35)}
+.btn.or:hover{background:#FF5530}
+.btn.line{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+
+/* hero */
+.hero{position:relative;color:#fff;background:#0A2A8C url('/leading-well/hero.webp?v=2') 72% center/cover no-repeat;padding:22px 0 170px;clip-path:ellipse(140% 100% at 50% 0%)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,18,70,.94) 0%,rgba(8,26,100,.72) 45%,rgba(8,26,100,.05) 80%)}
+.hero .wrap{position:relative}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.top img{width:52px;height:52px;filter:brightness(0) invert(1)}
 .lang{display:flex;gap:4px}
-.lang a{min-height:40px;display:inline-flex;align-items:center;padding:0 12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);text-decoration:none;border-bottom:2px solid transparent}
+.lang a{min-height:40px;display:inline-flex;align-items:center;padding:0 12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);text-decoration:none;border-bottom:2px solid transparent}
 .lang a[aria-current]{color:#fff;border-bottom-color:var(--orange)}
-.kicker{margin:56px 0 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.kicker span{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
-.pill{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--orange);color:#fff;letter-spacing:.14em!important}
-h1{margin:18px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(68px,13vw,150px);line-height:.9;letter-spacing:-.02em}
-.theme{margin:24px 0 0}.theme .label{display:none}
-.theme p.t{margin:0;font-family:var(--serif);font-size:clamp(28px,4.4vw,42px);line-height:1.1}
-.theme p.s{margin:6px 0 0;font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.6vw,24px);color:var(--soft)}
-.when{margin-top:36px;display:flex;flex-wrap:wrap;gap:20px 36px;align-items:center}
-.when .label{display:none}
-.when .d{margin:0;font-family:var(--serif);font-size:clamp(48px,8vw,88px);line-height:.95}
-.when .h{margin:6px 0 0;font-size:17px;font-weight:700;color:var(--mist)}
-.cta{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;background:var(--orange);color:#fff;font-weight:800;font-size:15px;letter-spacing:.04em;text-decoration:none}
-.cta:hover{background:#FF5530}
-.cta:focus-visible,.lang a:focus-visible,button:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
-.sdg{margin-top:30px;display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 8px;border:1px solid var(--line);border-radius:12px;font-size:14px;color:var(--mist);background:rgba(255,255,255,.04)}
-.sdg i{display:grid;place-items:center;width:36px;height:36px;border-radius:6px;background:var(--green);color:#fff;font-style:normal;font-weight:800;font-size:17px;flex:0 0 auto}
-main{background:var(--navy)}
-section{padding-block:72px}
-section+section{border-top:1px solid var(--line)}
-section:nth-of-type(even){background:var(--navy-2)}
-.sec-head{display:grid;grid-template-columns:64px minmax(0,1fr);gap:6px 18px;align-items:baseline}
-.sec-num{font-family:var(--serif);font-size:40px;line-height:1;color:var(--orange)}
-h2{margin:6px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.2vw,44px);line-height:1.12}
-.body{max-width:70ch;margin:24px 0 0 82px;font-size:17px;line-height:1.75;color:var(--mist)}
-.body p{margin:0 0 14px}
-sup a{text-decoration:none;font-weight:800;font-size:12px;padding:0 1px;color:var(--orange)}
-.target{margin:8px 0 18px;padding:18px 22px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:10px}
-.target b{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8BD07A}
-.target p{margin:6px 0 0!important;font-family:var(--serif);font-size:20px;line-height:1.4;color:#fff}
-.facts,.cols3,dl.meta,.prog,.speakers,.formcard,ol.refs{margin-left:82px}
-.facts{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-.fact b{display:block;font-family:var(--serif);font-weight:400;font-size:40px;line-height:1;color:var(--orange)}
-.fact span{display:block;margin-top:8px;font-size:14px;line-height:1.5;color:var(--soft)}
-.cols3{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-.card b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;font-size:15px}
-.card h3{margin:12px 0 6px;font-size:18px;font-weight:800;line-height:1.3}
-.card p{margin:0;font-size:15px;line-height:1.6;color:var(--soft)}
-dl.meta{margin-top:28px;margin-bottom:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 24px;border-top:1px solid var(--line)}
-dl.meta div{padding:16px 0;border-bottom:1px solid var(--line)}
-dl.meta dt{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
-dl.meta dd{margin:4px 0 0;font-size:16px;font-weight:600}
-.prog{margin-top:28px;display:grid;border-top:1px solid var(--line)}
-.prog div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
-.prog b{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--orange);font-variant-numeric:tabular-nums}
+.hero-in{padding-top:clamp(56px,10vh,110px);max-width:640px}
+.badge{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.badge b{padding:5px 12px;border-radius:999px;background:var(--orange);letter-spacing:.14em}
+.hero h1{margin:20px 0 0;font-weight:800;font-size:clamp(54px,9.5vw,118px);line-height:.92;letter-spacing:-.035em;text-transform:uppercase}
+.hero h1 span{display:block;background:linear-gradient(180deg,#fff 30%,#A9C8FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .tag{margin:18px 0 0;font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.4vw,34px);color:#CFE0FF}
+.hero .sub{margin:6px 0 0;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
+.hero .acts{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* countdown + info strip */
+.float{position:relative;z-index:2;margin-top:-120px}
+.strip{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0;background:#fff;border-radius:22px;box-shadow:0 30px 60px rgba(10,31,102,.16);overflow:hidden}
+.count{display:flex;align-items:center;gap:6px;padding:26px 30px;background:var(--navy);color:#fff}
+.count div{min-width:70px;text-align:center}
+.count b{display:block;font-size:40px;font-weight:800;line-height:1;color:#fff}
+.count small{display:block;margin-top:6px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+.count i{width:1px;height:44px;background:rgba(255,255,255,.18)}
+.info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.info > div{display:flex;gap:14px;align-items:center;padding:20px 24px}
+.info > div:nth-child(even){border-left:1px solid var(--line)}
+.info > div:nth-child(n+3){border-top:1px solid var(--line)}
+.ico{flex:0 0 auto;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#FFEDE8;color:var(--orange)}
+.ico svg{width:22px;height:22px}
+.info p b{display:block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.info p span{display:block;font-size:14px;color:var(--soft);line-height:1.4}
+
+/* overview */
+.sec{padding:110px 0}
+.ov{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center}
+.ov .lead{margin:20px 0 0}
+.ov .lead + .lead{margin-top:12px}
+sup a{color:var(--orange);text-decoration:none;font-weight:800;font-size:12px}
+.target{margin-top:26px;padding:20px 22px;background:#fff;border-radius:16px;border-left:4px solid #4C9F38;box-shadow:0 10px 30px rgba(10,31,102,.06)}
+.target b{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#3B7F2C}
+.target p{margin:6px 0 0;font-family:var(--serif);font-size:19px;line-height:1.4}
+.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:170px 170px 170px;gap:14px}
+.collage img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:0 18px 40px rgba(10,31,102,.16)}
+.collage .a{grid-column:1/3;grid-row:1/3}
+.collage .b{grid-row:3}
+.collage .c{grid-row:3}
+
+/* stats + format (dark band) */
+.band{position:relative;background:linear-gradient(160deg,#0B2A8C 0%,#0A1F66 55%,#061247 100%);color:#fff;padding:110px 0;clip-path:polygon(0 4%,100% 0,100% 96%,0 100%)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));text-align:center;border-bottom:1px solid rgba(156,194,255,.2);padding-bottom:48px}
+.stats div+div{border-left:1px solid rgba(156,194,255,.2)}
+.stats b{display:block;font-size:clamp(40px,5vw,56px);font-weight:800;line-height:1}
+.stats span{display:block;margin-top:8px;font-size:14px;color:var(--mist)}
+.band .head{margin:64px 0 32px}
+.band .h2 em{color:var(--sky)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(156,194,255,.18);border-radius:20px;padding:28px;transition:transform .3s ease,background .3s ease}
+.card:hover{transform:translateY(-6px);background:rgba(255,255,255,.1)}
+.card .ico{background:var(--orange);color:#fff}
+.card h3{margin:18px 0 8px;font-size:17px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.card p{margin:0;font-size:15px;color:var(--mist);line-height:1.6}
+
+/* outline word */
+.sec{overflow:hidden}
+.outline{font-weight:800;font-size:clamp(70px,15vw,190px);line-height:.9;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px rgba(10,31,102,.16);white-space:nowrap;text-align:center;margin:0 0 -40px;user-select:none}
+
+/* programme */
+.prog{margin-top:36px;display:grid;gap:14px}
+.prog div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;align-items:center;background:#fff;border-radius:16px;padding:20px 24px;box-shadow:0 8px 24px rgba(10,31,102,.06)}
+.prog b{font-size:22px;font-weight:800;color:var(--blue)}
 .prog p{margin:0;font-weight:700}
-.prog small{display:block;font-weight:500;color:var(--soft);font-size:14px}
-.speakers{margin-top:32px;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px}
-.sp{display:flex;flex-direction:column;gap:4px}
-.sp .ph{width:100%;max-width:200px;aspect-ratio:5/6;border-radius:100px 100px 14px 14px;margin-bottom:12px;display:grid;place-items:center;text-align:center;padding:20px;background:var(--card);border:1px dashed rgba(156,194,255,.5);color:var(--sky);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.sp h3{margin:2px 0 0;font-size:20px;font-weight:800;line-height:1.25}
-.sp p{margin:0;font-size:15px;color:var(--soft)}
-.formcard{margin-top:28px;background:#fff;color:var(--navy);border-radius:18px;padding:clamp(22px,4vw,40px);color-scheme:light}
-form{display:flex;flex-direction:column;gap:18px}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+
+/* audience */
+.aud{margin-top:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.au{border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(10,31,102,.08)}
+.au .top2{height:130px;background:linear-gradient(140deg,#2457FF,#0A1F66);display:grid;place-items:center;color:#fff}
+.au .top2 svg{width:46px;height:46px;opacity:.9}
+.au div.t{padding:18px 20px 22px}
+.au h3{margin:0;font-size:18px;font-weight:800}
+.au h3::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--orange);margin-right:8px;vertical-align:middle}
+.au p{margin:6px 0 0;font-size:14px;color:var(--soft);line-height:1.55}
+
+/* speakers */
+.spk{margin-top:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.sp{background:#fff;border-radius:20px;padding:22px;text-align:center;box-shadow:0 10px 30px rgba(10,31,102,.06)}
+.sp .ph{margin:0 auto 16px;width:120px;height:120px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(140deg,#E8EEFF,#F8F6F2);border:2px dashed #C9D4F5;color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:10px}
+.sp b{display:block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+.sp span{display:block;margin-top:6px;font-weight:700}
+
+/* register */
+.reg{background:linear-gradient(160deg,#0B2A8C,#061247);color:#fff;padding:120px 0 110px;clip-path:polygon(0 5%,100% 0,100% 100%,0 100%)}
+.reg-in{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:48px;align-items:start}
+.reg .lead{color:var(--mist)}
+.reg .h2 em{color:var(--sky)}
+.formcard{background:#fff;color:var(--ink);border-radius:22px;padding:clamp(22px,4vw,36px);box-shadow:0 30px 60px rgba(0,0,0,.25)}
+form{display:flex;flex-direction:column;gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .field{display:flex;flex-direction:column;gap:6px;min-width:0}
-.field label{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
-.opt{font-weight:500;letter-spacing:0;text-transform:none;color:#4A5578}
-.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--navy);background:#F7F8FC;border:1px solid #C9D1E6;border-radius:10px;padding:12px;min-height:48px;width:100%}
-.field textarea{min-height:96px;resize:vertical}
+.field label{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.opt{font-weight:500;letter-spacing:0;text-transform:none;color:var(--soft)}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--ink);background:#F7F8FC;border:1px solid #D5DBEA;border-radius:12px;padding:12px;min-height:48px;width:100%}
+.field textarea{min-height:90px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--blue);border-color:var(--blue);background:#fff}
 .is-invalid{border-color:#B42318!important}
-.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#4A5578}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--soft)}
 .check input{width:20px;height:20px;margin-top:1px;flex:0 0 auto;accent-color:var(--blue)}
 .err{margin:0;min-height:1em;color:#B42318;font-size:14px}
-button.submit{align-self:flex-start;min-height:52px;padding:0 30px;border:0;border-radius:999px;background:var(--orange);color:#fff;font:inherit;font-weight:800;font-size:15px;letter-spacing:.04em;cursor:pointer}
+button.submit{align-self:flex-start;min-height:52px;padding:0 30px;border:0;border-radius:999px;background:var(--orange);color:#fff;font:inherit;font-weight:800;font-size:15px;cursor:pointer}
 button.submit:hover{background:#FF5530}
 button.submit[disabled]{opacity:.6;cursor:wait}
-.thanks h3{margin:0;font-family:var(--serif);font-weight:400;font-size:30px;color:var(--navy)}
-.thanks p{margin:10px 0 0;color:#4A5578}
-section.refs-sec{padding-block:48px}
-ol.refs{margin-top:16px;padding-left:22px;max-width:80ch;font-size:14px;line-height:1.7;color:var(--soft)}
-ol.refs li{margin-bottom:6px}
-footer{background:var(--navy-2);border-top:1px solid var(--line);padding-block:28px}
+.thanks h3{margin:0;font-family:var(--serif);font-weight:400;font-size:30px}
+.thanks p{margin:10px 0 0;color:var(--soft)}
+.refs{padding:40px 0;background:var(--deep);color:#B8C3E6;font-size:13px}
+.refs ol{margin:10px 0 0;padding-left:20px;line-height:1.7}
+.refs a{color:var(--sky)}
+.refs p{margin:0;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+footer{background:var(--deep);border-top:1px solid rgba(156,194,255,.15);padding-block:26px;color:#B8C3E6}
 footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-footer img{width:48px;height:48px;filter:brightness(0) invert(1)}
-footer p{margin:0;color:var(--soft);font-size:14px}
-@media (max-width:720px){
-  .sec-head{grid-template-columns:minmax(0,1fr)}.sec-num{font-size:30px}
-  .body,.facts,.cols3,dl.meta,.prog,.speakers,.formcard,ol.refs{margin-left:0}
-  .grid2{grid-template-columns:minmax(0,1fr)}.prog div{grid-template-columns:72px minmax(0,1fr)}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+footer img{width:46px;height:46px;filter:brightness(0) invert(1)}
+footer p{margin:0;font-size:14px}footer a{color:var(--sky)}
+.sdg{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-size:13px;color:var(--mist)}
+.sdg i{display:grid;place-items:center;width:30px;height:30px;border-radius:6px;background:#4C9F38;color:#fff;font-style:normal;font-weight:800}
 
-/* === Vivid blue cover style === */
-:root{--navy:#0A1F66;--navy-2:#08185A;--line:rgba(156,194,255,.24)}
-body{background:var(--navy)}
-header.hero{min-height:min(92vh,860px);display:flex;flex-direction:column;padding-block:24px 64px;background:#0A2A8C url('/leading-well/hero.webp?v=2') right center/cover no-repeat;border-bottom:0}
-header.hero .bg{display:none}
-header.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,18,70,.92) 0%,rgba(8,26,100,.7) 40%,rgba(8,26,100,0) 75%),linear-gradient(0deg,rgba(8,24,90,.95) 0%,rgba(8,24,90,0) 50%)}
-header.hero::after{display:none;content:"";position:absolute;right:-2vw;bottom:-6vw;font:800 clamp(220px,34vw,520px)/1 var(--sans);letter-spacing:-.06em;color:rgba(255,255,255,.05);pointer-events:none}
-.hero .wrap{display:flex;flex-direction:column;flex:1}
-.kicker{margin-top:auto;padding-top:64px}
-h1{font-family:var(--sans);font-weight:800;text-transform:uppercase;font-size:clamp(56px,11vw,140px);line-height:.92;letter-spacing:-.035em;background:linear-gradient(180deg,#FFFFFF 30%,#A9C8FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.theme p.t{font-family:var(--serif);font-style:italic;color:#CFE0FF}
-.theme p.s{font-family:var(--sans);font-style:normal;font-weight:600;font-size:clamp(15px,1.8vw,18px);letter-spacing:.08em;text-transform:uppercase;color:var(--mist)}
-.when{border-left:3px solid var(--orange);padding-left:18px}
-.when .d{font-family:var(--sans);font-weight:800;font-size:clamp(36px,6vw,64px);letter-spacing:-.02em}
-h2{font-family:var(--sans);font-weight:800;letter-spacing:-.02em}
-.sec-num{font-family:var(--sans);font-weight:800}
-.fact b,.prog b{font-family:var(--sans);font-weight:800}
-section:nth-of-type(even){background:linear-gradient(180deg,#0B2378,#08185A)}
-@media (max-width:720px){header.hero{background-position:66% center}header.hero::after{display:none}}
+@media (max-width:960px){
+  .strip{grid-template-columns:minmax(0,1fr)}.count{justify-content:center}
+  
+  .ov,.reg-in{grid-template-columns:minmax(0,1fr)}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}.aud,.spk{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+  .hero{clip-path:ellipse(220% 100% at 50% 0%);padding-bottom:150px;background-position:66% center}
+  .count{padding:20px 12px}.count div{min-width:58px}.count b{font-size:32px}
+  .info{grid-template-columns:minmax(0,1fr)}.info > div:nth-child(even){border-left:0}.info > div+div{border-top:1px solid var(--line)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}.stats div:nth-child(3){border-left:0}
+  .cards,.aud,.spk{grid-template-columns:minmax(0,1fr)}.grid2{grid-template-columns:minmax(0,1fr)}
+  .prog div{grid-template-columns:80px minmax(0,1fr);padding:16px}
+  .collage{grid-template-rows:150px 150px 130px}
+  .sec{padding:80px 0}.band{padding:90px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.card{transition:none}}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="bg" aria-hidden="true"><i class="glow"></i><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="shade"></i></div>
   <div class="wrap">
     <div class="top">
-      <a href="/" aria-label="Global Premium Events"><img src="/invitation-mensday-k7r2q/seal-logo.png" alt="Global Premium Events" width="56" height="56"></a>
+      <a href="/" aria-label="Global Premium Events"><img src="/invitation-mensday-k7r2q/seal-logo.png" alt="Global Premium Events" width="52" height="52"></a>
       <nav class="lang" aria-label="Langue"><a href="/leading-well/" lang="fr" aria-current="page">Français</a><a href="/leading-well/en/" lang="en">English</a></nav>
     </div>
-    <p class="kicker"><span>International Men's Day 2026</span><span class="pill">Webinaire</span></p>
-    <h1>Leading<br>Well</h1>
-    <div class="theme">
-      <p class="label">Le thème</p>
-      <p class="t">Le leader qui va bien</p>
-      <p class="s">Santé mentale &amp; leadership au masculin</p>
+    <div class="hero-in">
+      <p class="badge">International Men's Day 2026 <b>Webinaire</b></p>
+      <h1><span>Leading</span><span>Well</span></h1>
+      <p class="tag">Le leader qui va bien</p>
+      <p class="sub">Santé mentale &amp; leadership au masculin</p>
+      <div class="acts"><a class="btn or" href="#inscription">Je réserve ma place &rarr;</a><a class="btn line" href="#programme">Voir le programme</a></div>
     </div>
-    <div class="when">
-      <div>
-        <p class="label">Jeudi</p>
-        <p class="d">19.11.2026</p>
-        <p class="h">10h – 11h (GMT+1) · En ligne sur Zoom</p>
-      </div>
-      <a class="cta" href="#inscription">Je réserve ma place</a>
-    </div>
-    <p class="sdg"><i aria-hidden="true">3</i><span>S'inscrit dans l'Agenda 2030 des Nations unies · Objectif de développement durable 3, cible 3.4</span></p>
   </div>
 </header>
 
+<div class="wrap float">
+  <div class="strip">
+    <div class="count" id="lwCount" aria-label="Countdown"><div><b data-k="d">--</b><small>Jours</small></div><i></i><div><b data-k="h">--</b><small>Heures</small></div><i></i><div><b data-k="m">--</b><small>Min</small></div><i></i><div><b data-k="s">--</b><small>Sec</small></div></div>
+    <div class="info"><div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></span><p style="margin:0"><b>Quand</b><span>Jeu. 19 novembre 2026<br>10h – 11h (GMT+1)</span></p></div><div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><p style="margin:0"><b>Où</b><span>En ligne, sur Zoom</span></p></div><div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><p style="margin:0"><b>Langues</b><span>Français · English</span></p></div><div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V5a1.5 1.5 0 0 1 3 0v6M11 11V4a1.5 1.5 0 0 1 3 0v7M14 11V6a1.5 1.5 0 0 1 3 0v8a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3 14a1.5 1.5 0 0 1 2.4-1.8L8 15"/></svg></span><p style="margin:0"><b>Accessibilité</b><span>Langue des signes, sous-titres</span></p></div></div>
+  </div>
+</div>
+
 <main>
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">01</span><div><p class="label">Contexte et justification</p><h2>La santé mentale des hommes, un enjeu de santé publique et de leadership</h2></div></div>
-    <div class="body">
-      <p>Selon l'Organisation mondiale de la santé, 15 % des adultes en âge de travailler vivaient avec un trouble mental en 2019. La dépression et l'anxiété entraînent la perte d'environ 12 milliards de journées de travail chaque année, pour un coût proche de 1 000 milliards de dollars pour l'économie mondiale.<sup><a href="#ref1" aria-label="Référence 1">[1]</a></sup></p>
-      <p>Dans ce contexte, la place des dirigeants mérite une attention particulière : leurs décisions engagent des équipes entières, et leur propre rapport à la santé mentale influence la culture des organisations. À l'occasion de l'International Men's Day, Leading Well propose d'ouvrir cette réflexion avec des dirigeants, des employeurs et des experts.</p>
-      <p>Cette initiative s'inscrit dans l'Agenda 2030 des Nations unies et contribue à la cible 3.4 de l'Objectif de développement durable 3 : promouvoir la santé mentale et le bien-être.<sup><a href="#ref2" aria-label="Référence 2">[2]</a></sup></p>
-      <blockquote class="target"><b>ODD 3 · Cible 3.4</b><p>« D'ici à 2030, réduire d'un tiers, par la prévention et le traitement, le taux de mortalité prématurée due à des maladies non transmissibles et promouvoir la santé mentale et le bien-être. »</p></blockquote>
+<section class="sec">
+  <div class="wrap ov">
+    <div>
+      <p class="kick">À propos</p>
+      <h2 class="h2">Pourquoi <em>Leading Well</em> ?</h2>
+      <p class="lead">Selon l'Organisation mondiale de la santé, 15 % des adultes en âge de travailler vivaient avec un trouble mental en 2019. La dépression et l'anxiété entraînent la perte d'environ 12 milliards de journées de travail chaque année, pour un coût proche de 1 000 milliards de dollars.<sup><a href="#ref1">[1]</a></sup></p>
+      <p class="lead">Les dirigeants, dont les décisions engagent des équipes entières, en parlent pourtant rarement. À l'occasion de l'International Men's Day, Leading Well ouvre cette conversation avec des dirigeants, des employeurs et des experts.</p>
+      <div class="target"><b>ODD 3 · Cible 3.4</b><p>« D'ici à 2030, […] promouvoir la santé mentale et le bien-être. »<sup><a href="#ref2">[2]</a></sup></p></div>
     </div>
-    <div class="facts">
-      <div class="fact"><b>15 %</b><span>des adultes en âge de travailler vivaient avec un trouble mental en 2019 (OMS)<sup><a href="#ref1">[1]</a></sup></span></div>
-      <div class="fact"><b>12 Mds</b><span>de journées de travail perdues chaque année à cause de la dépression et de l'anxiété (OMS, OIT)<sup><a href="#ref1">[1]</a></sup></span></div>
-      </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><div><p class="label">Objectifs</p><h2>Ce que le webinaire se propose d'atteindre</h2></div></div>
-    <div class="cols3">
-      <div class="card"><b>1</b><h3>Sensibiliser</h3><p>Faire connaître l'International Men's Day au Maroc et lever les tabous autour de la santé mentale des hommes.</p></div>
-      <div class="card"><b>2</b><h3>Partager des pratiques</h3><p>Présenter des retours d'expérience de dirigeants et d'employeurs sur la prévention et le bien-être au travail.</p></div>
-      <div class="card"><b>3</b><h3>Construire un rendez-vous</h3><p>Poser les bases d'une plateforme annuelle de dialogue, dès l'édition 2027.</p></div>
+    <div class="collage">
+      <img class="a" src="/leading-well/hero.webp?v=2" alt="Silhouettes de dirigeants" loading="lazy">
+      <img class="b" src="/leading-well/webinar.webp" alt="Participants à un webinaire" loading="lazy">
+      <img class="c" src="/leading-well/panel.webp" alt="Table ronde devant une carte du monde" loading="lazy">
     </div>
   </div>
 </section>
 
-<section>
+<section class="band">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">03</span><div><p class="label">Axes de réflexion</p><h2>Trois questions au cœur des échanges</h2></div></div>
-    <div class="cols3">
-      <div class="card"><h3>Le dirigeant face à sa propre santé mentale</h3><p>Comment reconnaître ses limites et préserver son équilibre dans des fonctions à forte pression ?</p></div>
-      <div class="card"><h3>L'organisation comme facteur de protection</h3><p>Quelles pratiques managériales et quel environnement de travail favorisent la santé mentale des équipes ?</p></div>
-      <div class="card"><h3>Normes sociales et recours à l'aide</h3><p>Comment les représentations associées à la masculinité influencent-elles la demande de soutien ?</p></div>
+    <div class="stats"><div><b>60</b><span>minutes de conversation</span></div><div><b>3</b><span>axes de réflexion</span></div><div><b>2</b><span>langues : FR · EN</span></div><div><b>1</b><span>objectif : l'ODD 3</span></div></div>
+    <div class="head"><p class="kick">Le format</p><h2 class="h2">Une heure, <em>trois temps forts</em></h2></div>
+    <div class="cards"><div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><h3>Keynote</h3><p>Le bien-être du dirigeant, raconté de l'intérieur.</p></div><div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><h3>Le regard de l'employeur</h3><p>Pourquoi un lieu de travail sain compte pour la santé mentale.</p></div><div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5a5 5 0 0 1 6 5"/></svg></span><h3>Table ronde</h3><p>Diplomatie, éducation et médecine croisent leurs regards.</p></div><div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span><h3>Questions du public</h3><p>Vos questions aux intervenants, en direct.</p></div><div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V5a1.5 1.5 0 0 1 3 0v6M11 11V4a1.5 1.5 0 0 1 3 0v7M14 11V6a1.5 1.5 0 0 1 3 0v8a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3 14a1.5 1.5 0 0 1 2.4-1.8L8 15"/></svg></span><h3>Accessible à tous</h3><p>Langue des signes marocaine et sous-titres.</p></div><div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l5.5 3.5-5.5 3.5z"/></svg></span><h3>Replay</h3><p>Envoyé à tous les inscrits après la session.</p></div></div>
+  </div>
+</section>
+
+<section class="sec" id="programme">
+  <div class="wrap">
+    <p class="outline" aria-hidden="true">Leading Well</p>
+    <p class="kick">Programme · 10h – 11h GMT+1</p>
+    <h2 class="h2">Le <em>déroulé</em></h2>
+    <div class="prog"><div><b>10h00</b><p>Ouverture et mot de bienvenue</p></div><div><b>10h03</b><p>Keynote : le bien-être du dirigeant</p></div><div><b>10h15</b><p>Le regard de l'employeur : un lieu de travail sain</p></div><div><b>10h25</b><p>Table ronde « Leading Well »</p></div><div><b>10h50</b><p>Questions du public</p></div><div><b>11h00</b><p>Synthèse et clôture</p></div></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <p class="kick">Pour qui</p>
+    <h2 class="h2">Une conversation <em>pour celles et ceux</em> qui dirigent</h2>
+    <div class="aud"><div class="au"><div class="top2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></div><div class="t"><h3>Dirigeants &amp; CEO</h3><p>Prendre soin de soi pour mieux mener les autres.</p></div></div><div class="au"><div class="top2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5a5 5 0 0 1 6 5"/></svg></div><div class="t"><h3>DRH &amp; bien-être</h3><p>Des pratiques concrètes pour les équipes.</p></div></div><div class="au"><div class="top2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-9-8.6C1.4 8 3.5 4.5 7 4.5c2 0 3.4 1.2 5 3 1.6-1.8 3-3 5-3 3.5 0 5.6 3.5 4 6.9C19 15.6 12 20 12 20z"/></svg></div><div class="t"><h3>Santé</h3><p>Le regard des professionnels du soin.</p></div></div><div class="au"><div class="top2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></svg></div><div class="t"><h3>Décideurs publics</h3><p>Politiques publiques et prévention.</p></div></div></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <p class="kick">Intervenants</p>
+    <h2 class="h2">Ils prennent <em>la parole</em></h2>
+    <div class="spk"><div class="sp"><div class="ph">Annonce à venir</div><b>Keynote</b></div><div class="sp"><div class="ph">Annonce à venir</div><b>Intervention</b></div><div class="sp"><div class="ph">Annonce à venir</div><b>Table ronde</b></div><div class="sp"><div class="ph">Annonce à venir</div><b>Modération</b></div></div>
+  </div>
+</section>
+
+<section class="reg" id="inscription">
+  <div class="wrap reg-in">
+    <div>
+      <p class="kick">Inscription · Places limitées</p>
+      <h2 class="h2">Je réserve <em>ma place</em></h2>
+      <p class="lead">Inscrivez-vous pour recevoir le lien Zoom avant le webinaire, puis le replay.</p>
+      <p class="sdg"><i aria-hidden="true">3</i>S'inscrit dans l'Agenda 2030 des Nations unies</p>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">04</span><div><p class="label">Format</p><h2>Modalités</h2></div></div>
-    <dl class="meta">
-      <div><dt>Date</dt><dd>Jeudi 19 novembre 2026</dd></div>
-      <div><dt>Horaire</dt><dd>10h – 11h (GMT+1)</dd></div>
-      <div><dt>Format</dt><dd>Webinaire en ligne, Zoom</dd></div>
-      <div><dt>Langues</dt><dd>Français et anglais</dd></div>
-      <div><dt>Public</dt><dd>Dirigeants, DRH, professionnels de santé, décideurs publics</dd></div>
-      <div><dt>Accessibilité</dt><dd>Langue des signes marocaine, sous-titres, replay</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><div><p class="label">Programme · 10h – 11h (GMT+1)</p><h2>Déroulé de la session</h2></div></div>
-    <div class="prog">
-      <div><b>10h00</b><p>Ouverture et mot de bienvenue</p></div>
-      <div><b>10h03</b><p>Keynote : le bien-être du dirigeant</p></div>
-      <div><b>10h15</b><p>Le regard de l'employeur : un lieu de travail sain pour la santé mentale</p></div>
-      <div><b>10h25</b><p>Table ronde « Leading Well »</p></div>
-      <div><b>10h50</b><p>Questions du public</p></div>
-      <div><b>11h00</b><p>Synthèse et clôture</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><div><p class="label">Intervenants</p><h2>Ils prennent la parole</h2></div></div>
-    <div class="speakers">
-      <div class="sp"><div class="ph">Annonce à venir</div><p class="label">Keynote</p><h3>Un dirigeant engagé</h3></div>
-      <div class="sp"><div class="ph">Annonce à venir</div><p class="label">Intervention</p><h3>Le regard de l'employeur</h3></div>
-      <div class="sp"><div class="ph">Annonce à venir</div><p class="label">Table ronde</p><h3>Diplomatie, éducation, médecine</h3></div>
-      <div class="sp"><div class="ph">Annonce à venir</div><p class="label">Modération</p><h3>Global Premium Events</h3></div>
-    </div>
-  </div>
-</section>
-
-<section id="inscription">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">07</span><div><p class="label">Inscription · Places limitées</p><h2>Je réserve ma place</h2></div></div>
     <div class="formcard">
       <form id="regForm" novalidate>
         <div class="grid2">
@@ -293,20 +301,17 @@ section:nth-of-type(even){background:linear-gradient(180deg,#0B2378,#08185A)}
   </div>
 </section>
 
-<section class="refs-sec">
+<section class="refs">
   <div class="wrap">
-    <p class="label">Références</p>
-    <ol class="refs">
-      <li id="ref1">Organisation mondiale de la santé et Organisation internationale du travail (2022), <i>Lignes directrices sur la santé mentale au travail</i>, rapportées par ONU Info (28 septembre 2022). <a href="https://news.un.org/en/story/2022/09/1128171" rel="noopener" target="_blank">news.un.org</a></li>
-      <li id="ref2">Nations unies. <i>Objectif 3 : Permettre à tous de vivre en bonne santé et promouvoir le bien-être de tous à tout âge</i>, cible 3.4. <a href="https://sdgs.un.org/goals/goal3" rel="noopener" target="_blank">sdgs.un.org</a></li>
-    </ol>
+    <p>Références</p>
+    <ol><li id="ref1">Organisation mondiale de la santé et Organisation internationale du travail (2022), <i>Lignes directrices sur la santé mentale au travail</i>, rapportées par ONU Info (28 septembre 2022). <a href="https://news.un.org/en/story/2022/09/1128171" rel="noopener" target="_blank">news.un.org</a></li><li id="ref2">Nations unies. <i>Objectif 3 : Permettre à tous de vivre en bonne santé et promouvoir le bien-être de tous à tout âge</i>, cible 3.4. <a href="https://sdgs.un.org/goals/goal3" rel="noopener" target="_blank">sdgs.un.org</a></li></ol>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <a href="/" aria-label="Global Premium Events"><img src="/invitation-mensday-k7r2q/seal-logo.png" alt="Global Premium Events" width="56" height="56"></a>
+    <a href="/" aria-label="Global Premium Events"><img src="/invitation-mensday-k7r2q/seal-logo.png" alt="Global Premium Events" width="46" height="46"></a>
     <p>Organisé par Global Premium Events · <a href="mailto:info@globalpremiumevents.com">info@globalpremiumevents.com</a></p>
   </div>
 </footer>
@@ -337,6 +342,12 @@ section:nth-of-type(even){background:linear-gradient(180deg,#0B2378,#08185A)}
         window.location.href=mailto;});
   });
 })();
+</script>
+<script>
+(function(){var el=document.getElementById('lwCount');if(!el)return;var t=Date.parse('2026-11-19T10:00:00+01:00');
+function p(n){return n<10?'0'+n:''+n}
+function tick(){var s=Math.max(0,Math.floor((t-Date.now())/1000));el.querySelector('[data-k=d]').textContent=p(Math.floor(s/86400));el.querySelector('[data-k=h]').textContent=p(Math.floor(s%86400/3600));el.querySelector('[data-k=m]').textContent=p(Math.floor(s%3600/60));el.querySelector('[data-k=s]').textContent=p(s%60);}
+tick();setInterval(tick,1000);})();
 </script>
 </body>
 </html>
