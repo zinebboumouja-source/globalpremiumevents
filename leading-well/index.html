@@ -132,6 +132,40 @@ sup a{color:var(--orange);text-decoration:none;font-weight:800;font-size:12px}
 @media (max-width:420px){.lead-sp{flex-direction:column;text-align:center}}
 .pn .ph2.in{border:0;background:linear-gradient(140deg,#FF6B4A,#2457FF);display:grid;place-items:center;color:#fff;font-size:24px;font-weight:800}
 .pn em{display:block;margin-top:4px;font-style:normal;font-size:12.5px;line-height:1.4;color:var(--mist)}
+
+/* animated brain scene */
+.brain-scene{position:relative;margin:0;aspect-ratio:5/4;border-radius:24px;overflow:hidden;perspective:900px;
+  background:radial-gradient(60% 55% at 50% 48%,#2C63FF 0%,#123A9E 45%,#0A1F66 80%);box-shadow:0 30px 60px rgba(10,31,102,.28)}
+.brain-scene::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(156,194,255,.28) 1px,transparent 1.2px);background-size:22px 22px;-webkit-mask-image:radial-gradient(70% 70% at 50% 50%,#000 30%,transparent 80%);mask-image:radial-gradient(70% 70% at 50% 50%,#000 30%,transparent 80%)}
+.bs-orbit{position:absolute;left:50%;top:50%;border-radius:50%;transform-style:preserve-3d}
+.bs-orbit.o1{width:88%;height:88%;margin:-44% 0 0 -44%;border:1.5px solid rgba(156,194,255,.55);transform:rotateX(72deg);animation:bsSpin 18s linear infinite}
+.bs-orbit.o2{width:70%;height:70%;margin:-35% 0 0 -35%;border:1.5px dashed rgba(255,107,74,.7);transform:rotateX(72deg) rotateY(18deg);animation:bsSpin2 26s linear infinite reverse}
+.bs-orbit i{position:absolute;top:-6px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#FF6B4A;box-shadow:0 0 14px #FF6B4A}
+.bs-orbit.o1 i{background:#9CC2FF;box-shadow:0 0 14px #9CC2FF}
+@keyframes bsSpin{to{transform:rotateX(72deg) rotateZ(360deg)}}
+@keyframes bsSpin2{to{transform:rotateX(72deg) rotateY(18deg) rotateZ(360deg)}}
+.bs-brain{position:absolute;left:50%;top:50%;width:66%;height:auto;transform:translate(-50%,-52%);filter:drop-shadow(0 20px 40px rgba(6,18,70,.55)) drop-shadow(0 0 30px rgba(156,194,255,.35));animation:bsFloat 6s ease-in-out infinite}
+@keyframes bsFloat{50%{transform:translate(-50%,-56%)}}
+.bs-cube{position:absolute;width:64px;height:64px;transform-style:preserve-3d;animation:bsCube 12s linear infinite}
+.bs-cube.c1{right:9%;top:12%}
+.bs-cube.c2{left:8%;bottom:14%;width:44px;height:44px;animation-duration:16s;animation-direction:reverse}
+.bs-cube span{position:absolute;inset:0;border:1.5px solid rgba(255,107,74,.9);background:rgba(255,107,74,.08)}
+.bs-cube.c2 span{border-color:rgba(156,194,255,.9);background:rgba(156,194,255,.08)}
+.bs-cube span:nth-child(1){transform:translateZ(32px)}.bs-cube span:nth-child(2){transform:rotateY(180deg) translateZ(32px)}
+.bs-cube span:nth-child(3){transform:rotateY(90deg) translateZ(32px)}.bs-cube span:nth-child(4){transform:rotateY(-90deg) translateZ(32px)}
+.bs-cube span:nth-child(5){transform:rotateX(90deg) translateZ(32px)}.bs-cube span:nth-child(6){transform:rotateX(-90deg) translateZ(32px)}
+.bs-cube.c2 span:nth-child(1){transform:translateZ(22px)}.bs-cube.c2 span:nth-child(2){transform:rotateY(180deg) translateZ(22px)}
+.bs-cube.c2 span:nth-child(3){transform:rotateY(90deg) translateZ(22px)}.bs-cube.c2 span:nth-child(4){transform:rotateY(-90deg) translateZ(22px)}
+.bs-cube.c2 span:nth-child(5){transform:rotateX(90deg) translateZ(22px)}.bs-cube.c2 span:nth-child(6){transform:rotateX(-90deg) translateZ(22px)}
+@keyframes bsCube{from{transform:rotateX(-20deg) rotateY(0)}to{transform:rotateX(-20deg) rotateY(360deg) rotateZ(360deg)}}
+.bs-sphere{position:absolute;border-radius:50%;animation:bsBob 7s ease-in-out infinite}
+.bs-sphere.s1{width:46px;height:46px;left:12%;top:16%;background:radial-gradient(circle at 32% 30%,#FFC2B3,#FF6B4A 45%,#B8391F 100%);box-shadow:0 10px 24px rgba(255,107,74,.45)}
+.bs-sphere.s2{width:28px;height:28px;right:14%;bottom:18%;background:radial-gradient(circle at 32% 30%,#E3EDFF,#9CC2FF 45%,#2457FF 100%);animation-delay:-2s}
+.bs-sphere.s3{width:16px;height:16px;right:30%;top:10%;background:radial-gradient(circle at 32% 30%,#fff,#9CC2FF 60%,#2457FF);animation-delay:-4s}
+@keyframes bsBob{50%{transform:translateY(-14px)}}
+.bs-ring{position:absolute;left:6%;top:46%;width:58px;height:58px;border-radius:50%;border:6px solid transparent;background:linear-gradient(#0A1F66,#0A1F66) padding-box,linear-gradient(135deg,#9CC2FF,#FF6B4A) border-box;animation:bsTilt 9s ease-in-out infinite}
+@keyframes bsTilt{50%{transform:rotateX(60deg) rotateY(30deg)}}
+@media (prefers-reduced-motion:reduce){.bs-orbit,.bs-brain,.bs-cube,.bs-sphere,.bs-ring{animation:none!important}}
 /* stats + format (dark band) */
 .band{position:relative;background:linear-gradient(160deg,#0B2A8C 0%,#0A1F66 55%,#061247 100%);color:#fff;padding:110px 0;clip-path:polygon(0 4%,100% 0,100% 96%,0 100%)}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));text-align:center;border-bottom:1px solid rgba(156,194,255,.2);padding-bottom:48px}
@@ -262,7 +296,7 @@ footer p{margin:0;font-size:14px}footer a{color:var(--sky)}
       <p class="lead">Les dirigeants, dont les décisions engagent des équipes entières, en parlent pourtant rarement. À l'occasion de l'International Men's Day, Leading Well ouvre cette conversation avec des dirigeants, des employeurs et des experts.</p>
       <div class="target"><b>ODD 3 · Cible 3.4</b><p>« D'ici à 2030, […] promouvoir la santé mentale et le bien-être. »<sup><a href="#ref2">[2]</a></sup></p></div>
     </div>
-    <figure class="about-img"><img src="/leading-well/about.webp" alt="Santé mentale, échange entre dirigeants et équilibre" width="1698" height="950" loading="lazy"></figure>
+    <figure class="brain-scene"><span class="bs-orbit o1" aria-hidden="true"><i></i></span><span class="bs-orbit o2" aria-hidden="true"><i></i></span><span class="bs-cube c1" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="bs-cube c2" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="bs-sphere s1" aria-hidden="true"></span><span class="bs-sphere s2" aria-hidden="true"></span><span class="bs-sphere s3" aria-hidden="true"></span><span class="bs-ring" aria-hidden="true"></span><img class="bs-brain" src="/leading-well/brain.webp" alt="Cerveau humain entouré de formes géométriques" width="901" height="810"></figure>
   </div>
 </section>
 
